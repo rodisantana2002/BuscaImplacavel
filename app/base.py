@@ -30,9 +30,9 @@ class base(object):
             writer.writeheader()
             with open(self.fileIN, 'r') as base:
                 reader = csv.DictReader(base)
-                print ('+----------------------------------------+')
-                print ('| Inciando script de captura de arquivos |')
-                print ('+----------------------------------------+')
+                print ('+--------------------------------------------------+')
+                print ('|     Inciando script de captura de arquivos       |')
+                print ('+--------------------------------------------------+')
                 for row in reader:
                     writer.writerow({'id':row['Identifier'],
                                      'title':row['Title'],
@@ -51,6 +51,8 @@ class base(object):
                                     })
                     # print leitura
                     print ('--->', row['Identifier'],'[',row['DOI'],']')
+        print ('+--------------------------------------------------+')
+        print (' ---> finalizando preparação do arquivo base...')
 
 # carrega script
 def main():
