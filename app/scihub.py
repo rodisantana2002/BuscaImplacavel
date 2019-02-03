@@ -10,12 +10,13 @@ import hashlib
 import logging
 import os
 import requests
+import urllib3
 from bs4 import BeautifulSoup
 from retrying import retry
 
 # log config
 logging.basicConfig()
-logger = logging.getLogger('Sci-Hub..')
+logger = logging.getLogger('Log.')
 logger.setLevel(logging.DEBUG)
 
 # constants
@@ -48,6 +49,7 @@ class SciHub(object):
         self.sess.headers = HEADERS
         self.available_base_url_list = AVAILABLE_SCIHUB_BASE_URL
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
+        requests.packages.urllib3.disable_warnings()
 
     def set_proxy(self, proxy):
         '''
@@ -63,7 +65,7 @@ class SciHub(object):
     def _change_base_url(self):
         del self.available_base_url_list[0]
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
-        logger.info("Alterando source {}".format(self.available_base_url_list[0]))
+        logger.debug("Alterando source {}".format(self.available_base_url_list[0]))
 
     def search(self, query, limit=10, download=False):
         """
@@ -121,9 +123,7 @@ class SciHub(object):
         data = self.fetch(identifier)
 
         if not 'err' in data:
-            self._save(data['pdf'],
-                       os.path.join(destination, path if path else data['name']))
-
+            self._save(data['pdf'], os.path.join(destination, path if path else data['name']))
         return data
 
     def fetch(self, identifier):
@@ -132,7 +132,6 @@ class SciHub(object):
         Se o identificador for um pay-wall DOI, PMID ou URL, use o Sci-Hub
         para acessar e baixar o papel. Caso contrário, basta baixar o papel diretamente.
         """
-
         try:
             url = self._get_direct_url(identifier)
             res = self.sess.get(url, verify=False)
@@ -141,10 +140,7 @@ class SciHub(object):
                 self._change_base_url()
                 # raise CaptchaNeedException('Falha ao buscar o pdf com o identificador [%s] '
                 #                            '(url resolvido [%s]) devido ao emprego de captcha' % (identifier, url))
-                return {
-                    'err': 'Failed to fetch pdf with identifier %s (resolved url %s) due to captcha'
-                           % (identifier, url)
-                }
+                return {'err': 'Falha ao buscar o pdf com identificador %s (url resolvido %s) devido ao emprego de captcha' % (identifier, url)}
             else:
                 return {
                     'pdf': res.content,
@@ -153,14 +149,11 @@ class SciHub(object):
                 }
 
         except requests.exceptions.ConnectionError:
-            logger.info('Impossível acessar {}, alterando url'.format(self.available_base_url_list[0]))
+            logger.debug('Impossível acessar {}, alterando url'.format(self.available_base_url_list[0]))
             self._change_base_url()
 
         except requests.exceptions.RequestException as e:
-            return {
-                'err': 'Falha ao buscar o pdf com o identificador [%s] (url resolvido %s) devido a solicitacao de excecao.'
-                       % (identifier, url)
-            }
+            return {'err': 'Falha ao buscar o pdf com o identificador [%s] (url resolvido %s) devido a solicitacao de excecao.' % (identifier, url)}
 
     def _get_direct_url(self, identifier):
         """
