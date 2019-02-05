@@ -117,7 +117,7 @@ class conversor(object):
                 logger.debug('+----------------------------------------------------------+')
                 count = 1
                 for row in reader:
-                    if count <= self.limiteInf:
+                    if count >= self.limiteInf and count <= self.limiteSup:
                         writer.writerow({'id': 'IEEE-{0}-{1}'.format(row['Publication_Year'], count),
                                          'title':row['Document Title'],
                                          'year':row['Publication_Year'],
@@ -148,7 +148,7 @@ class conversor(object):
                 logger.debug('+----------------------------------------------------------+')
                 count = 1
                 for row in reader:
-                    if count <= self.limiteInf:
+                    if count >= self.limiteInf and count <= self.limiteSup:
                         writer.writerow({'id':'Springer-{0}-{1}'.format(row['Publication Year'], count),
                                          'title':row['Item Title'],
                                          'year':row['Publication Year'],
@@ -179,7 +179,7 @@ class conversor(object):
                 logger.debug('+----------------------------------------------------------+')
                 count = 1
                 for row in reader:
-                    if count <= self.limiteInf:
+                    if count >= self.limiteInf and count <= self.limiteSup:
                         writer.writerow({'id':'ACM-{0}-{1}'.format(row['id'], row['year']),
                                          'title':row['title'],
                                          'year':row['year'],
@@ -211,7 +211,7 @@ class conversor(object):
                 logger.debug('+----------------------------------------------------------+')
                 count = 1
                 for row in reader:
-                    if count <= self.limiteInf:
+                    if count >= self.limiteInf and count <= self.limiteSup:
                         writer.writerow({'id':row['Identifier'],
                                          'title':row['Title'],
                                          'year':row['Year'],
@@ -237,8 +237,8 @@ def main():
     # carrega parametros de chamada
     parser = argparse.ArgumentParser(description='RodoBot - Removendo as barreiras da ciência.')
     parser.add_argument('-p',  '--lista', metavar='path', help='irá converter todos arquivos .csv encontrados no path:', default='', type=str)
-    parser.add_argument('-l',  '--limit_inf', metavar='N', help='o limite de conversao é limitado em:', default=0, type=int)
-    parser.add_argument('-s',  '--limit_sup', metavar='N', help='o limite de conversao é limitado em:', default=0, type=int)
+    parser.add_argument('-inf',  '--limit_inf', metavar='N', help='o limite inferior de busca:', default=0, type=int)
+    parser.add_argument('-sup',  '--limit_sup', metavar='N', help='o limite superior de busca:', default=0, type=int)
     args = parser.parse_args()
 
     bs = conversor(args.lista, arqBase, limiteInf=args.limit_inf, limiteSup=args.limit_sup)
