@@ -16,7 +16,7 @@ arqBase='../bases/source.csv'
 
 class conversor(object):
     # construtor
-    def __init__(self, origem, destino, limite):
+    def __init__(self, origem, destino, limiteInf, limiteSup):
         self.homeDir = "../logs"
         self.logFile= self.homeDir + '/conversor.log'
         self.logger_handler = logging.FileHandler(self.logFile, mode='w')
@@ -24,7 +24,8 @@ class conversor(object):
         # Associe o Handler ao  Logger
         logger.addHandler(self.logger_handler)
 
-        self.limite = limite
+        self.limiteInf = limiteInf
+        self.limiteSup = limiteSup
         self.origem = origem #sempre recebe uma lista
         self.destino = destino
         self.FIELD_NAMES = ['id',
@@ -85,7 +86,7 @@ class conversor(object):
                 logger.debug('+----------------------------------------------------------+')
                 count = 1
                 for row in reader:
-                    if count <= self.limite:
+                    if count >= self.limiteInf and count <= self.limiteSup:
                         writer.writerow({'id':row['Identifier'],
                                          'title':row['Title'],
                                          'year':row['Year'],
@@ -116,7 +117,7 @@ class conversor(object):
                 logger.debug('+----------------------------------------------------------+')
                 count = 1
                 for row in reader:
-                    if count <= self.limite:
+                    if count <= self.limiteInf:
                         writer.writerow({'id': 'IEEE-{0}-{1}'.format(row['Publication_Year'], count),
                                          'title':row['Document Title'],
                                          'year':row['Publication_Year'],
@@ -147,7 +148,7 @@ class conversor(object):
                 logger.debug('+----------------------------------------------------------+')
                 count = 1
                 for row in reader:
-                    if count <= self.limite:
+                    if count <= self.limiteInf:
                         writer.writerow({'id':'Springer-{0}-{1}'.format(row['Publication Year'], count),
                                          'title':row['Item Title'],
                                          'year':row['Publication Year'],
@@ -178,7 +179,7 @@ class conversor(object):
                 logger.debug('+----------------------------------------------------------+')
                 count = 1
                 for row in reader:
-                    if count <= self.limite:
+                    if count <= self.limiteInf:
                         writer.writerow({'id':'ACM-{0}-{1}'.format(row['id'], row['year']),
                                          'title':row['title'],
                                          'year':row['year'],
@@ -210,7 +211,7 @@ class conversor(object):
                 logger.debug('+----------------------------------------------------------+')
                 count = 1
                 for row in reader:
-                    if count <= self.limite:
+                    if count <= self.limiteInf:
                         writer.writerow({'id':row['Identifier'],
                                          'title':row['Title'],
                                          'year':row['Year'],
@@ -236,10 +237,11 @@ def main():
     # carrega parametros de chamada
     parser = argparse.ArgumentParser(description='RodoBot - Removendo as barreiras da ciência.')
     parser.add_argument('-p',  '--lista', metavar='path', help='irá converter todos arquivos .csv encontrados no path:', default='', type=str)
-    parser.add_argument('-l',  '--limit', metavar='N', help='o limite de conversao é limitado em:', default=0, type=int)
+    parser.add_argument('-l',  '--limit_inf', metavar='N', help='o limite de conversao é limitado em:', default=0, type=int)
+    parser.add_argument('-s',  '--limit_sup', metavar='N', help='o limite de conversao é limitado em:', default=0, type=int)
     args = parser.parse_args()
 
-    bs = conversor(args.lista, arqBase, limite=args.limit)
+    bs = conversor(args.lista, arqBase, limiteInf=args.limit_inf, limiteSup=args.limit_sup)
     bs.gerarFileBase()
 
 

@@ -55,8 +55,8 @@ class base(object):
                     if row['situacao'] == 'pendente':
                         data_hora_atuais = datetime.now()
                         data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
-
                         result = sci.download(row['doi'], destination='../files', path=row['id'])
+
                         if 'err' in result:
                             writer.writerow({'id':row['id'],
                                              'title':row['title'],
@@ -94,6 +94,11 @@ class base(object):
                             logger.debug('%s ---[ ok ] Arquivo baixado com sucesso com identificador [%s]', data_atual, row['id'])
         os.rename(tmp_file, self.fileOUT)
         return status
+
+    def _isBlank (self, myString):
+        if myString and myString.strip():
+            return False
+        return True
 
 # carrega script e roda em modo força-bruta
 def main():
