@@ -21,7 +21,6 @@ class conversor(object):
         self.logFile= self.homeDir + '/conversor.log'
         self.logger_handler = logging.FileHandler(self.logFile, mode='w')
         self.logger_handler.setLevel(logging.DEBUG)
-
         # Associe o Handler ao  Logger
         logger.addHandler(self.logger_handler)
 

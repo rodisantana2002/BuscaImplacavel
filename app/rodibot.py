@@ -4,7 +4,7 @@ import sys
 import csv
 import logging
 from scihub import *
-
+from datetime import datetime
 
 # log config
 logging.basicConfig()
@@ -14,6 +14,13 @@ logger.setLevel(logging.DEBUG)
 class base(object):
     """construtor"""
     def __init__(self, fileOUT):
+        self.homeDir = "../logs"
+        self.logFile= self.homeDir + '/rodibot.log'
+        self.logger_handler = logging.FileHandler(self.logFile, mode='w')
+        self.logger_handler.setLevel(logging.DEBUG)
+        # Associe o Handler ao  Logger
+        logger.addHandler(self.logger_handler)
+
         self.fileOUT = fileOUT
         self.FIELD_NAMES = ['id',
                             'title',
@@ -46,6 +53,9 @@ class base(object):
                 reader = csv.DictReader(source)
                 for row in reader:
                     if row['situacao'] == 'pendente':
+                        data_hora_atuais = datetime.now()
+                        data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
+
                         result = sci.download(row['doi'], destination='../files', path=row['id'])
                         if 'err' in result:
                             writer.writerow({'id':row['id'],
@@ -63,7 +73,7 @@ class base(object):
                                              'valorCaptcha':'none',
                                              'msgRetorno': result['err']
                                             })
-                            logger.debug('%s', result['err'])
+                            logger.debug('%s %s', data_atual, result['err'])
                             status=True
                         else:
                             writer.writerow({'id':row['id'],
@@ -81,14 +91,13 @@ class base(object):
                                              'valorCaptcha':'none',
                                              'msgRetorno': 'Arquivo baixado com sucesso'
                                             })
-                            logger.debug('---[ ok ] Arquivo baixado com sucesso com identificador [%s]', row['id'])
+                            logger.debug('%s ---[ ok ] Arquivo baixado com sucesso com identificador [%s]', data_atual, row['id'])
         os.rename(tmp_file, self.fileOUT)
         return status
 
-# carrega script
+# carrega script e roda em modo força-bruta
 def main():
     bs = base('../bases/source.csv')
-    bs.gerarFileBase()
     condicao = True
     tentativa=1
     while (condicao) :
