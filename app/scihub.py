@@ -20,23 +20,10 @@ logger = logging.getLogger('Log.')
 logger.setLevel(logging.DEBUG)
 
 # constants
-SCIHUB_BASE_URL = 'http://sci-hub.ca/'
+SCIHUB_BASE_URL = 'http://sci-hub.tw/'
 SCHOLARS_BASE_URL = 'https://scholar.google.com/scholar'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/20100101 Firefox/27.0'}
-AVAILABLE_SCIHUB_BASE_URL = ['sci-hub.tw',
-                             'sci-hub.hk',
-                             'sci-hub.la',
-                             'sci-hub.mn',
-                             'sci-hub.name',
-                             'sci-hub.is',
-                             'sci-hub.tv'
-                             'sci-hub.ws'
-                             'www.sci-hub.cn'
-                             'sci-hub.sci-hub.hk',
-                             'sci-hub.sci-hub.tw',
-                             'sci-hub.sci-hub.mn',
-                             'sci-hub.sci-hub.tv',
-                             'tree.sci-hub.la']
+AVAILABLE_SCIHUB_BASE_URL = ['sci-hub.se','sci-hub.tw']
 
 class SciHub(object):
     """
@@ -63,9 +50,9 @@ class SciHub(object):
                 "https": proxy, }
 
     def _change_base_url(self):
-        del self.available_base_url_list[0]
+        # del self.available_base_url_list[0]
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
-        logger.debug("Alterando source {}".format(self.available_base_url_list[0]))
+        logger.debug("---> Alterando source {}".format(self.available_base_url_list[0]))
 
     def search(self, query, limit=10, download=False):
         """
@@ -79,7 +66,7 @@ class SciHub(object):
             try:
                 res = self.sess.get(SCHOLARS_BASE_URL, params={'q': query, 'start': start})
             except requests.exceptions.RequestException as e:
-                results['err'] = 'Falha ao completar a pesquisa com a query [%s} (connection error)' % query
+                results['err'] = '---[erro] Falha ao completar a pesquisa com a query [%s} (connection error)' % query
                 return results
 
             s = self._get_soup(res.content)
@@ -87,7 +74,7 @@ class SciHub(object):
 
             if not papers:
                 if 'CAPTCHA' in str(res.content):
-                    results['err'] = 'Erro ao carregar pesquisa, query identificou o emprego de captcha [%s]' % query
+                    results['err'] = '---[erro] Erro ao carregar pesquisa, query identificou o emprego de captcha [%s]' % query
                 return results
 
             for paper in papers:
@@ -137,10 +124,10 @@ class SciHub(object):
             res = self.sess.get(url, verify=False)
 
             if res.headers['Content-Type'] != 'application/pdf':
-                self._change_base_url()
+                # self._change_base_url()
                 # raise CaptchaNeedException('Falha ao buscar o pdf com o identificador [%s] '
-                #                            '(url resolvido [%s]) devido ao emprego de captcha' % (identifier, url))
-                return {'err': 'Falha ao buscar o pdf com identificador %s (url resolvido %s) devido ao emprego de captcha' % (identifier, url)}
+                #                             '(url resolvido [%s]) devido ao emprego de captcha' % (identifier, url))
+                return {'err': '---[erro] Falha: %s (url) identificou uso de captcha' % (identifier)}
             else:
                 return {
                     'pdf': res.content,
@@ -153,7 +140,7 @@ class SciHub(object):
             self._change_base_url()
 
         except requests.exceptions.RequestException as e:
-            return {'err': 'Falha ao buscar o pdf com o identificador [%s] (url resolvido %s) devido a solicitacao de excecao.' % (identifier, url)}
+            return {'err': e}
 
     def _get_direct_url(self, identifier):
         """
@@ -246,26 +233,26 @@ def main():
         if 'err' in result:
             logger.debug('%s', result['err'])
         else:
-            logger.debug('Arquivo baixado com sucesso com identificador [%s]', args.download)
+            logger.debug('---[ ok ] Arquivo baixado com sucesso com identificador [%s]', args.download)
     elif args.search:
         results = sh.search(args.search, args.limit)
         if 'err' in results:
             logger.debug('%s', results['err'])
         else:
-            logger.debug('Pesquisa concluida com sucesso para a query [%s]', args.search)
+            logger.debug('---[ ok ] Pesquisa concluida com sucesso para a query [%s]', args.search)
         print(results)
     elif args.search_download:
         results = sh.search(args.search_download, args.limit)
         if 'err' in results:
             logger.debug('%s', results['err'])
         else:
-            logger.debug('Pesquisa concluida com sucesso para a query [%s]', args.search_download)
+            logger.debug('---[ ok ] Pesquisa concluida com sucesso para a query [%s]', args.search_download)
             for paper in results['papers']:
                 result = sh.download(paper['url'], args.output)
                 if 'err' in result:
                     logger.debug('%s', result['err'])
                 else:
-                    logger.debug('Arquivo baixado com sucesso com identificador [%s]', paper['url'])
+                    logger.debug('---[ ok ] Arquivo baixado com sucesso com identificador [%s]', paper['url'])
     elif args.file:
         with open(args.file, 'r') as f:
             identifiers = f.read().splitlines()
@@ -274,7 +261,7 @@ def main():
                 if 'err' in result:
                     logger.debug('%s', result['err'])
                 else:
-                    logger.debug('Arquivo baixado com sucesso com identificador [%s]', identifier)
+                    logger.debug('---[ ok ] Arquivo baixado com sucesso com identificador [%s]', identifier)
 
 
 if __name__ == '__main__':
