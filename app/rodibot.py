@@ -13,9 +13,7 @@ logger.setLevel(logging.DEBUG)
 
 class base(object):
     """construtor"""
-    def __init__(self, fileIN, fileOUT, limite=1):
-        self.limite = limite
-        self.fileIN = fileIN
+    def __init__(self, fileOUT):
         self.fileOUT = fileOUT
         self.FIELD_NAMES = ['id',
                             'title',
@@ -31,41 +29,6 @@ class base(object):
                             'possuiCaptcha',
                             'valorCaptcha',
                             'msgRetorno']
-
-    def gerarFileBase(self):
-        with open(self.fileOUT, 'w') as source:
-            writer = csv.DictWriter(source, fieldnames=self.FIELD_NAMES)
-            writer.writeheader()
-            with open(self.fileIN, 'r') as base:
-                reader = csv.DictReader(base)
-                logger.debug('+--------------------------------------------------+')
-                logger.debug('|     Inciando script de captura de arquivos       |')
-                logger.debug('+--------------------------------------------------+')
-                count = 1
-                for row in reader:
-                    if count <= self.limite:
-                        writer.writerow({'id':row['Identifier'],
-                                         'title':row['Title'],
-                                         'year':row['Year'],
-                                         'author':row['Author'],
-                                         'doi':row['DOI'],
-                                         'url':row['URL'],
-                                         'keywords':row['Custom3'],
-                                         'tipo':row['Publisher'],
-                                         'base':row['BibliographyType'],
-                                         'situacao':'pendente',
-                                         'numTentativas':'none',
-                                         'possuiCaptcha':'none',
-                                         'valorCaptcha':'none',
-                                         'msgRetorno':''
-                                        })
-
-                        strLog = '---> {0} - {1}'.format(row['Identifier'], row['DOI'])
-                        logger.debug(strLog)
-                    count+=1
-
-        logger.debug ('----------------------------------------------------------')
-        logger.debug ('---> Finalizando preparação do arquivo base.')
 
     def processarDownload(self, numTentativa):
         logger.debug ('----------------------------------------------------------')
@@ -124,7 +87,7 @@ class base(object):
 
 # carrega script
 def main():
-    bs = base('../bases/Base.csv', '../bases/source.csv', 5)
+    bs = base('../bases/source.csv')
     bs.gerarFileBase()
     condicao = True
     tentativa=1

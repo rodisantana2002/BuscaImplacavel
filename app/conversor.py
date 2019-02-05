@@ -12,6 +12,7 @@ import logging
 logging.basicConfig()
 logger = logging.getLogger('Log.')
 logger.setLevel(logging.DEBUG)
+arqBase='../bases/source.csv'
 
 class conversor(object):
     # construtor
@@ -239,7 +240,7 @@ def main():
     parser.add_argument('-l',  '--limit', metavar='N', help='o limite de conversao é limitado em:', default=0, type=int)
     args = parser.parse_args()
 
-    bs = conversor(args.lista, '../bases/source.csv', limite=args.limit)
+    bs = conversor(args.lista, arqBase, limite=args.limit)
     bs.gerarFileBase()
 
 
