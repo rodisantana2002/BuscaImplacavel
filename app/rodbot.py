@@ -12,7 +12,7 @@ logger = logging.getLogger('Log.')
 logger.setLevel(logging.DEBUG)
 
 class base(object):
-    """docstring for ."""
+    """construtor"""
     def __init__(self, fileIN, fileOUT, limite=1):
         self.limite = limite
         self.fileIN = fileIN
@@ -124,7 +124,7 @@ class base(object):
 
 # carrega script
 def main():
-    bs = base('../strings/Base.csv', '../strings/source.csv', 5)
+    bs = base('../bases/Base.csv', '../bases/source.csv', 5)
     bs.gerarFileBase()
     condicao = True
     tentativa=1
