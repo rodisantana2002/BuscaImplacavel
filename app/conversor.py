@@ -68,7 +68,6 @@ class conversor(object):
             else:
                 strNone='------------------------------------------------------------'
 
-
         logger.debug (strNone)
         logger.debug ('---> Finalizando preparação do arquivo base.')
 
