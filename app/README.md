@@ -8,7 +8,6 @@
 -->
 python3 conversor.py -p '../bases/origem/' -inf 9 -sup 20
 
-
 <!--  -->
 <!--  mode de usar RodoBot
   a) processo busca por arquivos sinalizados no source preparado pelo conversor
