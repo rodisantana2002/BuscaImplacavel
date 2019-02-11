@@ -36,7 +36,7 @@ class SciHub(object):
         self.sess.headers = HEADERS
         self.available_base_url_list = AVAILABLE_SCIHUB_BASE_URL
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
-        requests.packages.urllib3.disable_warnings()
+        # requests.packages.urllib3.disable_warnings()
 
     def set_proxy(self, proxy):
         '''
@@ -65,7 +65,7 @@ class SciHub(object):
         while True:
             try:
                 res = self.sess.get(SCHOLARS_BASE_URL, params={'q': query, 'start': start})
-            except requests.exceptions.RequestException as e:
+            except requests.exceptions.RequestException:
                 results['err'] = '---[erro] Falha ao completar a pesquisa com a query [%s} (connection error)' % query
                 return results
 

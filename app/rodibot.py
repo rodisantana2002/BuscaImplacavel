@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 # encoding: iso-8859-1
+
 import sys
 import csv
+import os
 import logging
-from scihub import *
+import scihub as sc
 from datetime import datetime
 
 # log config
@@ -41,7 +43,7 @@ class base(object):
         logger.debug ('----------------------------------------------------------')
         logger.debug ('---> Inicializando tentativa [%s] de downloads dos aqruivos.' % numTentativa)
 
-        sci = SciHub()
+        sci = sc.SciHub()
         tmp_file = "%s.tmp" % self.fileOUT
         status = False
 

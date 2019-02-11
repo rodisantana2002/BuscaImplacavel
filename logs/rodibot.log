@@ -1,14 +1,21 @@
 ----------------------------------------------------------
 ---> Inicializando tentativa [1] de downloads dos aqruivos.
-05/02/2019 21:10:52 ---[ ok ] Arquivo baixado com sucesso com identificador [Alias2017]
-05/02/2019 21:10:58 ---[ ok ] Arquivo baixado com sucesso com identificador [Pogue2016]
-05/02/2019 21:11:00 ---[ ok ] Arquivo baixado com sucesso com identificador [Miller2016]
-05/02/2019 21:11:04 ---[ ok ] Arquivo baixado com sucesso com identificador [Koskela-Huotari2016]
-05/02/2019 21:11:07 ---[ ok ] Arquivo baixado com sucesso com identificador [Herterich2016]
-05/02/2019 21:11:11 ---[ ok ] Arquivo baixado com sucesso com identificador [Fujita2016]
-05/02/2019 21:11:20 ---[ ok ] Arquivo baixado com sucesso com identificador [Ekman2016]
-05/02/2019 21:11:24 ---[ ok ] Arquivo baixado com sucesso com identificador [Chen2016]
-05/02/2019 21:11:26 ---[ ok ] Arquivo baixado com sucesso com identificador [Ateetanan2016]
-05/02/2019 21:11:29 ---[ ok ] Arquivo baixado com sucesso com identificador [Yu2015]
-05/02/2019 21:11:35 ---[ ok ] Arquivo baixado com sucesso com identificador [Wu2015]
-05/02/2019 21:11:40 ---[ ok ] Arquivo baixado com sucesso com identificador [Vargo2015]
+11/02/2019 17:34:07 ---[erro] Falha: 10.1109/ICE.2018.8436258 (url) identificou uso de captcha
+11/02/2019 17:34:08 ---[ ok ] Arquivo baixado com sucesso com identificador [NAKAJIMA2018]
+11/02/2019 17:34:10 ---[erro] Falha: 10.1049/cp.2018.0023 (url) identificou uso de captcha
+11/02/2019 17:34:11 ---[ ok ] Arquivo baixado com sucesso com identificador [Kayabay2018]
+11/02/2019 17:34:13 ---[ ok ] Arquivo baixado com sucesso com identificador [Cho2018]
+11/02/2019 17:34:15 ---[erro] Falha: 10.23919/PICMET.2017.8125346 (url) identificou uso de captcha
+11/02/2019 17:34:16 ---[erro] Falha: 10.1109/ICSITech.2017.8257167 (url) identificou uso de captcha
+11/02/2019 17:34:17 ---[erro] Falha: 10.1109/ICSSSM.2017.7996146 (url) identificou uso de captcha
+11/02/2019 17:34:18 ---[ ok ] Arquivo baixado com sucesso com identificador [Alias2017]
+11/02/2019 17:34:19 ---[erro] Falha: 10.1109/IPCC.2016.7740539 (url) identificou uso de captcha
+11/02/2019 17:34:20 ---[erro] Falha: 10.1109/GlobalSIP.2016.7905865 (url) identificou uso de captcha
+11/02/2019 17:34:20 ---[erro] Falha: 10.1109/HICSS.2016.202 (url) identificou uso de captcha
+11/02/2019 17:34:22 ---[erro] Falha: 10.1109/HICSS.2016.157 (url) identificou uso de captcha
+11/02/2019 17:34:23 ---[erro] Falha: 10.1109/ICA.2016.018 (url) identificou uso de captcha
+11/02/2019 17:34:24 ---[erro] Falha: 10.1109/ISC2.2016.7580744 (url) identificou uso de captcha
+----------------------------------------------------------
+---> Inicializando tentativa [2] de downloads dos aqruivos.
+11/02/2019 17:34:25 ---[erro] Falha: 10.1109/ICE.2018.8436258 (url) identificou uso de captcha
+11/02/2019 17:34:26 ---[erro] Falha: 10.1049/cp.2018.0023 (url) identificou uso de captcha
