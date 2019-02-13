@@ -54,51 +54,51 @@ class SciHub(object):
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
         logger.debug("---> Alterando source {}".format(self.available_base_url_list[0]))
 
-    def search(self, query, limit=10, download=False):
-        """
-        Realiza uma consulta em scholar.google.com e retorna um dicionário de resultados no formulário {'papers': ...}.
-        Infelizmente, a partir de agora, os captchas podem potencialmente evitar buscas após um certo limite.
-        """
-        start = 0
-        results = {'papers': []}
+    # def search(self, query, limit=10, download=False):
+    #     """
+    #     Realiza uma consulta em scholar.google.com e retorna um dicionário de resultados no formulário {'papers': ...}.
+    #     Infelizmente, a partir de agora, os captchas podem potencialmente evitar buscas após um certo limite.
+    #     """
+    #     start = 0
+    #     results = {'papers': []}
 
-        while True:
-            try:
-                res = self.sess.get(SCHOLARS_BASE_URL, params={'q': query, 'start': start})
-            except requests.exceptions.RequestException:
-                results['err'] = '---[erro] Falha ao completar a pesquisa com a query [%s} (connection error)' % query
-                return results
+    #     while True:
+    #         try:
+    #             res = self.sess.get(SCHOLARS_BASE_URL, params={'q': query, 'start': start})
+    #         except requests.exceptions.RequestException:
+    #             results['err'] = '---[erro] Falha ao completar a pesquisa com a query [%s} (connection error)' % query
+    #             return results
 
-            s = self._get_soup(res.content)
-            papers = s.find_all('div', class_="gs_r")
+    #         s = self._get_soup(res.content)
+    #         papers = s.find_all('div', class_="gs_r")
 
-            if not papers:
-                if 'CAPTCHA' in str(res.content):
-                    results['err'] = '---[erro] Erro ao carregar pesquisa, query identificou o emprego de captcha [%s]' % query
-                return results
+    #         if not papers:
+    #             if 'CAPTCHA' in str(res.content):
+    #                 results['err'] = '---[erro] Erro ao carregar pesquisa, query identificou o emprego de captcha [%s]' % query
+    #             return results
 
-            for paper in papers:
-                if not paper.find('table'):
-                    source = None
-                    pdf = paper.find('div', class_='gs_ggs gs_fl')
-                    link = paper.find('h3', class_='gs_rt')
+    #         for paper in papers:
+    #             if not paper.find('table'):
+    #                 source = None
+    #                 pdf = paper.find('div', class_='gs_ggs gs_fl')
+    #                 link = paper.find('h3', class_='gs_rt')
 
-                    if pdf:
-                        source = pdf.find('a')['href']
-                    elif link.find('a'):
-                        source = link.find('a')['href']
-                    else:
-                        continue
+    #                 if pdf:
+    #                     source = pdf.find('a')['href']
+    #                 elif link.find('a'):
+    #                     source = link.find('a')['href']
+    #                 else:
+    #                     continue
 
-                    results['papers'].append({
-                        'name': link.text,
-                        'url': source
-                    })
+    #                 results['papers'].append({
+    #                     'name': link.text,
+    #                     'url': source
+    #                 })
 
-                    if len(results['papers']) >= limit:
-                        return results
+    #                 if len(results['papers']) >= limit:
+    #                     return results
 
-            start += 10
+    #         start += 10
 
     @retry(wait_random_min=100, wait_random_max=10000, stop_max_attempt_number=10)
     def download(self, identifier, destination='', path=None):
@@ -124,9 +124,6 @@ class SciHub(object):
             res = self.sess.get(url, verify=False)
 
             if res.headers['Content-Type'] != 'application/pdf':
-                # self._change_base_url()
-                # raise CaptchaNeedException('Falha ao buscar o pdf com o identificador [%s] '
-                #                             '(url resolvido [%s]) devido ao emprego de captcha' % (identifier, url))
                 return {'err': '---[erro] Falha: %s (url) identificou uso de captcha' % (identifier)}
             else:
                 return {
@@ -205,17 +202,12 @@ class SciHub(object):
         pdf_hash = hashlib.md5(res.content).hexdigest()
         return '%s-%s' % (pdf_hash, name[-20:])
 
-class CaptchaNeedException(Exception):
-    pass
-
 def main():
     sh = SciHub()
 
     parser = argparse.ArgumentParser(description='SciHub - To remove all barriers in the way of science.')
     parser.add_argument('-d',  '--download', metavar='(DOI|PMID|URL)', help='tenta encontrar e baixar o arquivo', type=str)
     parser.add_argument('-f',  '--file', metavar='path', help='utilizado para realizar o Download por meio arquivo com lista de URLs', type=str)
-    parser.add_argument('-s',  '--search', metavar='query', help='search Google Scholars', type=str)
-    parser.add_argument('-sd', '--search_download', metavar='query', help='pesquisa no Google Scholars and download se possivel', type=str)
     parser.add_argument('-l',  '--limit', metavar='N', help='o limite de pesquisa é limitado em:', default=10, type=int)
     parser.add_argument('-o',  '--output', metavar='path', help='diretorio para armazenar os documentos', default='', type=str)
     parser.add_argument('-v',  '--verbose', help='aumentar a verbosidade de saida', action='store_true')
@@ -234,25 +226,6 @@ def main():
             logger.debug('%s', result['err'])
         else:
             logger.debug('---[ ok ] Arquivo baixado com sucesso com identificador [%s]', args.download)
-    elif args.search:
-        results = sh.search(args.search, args.limit)
-        if 'err' in results:
-            logger.debug('%s', results['err'])
-        else:
-            logger.debug('---[ ok ] Pesquisa concluida com sucesso para a query [%s]', args.search)
-        print(results)
-    elif args.search_download:
-        results = sh.search(args.search_download, args.limit)
-        if 'err' in results:
-            logger.debug('%s', results['err'])
-        else:
-            logger.debug('---[ ok ] Pesquisa concluida com sucesso para a query [%s]', args.search_download)
-            for paper in results['papers']:
-                result = sh.download(paper['url'], args.output)
-                if 'err' in result:
-                    logger.debug('%s', result['err'])
-                else:
-                    logger.debug('---[ ok ] Arquivo baixado com sucesso com identificador [%s]', paper['url'])
     elif args.file:
         with open(args.file, 'r') as f:
             identifiers = f.read().splitlines()
