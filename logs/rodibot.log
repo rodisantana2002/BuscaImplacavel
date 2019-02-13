@@ -1,15 +1,13 @@
 ----------------------------------------------------------
 ---> Inicializando tentativa [1] de downloads dos aqruivos.
-11/02/2019 17:40:20 ---[erro] Falha: 10.1109/ICE.2018.8436258 (url) identificou uso de captcha
-11/02/2019 17:40:22 ---[erro] Falha: 10.1049/cp.2018.0023 (url) identificou uso de captcha
-11/02/2019 17:40:23 ---[erro] Falha: 10.23919/PICMET.2017.8125346 (url) identificou uso de captcha
-11/02/2019 17:40:24 ---[erro] Falha: 10.1109/ICSITech.2017.8257167 (url) identificou uso de captcha
-11/02/2019 17:40:25 ---[erro] Falha: 10.1109/ICSSSM.2017.7996146 (url) identificou uso de captcha
-11/02/2019 17:40:26 ---[erro] Falha: 10.1109/IPCC.2016.7740539 (url) identificou uso de captcha
-11/02/2019 17:40:27 ---[erro] Falha: 10.1109/GlobalSIP.2016.7905865 (url) identificou uso de captcha
-11/02/2019 17:40:28 ---[erro] Falha: 10.1109/HICSS.2016.202 (url) identificou uso de captcha
-11/02/2019 17:40:29 ---[erro] Falha: 10.1109/HICSS.2016.157 (url) identificou uso de captcha
-11/02/2019 17:40:30 ---[erro] Falha: 10.1109/ICA.2016.018 (url) identificou uso de captcha
-11/02/2019 17:40:31 ---[erro] Falha: 10.1109/ISC2.2016.7580744 (url) identificou uso de captcha
-----------------------------------------------------------
----> Inicializando tentativa [2] de downloads dos aqruivos.
+13/02/2019 18:30:28 ---[ ok ] Arquivo baixado com sucesso com identificador [NAKAJIMA2018]
+13/02/2019 18:30:30 ---[ ok ] Arquivo baixado com sucesso com identificador [Lee2018]
+13/02/2019 18:30:33 ---[ ok ] Arquivo baixado com sucesso com identificador [Kayabay2018]
+13/02/2019 18:30:35 ---[ ok ] Arquivo baixado com sucesso com identificador [Cho2018]
+13/02/2019 18:30:37 ---[ ok ] Arquivo baixado com sucesso com identificador [Sudo2017]
+13/02/2019 18:30:39 ---[ ok ] Arquivo baixado com sucesso com identificador [Pratama2017]
+13/02/2019 18:30:40 ---[ ok ] Arquivo baixado com sucesso com identificador [Hu2017]
+13/02/2019 18:30:41 ---[ ok ] Arquivo baixado com sucesso com identificador [Alias2017]
+13/02/2019 18:30:42 ---[ ok ] Arquivo baixado com sucesso com identificador [Pogue2016]
+13/02/2019 18:30:43 ---[ ok ] Arquivo baixado com sucesso com identificador [Miller2016]
+13/02/2019 18:30:44 ---[ ok ] Arquivo baixado com sucesso com identificador [Koskela-Huotari2016]
