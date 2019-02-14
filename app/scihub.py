@@ -37,7 +37,6 @@ class SciHub(object):
         self.sess.headers = HEADERS
         self.available_base_url_list = AVAILABLE_SCIHUB_BASE_URL
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
-        # requests.packages.urllib3.disable_warnings()
 
     def set_proxy(self, proxy):
         '''
@@ -167,8 +166,7 @@ def main():
     parser.add_argument('-f',  '--file', metavar='path', help='utilizado para realizar o Download por meio arquivo com lista de URLs', type=str)
     parser.add_argument('-l',  '--limit', metavar='N', help='o limite de pesquisa é limitado em:', default=10, type=int)
     parser.add_argument('-o',  '--output', metavar='path', help='diretorio para armazenar os documentos', default='', type=str)
-    parser.add_argument('-v',  '--verbose', help='aumentar a verbosidade de saida', action='store_true')
-    parser.add_argument('-p',  '--proxy', help='via proxy format like socks5://user:pass@host:port', action='store', type=str)
+
 
     args = parser.parse_args()
 
