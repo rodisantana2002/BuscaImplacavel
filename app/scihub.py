@@ -120,6 +120,7 @@ class SciHub(object):
                         LABEL = Label(root, text=USER_INPUT)
                         LABEL.pack()
 
+                print(USER_INPUT)
                 return {'err': '---[erro] Falha: %s (url) identificou uso de captcha' % (identifier)}
 
             else:
