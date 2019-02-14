@@ -13,6 +13,7 @@ import requests
 import urllib3
 from bs4 import BeautifulSoup
 from retrying import retry
+from download import download_from_doi, start_scihub
 
 # log config
 logging.basicConfig()
@@ -54,52 +55,6 @@ class SciHub(object):
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
         logger.debug("---> Alterando source {}".format(self.available_base_url_list[0]))
 
-    # def search(self, query, limit=10, download=False):
-    #     """
-    #     Realiza uma consulta em scholar.google.com e retorna um dicionário de resultados no formulário {'papers': ...}.
-    #     Infelizmente, a partir de agora, os captchas podem potencialmente evitar buscas após um certo limite.
-    #     """
-    #     start = 0
-    #     results = {'papers': []}
-
-    #     while True:
-    #         try:
-    #             res = self.sess.get(SCHOLARS_BASE_URL, params={'q': query, 'start': start})
-    #         except requests.exceptions.RequestException:
-    #             results['err'] = '---[erro] Falha ao completar a pesquisa com a query [%s} (connection error)' % query
-    #             return results
-
-    #         s = self._get_soup(res.content)
-    #         papers = s.find_all('div', class_="gs_r")
-
-    #         if not papers:
-    #             if 'CAPTCHA' in str(res.content):
-    #                 results['err'] = '---[erro] Erro ao carregar pesquisa, query identificou o emprego de captcha [%s]' % query
-    #             return results
-
-    #         for paper in papers:
-    #             if not paper.find('table'):
-    #                 source = None
-    #                 pdf = paper.find('div', class_='gs_ggs gs_fl')
-    #                 link = paper.find('h3', class_='gs_rt')
-
-    #                 if pdf:
-    #                     source = pdf.find('a')['href']
-    #                 elif link.find('a'):
-    #                     source = link.find('a')['href']
-    #                 else:
-    #                     continue
-
-    #                 results['papers'].append({
-    #                     'name': link.text,
-    #                     'url': source
-    #                 })
-
-    #                 if len(results['papers']) >= limit:
-    #                     return results
-
-    #         start += 10
-
     @retry(wait_random_min=100, wait_random_max=10000, stop_max_attempt_number=10)
     def download(self, identifier, destination='', path=None):
         """
@@ -124,6 +79,8 @@ class SciHub(object):
             res = self.sess.get(url, verify=False)
 
             if res.headers['Content-Type'] != 'application/pdf':
+                start_scihub()
+                download_from_doi(identifier)
                 return {'err': '---[erro] Falha: %s (url) identificou uso de captcha' % (identifier)}
             else:
                 return {
