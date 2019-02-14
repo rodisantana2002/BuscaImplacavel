@@ -166,14 +166,7 @@ def main():
     parser.add_argument('-f',  '--file', metavar='path', help='utilizado para realizar o Download por meio arquivo com lista de URLs', type=str)
     parser.add_argument('-l',  '--limit', metavar='N', help='o limite de pesquisa é limitado em:', default=10, type=int)
     parser.add_argument('-o',  '--output', metavar='path', help='diretorio para armazenar os documentos', default='', type=str)
-
-
     args = parser.parse_args()
-
-    if args.verbose:
-        logger.setLevel(logging.DEBUG)
-    if args.proxy:
-        sh.set_proxy(args.proxy)
 
     if args.download:
         result = sh.download(args.download, args.output)
