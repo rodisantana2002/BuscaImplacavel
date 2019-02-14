@@ -18,6 +18,10 @@ import bibtexparser
 from bs4 import BeautifulSoup
 from retrying import retry
 from capcha import Capcha
+from tkinter import *
+from PIL import Image, ImageTk
+from form import Window
+
 
 # log config
 logging.basicConfig()
@@ -102,6 +106,12 @@ class SciHub(object):
 
             if res.headers['Content-Type'] != 'application/pdf':
                 self.download_from_doi(identifier)
+
+                root = Tk()
+                root.geometry("1125x550")
+                app = Window(root)
+                root.mainloop()
+
                 return {'err': '---[erro] Falha: %s (url) identificou uso de captcha' % (identifier)}
             else:
                 return {

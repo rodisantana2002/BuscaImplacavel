@@ -1,3 +1,4 @@
+from __future__ import unicode_literals, absolute_import
 from tkinter import *
 from PIL import Image, ImageTk
 
@@ -13,16 +14,6 @@ class Window(Frame):
         self.pack(fill=BOTH, expand=2)
         self.showImg("../imagens/10.1109_ICSSSM.2012.6252346.png")
         self.showText("iden")
-        
-        # menu = Menu(self.master)
-        # self.master.config(menu=menu)
-        # file = Menu(menu)
-        # file.add_command(label="Exit", command=self.client_exit)
-        # menu.add_cascade(label="File", menu=file)
-        # edit = Menu(menu)
-        # edit.add_command(label="Show Img", command=self.showImg)
-        # edit.add_command(label="Show Text", command=self.showText)
-        # menu.add_cascade(label="Edit", menu=edit)
 
     def showImg(self, path):
         load = Image.open(path)
