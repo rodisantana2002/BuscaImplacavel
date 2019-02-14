@@ -16,7 +16,7 @@ except ImportError:
     from io import StringIO, BytesIO
 
 
-class SciHub(object):
+class Capcha(object):
     def __init__(self,
                  headers,
                  xpath_captcha="//*[@id='captcha']",

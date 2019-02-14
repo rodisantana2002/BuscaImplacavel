@@ -4,6 +4,8 @@
 """
 @author Rodolfo Santana
 """
+from __future__ import unicode_literals, absolute_import
+
 import re
 import argparse
 import hashlib
@@ -11,9 +13,11 @@ import logging
 import os
 import requests
 import urllib3
+import bibtexparser
+
 from bs4 import BeautifulSoup
 from retrying import retry
-from download import download_from_doi, start_scihub
+from capcha import Capcha
 
 # log config
 logging.basicConfig()
@@ -26,6 +30,13 @@ SCHOLARS_BASE_URL = 'https://scholar.google.com/scholar'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/20100101 Firefox/27.0'}
 AVAILABLE_SCIHUB_BASE_URL = ['sci-hub.se','sci-hub.tw']
 
+libgen_xpath_pdf_url = "/html/body/table/tr/td[3]/a"
+xpath_captcha = "//*[@id='captcha']"
+xpath_pdf = "//*[@id='pdf']"
+xpath_input = "/html/body/div/table/tbody/tr/td/form/input"
+xpath_form = "/html/body/div/table/tbody/tr/td/form"
+domain_scihub = "http://sci-hub.tw/"
+
 class SciHub(object):
     """
     SciHub class permite a pesquisa de papers no Google Scholars
@@ -37,6 +48,18 @@ class SciHub(object):
         self.sess.headers = HEADERS
         self.available_base_url_list = AVAILABLE_SCIHUB_BASE_URL
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
+        self.capcha = Capcha(HEADERS, xpath_captcha, xpath_pdf, xpath_input, xpath_form, domain_scihub)
+        self.capcha.start()
+
+    def download_from_scihub(self, doi, png_file):
+        found, r = self.capcha.navigate_to(doi, png_file)
+        has_captcha, has_iframe = self.capcha.check_captcha()
+
+
+    def download_from_doi(self, doi, location="../imagens/", use_libgen=False):
+        pdf_name = "{}".format(doi.replace("/", "_"))
+        png_file = location + pdf_name
+        self.download_from_scihub(doi, png_file)
 
     def set_proxy(self, proxy):
         '''
@@ -78,8 +101,7 @@ class SciHub(object):
             res = self.sess.get(url, verify=False)
 
             if res.headers['Content-Type'] != 'application/pdf':
-                start_scihub()
-                download_from_doi(identifier)
+                self.download_from_doi(identifier)
                 return {'err': '---[erro] Falha: %s (url) identificou uso de captcha' % (identifier)}
             else:
                 return {
