@@ -84,7 +84,7 @@ class Capcha(object):
         found = r.status_code == 200
         if found:
             self.driver.get(self.sci_url)
-            self.driver.set_window_size(1120, 550)
+            self.driver.set_window_size(1300, 550)
         else:
             print("\tSomething is wrong with sci-hub,")
             print("\tstatus_code: ", r.status_code)

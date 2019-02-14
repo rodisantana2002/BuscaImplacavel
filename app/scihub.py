@@ -18,10 +18,10 @@ import bibtexparser
 from bs4 import BeautifulSoup
 from retrying import retry
 from capcha import Capcha
+
 from tkinter import *
 from PIL import Image, ImageTk
 from form import Window
-
 
 # log config
 logging.basicConfig()
@@ -59,7 +59,6 @@ class SciHub(object):
         found, r = self.capcha.navigate_to(doi, png_file)
         has_captcha, has_iframe = self.capcha.check_captcha()
 
-
     def download_from_doi(self, doi, location="../imagens/", use_libgen=False):
         pdf_name = "{}".format(doi.replace("/", "_"))
         png_file = location + pdf_name
@@ -77,7 +76,6 @@ class SciHub(object):
                 "https": proxy, }
 
     def _change_base_url(self):
-        # del self.available_base_url_list[0]
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
         logger.debug("---> Alterando source {}".format(self.available_base_url_list[0]))
 
@@ -105,14 +103,25 @@ class SciHub(object):
             res = self.sess.get(url, verify=False)
 
             if res.headers['Content-Type'] != 'application/pdf':
+               
                 self.download_from_doi(identifier)
-
                 root = Tk()
-                root.geometry("1125x550")
+                root.geometry("1300x400")
                 app = Window(root)
-                root.mainloop()
+
+                LOOP_ACTIVE = True
+                while LOOP_ACTIVE:
+                    root.update()
+                    USER_INPUT = input("Informe o valor do captcha: ")
+                    if USER_INPUT != "":
+                        root.quit()
+                        LOOP_ACTIVE = False
+                    else:
+                        LABEL = Label(root, text=USER_INPUT)
+                        LABEL.pack()
 
                 return {'err': '---[erro] Falha: %s (url) identificou uso de captcha' % (identifier)}
+
             else:
                 return {
                     'pdf': res.content,
