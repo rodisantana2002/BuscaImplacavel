@@ -1,7 +1,6 @@
 from tkinter import *
 from PIL import Image, ImageTk
 
-
 class Window(Frame):
 
     def __init__(self, master=None):
@@ -12,7 +11,8 @@ class Window(Frame):
     def init_window(self):
         self.master.title("Identificador de Captcha")
         self.pack(fill=BOTH, expand=2)
-        self.showImg()
+        self.showImg("../imagens/10.1109_ICSSSM.2012.6252346.png")
+        self.showText("iden")
         
         # menu = Menu(self.master)
         # self.master.config(menu=menu)
@@ -24,15 +24,15 @@ class Window(Frame):
         # edit.add_command(label="Show Text", command=self.showText)
         # menu.add_cascade(label="Edit", menu=edit)
 
-    def showImg(self):
-        load = Image.open("../imagens/10.1109_ICSSSM.2012.6252346.png")
+    def showImg(self, path):
+        load = Image.open(path)
         render = ImageTk.PhotoImage(load)
         img = Label(self, image=render)
         img.image = render
         img.place(x=0, y=0)
 
-    def showText(self):
-        text = Label(self, text="Hey there good lookin!")
+    def showText(self, title):
+        text = Label(self, text=title, font=("Helvetica", 16), height=(2))
         text.pack()
 
     def client_exit(self):
