@@ -2,9 +2,7 @@ from __future__ import unicode_literals, absolute_import
 from tkinter import *
 from PIL import Image, ImageTk
 
-
 class Window(Frame):
-
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.master = master
@@ -13,8 +11,8 @@ class Window(Frame):
     def init_window(self):
         self.master.title("Identificador de Captcha")
         self.pack(fill=BOTH, expand=2)
-        self.showTitulo("iden")
-        self.showImg("../imagens/10.1109_ICSSSM.2012.6252346.png")
+        self.showTitulo("Identificador: ")
+        self.showImg("../imagens/10.1109_ROMAN.2014.6926404.png")
 
     def showImg(self, path):
         load = Image.open(path)

@@ -1,3 +1,53 @@
 ----------------------------------------------------------
 ---> Inicializando tentativa [1] de downloads dos aqruivos.
-13/02/2019 22:15:21 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+15/02/2019 14:10:50 ---[erro] Falha: 10.1109/IPCC.2016.7740539 (url) identificou uso de captcha
+15/02/2019 14:10:52 ---[erro] Falha: 10.1109/GlobalSIP.2016.7905865 (url) identificou uso de captcha
+15/02/2019 14:10:53 ---[erro] Falha: 10.1109/HICSS.2016.202 (url) identificou uso de captcha
+15/02/2019 14:10:54 ---[erro] Falha: 10.1109/HICSS.2016.157 (url) identificou uso de captcha
+15/02/2019 14:10:56 ---[erro] Falha: 10.1109/ICA.2016.018 (url) identificou uso de captcha
+15/02/2019 14:10:57 ---[erro] Falha: 10.1109/ISC2.2016.7580744 (url) identificou uso de captcha
+15/02/2019 14:10:58 ---[erro] Falha: 10.1109/HICSS.2016.631 (url) identificou uso de captcha
+15/02/2019 14:10:59 ---[erro] Falha: 10.1109/PICMET.2016.7806708 (url) identificou uso de captcha
+15/02/2019 14:11:00 ---[erro] Falha: 10.1109/ICSSSM.2015.7170250 (url) identificou uso de captcha
+15/02/2019 14:11:01 ---[erro] Falha: 10.1109/ICSSSM.2015.7170258 (url) identificou uso de captcha
+15/02/2019 14:11:02 ---[erro] Falha: 10.1109/HICSS.2015.166 (url) identificou uso de captcha
+15/02/2019 14:11:02 ---[erro] Falha: 10.1109/ICC.2015.7248363 (url) identificou uso de captcha
+15/02/2019 14:11:03 ---[erro] Falha: 10.1109/IPCC.2015.7235824 (url) identificou uso de captcha
+15/02/2019 14:11:04 ---[erro] Falha: 10.1109/PICMET.2015.7273086 (url) identificou uso de captcha
+15/02/2019 14:11:05 ---[erro] Falha: 10.1109/HICSS.2015.174 (url) identificou uso de captcha
+15/02/2019 14:11:06 ---[erro] Falha: 10.1109/CISTI.2015.7170561 (url) identificou uso de captcha
+15/02/2019 14:11:07 ---[erro] Falha: 10.1109/SOLI.2014.6960702 (url) identificou uso de captcha
+15/02/2019 14:11:08 ---[erro] Falha: 10.1109/SOLI.2014.6960715 (url) identificou uso de captcha
+15/02/2019 14:11:08 ---[erro] Falha: 10.1109/HICSS.2014.165 (url) identificou uso de captcha
+15/02/2019 14:11:09 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+15/02/2019 14:11:10 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+15/02/2019 14:11:11 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+15/02/2019 14:11:12 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+15/02/2019 14:11:12 ---[erro] Falha: 10.1109/HICSS.2014.170 (url) identificou uso de captcha
+15/02/2019 14:11:13 ---[erro] Falha: 10.1109/ICMIT.2014.6942444 (url) identificou uso de captcha
+15/02/2019 14:11:14 ---[erro] Falha: 10.1109/CBI.2014.23 (url) identificou uso de captcha
+15/02/2019 14:11:15 ---[erro] Falha: 10.1109/ICSSSM.2014.6874039 (url) identificou uso de captcha
+15/02/2019 14:11:16 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+15/02/2019 14:11:17 ---[erro] Falha: 10.1109/ROMAN.2014.6926404 (url) identificou uso de captcha
+15/02/2019 14:11:18 ---[erro] Falha: 10.1109/HICSS.2014.562 (url) identificou uso de captcha
+15/02/2019 14:11:19 ---[erro] Falha: 10.1109/HICSS.2013.158 (url) identificou uso de captcha
+15/02/2019 14:11:20 ---[erro] Falha: 10.1109/ICIII.2013.6702964 (url) identificou uso de captcha
+15/02/2019 14:11:21 ---[erro] Falha: 10.1109/ICSSSM.2013.6602612 (url) identificou uso de captcha
+15/02/2019 14:11:22 ---[erro] Falha: 10.1109/HICSS.2013.221 (url) identificou uso de captcha
+15/02/2019 14:11:23 ---[erro] Falha: 10.1109/SOLI.2013.6611471 (url) identificou uso de captcha
+15/02/2019 14:11:24 ---[erro] Falha: 10.1109/ICSSI.2013.12 (url) identificou uso de captcha
+15/02/2019 14:11:24 ---[erro] Falha: 10.1109/ICSSSM.2013.6602624 (url) identificou uso de captcha
+15/02/2019 14:11:25 ---[erro] Falha: 10.1109/ICSSSM.2013.6602540 (url) identificou uso de captcha
+15/02/2019 14:11:26 ---[erro] Falha: 10.1109/ICSSI.2013.15 (url) identificou uso de captcha
+15/02/2019 14:11:27 ---[erro] Falha: 10.1109/CBI.2013.34 (url) identificou uso de captcha
+15/02/2019 14:11:28 ---[erro] Falha: 10.1109/ICRIIS.2013.6716735 (url) identificou uso de captcha
+15/02/2019 14:11:29 ---[erro] Falha: 10.1109/ICSSI.2013.51 (url) identificou uso de captcha
+15/02/2019 14:11:29 ---[erro] Falha: 10.1109/HICSS.2013.393 (url) identificou uso de captcha
+15/02/2019 14:11:30 ---[erro] Falha: 10.1109/HICSS.2013.56 (url) identificou uso de captcha
+15/02/2019 14:11:31 ---[erro] Falha: 10.1109/CBI.2013.32 (url) identificou uso de captcha
+15/02/2019 14:11:32 ---[erro] Falha: 10.1109/ICCNC.2013.6504105 (url) identificou uso de captcha
+----------------------------------------------------------
+---> Inicializando tentativa [2] de downloads dos aqruivos.
+15/02/2019 14:11:34 ---[erro] Falha: 10.1109/IPCC.2016.7740539 (url) identificou uso de captcha
+15/02/2019 14:11:35 ---[erro] Falha: 10.1109/GlobalSIP.2016.7905865 (url) identificou uso de captcha
+15/02/2019 14:11:36 ---[erro] Falha: 10.1109/HICSS.2016.202 (url) identificou uso de captcha

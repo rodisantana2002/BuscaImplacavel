@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # encoding: iso-8859-1
 
+
 """
 @author Rodolfo Santana
 """
@@ -22,6 +23,7 @@ from capcha import Capcha
 from tkinter import *
 from PIL import Image, ImageTk
 from form import Window
+import io
 
 # log config
 logging.basicConfig()
@@ -52,17 +54,18 @@ class SciHub(object):
         self.sess.headers = HEADERS
         self.available_base_url_list = AVAILABLE_SCIHUB_BASE_URL
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
-        self.capcha = Capcha(HEADERS, xpath_captcha, xpath_pdf, xpath_input, xpath_form, domain_scihub)
-        self.capcha.start()
 
-    def download_from_scihub(self, doi, png_file):
-        found, r = self.capcha.navigate_to(doi, png_file)
-        has_captcha, has_iframe = self.capcha.check_captcha()
+        # self.capcha = Capcha(HEADERS, xpath_captcha, xpath_pdf, xpath_input, xpath_form, domain_scihub)
+        # self.capcha.start()
 
-    def download_from_doi(self, doi, location="../imagens/", use_libgen=False):
-        pdf_name = "{}".format(doi.replace("/", "_"))
-        png_file = location + pdf_name
-        self.download_from_scihub(doi, png_file)
+    # def download_from_scihub(self, doi, png_file):
+    #     found, r = self.capcha.navigate_to(doi, png_file)
+    #     has_captcha, has_iframe = self.capcha.check_captcha()
+
+    # def download_from_doi(self, doi, location="../imagens/", use_libgen=False):
+    #     pdf_name = "{}".format(doi.replace("/", "_"))
+    #     png_file = location + pdf_name
+    #     self.download_from_scihub(doi, png_file)
 
     def set_proxy(self, proxy):
         '''
@@ -102,27 +105,49 @@ class SciHub(object):
             url = self._get_direct_url(identifier)
             res = self.sess.get(url, verify=False)
 
-            if res.headers['Content-Type'] != 'application/pdf':
-               
-                self.download_from_doi(identifier)
-                root = Tk()
-                root.geometry("1300x400")
-                app = Window(root)
+            if res.headers['Content-Type'] != 'application/pdf':   
+                logger.debug(res.content)
 
-                LOOP_ACTIVE = True
-                while LOOP_ACTIVE:
-                    root.update()
-                    USER_INPUT = input("Informe o valor do captcha: ")
-                    if USER_INPUT != "":
-                        root.quit()
-                        LOOP_ACTIVE = False
-                    else:
-                        LABEL = Label(root, text=USER_INPUT)
-                        LABEL.pack()
+                soup = BeautifulSoup(res.content, 'lxml')
+            
+                images = [img for img in soup.findAll('img')]
+                print(str(len(images)) + "images found.")
 
-                print(USER_INPUT)
+                image_links = [each.get('src') for each in images]
+                for each in image_links:
+                    filename = each.split('/')[-1]
+                    print(url + "/" + filename)
+
+                    # response = requests.get(url + "/" + filename)
+
+                    # with open('img.jpg', 'wb') as f:
+                    #     f.write(response.content)
+
+                # im = Image.open('../imagens/10.1109_ROMAN.2014.6926404.png')
+                # #Display image
+                # imshow()
+
+
+
+                # self.download_from_doi(identifier)
+                # root = Tk()
+                # root.geometry("1300x400")
+                # app = Window(root)
+
+                # LOOP_ACTIVE = True
+                # while LOOP_ACTIVE:
+                #     root.update()
+                #     USER_INPUT = input("Informe o valor do captcha: ")
+                #     if USER_INPUT != "":
+                #         root.quit()
+                #         LOOP_ACTIVE = False
+                #     else:
+                #         LABEL = Label(root, text=USER_INPUT)
+                #         LABEL.pack()
+
+                # # print(USER_INPUT)
+
                 return {'err': '---[erro] Falha: %s (url) identificou uso de captcha' % (identifier)}
-
             else:
                 return {
                     'pdf': res.content,
