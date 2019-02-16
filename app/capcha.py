@@ -81,6 +81,8 @@ class Capcha(object):
         self.pdf_file = pdf_file
         self.sci_url = self.domain_scihub+doi
         r = requests.get(self.sci_url)
+        print("----------------------------------------------------------------\n")
+        print (r.content)
         found = r.status_code == 200
         if found:
             self.driver.get(self.sci_url)

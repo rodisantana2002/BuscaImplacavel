@@ -82,7 +82,7 @@ class SciHub(object):
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
         logger.debug("---> Alterando source {}".format(self.available_base_url_list[0]))
 
-    @retry(wait_random_min=100, wait_random_max=10000, stop_max_attempt_number=10)
+    @retry(wait_random_min=100, wait_random_max=10000, stop_max_attempt_number=4)
     def download(self, identifier, destination='', path=None):
         """
         Faz o download de um documento do sci-hub com um identificador (DOI, PMID, URL).
@@ -106,19 +106,21 @@ class SciHub(object):
             res = self.sess.get(url, verify=False)
 
             if res.headers['Content-Type'] != 'application/pdf':   
-                logger.debug(res.content)
+                # self.download_from_doi(identifier)
+                
+                # logger.debug(res.content)
 
-                soup = BeautifulSoup(res.content, 'lxml')
+                # soup = BeautifulSoup(res.content, 'lxml')
             
-                images = [img for img in soup.findAll('img')]
-                print(str(len(images)) + "images found.")
+                # images = [img for img in soup.findAll('img')]
+                # print(str(len(images)) + "images found.")
 
-                image_links = [each.get('src') for each in images]
-                for each in image_links:
-                    filename = each.split('/')[-1]
-                    print(url + "/" + filename)
+                # image_links = [each.get('src') for each in images]
+                # for each in image_links:
+                #     filename = each.split('/')[-1]
+                #     print(url + "/" + filename)
 
-                    # response = requests.get(url + "/" + filename)
+                #     # response = requests.get(url + "/" + filename)
 
                     # with open('img.jpg', 'wb') as f:
                     #     f.write(response.content)
@@ -129,7 +131,7 @@ class SciHub(object):
 
 
 
-                # self.download_from_doi(identifier)
+
                 # root = Tk()
                 # root.geometry("1300x400")
                 # app = Window(root)
