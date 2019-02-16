@@ -14,16 +14,14 @@ import logging
 import os
 import requests
 import urllib3
-import bibtexparser
 
+from PIL import Image, ImageTk
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.keys import Keys
 from bs4 import BeautifulSoup
 from retrying import retry
-from capcha import Capcha
-
-from tkinter import *
 from PIL import Image, ImageTk
-from form import Window
-import io
 
 # log config
 logging.basicConfig()
@@ -32,16 +30,8 @@ logger.setLevel(logging.DEBUG)
 
 # constants
 SCIHUB_BASE_URL = 'http://sci-hub.tw/'
-SCHOLARS_BASE_URL = 'https://scholar.google.com/scholar'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/20100101 Firefox/27.0'}
 AVAILABLE_SCIHUB_BASE_URL = ['sci-hub.se','sci-hub.tw']
-
-libgen_xpath_pdf_url = "/html/body/table/tr/td[3]/a"
-xpath_captcha = "//*[@id='captcha']"
-xpath_pdf = "//*[@id='pdf']"
-xpath_input = "/html/body/div/table/tbody/tr/td/form/input"
-xpath_form = "/html/body/div/table/tbody/tr/td/form"
-domain_scihub = "http://sci-hub.tw/"
 
 class SciHub(object):
     """
@@ -55,18 +45,6 @@ class SciHub(object):
         self.available_base_url_list = AVAILABLE_SCIHUB_BASE_URL
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
 
-        # self.capcha = Capcha(HEADERS, xpath_captcha, xpath_pdf, xpath_input, xpath_form, domain_scihub)
-        # self.capcha.start()
-
-    # def download_from_scihub(self, doi, png_file):
-    #     found, r = self.capcha.navigate_to(doi, png_file)
-    #     has_captcha, has_iframe = self.capcha.check_captcha()
-
-    # def download_from_doi(self, doi, location="../imagens/", use_libgen=False):
-    #     pdf_name = "{}".format(doi.replace("/", "_"))
-    #     png_file = location + pdf_name
-    #     self.download_from_scihub(doi, png_file)
-
     def set_proxy(self, proxy):
         '''
         set proxy for session
@@ -74,15 +52,13 @@ class SciHub(object):
         :return:
         '''
         if proxy:
-            self.sess.proxies = {
-                "http": proxy,
-                "https": proxy, }
+            self.sess.proxies = {"http": proxy, "https": proxy, }
 
     def _change_base_url(self):
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
         logger.debug("---> Alterando source {}".format(self.available_base_url_list[0]))
 
-    @retry(wait_random_min=100, wait_random_max=10000, stop_max_attempt_number=4)
+    @retry(wait_random_min=100, wait_random_max=10000, stop_max_attempt_number=3)
     def download(self, identifier, destination='', path=None):
         """
         Faz o download de um documento do sci-hub com um identificador (DOI, PMID, URL).
@@ -106,50 +82,25 @@ class SciHub(object):
             res = self.sess.get(url, verify=False)
 
             if res.headers['Content-Type'] != 'application/pdf':   
-                # self.download_from_doi(identifier)
-                
-                # logger.debug(res.content)
+                driver = webdriver.Chrome(ChromeDriverManager().install())
+                driver.get(url)
 
-                # soup = BeautifulSoup(res.content, 'lxml')
-            
-                # images = [img for img in soup.findAll('img')]
-                # print(str(len(images)) + "images found.")
+                elem = driver.find_element_by_name("answer")
+                strCaptcha = input("informe o capctha: ")                
+                elem.send_keys(strCaptcha)
+                elem.submit()
+                res = self.sess.get(driver.current_url, verify=False)
+                driver.close()
 
-                # image_links = [each.get('src') for each in images]
-                # for each in image_links:
-                #     filename = each.split('/')[-1]
-                #     print(url + "/" + filename)
+                if res.headers['Content-Type'] != 'application/pdf':
+                    return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
 
-                #     # response = requests.get(url + "/" + filename)
-
-                    # with open('img.jpg', 'wb') as f:
-                    #     f.write(response.content)
-
-                # im = Image.open('../imagens/10.1109_ROMAN.2014.6926404.png')
-                # #Display image
-                # imshow()
-
-
-
-
-                # root = Tk()
-                # root.geometry("1300x400")
-                # app = Window(root)
-
-                # LOOP_ACTIVE = True
-                # while LOOP_ACTIVE:
-                #     root.update()
-                #     USER_INPUT = input("Informe o valor do captcha: ")
-                #     if USER_INPUT != "":
-                #         root.quit()
-                #         LOOP_ACTIVE = False
-                #     else:
-                #         LABEL = Label(root, text=USER_INPUT)
-                #         LABEL.pack()
-
-                # # print(USER_INPUT)
-
-                return {'err': '---[erro] Falha: %s (url) identificou uso de captcha' % (identifier)}
+                else:    
+                    return {
+                        'pdf': res.content,
+                        'url': url,
+                        'name': self._generate_name(res)
+                    }
             else:
                 return {
                     'pdf': res.content,
@@ -252,7 +203,6 @@ def main():
                     logger.debug('%s', result['err'])
                 else:
                     logger.debug('---[ ok ] Arquivo baixado com sucesso com identificador [%s]', identifier)
-
 
 if __name__ == '__main__':
     main()
