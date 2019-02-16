@@ -14,6 +14,7 @@ logger = logging.getLogger('Log.')
 logger.setLevel(logging.DEBUG)
 arqBase='../bases/source.csv'
 
+
 class conversor(object):
     # construtor
     def __init__(self, origem, destino, limiteInf, limiteSup):
@@ -86,24 +87,28 @@ class conversor(object):
                 count = 1
                 for row in reader:
                     if count >= self.limiteInf and count <= self.limiteSup:
-                        writer.writerow({'id':row['Identifier'],
-                                         'title':row['Title'],
-                                         'year':row['Year'],
-                                         'author':row['Author'],
-                                         'doi':row['DOI'],
-                                         'url':row['URL'],
-                                         'keywords':row['Custom3'],
-                                         'tipo':row['Publisher'],
-                                         'base':row['BibliographyType'],
-                                         'situacao':'pendente',
-                                         'numTentativas':'none',
-                                         'possuiCaptcha':'none',
-                                         'valorCaptcha':'none',
-                                         'msgRetorno':''
-                                        })
+                        if row['DOI'] != '':
+                            writer.writerow({'id':row['Identifier'],
+                                            'title':row['Title'],
+                                            'year':row['Year'],
+                                            'author':row['Author'],
+                                            'doi':row['DOI'],
+                                            'url':row['URL'],
+                                            'keywords':row['Custom3'],
+                                            'tipo':row['Publisher'],
+                                            'base':row['BibliographyType'],
+                                            'situacao':'pendente',
+                                            'numTentativas':'none',
+                                            'possuiCaptcha':'none',
+                                            'valorCaptcha':'none',
+                                            'msgRetorno':''
+                                            })
 
-                        strLog = '---> {0} - {1}'.format(row['Identifier'], row['DOI'])
-                        logger.debug(strLog)
+                            strLog = '---> {0} - {1}'.format(row['Identifier'], row['DOI'])
+                            logger.debug(strLog)
+                        else:
+                            strLog = '---> [erro] {0} - artigo nao possui DOI, ele foi removido da conversao'.format(row['Identifier']) 
+                            logger.debug(strLog)
                     count+=1
 
     def _carregarIEEE(self, arquivo):
@@ -117,24 +122,28 @@ class conversor(object):
                 count = 1
                 for row in reader:
                     if count >= self.limiteInf and count <= self.limiteSup:
-                        writer.writerow({'id': 'IEEE-{0}-{1}'.format(row['Publication_Year'], count),
-                                         'title':row['Document Title'],
-                                         'year':row['Publication_Year'],
-                                         'author':row['Authors'],
-                                         'doi':row['DOI'],
-                                         'url':row['PDF Link'],
-                                         'keywords':'none',
-                                         'tipo':row['Publisher'],
-                                         'base':row['Document Identifier'],
-                                         'situacao':'pendente',
-                                         'numTentativas':'none',
-                                         'possuiCaptcha':'none',
-                                         'valorCaptcha':'none',
-                                         'msgRetorno':''
-                                        })
+                        if row['DOI'] != '':
+                            writer.writerow({'id': 'IEEE-{0}-{1}'.format(row['Publication_Year'], count),
+                                            'title':row['Document Title'],
+                                            'year':row['Publication_Year'],
+                                            'author':row['Authors'],
+                                            'doi':row['DOI'],
+                                            'url':row['PDF Link'],
+                                            'keywords':'none',
+                                            'tipo':row['Publisher'],
+                                            'base':row['Document Identifier'],
+                                            'situacao':'pendente',
+                                            'numTentativas':'none',
+                                            'possuiCaptcha':'none',
+                                            'valorCaptcha':'none',
+                                            'msgRetorno':''
+                                            })
 
-                        strLog = '---> {0} - {1}'.format(row['Publication_Year'], row['DOI'])
-                        logger.debug(strLog)
+                            strLog = '---> {0} - {1}'.format(row['Publication_Year'], row['DOI'])
+                            logger.debug(strLog)
+                        else:
+                            strLog = '---> [erro] {0} - artigo nao possui DOI, ele foi removido da conversao'.format(row['Publication_Year'])
+                            logger.debug(strLog)
                     count+=1
 
     def _carregarSpringer(self, arquivo):
@@ -148,24 +157,28 @@ class conversor(object):
                 count = 1
                 for row in reader:
                     if count >= self.limiteInf and count <= self.limiteSup:
-                        writer.writerow({'id':'Springer-{0}-{1}'.format(row['Publication Year'], count),
-                                         'title':row['Item Title'],
-                                         'year':row['Publication Year'],
-                                         'author':row['Authors'],
-                                         'doi':row['Item DOI'],
-                                         'url':row['URL'],
-                                         'keywords':'none',
-                                         'tipo':'Springer',
-                                         'base':row['Content Type'],
-                                         'situacao':'pendente',
-                                         'numTentativas':'none',
-                                         'possuiCaptcha':'none',
-                                         'valorCaptcha':'none',
-                                         'msgRetorno':''
-                                        })
+                        if row['Item DOI'] != '':
+                            writer.writerow({'id':'Springer-{0}-{1}'.format(row['Publication Year'], count),
+                                            'title':row['Item Title'],
+                                            'year':row['Publication Year'],
+                                            'author':row['Authors'],
+                                            'doi':row['Item DOI'],
+                                            'url':row['URL'],
+                                            'keywords':'none',
+                                            'tipo':'Springer',
+                                            'base':row['Content Type'],
+                                            'situacao':'pendente',
+                                            'numTentativas':'none',
+                                            'possuiCaptcha':'none',
+                                            'valorCaptcha':'none',
+                                            'msgRetorno':''
+                                            })
 
-                        strLog = '---> {0} - {1}'.format(row['Publication Year'], row['Item DOI'])
-                        logger.debug(strLog)
+                            strLog = '---> {0} - {1}'.format(row['Publication Year'], row['Item DOI'])
+                            logger.debug(strLog)
+                        else:
+                            strLog = '---> [erro] {0} - artigo nao possui DOI, ele foi removido da conversao'.format(row['Publication Year'])
+                            logger.debug(strLog)
                     count+=1
 
     def _carregarACM(self, arquivo):
@@ -179,24 +192,28 @@ class conversor(object):
                 count = 1
                 for row in reader:
                     if count >= self.limiteInf and count <= self.limiteSup:
-                        writer.writerow({'id':'ACM-{0}-{1}'.format(row['id'], row['year']),
-                                         'title':row['title'],
-                                         'year':row['year'],
-                                         'author':row['author'],
-                                         'doi':row['doi'],
-                                         'url':'none',
-                                         'keywords':'none',
-                                         'tipo':row['publisher'],
-                                         'base':row['type'],
-                                         'situacao':'pendente',
-                                         'numTentativas':'none',
-                                         'possuiCaptcha':'none',
-                                         'valorCaptcha':'none',
-                                         'msgRetorno':''
-                                        })
+                        if row['doi'] != '':
+                            writer.writerow({'id':'ACM-{0}-{1}'.format(row['id'], row['year']),
+                                            'title':row['title'],
+                                            'year':row['year'],
+                                            'author':row['author'],
+                                            'doi':row['doi'],
+                                            'url':'none',
+                                            'keywords':'none',
+                                            'tipo':row['publisher'],
+                                            'base':row['type'],
+                                            'situacao':'pendente',
+                                            'numTentativas':'none',
+                                            'possuiCaptcha':'none',
+                                            'valorCaptcha':'none',
+                                            'msgRetorno':''
+                                            })
 
-                        strLog = '---> {0} - {1}'.format(row['id'], row['doi'])
-                        logger.debug(strLog)
+                            strLog = '---> {0} - {1}'.format(row['id'], row['doi'])
+                            logger.debug(strLog)
+                        else:
+                            strLog = '---> [erro] {0} - artigo nao possui DOI, ele foi removido da conversao'.format(row['id'])
+                            logger.debug(strLog)
                     count+=1
 
     def _carregarScience(self, arquivo):
@@ -211,24 +228,28 @@ class conversor(object):
                 count = 1
                 for row in reader:
                     if count >= self.limiteInf and count <= self.limiteSup:
-                        writer.writerow({'id':row['Identifier'],
-                                         'title':row['Title'],
-                                         'year':row['Year'],
-                                         'author':row['Author'],
-                                         'doi':row['DOI'],
-                                         'url':row['URL'],
-                                         'keywords':'none',
-                                         'tipo':row['Publisher'],
-                                         'base':row['BibliographyType'],
-                                         'situacao':'pendente',
-                                         'numTentativas':'none',
-                                         'possuiCaptcha':'none',
-                                         'valorCaptcha':'none',
-                                         'msgRetorno':''
-                                        })
+                        if row['DOI'] != '':
+                            writer.writerow({'id':row['Identifier'],
+                                            'title':row['Title'],
+                                            'year':row['Year'],
+                                            'author':row['Author'],
+                                            'doi':row['DOI'],
+                                            'url':row['URL'],
+                                            'keywords':'none',
+                                            'tipo':row['Publisher'],
+                                            'base':row['BibliographyType'],
+                                            'situacao':'pendente',
+                                            'numTentativas':'none',
+                                            'possuiCaptcha':'none',
+                                            'valorCaptcha':'none',
+                                            'msgRetorno':''
+                                            })
 
-                        strLog = '---> {0} - {1}'.format(row['Identifier'], row['DOI'])
-                        logger.debug(strLog)
+                            strLog = '---> {0} - {1}'.format(row['Identifier'], row['DOI'])
+                            logger.debug(strLog)
+                        else:
+                            strLog = '---> [erro] {0} - artigo nao possui DOI, ele foi removido da conversao'.format(row['identifier'])
+                            logger.debug(strLog)
                     count+=1
 
 # carrega script
