@@ -2,3 +2,8 @@ beautifulsoup4
 requests
 retrying
 pysocks
+retry
+selenium
+PIL
+urllib3
+phantomjs

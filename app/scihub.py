@@ -21,7 +21,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
 from bs4 import BeautifulSoup
 from retrying import retry
-from PIL import Image, ImageTk
+import urllib.request
 
 # log config
 logging.basicConfig()
@@ -29,9 +29,8 @@ logger = logging.getLogger('Log.')
 logger.setLevel(logging.DEBUG)
 
 # constants
-SCIHUB_BASE_URL = 'http://sci-hub.tw/'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/20100101 Firefox/27.0'}
-AVAILABLE_SCIHUB_BASE_URL = ['sci-hub.se','sci-hub.tw']
+AVAILABLE_SCIHUB_BASE_URL = ['sci-hub.se','sci-hub.fun']
 
 class SciHub(object):
     """
@@ -39,11 +38,12 @@ class SciHub(object):
     e lista e baixa os arquivos do sci-hub.io
     """
 
-    def __init__(self):
+    def __init__(self, viewPDF=False):
         self.sess = requests.Session()
         self.sess.headers = HEADERS
         self.available_base_url_list = AVAILABLE_SCIHUB_BASE_URL
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
+        self.viewPDF = viewPDF
 
     def set_proxy(self, proxy):
         '''
@@ -55,10 +55,13 @@ class SciHub(object):
             self.sess.proxies = {"http": proxy, "https": proxy, }
 
     def _change_base_url(self):
+        if len(self.available_base_url_list) > 1:
+            del self.available_base_url_list[0]
+
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
         logger.debug("---> Alterando source {}".format(self.available_base_url_list[0]))
 
-    @retry(wait_random_min=100, wait_random_max=10000, stop_max_attempt_number=3)
+    @retry(wait_random_min=100, wait_random_max=5000, stop_max_attempt_number=3)
     def download(self, identifier, destination='', path=None):
         """
         Faz o download de um documento do sci-hub com um identificador (DOI, PMID, URL).
@@ -82,25 +85,51 @@ class SciHub(object):
             res = self.sess.get(url, verify=False)
 
             if res.headers['Content-Type'] != 'application/pdf':   
-                driver = webdriver.Chrome(ChromeDriverManager().install())
-                driver.get(url)
+                # view sem abertura do Browser
+                if self.viewPDF:
+                    # View com abertura do Browser
+                    driver = webdriver.Chrome(ChromeDriverManager().install())
+                    driver.get(url)
 
-                elem = driver.find_element_by_name("answer")
-                strCaptcha = input("informe o capctha: ")                
-                elem.send_keys(strCaptcha)
-                elem.submit()
-                res = self.sess.get(driver.current_url, verify=False)
+                    elem = driver.find_element_by_name("answer")
+                    strCaptcha = input("informe o capctha: ")
+                    elem.send_keys(strCaptcha)
+                    elem.submit()
+                    res = self.sess.get(driver.current_url, verify=False)
+
+                else:     
+                    # View com abertura do Browser
+                    driver = webdriver.PhantomJS()
+                    driver.get(url)
+
+                    driver.set_window_size(1300, 550)
+                    images = driver.find_elements_by_tag_name('img')
+
+                    for image in images:
+                        src = image.get_attribute('src')
+                        name = identifier.split('/')[-1]
+                        urllib.request.urlretrieve(src, "../imagens/" + name + ".png")
+                        im = Image.open("../imagens/" + name + ".png")
+                        im.show()
+
+                    elem = driver.find_element_by_name("answer")
+                    strCaptcha = input("informe o capctha: ")
+                    elem.send_keys(strCaptcha)
+                    elem.submit()
+                    res = self.sess.get(driver.current_url, verify=False)
+
                 driver.close()
 
                 if res.headers['Content-Type'] != 'application/pdf':
                     return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
 
-                else:    
+                else:
                     return {
                         'pdf': res.content,
                         'url': url,
                         'name': self._generate_name(res)
                     }
+
             else:
                 return {
                     'pdf': res.content,
