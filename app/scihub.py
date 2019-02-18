@@ -61,7 +61,7 @@ class SciHub(object):
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
         logger.debug("---> Alterando source {}".format(self.available_base_url_list[0]))
 
-    @retry(wait_random_min=100, wait_random_max=5000, stop_max_attempt_number=3)
+    @retry(wait_random_min=2000, wait_random_max=10000, stop_max_attempt_number=3)
     def download(self, identifier, destination='', path=None):
         """
         Faz o download de um documento do sci-hub com um identificador (DOI, PMID, URL).
