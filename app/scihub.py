@@ -105,18 +105,21 @@ class SciHub(object):
                     driver.set_window_size(1300, 550)
                     images = driver.find_elements_by_tag_name('img')
 
-                    for image in images:
-                        src = image.get_attribute('src')
-                        name = identifier.split('/')[-1]
-                        urllib.request.urlretrieve(src, "../imagens/" + name + ".png")
-                        im = Image.open("../imagens/" + name + ".png")
-                        im.show()
+                    if len(images)>0:    
+                        for image in images:
+                            src = image.get_attribute('src')
+                            name = identifier.split('/')[-1]
+                            urllib.request.urlretrieve(src, "../imagens/" + name + ".png")
+                            im = Image.open("../imagens/" + name + ".png")
+                            im.show()
 
-                    elem = driver.find_element_by_name("answer")
-                    strCaptcha = input("informe o capctha: ")
-                    elem.send_keys(strCaptcha)
-                    elem.submit()
-                    res = self.sess.get(driver.current_url, verify=False)
+                        elem = driver.find_element_by_name("answer")                        
+                        strCaptcha = input("informe o capctha: ")
+                        elem.send_keys(strCaptcha)
+                        elem.submit()
+                        res = self.sess.get(driver.current_url, verify=False)
+                    else:
+                        return {'err': '---[erro] Falha: %s (url) não foi localizada a imagem do captcha, verifique manualmente o DOI' % (identifier)}
 
                 driver.close()
 

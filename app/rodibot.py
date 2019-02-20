@@ -43,7 +43,7 @@ class base(object):
         logger.debug ('----------------------------------------------------------')
         logger.debug ('---> Inicializando tentativa [%s] de downloads dos aqruivos.' % numTentativa)
 
-        sci = sc.SciHub(viewPDF=False)
+        sci = sc.SciHub(viewPDF=True)
         tmp_file = "%s.tmp" % self.fileOUT
         status = False
 
