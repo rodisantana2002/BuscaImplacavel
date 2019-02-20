@@ -93,7 +93,7 @@ class base(object):
                                              'valorCaptcha':'none',
                                              'msgRetorno': 'Arquivo baixado com sucesso'
                                             })
-                            logger.debug('%s ---[ ok ] Arquivo baixado com sucesso com identificador [%s]', data_atual, row['id'] + ".pdf")
+                            logger.debug('---> %s --[ ok ] Arquivo baixado com sucesso com identificador [%s]', data_atual, row['id'] + ".pdf")
         os.rename(tmp_file, self.fileOUT)
         return status
 
@@ -106,6 +106,8 @@ def main():
         condicao = bs.processarDownload(tentativa)
         tentativa+=1
 
+    logger.debug('----------------------------------------------------------')
+    logger.debug('---> Encerrando processo de download de arquivo.')
 
 if __name__ == '__main__':
     main()
