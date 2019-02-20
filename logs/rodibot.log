@@ -1,7 +1,12 @@
 ----------------------------------------------------------
----> Inicializando tentativa [1] de downloads dos aqruivos.
----> 20/02/2019 12:18:11 --[ ok ] Arquivo baixado com sucesso com identificador [Pratama2017.pdf]
----> 20/02/2019 12:18:14 --[ ok ] Arquivo baixado com sucesso com identificador [Hu2017.pdf]
----> 20/02/2019 12:18:15 --[ ok ] Arquivo baixado com sucesso com identificador [Alias2017.pdf]
+-- Seja bem vindo ao RodiBot, o que deseja que eu faça? --
+----------------------------------------------------------
+--> [1] Download de aquivos (exibe browser para leitura do captcha)
+--> [2] Download de aquivos (exibe apenas imagem para leitura do captcha)
+--> [3] Download de aquivos (não solicita o input do catcha, quando detectado)
+--> [0] Finalizar o Bot
+----------------------------------------------------------
+----------------------------------------------------------
+---> Inicializando tentativa [1] de downloads dos arquivos.
 ----------------------------------------------------------
 ---> Encerrando processo de download de arquivo.

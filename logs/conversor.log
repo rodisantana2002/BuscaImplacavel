@@ -1,8 +1,14 @@
 +----------------------------------------------------------+
 |     Inciando script de conversão de arquivos (JabRef)    |
 +----------------------------------------------------------+
----> Pratama2017 - 10.1109/ICSITech.2017.8257167
----> Hu2017 - 10.1109/ICSSSM.2017.7996146
----> Alias2017 - 10.1109/ICEEI.2017.8312412
+---> Siltaloppi2014 - 10.1109/HICSS.2014.165
+---> [erro] Sakano2014 - artigo nao possui DOI, ele foi removido da conversao
+---> [erro] Oshio2014 - artigo nao possui DOI, ele foi removido da conversao
+---> [erro] Ohnishi2014 - artigo nao possui DOI, ele foi removido da conversao
+---> [erro] Mountford2014 - artigo nao possui DOI, ele foi removido da conversao
+---> Clavier2014 - 10.1109/HICSS.2014.170
+---> Chin2014 - 10.1109/ICMIT.2014.6942444
+---> Chew2014 - 10.1109/CBI.2014.23
+---> Cheng2014 - 10.1109/ICSSSM.2014.6874039
 ------------------------------------------------------------
 ---> Finalizando preparação do arquivo base.

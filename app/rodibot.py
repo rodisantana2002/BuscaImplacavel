@@ -39,11 +39,17 @@ class base(object):
                             'valorCaptcha',
                             'msgRetorno']
 
-    def processarDownload(self, numTentativa):
+    def processarDownload(self, numTentativa, modo):
         logger.debug ('----------------------------------------------------------')
-        logger.debug ('---> Inicializando tentativa [%s] de downloads dos aqruivos.' % numTentativa)
+        logger.debug ('---> Inicializando tentativa [%s] de downloads dos arquivos.' % numTentativa)
 
-        sci = sc.SciHub(viewPDF=True)
+        if modo == "view":           
+            sci = sc.SciHub(viewPDF=modo)
+        elif modo == "hide":   
+            sci = sc.SciHub(viewPDF=modo)
+        else:
+            sci = sc.SciHub(viewPDF=modo)
+
         tmp_file = "%s.tmp" % self.fileOUT
         status = False
 
@@ -75,7 +81,7 @@ class base(object):
                                              'valorCaptcha':'none',
                                              'msgRetorno': result['err']
                                             })
-                            logger.debug('%s %s', data_atual, result['err'])
+                            logger.debug('---> %s %s', data_atual, result['err'])
                             status=True
                         else:
                             writer.writerow({'id':row['id'],
@@ -100,14 +106,47 @@ class base(object):
 # carrega script e roda em modo força-bruta
 def main():
     bs = base('../bases/source.csv')
-    condicao = True
+    condicao = True    
     tentativa=1
-    while (condicao) :
-        condicao = bs.processarDownload(tentativa)
-        tentativa+=1
 
     logger.debug('----------------------------------------------------------')
-    logger.debug('---> Encerrando processo de download de arquivo.')
+    logger.debug('-- Seja bem vindo ao RodiBot, o que deseja que eu faça? --')
+    logger.debug('----------------------------------------------------------')
+    logger.debug('--> [1] Download de aquivos (exibe browser para leitura do captcha)')
+    logger.debug('--> [2] Download de aquivos (exibe apenas imagem para leitura do captcha)')
+    logger.debug('--> [3] Download de aquivos (não solicita o input do catcha, quando detectado)')
+    logger.debug('--> [0] Finalizar o Bot')
+    logger.debug('----------------------------------------------------------')
+    opcao = input("informe a opção desejada:")
+
+    if str(opcao) == "1":
+        while (condicao):
+            condicao=bs.processarDownload(tentativa, "view")
+            tentativa += 1
+        logger.debug('----------------------------------------------------------')
+        logger.debug('---> Encerrando processo de download de arquivo.')
+
+    elif str(opcao) == "2": 
+        while (condicao):
+            condicao = bs.processarDownload(tentativa, "hide")
+            tentativa += 1
+        logger.debug('----------------------------------------------------------')
+        logger.debug('---> Encerrando processo de download de arquivo.')
+    
+    elif str(opcao) == "3":
+        while (condicao):
+            condicao = bs.processarDownload(tentativa, "none")
+            tentativa += 1
+        logger.debug('----------------------------------------------------------')
+        logger.debug('---> Encerrando processo de download de arquivo.')
+
+    elif str(opcao) == "0":
+        logger.debug('---> Encerrando processo de download de arquivo.')
+
+    else:
+        logger.debug('---> Opção informada (%s) não existe no menu' % opcao)
+        logger.debug('----------------------------------------------------------')
+        logger.debug('---> Encerrando processo de download de arquivo.')
 
 if __name__ == '__main__':
     main()

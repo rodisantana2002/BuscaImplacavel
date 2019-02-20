@@ -38,7 +38,7 @@ class SciHub(object):
     e lista e baixa os arquivos do sci-hub.io
     """
 
-    def __init__(self, viewPDF=False):
+    def __init__(self, viewPDF="none"):
         self.sess = requests.Session()
         self.sess.headers = HEADERS
         self.available_base_url_list = AVAILABLE_SCIHUB_BASE_URL
@@ -61,7 +61,7 @@ class SciHub(object):
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
         logger.debug("---> Alterando source {}".format(self.available_base_url_list[0]))
 
-    @retry(wait_random_min=2000, wait_random_max=10000, stop_max_attempt_number=3)
+    @retry(wait_random_min=2000, wait_random_max=10000, stop_max_attempt_number=2)
     def download(self, identifier, destination='', path=None):
         """
         Faz o download de um documento do sci-hub com um identificador (DOI, PMID, URL).
@@ -84,9 +84,13 @@ class SciHub(object):
             url = self._get_direct_url(identifier)
             res = self.sess.get(url, verify=False)
 
+
             if res.headers['Content-Type'] != 'application/pdf':   
-                # view sem abertura do Browser
-                if self.viewPDF:
+                    # view sem abertura do Browser
+                if self.viewPDF == "none":
+                    return {'err': '---[erro] Falha: %s (url) foi identificada a utilização de captcha' % (identifier)}
+
+                elif self.viewPDF == "view":
                     # View com abertura do Browser
                     driver = webdriver.Chrome(ChromeDriverManager().install())
                     driver.get(url)
@@ -96,8 +100,19 @@ class SciHub(object):
                     elem.send_keys(strCaptcha)
                     elem.submit()
                     res = self.sess.get(driver.current_url, verify=False)
+                    driver.close()
 
-                else:     
+                    if res.headers['Content-Type'] != 'application/pdf':
+                        return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
+
+                    else:
+                        return {
+                            'pdf': res.content,
+                            'url': url,
+                            'name': self._generate_name(res)
+                        }
+
+                elif self.viewPDF == "hide":
                     # View com abertura do Browser
                     driver = webdriver.PhantomJS()
                     driver.get(url)
@@ -105,33 +120,34 @@ class SciHub(object):
                     driver.set_window_size(1300, 550)
                     images = driver.find_elements_by_tag_name('img')
 
-                    if len(images)>0:    
+                    if len(images) > 0:
                         for image in images:
                             src = image.get_attribute('src')
                             name = identifier.split('/')[-1]
-                            urllib.request.urlretrieve(src, "../imagens/" + name + ".png")
+                            urllib.request.urlretrieve(
+                                src, "../imagens/" + name + ".png")
                             im = Image.open("../imagens/" + name + ".png")
                             im.show()
 
-                        elem = driver.find_element_by_name("answer")                        
+                        elem = driver.find_element_by_name("answer")
                         strCaptcha = input("informe o capctha: ")
                         elem.send_keys(strCaptcha)
                         elem.submit()
                         res = self.sess.get(driver.current_url, verify=False)
+                        driver.close()
+
+                        if res.headers['Content-Type'] != 'application/pdf':
+                            return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
+
+                        else:
+                            return {
+                                'pdf': res.content,
+                                'url': url,
+                                'name': self._generate_name(res)
+                            }
+
                     else:
                         return {'err': '---[erro] Falha: %s (url) não foi localizada a imagem do captcha, verifique manualmente o DOI' % (identifier)}
-
-                driver.close()
-
-                if res.headers['Content-Type'] != 'application/pdf':
-                    return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
-
-                else:
-                    return {
-                        'pdf': res.content,
-                        'url': url,
-                        'name': self._generate_name(res)
-                    }
 
             else:
                 return {
@@ -141,11 +157,11 @@ class SciHub(object):
                 }
 
         except requests.exceptions.ConnectionError:
-            logger.debug('Impossível acessar {}, alterando url'.format(self.available_base_url_list[0]))
+            logger.debug('---> Impossível acessar {}, alterando url'.format(self.available_base_url_list[0]))
             self._change_base_url()
 
         except requests.exceptions.RequestException as e:
-            return {'err': e}
+            return {'---> err': e}
 
     def _get_direct_url(self, identifier):
         """
