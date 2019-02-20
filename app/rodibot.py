@@ -117,36 +117,32 @@ def main():
     logger.debug('--> [3] Download de aquivos (não solicita o input do catcha, quando detectado)')
     logger.debug('--> [0] Finalizar o Bot')
     logger.debug('----------------------------------------------------------')
-    opcao = input("informe a opção desejada:")
+    opcao = input("----------:--> Informe a opção desejada:")
 
     if str(opcao) == "1":
         while (condicao):
             condicao=bs.processarDownload(tentativa, "view")
             tentativa += 1
-        logger.debug('----------------------------------------------------------')
-        logger.debug('---> Encerrando processo de download de arquivo.')
 
     elif str(opcao) == "2": 
         while (condicao):
             condicao = bs.processarDownload(tentativa, "hide")
             tentativa += 1
-        logger.debug('----------------------------------------------------------')
-        logger.debug('---> Encerrando processo de download de arquivo.')
     
     elif str(opcao) == "3":
         while (condicao):
             condicao = bs.processarDownload(tentativa, "none")
             tentativa += 1
-        logger.debug('----------------------------------------------------------')
-        logger.debug('---> Encerrando processo de download de arquivo.')
 
     elif str(opcao) == "0":
-        logger.debug('---> Encerrando processo de download de arquivo.')
+        pass
 
     else:
         logger.debug('---> Opção informada (%s) não existe no menu' % opcao)
-        logger.debug('----------------------------------------------------------')
-        logger.debug('---> Encerrando processo de download de arquivo.')
+
+    logger.debug('----------------------------------------------------------')
+    logger.debug('---> Encerrando processo de download de arquivo.')
+
 
 if __name__ == '__main__':
     main()
