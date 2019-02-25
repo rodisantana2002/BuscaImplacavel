@@ -53,7 +53,7 @@ class SciHub(object):
         '''
         if proxy:
             self.sess.proxies = {"http": proxy, "https": proxy, }
-
+            
     def _change_base_url(self):
         if len(self.available_base_url_list) > 1:
             del self.available_base_url_list[0]
