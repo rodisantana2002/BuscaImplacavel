@@ -99,7 +99,7 @@ class base(object):
                                              'valorCaptcha':'none',
                                              'msgRetorno': 'Arquivo baixado com sucesso'
                                             })
-                            logger.debug('---> %s --[ ok ] Arquivo baixado com sucesso com identificador [%s]', data_atual, row['id'] + ".pdf")
+                            logger.debug('---> %s ---[ ok ] Arquivo baixado com sucesso com identificador [%s]', data_atual, row['id'] + ".pdf")
         os.rename(tmp_file, self.fileOUT)
         return status
 

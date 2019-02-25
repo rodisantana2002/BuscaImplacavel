@@ -161,7 +161,7 @@ class SciHub(object):
             self._change_base_url()
 
         except requests.exceptions.RequestException as e:
-            return {'---> err': e}
+            return {'err': e}
 
     def _get_direct_url(self, identifier):
         """
