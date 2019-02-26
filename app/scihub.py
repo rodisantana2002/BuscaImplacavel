@@ -102,10 +102,10 @@ class SciHub(object):
                         elem.send_keys(strCaptcha)
                         elem.submit()
                         res = self.sess.get(driver.current_url, verify=False)
+                        driver.close()
                     except:
-                        pass    
+                        driver.close()
 
-                    driver.close()
                     if res.headers['Content-Type'] != 'application/pdf':
                         return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
 
