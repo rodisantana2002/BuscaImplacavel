@@ -95,13 +95,17 @@ class SciHub(object):
                     driver = webdriver.Chrome(ChromeDriverManager().install())
                     driver.get(url)
 
-                    elem = driver.find_element_by_name("answer")
-                    strCaptcha = input("informe o capctha: ")
-                    elem.send_keys(strCaptcha)
-                    elem.submit()
-                    res = self.sess.get(driver.current_url, verify=False)
-                    driver.close()
+                    # tratamento cado carrege a pagina com o pdf e sem o captcha
+                    try:
+                        elem = driver.find_element_by_name("answer")
+                        strCaptcha = input("informe o capctha: ")
+                        elem.send_keys(strCaptcha)
+                        elem.submit()
+                        res = self.sess.get(driver.current_url, verify=False)
+                    except:
+                        pass    
 
+                    driver.close()
                     if res.headers['Content-Type'] != 'application/pdf':
                         return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
 
@@ -128,13 +132,6 @@ class SciHub(object):
                                 src, "../imagens/" + name + ".png")
                             im = Image.open("../imagens/" + name + ".png")
                             im.show()
-
-                        elem = driver.find_element_by_name("answer")
-                        strCaptcha = input("informe o capctha: ")
-                        elem.send_keys(strCaptcha)
-                        elem.submit()
-                        res = self.sess.get(driver.current_url, verify=False)
-                        driver.close()
 
                         if res.headers['Content-Type'] != 'application/pdf':
                             return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
