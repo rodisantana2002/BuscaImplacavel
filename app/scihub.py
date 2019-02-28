@@ -98,7 +98,7 @@ class SciHub(object):
                     # tratamento cado carrege a pagina com o pdf e sem o captcha
                     try:
                         elem = driver.find_element_by_name("answer")
-                        strCaptcha = input("informe o capctha: ")
+                        strCaptcha = input("informe o captcha: ")
                         elem.send_keys(strCaptcha)
                         elem.submit()
                         res = self.sess.get(driver.current_url, verify=False)
