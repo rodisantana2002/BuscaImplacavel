@@ -8,33 +8,21 @@
 ----------------------------------------------------------
 ----------------------------------------------------------
 ---> Inicializando tentativa [1] de downloads dos arquivos.
----> 26/02/2019 15:36:03 ---[ ok ] Arquivo baixado com sucesso com identificador [Ismail2010.pdf]
----> 26/02/2019 15:36:32 ---[erro] Falha: 10.1109/HICSS.2010.30 (url) captcha informado esta incorreto
----> 26/02/2019 15:36:38 ---[ ok ] Arquivo baixado com sucesso com identificador [Hsieh2010.pdf]
----> 26/02/2019 15:36:39 ---[erro] Falha: 10.1109/OPEE.2010.5508075 (url) captcha informado esta incorreto
----> 26/02/2019 15:36:55 ---[ ok ] Arquivo baixado com sucesso com identificador [Zhang2009.pdf]
----> 26/02/2019 15:37:09 ---[ ok ] Arquivo baixado com sucesso com identificador [Schmidt2009.pdf]
----> 26/02/2019 15:37:20 ---[ ok ] Arquivo baixado com sucesso com identificador [Chou2009.pdf]
----> 26/02/2019 15:37:21 ---[ ok ] Arquivo baixado com sucesso com identificador [Brocke2009.pdf]
----> 26/02/2019 15:37:33 ---[ ok ] Arquivo baixado com sucesso com identificador [Yu2008.pdf]
----> 26/02/2019 15:37:34 ---[ ok ] Arquivo baixado com sucesso com identificador [Raweewan2008.pdf]
----> 26/02/2019 15:37:35 ---[ ok ] Arquivo baixado com sucesso com identificador [Miles2008.pdf]
----> 26/02/2019 15:37:45 ---[ ok ] Arquivo baixado com sucesso com identificador [Lusch2008.pdf]
----> 26/02/2019 15:37:46 ---[ ok ] Arquivo baixado com sucesso com identificador [Kudithipudi2008.pdf]
----> 26/02/2019 15:37:47 ---[ ok ] Arquivo baixado com sucesso com identificador [Li2007.pdf]
----> 26/02/2019 15:37:50 ---[ ok ] Arquivo baixado com sucesso com identificador [Choi2007.pdf]
----> 26/02/2019 15:38:02 ---[ ok ] Arquivo baixado com sucesso com identificador [Brady2007.pdf]
----> 26/02/2019 15:38:13 ---[ ok ] Arquivo baixado com sucesso com identificador [Jung2005.pdf]
----> 26/02/2019 15:38:25 ---[ ok ] Arquivo baixado com sucesso com identificador [Subramonian2004.pdf]
----> 26/02/2019 15:38:26 ---[ ok ] Arquivo baixado com sucesso com identificador [Rao2004.pdf]
----> 26/02/2019 15:38:37 ---[ ok ] Arquivo baixado com sucesso com identificador [Greenwood2004.pdf]
----> 26/02/2019 15:38:48 ---[ ok ] Arquivo baixado com sucesso com identificador [Orriens2003.pdf]
+---> 04/03/2019 12:51:58 ---[ ok ] Arquivo baixado com sucesso com identificador [Orriens2003.pdf]
+---> 04/03/2019 12:52:01 ---[ ok ] Arquivo baixado com sucesso com identificador [Rahlf2021.pdf]
+---> 04/03/2019 12:52:02 ---[ ok ] Arquivo baixado com sucesso com identificador [Rahlf2021a.pdf]
+---> 04/03/2019 12:52:03 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 04/03/2019 12:52:05 ---[ ok ] Arquivo baixado com sucesso com identificador [Napolitano2021.pdf]
+---> 04/03/2019 12:52:07 ---[ ok ] Arquivo baixado com sucesso com identificador [Eloranta2021.pdf]
+---> 04/03/2019 12:52:08 ---[ ok ] Arquivo baixado com sucesso com identificador [Mil2021.pdf]
 ----------------------------------------------------------
 ---> Inicializando tentativa [2] de downloads dos arquivos.
----> 26/02/2019 15:38:59 ---[erro] Falha: 10.1109/HICSS.2010.30 (url) captcha informado esta incorreto
----> 26/02/2019 15:39:16 ---[ ok ] Arquivo baixado com sucesso com identificador [Cao2010.pdf]
+---> 04/03/2019 12:52:09 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
 ----------------------------------------------------------
 ---> Inicializando tentativa [3] de downloads dos arquivos.
----> 26/02/2019 15:39:37 ---[ ok ] Arquivo baixado com sucesso com identificador [Hsieh2010a.pdf]
+---> 04/03/2019 12:52:11 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
 ----------------------------------------------------------
----> Encerrando processo de download de arquivo.
+---> Inicializando tentativa [4] de downloads dos arquivos.
+---> 04/03/2019 12:52:14 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+----------------------------------------------------------
+---> Inicializando tentativa [5] de downloads dos arquivos.

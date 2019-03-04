@@ -96,15 +96,12 @@ class SciHub(object):
                     driver.get(url)
 
                     # tratamento cado carrege a pagina com o pdf e sem o captcha
-                    try:
-                        elem = driver.find_element_by_name("answer")
-                        strCaptcha = input("informe o captcha: ")
-                        elem.send_keys(strCaptcha)
-                        elem.submit()
-                        res = self.sess.get(driver.current_url, verify=False)
-                        driver.close()
-                    except:
-                        driver.close()
+                    elem = driver.find_element_by_name("answer")
+                    strCaptcha = input("informe o captcha: ")
+                    elem.send_keys(strCaptcha)
+                    elem.submit()
+                    res = self.sess.get(driver.current_url, verify=False)
+                    driver.close()
 
                     if res.headers['Content-Type'] != 'application/pdf':
                         return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
@@ -128,11 +125,16 @@ class SciHub(object):
                         for image in images:
                             src = image.get_attribute('src')
                             name = identifier.split('/')[-1]
-                            urllib.request.urlretrieve(
-                                src, "../imagens/" + name + ".png")
+                            urllib.request.urlretrieve(src, "../imagens/" + name + ".png")
                             im = Image.open("../imagens/" + name + ".png")
                             im.show()
 
+                            elem = driver.find_element_by_name("answer")
+                            strCaptcha = input("informe o captcha: ")
+                            elem.send_keys(strCaptcha)
+                            elem.submit()
+                            res = self.sess.get(driver.current_url, verify=False)
+                            
                         if res.headers['Content-Type'] != 'application/pdf':
                             return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
 
@@ -157,8 +159,8 @@ class SciHub(object):
             logger.debug('---> Impossível acessar {}, alterando url'.format(self.available_base_url_list[0]))
             self._change_base_url()
 
-        except requests.exceptions.RequestException as e:
-            return {'err': e}
+        except requests.exceptions.RequestException as exc:
+            return {'err': exc}
 
     def _get_direct_url(self, identifier):
         """
