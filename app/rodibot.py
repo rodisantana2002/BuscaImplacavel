@@ -8,6 +8,7 @@ import logging
 import scihub as sc
 from datetime import datetime
 
+
 # log config
 logging.basicConfig()
 logger = logging.getLogger('Log.')
