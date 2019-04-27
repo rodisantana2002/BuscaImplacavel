@@ -12,6 +12,7 @@ import argparse
 import hashlib
 import logging
 import os
+import sys
 import requests
 import urllib3
 
@@ -155,7 +156,6 @@ class SciHub(object):
                     'url': url,
                     'name': self._generate_name(res)
                 }
-
         except requests.exceptions.ConnectionError:
             logger.debug('---> Impossível acessar {}, alterando url'.format(self.available_base_url_list[0]))
             self._change_base_url()
