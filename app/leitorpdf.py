@@ -3,9 +3,7 @@ from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams, LTTextBox, LTTextLine, LTFigure, LTImage, LTTextLineHorizontal,LTTextBoxHorizontal, LTChar, LTRect, LTLine, LTAnon
 from io import StringIO
 
-fp = open("../files/arquivo2.pdf", 'rb')
-
-
+fp = open("../files/arquivo.pdf", 'rb')
 def lerPDF(arquivoPDF):
     # PDFResourceManager Usado para armazenar recursos compartilhados
     # como fontes e imagens
@@ -14,7 +12,7 @@ def lerPDF(arquivoPDF):
     layoutParams = LAParams(line_margin=1, word_margin=0.3, char_margin=100,
                             line_overlap=0.1, boxes_flow=0.1)
     dispositivo = TextConverter(recursos, buffer, laparams=layoutParams)
-    process_pdf(recursos, dispositivo, arquivoPDF, check_extractable=False)
+    process_pdf(recursos, dispositivo, arquivoPDF, check_extractable=True)
     dispositivo.close()
     conteudo = buffer.getvalue()
     buffer.close()
@@ -23,7 +21,59 @@ def lerPDF(arquivoPDF):
 with open('convertedFile.txt', "wb") as txt_file:
     txt_file.write(lerPDF(fp).encode("utf-8"))
 
+fp.close()
+
+fp = open("convertedFile.txt", 'rb')
+
+for linha in fp:
+    # if linha[0:1] == chr(13):
+    print(hex(linha[0:1]))
+
 fp.close()    
+
+
+# Abstract. Background – Startup companies are becoming important suppliers
+# of innovative and software intensive products. The failure rate among startups
+# is high due to lack of resources, immaturity, multiple influences and dynamic
+# technologies. However, software product engineering is the core activity in
+# startups, therefore inadequacies in applied engineering practices might be a
+# significant contributing factor for high failure rates. Aim – This study identifies
+# and categorizes software engineering knowledge areas utilized in startups to
+# map out the state-of-art, identifying gaps for further research. Method – We
+# perform a systematic literature mapping study, applying snowball sampling to
+# identify relevant primary studies. Results – We have identified 54 practices
+# covered, a large part of categories is not. Conclusions – Existing research does
+# not provide reliable support for software engineering in any phase of a startup
+# life cycle. Transfer of results to other startups is difficult due to low rigor in
+# current studies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # parser = PDFParser(fp)
 # doc = PDFDocument()
