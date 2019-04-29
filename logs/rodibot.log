@@ -8,5 +8,12 @@
 ----------------------------------------------------------
 ----------------------------------------------------------
 ---> Inicializando tentativa [1] de downloads dos arquivos.
----> 27/04/2019 14:56:19 ---[ ok ] Arquivo baixado com sucesso com identificador [Springer-2010-1.pdf]
----> 27/04/2019 14:56:21 ---[erro] Falha: 10.1007/978-3-319-51385-0 (url) foi identificada a utilização de captcha
+---> 28/04/2019 16:46:11 ---[ ok ] Arquivo baixado com sucesso com identificador [Springer-2010-1.pdf]
+---> 28/04/2019 16:46:23 ---[erro] Falha: 10.1007/978-3-319-51385-0 (url) captcha informado esta incorreto
+---> 28/04/2019 16:46:34 ---[ ok ] Arquivo baixado com sucesso com identificador [Springer-2014-4.pdf]
+---> 28/04/2019 16:46:49 ---[ ok ] Arquivo baixado com sucesso com identificador [Springer-2014-5.pdf]
+----------------------------------------------------------
+---> Inicializando tentativa [2] de downloads dos arquivos.
+---> 28/04/2019 16:47:03 ---[ ok ] Arquivo baixado com sucesso com identificador [Springer-2017-2.pdf]
+----------------------------------------------------------
+---> Encerrando processo de download de arquivo.
