@@ -1,9 +1,11 @@
+# -*- coding: utf-8 -*-
+
 from pdfminer.pdfinterp import PDFResourceManager, process_pdf
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams, LTTextBox, LTTextLine, LTFigure, LTImage, LTTextLineHorizontal,LTTextBoxHorizontal, LTChar, LTRect, LTLine, LTAnon
 from io import StringIO
 
-fp = open("../files/arquivo.pdf", 'rb')
+fp = open("../files/arquivo2.pdf", 'rb')
 def lerPDF(arquivoPDF):
     # PDFResourceManager Usado para armazenar recursos compartilhados
     # como fontes e imagens
@@ -24,37 +26,32 @@ with open('convertedFile.txt', "wb") as txt_file:
 fp.close()
 
 fp = open("convertedFile.txt", 'rb')
+for linha in fp:    
+    x = str(linha)
+    # y = x.replace('\f', "*****")
+    # z = y.replace('\n', "\$$" )    
 
-for linha in fp:
-    # if linha[0:1] == chr(13):
-    print(hex(linha[0:1]))
+    print(x)    
 
-fp.close()    
+    # if "\xe2" in z:
+    #     print(repr(z)
 
+    # if x.startswith("\x0c"):
+    #     y = x.replace('\x0c', "*****")
+    # elif x.startswith("\n"):        
+    #     y = x.replace('\n', "%%")
+    # elif x.startswith(' \n'):
+    #     y = x.replace(' \n', "%%")
+    # elif x.endswith('\n'):   
+    #     y = x.replace('\n', "$$" )
 
-# Abstract. Background – Startup companies are becoming important suppliers
-# of innovative and software intensive products. The failure rate among startups
-# is high due to lack of resources, immaturity, multiple influences and dynamic
-# technologies. However, software product engineering is the core activity in
-# startups, therefore inadequacies in applied engineering practices might be a
-# significant contributing factor for high failure rates. Aim – This study identifies
-# and categorizes software engineering knowledge areas utilized in startups to
-# map out the state-of-art, identifying gaps for further research. Method – We
-# perform a systematic literature mapping study, applying snowball sampling to
-# identify relevant primary studies. Results – We have identified 54 practices
-# covered, a large part of categories is not. Conclusions – Existing research does
-# not provide reliable support for software engineering in any phase of a startup
-# life cycle. Transfer of results to other startups is difficult due to low rigor in
-# current studies.
-
+    # print(y)        
+# fp.close()    
 
 
-
-
-
-
-
-
+# var = '\x0c Abstract. Background – Startup companies are becoming important suppliers'
+# x= var.replace('\x0c', '\n |')
+# print(x)
 
 
 
@@ -144,6 +141,4 @@ fp.close()
 # # for str in stx:
 # print(stx)    
 # print()
-# print('-------------------------------------------')
-
-
+# print('-------------------------------------------')    
