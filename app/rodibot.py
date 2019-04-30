@@ -6,6 +6,7 @@ import csv
 import os
 import logging
 import scihub as sc
+import converterpdf as conv
 from datetime import datetime
 
 
@@ -42,14 +43,9 @@ class base(object):
 
     def processarDownload(self, numTentativa, modo):
         logger.debug ('----------------------------------------------------------')
-        logger.debug ('---> Inicializando tentativa [%s] de downloads dos arquivos.' % numTentativa)
+        logger.debug ('---> Iniciando tentativa [%s] de downloads dos arquivos.' % numTentativa)
 
-        if modo == "view":           
-            sci = sc.SciHub(viewPDF=modo)
-        elif modo == "hide":   
-            sci = sc.SciHub(viewPDF=modo)
-        else:
-            sci = sc.SciHub(viewPDF=modo)
+        sci = sc.SciHub(viewPDF=modo)
 
         tmp_file = "%s.tmp" % self.fileOUT
         status = False
@@ -104,20 +100,39 @@ class base(object):
         os.rename(tmp_file, self.fileOUT)
         return status
 
+
+    def processarConversao(self):    
+        convPDF = conv.converterpdf()
+
+        logger.debug('----------------------------------------------------------')
+        logger.debug('---> Iniciando conversão dos arquivos.')
+        
+        convPDF.gerarTXT("../files/arquivo.pdf")
+
+    def processarTraducao(self):
+        pass    
+
+
+
+
 # carrega script e roda em modo força-bruta
 def main():
     bs = base('../bases/source.csv')
     condicao = True    
     tentativa=1
 
-    logger.debug('----------------------------------------------------------')
-    logger.debug('-- Seja bem vindo ao RodiBot, o que deseja que eu faça? --')
-    logger.debug('----------------------------------------------------------')
+    limpar()
+    logger.debug('------------------------------------------------------------------------------')
+    logger.debug('--        Seja bem vindo ao RodiBot, o que deseja que eu faça?              --')
+    logger.debug('------------------------------------------------------------------------------')
     logger.debug('--> [1] Download de aquivos (exibe browser para leitura do captcha)')
     logger.debug('--> [2] Download de aquivos (exibe apenas imagem para leitura do captcha)')
     logger.debug('--> [3] Download de aquivos (não solicita o input do catcha, quando detectado)')
+    logger.debug('------------------------------------------------------------------------------')
+    logger.debug('--> [4] Converter arquivos baixados - PDF to TXT')
+    logger.debug('--> [5] Traduzir arquivos convertidos')
     logger.debug('--> [0] Finalizar o Bot')
-    logger.debug('----------------------------------------------------------')
+    logger.debug('------------------------------------------------------------------------------')
     opcao = input("----------:--> Informe a opção desejada:")
 
     if str(opcao) == "1":
@@ -135,6 +150,12 @@ def main():
             condicao = bs.processarDownload(tentativa, "none")
             tentativa += 1
 
+    elif str(opcao) == "4":
+        bs.processarConversao()
+
+    elif str(opcao) == "5":
+        pass
+
     elif str(opcao) == "0":
         pass
 
@@ -144,6 +165,14 @@ def main():
     logger.debug('----------------------------------------------------------')
     logger.debug('---> Encerrando processo de download de arquivo.')
 
+
+def limpar():
+    if sys.platform != 'win':
+        cmd = 'clear'
+    else:
+        cmd = 'cls'    
+
+    return os.system(cmd)
 
 if __name__ == '__main__':
     main()
