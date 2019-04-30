@@ -6,9 +6,8 @@ import csv
 import os
 import logging
 import scihub as sc
-import converterpdf as conv
+import pdftotxt as conv
 from datetime import datetime
-
 
 # log config
 logging.basicConfig()
@@ -102,13 +101,9 @@ class base(object):
 
 
     def processarConversao(self):    
-        convPDF = conv.converterpdf()
-
-        logger.debug('----------------------------------------------------------')
-        logger.debug('---> Iniciando conversão dos arquivos.')
-        
-        convPDF.gerarTXT("../files/arquivo.pdf")
-
+        convPDF = conv.pdftotxt()
+        convPDF.converterPDF()
+       
     def processarTraducao(self):
         pass    
 
@@ -121,6 +116,7 @@ def main():
     condicao = True    
     tentativa=1
 
+    logging.getLogger("pdfminer").setLevel(logging.WARNING)
     limpar()
     logger.debug('------------------------------------------------------------------------------')
     logger.debug('--        Seja bem vindo ao RodiBot, o que deseja que eu faça?              --')
