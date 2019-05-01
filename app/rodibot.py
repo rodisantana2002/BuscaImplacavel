@@ -7,6 +7,8 @@ import os
 import logging
 import scihub as sc
 import pdftotxt as conv
+import translate as trans
+
 from datetime import datetime
 
 # log config
@@ -105,9 +107,9 @@ class base(object):
         convPDF.converterPDF()
        
     def processarTraducao(self):
+        tradPDF = trans.translate()
+        tradPDF.traduzirDados()
         pass    
-
-
 
 
 # carrega script e roda em modo força-bruta
@@ -150,7 +152,7 @@ def main():
         bs.processarConversao()
 
     elif str(opcao) == "5":
-        pass
+        bs.processarTraducao()
 
     elif str(opcao) == "0":
         pass
@@ -159,7 +161,7 @@ def main():
         logger.debug('---> Opção informada (%s) não existe no menu' % opcao)
 
     logger.debug('----------------------------------------------------------')
-    logger.debug('---> Encerrando processo de download de arquivo.')
+    logger.debug('---> Encerrando aplicativo        :-) by (Rodolfo Santana)')
 
 
 def limpar():

@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# encoding: iso-8859-1
+
 import re
 import sys
 import os
@@ -64,19 +66,19 @@ class pdftotxt(object):
                     x = str(linha)
 
                     if x[0:1] =="\n":
-                        y = x.replace('\n', "\n++")
+                        y = x.replace('\n', "\n###")
                         txt.write(y)
 
                     elif x.startswith('\f'):
-                        y = x.replace('\f', "\n@@")
+                        y = x.replace('\f', "\n@@@")
                         txt.write(y)
 
                     elif x.startswith(' \n'):
-                        y = x.replace(' \n', "\n%%")
+                        y = x.replace(' \n', "\n%%%")
                         txt.write(y)
 
                     elif x.startswith('\n '):
-                        y = x.replace('\n ', "\n%%")
+                        y = x.replace('\n ', "\n%%%")
                         txt.write(y)
 
                     elif x.endswith('\n'):
@@ -84,7 +86,7 @@ class pdftotxt(object):
                         txt.write(y)
 
                     elif x.startswith(' '):
-                        y = x.replace('\n', "\n%%")
+                        y = x.replace('\n', "\n%%%")
                         txt.write(y)
 
                     else:
@@ -93,27 +95,30 @@ class pdftotxt(object):
             fp.close() 
 
             os.remove(arqDestino + tmp_file)               
-
             return '---> {} ---[ ok ] Arquivo convertido com sucesso [{}]'.format(data_atual, os.path.basename(arquivoPDF))
 
         except:
-            return '---> {} ---[erro] Arquivo não pode ser convertido [{}]'.format(data_atual, os.path.basename(arquivoPDF))
+            data_hora_atuais = datetime.now()
+            data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
+            return '---> {} ---[erro] Arquivo não pode ser convertido'.format(data_atual)
 
     def converterPDF(self):
         logger.debug('----------------------------------------------------------')
         logger.debug('---> Iniciando conversão dos arquivos.')
         logger.debug('----------------------------------------------------------')
 
-        for arq in self.obterArquivos(arqOrigem):
-            logger.debug(self.gerarTXT(arq))            
+        arquivos = self.obterArquivos(arqOrigem)        
+        if len(arquivos) > 2: 
+            for arq in arquivos:
+                logger.debug(self.gerarTXT(arq))            
+        else:
+            logger.debug('---> Não foram encontrados arquivos PDF para serem convertidos')
 
     def obterArquivos(self, path):    
         return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith(".pdf")])
 
 def main():
-    conv = pdftotxt()
-    
-    conv.gerarTXT("../files/arquivo.pdf")
+    conv = pdftotxt()   
     conv.converterPDF()
 
 if __name__ == '__main__':
