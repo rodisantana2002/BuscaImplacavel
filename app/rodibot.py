@@ -102,14 +102,17 @@ class base(object):
         return status
 
 
-    def processarConversao(self):    
+    def processarConversaoPDFtoTXT(self):    
         convPDF = conv.pdftotxt()
         convPDF.converterPDF()
        
+    def processarCarregamentoCSV(self):
+        tradPDF = trans.translate()
+        tradPDF.carregarRepositoriosCSV()
+
     def processarTraducao(self):
         tradPDF = trans.translate()
         tradPDF.traduzirDados()
-        pass    
 
 
 # carrega script e roda em modo força-bruta
@@ -128,7 +131,8 @@ def main():
     logger.debug('--> [3] Download de aquivos (não solicita o input do catcha, quando detectado)')
     logger.debug('------------------------------------------------------------------------------')
     logger.debug('--> [4] Converter arquivos baixados - PDF to TXT')
-    logger.debug('--> [5] Traduzir arquivos convertidos')
+    logger.debug('--> [5] Carregar repositórios CSV')
+    logger.debug('--> [6] Traduzir arquivos')
     logger.debug('--> [0] Finalizar o Bot')
     logger.debug('------------------------------------------------------------------------------')
     opcao = input("----------:--> Informe a opção desejada:")
@@ -149,10 +153,13 @@ def main():
             tentativa += 1
 
     elif str(opcao) == "4":
-        bs.processarConversao()
+        bs.processarConversaoPDFtoTXT()
 
     elif str(opcao) == "5":
-        bs.processarTraducao()
+        bs.processarCarregamentoCSV()
+
+    elif str(opcao) == "6":
+        bs.processarTraducao
 
     elif str(opcao) == "0":
         pass

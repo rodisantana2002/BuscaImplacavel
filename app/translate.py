@@ -6,6 +6,7 @@ import sys
 import os
 import logging
 import csv
+import time
 
 from datetime import datetime
 
@@ -14,8 +15,8 @@ logging.basicConfig()
 logger = logging.getLogger('Log.')
 logger.setLevel(logging.DEBUG)
 
-arqOrigem = '../files/convertidos/'
-arqDestino = '../files/traduzidos/'
+pathOrigem = '../files/convertidos/'
+pathDestino = '../files/traduzidos/'
 
 class translate(object):
 
@@ -39,7 +40,7 @@ class translate(object):
         try:
             csv_file = "%s.csv" % os.path.basename(arquivoTXT)[0:-4]
 
-            with open(arqDestino + csv_file, 'w') as tmp:
+            with open(pathDestino + csv_file, 'w') as tmp:
                 writer = csv.DictWriter(tmp, fieldnames=self.FIELD_NAMES)
                 writer.writeheader()
                 id = 1
@@ -48,7 +49,7 @@ class translate(object):
                         data_hora_atuais = datetime.now()
                         data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
 
-                        if row[0:3] == '###':
+                        if row[0:3] == '###' or row[0:3] == 'TIT' or row[0:3] == 'ABS' or row[0:3] == 'WOR' or row[0:3] == 'REF':
                             id += 1
                             writer.writerow({'id':id,
                                             'arquivo':os.path.basename(arquivoTXT)[0:-4],
@@ -56,42 +57,98 @@ class translate(object):
                                             'txtorigem':row[3:],
                                             'txttranslate':'',
                                             'datahoracarga':data_atual,
-                                             'datahoratranslate': ''
+                                            'datahoratranslate': ''
                                             })
 
             return '---> {} ---[ ok ] Foram carregadas [{}] linhas com sucesso'.format(data_atual, id)
 
-        except:
+        except Exception:
             data_hora_atuais = datetime.now()
             data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
             return '---> {} ---[erro] Arquivo não pode ser carregado'.format(data_atual)
 
-    def traduzirDados(self):
+    def traduzirDados(self, arquivoCSV):
+        try:
+            csv_file = "%s.csv" % os.path.basename(arquivoCSV)[0:-4]
+
+            with open(pathDestino + csv_file, 'w') as tmp:
+                writer = csv.DictWriter(tmp, fieldnames=self.FIELD_NAMES)
+                writer.writeheader()
+                id = 1
+                with open(arquivoCSV, 'r') as source:
+                    for row in source:
+                        data_hora_atuais = datetime.now()
+                        data_atual = data_hora_atuais.strftime(
+                            '%d/%m/%Y %H:%M:%S')
+
+                        if not row.isblank():
+                            id += 1
+                            writer.writerow({'id': id,
+                                             'arquivo': os.path.basename(arquivoCSV)[0:-4],
+                                             'tipo': row[0:3],
+                                             'txtorigem': row[3:],
+                                             'txttranslate': '',
+                                             'datahoracarga': data_atual,
+                                             'datahoratranslate': ''
+                                             })
+
+            return '---> {} ---[ ok ] Foram carregadas [{}] linhas com sucesso'.format(data_atual, id)
+
+        except Exception:
+            data_hora_atuais = datetime.now()
+            data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
+            return '---> {} ---[erro] Arquivo não pode ser carregado'.format(data_atual)
+
+
+    def carregarRepositoriosCSV(self):
         logger.debug('----------------------------------------------------------')
-        logger.debug('---> Iniciando processo de tradução dos arquivos.')
-        logger.debug('----------------------------------------------------------')
-        logger.debug('---> Passo 01 - Carregar dados dos arquivos convertidos')
+        logger.debug('---> Iniciando processo de carga nos repositórios CSV.')
         logger.debug('----------------------------------------------------------')
 
         # Passo 01 carregar dos dados para os arquivos csv 
-        arquivos = self.obterArquivos(arqOrigem)
+        arquivos = self.obterArquivos(pathOrigem)
+
         if len(arquivos) > 0:
             for arq in arquivos:
                 logger.debug(self.popularDados(arq))
 
             logger.debug('----------------------------------------------------------')
-
-            # Passo 2 executar a tradução das linhas carregadas
             
         else:
-            logger.debug('---> Não foram encontrados arquivos TXT para serem traduzidos')
+            logger.debug('---> Não foram encontrados arquivos TXT para serem lidos')
+
+    def traduzirDados(self):
+        logger.debug('----------------------------------------------------------')
+        logger.debug('---> Iniciando processo de tradução dos arquivos.')
+        logger.debug('----------------------------------------------------------')
+
+        # Passo 01 ler arquivos csv e processar tradução e atualização dos dados
+        arquivos = self.obterArquivos(pathDestino)
+
+        if len(arquivos) > 0:
+            for arq in arquivos:
+                logger.debug(self.traduzirDados(arq))
+
+            logger.debug(
+                '----------------------------------------------------------')
+
+        else:
+            logger.debug(
+                '---> Não foram encontrados arquivos CSV para serem traduzidos')
 
     def obterArquivos(self, path):
         return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith(".txt")])
 
 def main():
     trans = translate()
-    trans.traduzirDados()
+    trans.carregarRepositoriosCSV()
+    # trans.traduzirDados()
 
 if __name__ == '__main__':
     main()
+
+
+'''
+    for translation in translations:
+        print(translation.origin, ' -> ', translation.text)
+'''

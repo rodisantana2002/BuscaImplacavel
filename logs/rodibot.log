@@ -6,8 +6,15 @@
 --> [3] Download de aquivos (não solicita o input do catcha, quando detectado)
 ------------------------------------------------------------------------------
 --> [4] Converter arquivos baixados - PDF to TXT
---> [5] Traduzir arquivos convertidos
+--> [5] Carregar repositórios CSV
+--> [6] Traduzir arquivos
 --> [0] Finalizar o Bot
 ------------------------------------------------------------------------------
+----------------------------------------------------------
+---> Iniciando processo de carga nos repositórios CSV.
+----------------------------------------------------------
+---> 02/05/2019 11:33:04 ---[ ok ] Foram carregadas [56] linhas com sucesso
+---> 02/05/2019 11:33:04 ---[ ok ] Foram carregadas [99] linhas com sucesso
+----------------------------------------------------------
 ----------------------------------------------------------
 ---> Encerrando aplicativo        :-) by (Rodolfo Santana)

@@ -1,10 +1,8 @@
 ----------------------------------------------------------
----> Iniciando processo de tradução dos arquivos.
+---> Iniciando processo de carga nos repositórios CSV.
 ----------------------------------------------------------
----> Passo 01 - Carregar dados dos arquivos convertidos
-----------------------------------------------------------
----> 30/04/2019 23:52:10 ---[ ok ] Foram carregadas [71] linhas com sucesso
----> 30/04/2019 23:52:10 ---[ ok ] Foram carregadas [99] linhas com sucesso
+---> 02/05/2019 11:33:04 ---[ ok ] Foram carregadas [56] linhas com sucesso
+---> 02/05/2019 11:33:04 ---[ ok ] Foram carregadas [99] linhas com sucesso
 ----------------------------------------------------------
 ----------------------------------------------------------
----> Encerrando ferramenta        --> by (Rodolfo Santana).
+---> Encerrando aplicativo        :-) by (Rodolfo Santana)
