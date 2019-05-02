@@ -91,11 +91,11 @@ class translate(object):
                             txtTranslate = ''
                         elif row['tipo'] == 'REF':
                             logger.debug('-----> referências arq. [%s]', id)
-                            txtTranslate = row['txtOrigem']
+                            txtTranslate = row['txtorigem']
                         else:    
                             txtTranslate = ''
                             logger.debug('-----> traduzindo texto [%s]', id)
-                            # txt = trans.translate(row['txtorigem'], dest='pt')
+                            txt = trans.translate(row['txtorigem'], dest='pt')
                             txtTranslate = '' #txt.text                        
                                 
                         writer.writerow({'id': row['id'],
