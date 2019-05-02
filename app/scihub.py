@@ -15,6 +15,7 @@ import os
 import sys
 import requests
 import urllib3
+import time
 
 from PIL import Image, ImageTk
 from selenium import webdriver
@@ -151,11 +152,13 @@ class SciHub(object):
                         return {'err': '---[erro] Falha: %s (url) não foi localizada a imagem do captcha, verifique manualmente o DOI' % (identifier)}
 
             else:
+                time.sleep(4)
                 return {
                     'pdf': res.content,
                     'url': url,
                     'name': self._generate_name(res)
                 }
+
         except requests.exceptions.ConnectionError:
             logger.debug('---> Impossível acessar {}, alterando url'.format(self.available_base_url_list[0]))
             self._change_base_url()

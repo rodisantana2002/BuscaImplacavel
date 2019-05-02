@@ -103,9 +103,9 @@ class pdftotxt(object):
             return '---> {} ---[erro] Arquivo não pode ser convertido'.format(data_atual)
 
     def converterPDF(self):
-        logger.debug('----------------------------------------------------------')
+        logger.debug('----------------------------------------------------------------------------------------------')
         logger.debug('---> Iniciando conversão dos arquivos.')
-        logger.debug('----------------------------------------------------------')
+        logger.debug('----------------------------------------------------------------------------------------------')
 
         arquivos = self.obterArquivos(arqOrigem)        
         if len(arquivos) > 2: 

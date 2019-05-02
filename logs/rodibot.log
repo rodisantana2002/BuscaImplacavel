@@ -1,17 +1,14 @@
-------------------------------------------------------------------------------
---        Seja bem vindo ao RodiBot, o que deseja que eu faça?              --
-------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+--                   Seja bem vindo ao RodiBot, o que deseja que eu faça?                   --
+----------------------------------------------------------------------------------------------
 --> [1] Download de aquivos (exibe browser para leitura do captcha)
 --> [2] Download de aquivos (exibe apenas imagem para leitura do captcha)
---> [3] Download de aquivos (não solicita o input do catcha, quando detectado)
-------------------------------------------------------------------------------
+--> [3] Download de aquivos (não solicita o input do catcha, quando detectado - sleep(4) sec.)
+----------------------------------------------------------------------------------------------
 --> [4] Converter arquivos baixados - PDF to TXT
 --> [5] Carregar repositórios CSV
 --> [6] Traduzir arquivos
 --> [0] Finalizar o Bot
-------------------------------------------------------------------------------
-----------------------------------------------------------
----> Iniciando tentativa [1] de downloads dos arquivos.
----> 02/05/2019 12:03:07 ---[ ok ] Arquivo baixado com sucesso com identificador [Springer-2010-1.pdf]
-----------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 ---> Encerrando aplicativo        :-) by (Rodolfo Santana)

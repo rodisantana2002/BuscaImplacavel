@@ -43,7 +43,7 @@ class base(object):
                             'msgRetorno']
 
     def processarDownload(self, numTentativa, modo):
-        logger.debug ('----------------------------------------------------------')
+        logger.debug ('----------------------------------------------------------------------------------------------')
         logger.debug ('---> Iniciando tentativa [%s] de downloads dos arquivos.' % numTentativa)
 
         sci = sc.SciHub(viewPDF=modo)
@@ -123,18 +123,18 @@ def main():
 
     logging.getLogger("pdfminer").setLevel(logging.WARNING)
     limpar()
-    logger.debug('------------------------------------------------------------------------------')
-    logger.debug('--        Seja bem vindo ao RodiBot, o que deseja que eu faça?              --')
-    logger.debug('------------------------------------------------------------------------------')
+    logger.debug('----------------------------------------------------------------------------------------------')
+    logger.debug('--                   Seja bem vindo ao RodiBot, o que deseja que eu faça?                   --')
+    logger.debug('----------------------------------------------------------------------------------------------')
     logger.debug('--> [1] Download de aquivos (exibe browser para leitura do captcha)')
     logger.debug('--> [2] Download de aquivos (exibe apenas imagem para leitura do captcha)')
-    logger.debug('--> [3] Download de aquivos (não solicita o input do catcha, quando detectado)')
-    logger.debug('------------------------------------------------------------------------------')
+    logger.debug('--> [3] Download de aquivos (não solicita o input do catcha, quando detectado - sleep(4) sec.)')
+    logger.debug('----------------------------------------------------------------------------------------------')
     logger.debug('--> [4] Converter arquivos baixados - PDF to TXT')
     logger.debug('--> [5] Carregar repositórios CSV')
-    logger.debug('--> [6] Traduzir arquivos')
+    logger.debug('--> [6] Traduzir arquivos - sleep(6) sec.)')
     logger.debug('--> [0] Finalizar o Bot')
-    logger.debug('------------------------------------------------------------------------------')
+    logger.debug('----------------------------------------------------------------------------------------------')
     opcao = input("----------:--> Informe a opção desejada:")
 
     if str(opcao) == "1":
@@ -159,7 +159,7 @@ def main():
         bs.processarCarregamentoCSV()
 
     elif str(opcao) == "6":
-        bs.processarTraducao
+        bs.processarTraducao()
 
     elif str(opcao) == "0":
         pass
@@ -167,7 +167,7 @@ def main():
     else:
         logger.debug('---> Opção informada (%s) não existe no menu' % opcao)
 
-    logger.debug('----------------------------------------------------------')
+    logger.debug('----------------------------------------------------------------------------------------------')
     logger.debug('---> Encerrando aplicativo        :-) by (Rodolfo Santana)')
 
 

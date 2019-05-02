@@ -110,7 +110,7 @@ class translate(object):
                         time.sleep(6)
 
             os.remove(pathPendentes+csv_file)
-            return '---> {} ---[ ok ] Foram traduzidas [{}] linhas com sucesso'.format(data_atual, id)
+            return '---> {} ---[ ok ] Foram lidas [{}] linhas com sucesso'.format(data_atual, id)
 
         except Exception as exc:
             data_hora_atuais = datetime.now()
@@ -119,9 +119,9 @@ class translate(object):
 
 
     def carregarRepositoriosCSV(self):
-        logger.debug('----------------------------------------------------------')
+        logger.debug('----------------------------------------------------------------------------------------------')
         logger.debug('---> Iniciando processo de carga nos repositórios CSV.')
-        logger.debug('----------------------------------------------------------')
+        logger.debug('----------------------------------------------------------------------------------------------')
 
         # Passo 01 carregar dos dados para os arquivos csv 
         arquivos = self._obterArquivos(pathOrigem, "txt")
@@ -130,15 +130,15 @@ class translate(object):
             for arq in arquivos:
                 logger.debug(self._popularDados(arq))
 
-            logger.debug('----------------------------------------------------------')
+            logger.debug('----------------------------------------------------------------------------------------------')
             
         else:
             logger.debug('---> Não foram encontrados arquivos TXT para serem lidos')
 
     def traduzirArquivo(self):
-        logger.debug('----------------------------------------------------------------')
+        logger.debug('----------------------------------------------------------------------------------------------')
         logger.debug('---> Iniciando processo de tradução dos arquivos. (timer 6 seg.)')
-        logger.debug('----------------------------------------------------------------')
+        logger.debug('----------------------------------------------------------------------------------------------')
 
         # Passo 01 ler arquivos csv e processar tradução e atualização dos dados
         arquivos = self._obterArquivos(pathPendentes, "csv")
@@ -147,9 +147,7 @@ class translate(object):
             for arq in arquivos:
                 logger.debug('---> Processando tradução do arquivo [%s].', os.path.basename(arq)[0:-4])
                 logger.debug(self._processarTraducao(arq))
-                logger.debug('----------------------------------------------------------')
-
-            logger.debug('----------------------------------------------------------')
+                logger.debug('----------------------------------------------------------------------------------------------')
 
         else:
             logger.debug('---> Não foram encontrados arquivos CSV para serem traduzidos')
