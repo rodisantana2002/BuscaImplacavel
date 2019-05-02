@@ -96,7 +96,7 @@ class translate(object):
                             txtTranslate = ''
                             logger.debug('-----> traduzindo texto [%s]', id)
                             txt = trans.translate(row['txtorigem'], dest='pt')
-                            txtTranslate = '' #txt.text                        
+                            txtTranslate = txt.text                        
                                 
                         writer.writerow({'id': row['id'],
                                         'arquivo': row['arquivo'],

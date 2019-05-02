@@ -108,7 +108,7 @@ class pdftotxt(object):
         logger.debug('----------------------------------------------------------------------------------------------')
 
         arquivos = self.obterArquivos(arqOrigem)        
-        if len(arquivos) > 2: 
+        if len(arquivos) >= 2: 
             for arq in arquivos:
                 logger.debug(self.gerarTXT(arq))            
         else:
