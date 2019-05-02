@@ -112,7 +112,7 @@ class base(object):
 
     def processarTraducao(self):
         tradPDF = trans.translate()
-        tradPDF.traduzirDados()
+        tradPDF.traduzirArquivo()
 
 
 # carrega script e roda em modo força-bruta
