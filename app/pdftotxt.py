@@ -5,8 +5,6 @@ import re
 import sys
 import os
 import logging
-import argparse
-import hashlib
 
 from pdfminer.pdfinterp import PDFResourceManager, process_pdf
 from pdfminer.converter import TextConverter
@@ -97,7 +95,7 @@ class pdftotxt(object):
             os.remove(arqDestino + tmp_file)               
             return '---> {} ---[ ok ] Arquivo convertido com sucesso [{}]'.format(data_atual, os.path.basename(arquivoPDF))
 
-        except:
+        except Exception:
             data_hora_atuais = datetime.now()
             data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
             return '---> {} ---[erro] Arquivo não pode ser convertido'.format(data_atual)

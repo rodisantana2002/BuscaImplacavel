@@ -8,6 +8,7 @@ import logging
 import scihub as sc
 import pdftotxt as conv
 import translate as trans
+import csvtohtml as html
 
 from datetime import datetime
 
@@ -114,6 +115,10 @@ class base(object):
         tradPDF = trans.translate()
         tradPDF.traduzirArquivo()
 
+    def processarHTML(self):
+        transfHTML = html.csvtohtml()
+        transfHTML.gerarHTML()
+
 
 # carrega script e roda em modo força-bruta
 def main():
@@ -133,6 +138,7 @@ def main():
     logger.debug('--> [4] Converter arquivos baixados - PDF to TXT')
     logger.debug('--> [5] Carregar repositórios CSV')
     logger.debug('--> [6] Traduzir arquivos - sleep(6) sec.)')
+    logger.debug('--> [7] Gerar arquivos HTML')
     logger.debug('--> [0] Finalizar o Bot')
     logger.debug('----------------------------------------------------------------------------------------------')
     opcao = input("----------:--> Informe a opção desejada:")
@@ -160,6 +166,9 @@ def main():
 
     elif str(opcao) == "6":
         bs.processarTraducao()
+
+    elif str(opcao) == "7":
+        bs.processarHTML()
 
     elif str(opcao) == "0":
         pass
