@@ -152,7 +152,6 @@ class SciHub(object):
                         return {'err': '---[erro] Falha: %s (url) não foi localizada a imagem do captcha, verifique manualmente o DOI' % (identifier)}
 
             else:
-                time.sleep(4)
                 return {
                     'pdf': res.content,
                     'url': url,
@@ -160,8 +159,9 @@ class SciHub(object):
                 }
 
         except requests.exceptions.ConnectionError:
-            logger.debug('---> Impossível acessar {}, alterando url'.format(self.available_base_url_list[0]))
-            self._change_base_url()
+            logger.debug('---> Impossível acessar a url {}'.format(self.available_base_url_list[0]))
+            # self._change_base_url()
+            return {'err': '---[erro] Falha: %s (url) não foi possível estabeler a conexão com os servidores' % (identifier)}
 
         except requests.exceptions.RequestException as exc:
             return {'err': exc}

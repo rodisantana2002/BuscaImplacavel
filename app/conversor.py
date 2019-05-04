@@ -13,7 +13,7 @@ logging.basicConfig()
 logger = logging.getLogger('Log.')
 logger.setLevel(logging.DEBUG)
 arqBase = '../bases/source.csv'
-
+arqOrigem = '../bases/origem/'
 
 class conversor(object):
     # construtor
@@ -277,23 +277,19 @@ class conversor(object):
                             logger.debug(strLog)
                     count += 1
 
+    def gerarSource(self):
+        self.gerarFileBase()
+
 # carrega script
-
-
 def main():
     # carrega parametros de chamada
-    parser = argparse.ArgumentParser(
-        description='RodoBot - Removendo as barreiras da ciência.')
-    parser.add_argument('-p',  '--lista', metavar='path',
-                        help='irá converter todos arquivos .csv encontrados no path:', default='', type=str)
-    parser.add_argument('-inf',  '--limit_inf', metavar='N',
-                        help='o limite inferior de busca:', default=0, type=int)
-    parser.add_argument('-sup',  '--limit_sup', metavar='N',
-                        help='o limite superior de busca:', default=0, type=int)
+    parser = argparse.ArgumentParser(description='RodoBot - Removendo as barreiras da ciência.')
+    parser.add_argument('-p',  '--lista', metavar='path', help='irá converter todos arquivos .csv encontrados no path:', default='', type=str)
+    parser.add_argument('-inf',  '--limit_inf', metavar='N', help='o limite inferior de busca:', default=0, type=int)
+    parser.add_argument('-sup',  '--limit_sup', metavar='N', help='o limite superior de busca:', default=0, type=int)
     args = parser.parse_args()
 
-    bs = conversor(args.lista, arqBase, limiteInf=args.limit_inf,
-                   limiteSup=args.limit_sup)
+    bs = conversor(args.lista, arqBase, limiteInf=args.limit_inf, limiteSup=args.limit_sup)
     bs.gerarFileBase()
 
 

@@ -5,10 +5,12 @@ import sys
 import csv
 import os
 import logging
+
 import scihub as sc
 import pdftotxt as conv
 import translate as trans
 import csvtohtml as html
+import conversor as source
 
 from datetime import datetime
 
@@ -103,6 +105,16 @@ class base(object):
         return status
 
 
+    def processarSourceDownload(self):
+        logger.debug('----------------------------------------------------------------------------------------------')
+        logger.debug('--> Informe os limites para a seleção dos dados')
+        logger.debug('----------------------------------------------------------------------------------------------')
+        inf = input("----------:--> Limite inferior para conversão: ")
+        sup = input("----------:--> Limite superior para conversão: ")
+
+        sourceCSV = source.conversor('../bases/origem/', '../bases/source.csv', limiteInf=int(inf), limiteSup=int(sup))
+        sourceCSV.gerarSource()
+
     def processarConversaoPDFtoTXT(self):    
         convPDF = conv.pdftotxt()
         convPDF.converterPDF()
@@ -131,43 +143,47 @@ def main():
     logger.debug('----------------------------------------------------------------------------------------------')
     logger.debug('--                   Seja bem vindo ao RodiBot, o que deseja que eu faça?                   --')
     logger.debug('----------------------------------------------------------------------------------------------')
-    logger.debug('--> [1] Download de aquivos (exibe browser para leitura do captcha)')
-    logger.debug('--> [2] Download de aquivos (exibe apenas imagem para leitura do captcha)')
-    logger.debug('--> [3] Download de aquivos (não solicita o input do catcha, quando detectado - sleep(4) sec.)')
+    logger.debug('--> [1] Preparar arquivos para download')
+    logger.debug('--> [2] Download de aquivos (exibe browser para leitura do captcha)')
+    logger.debug('--> [3] Download de aquivos (exibe apenas imagem para leitura do captcha)')
+    logger.debug('--> [4] Download de aquivos (não solicita o input do catcha, quando detectado - sleep(4) sec.)')
     logger.debug('----------------------------------------------------------------------------------------------')
-    logger.debug('--> [4] Converter arquivos baixados - PDF to TXT')
-    logger.debug('--> [5] Carregar repositórios CSV')
-    logger.debug('--> [6] Traduzir arquivos - sleep(6) sec.)')
-    logger.debug('--> [7] Gerar arquivos HTML')
+    logger.debug('--> [5] Converter arquivos baixados - PDF to TXT')
+    logger.debug('--> [6] Carregar repositórios CSV')
+    logger.debug('--> [7] Traduzir arquivos - sleep(6) sec.)')
+    logger.debug('--> [8] Gerar arquivos HTML')
     logger.debug('--> [0] Finalizar o Bot')
     logger.debug('----------------------------------------------------------------------------------------------')
     opcao = input("----------:--> Informe a opção desejada:")
 
     if str(opcao) == "1":
+        bs.processarSourceDownload()
+
+    elif str(opcao) == "2":
         while (condicao):
             condicao=bs.processarDownload(tentativa, "view")
             tentativa += 1
 
-    elif str(opcao) == "2": 
+    elif str(opcao) == "3": 
         while (condicao):
             condicao = bs.processarDownload(tentativa, "hide")
             tentativa += 1
     
-    elif str(opcao) == "3":
+    elif str(opcao) == "4":
         while (condicao):
             condicao = bs.processarDownload(tentativa, "none")
             tentativa += 1
 
-    elif str(opcao) == "4":
+    elif str(opcao) == "5":
         bs.processarConversaoPDFtoTXT()
 
-    elif str(opcao) == "5":
+    elif str(opcao) == "6":
         bs.processarCarregamentoCSV()
 
-    elif str(opcao) == "6":
+    elif str(opcao) == "7":
         bs.processarTraducao()
 
-    elif str(opcao) == "7":
+    elif str(opcao) == "8":
         bs.processarHTML()
 
     elif str(opcao) == "0":
