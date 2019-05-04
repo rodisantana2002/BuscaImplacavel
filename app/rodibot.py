@@ -176,8 +176,8 @@ def main():
     else:
         logger.debug('---> Opção informada (%s) não existe no menu' % opcao)
 
-    logger.debug('----------------------------------------------------------------------------------------------')
     logger.debug('---> Encerrando aplicativo        :-) by (Rodolfo Santana)')
+    logger.debug('----------------------------------------------------------------------------------------------')
 
 
 def limpar():

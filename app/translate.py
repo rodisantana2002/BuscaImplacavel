@@ -147,7 +147,7 @@ class translate(object):
             for arq in arquivos:
                 logger.debug('---> Processando tradução do arquivo [%s].', os.path.basename(arq)[0:-4])
                 logger.debug(self._processarTraducao(arq))
-                logger.debug('----------------------------------------------------------------------------------------------')
+            logger.debug('----------------------------------------------------------------------------------------------')
 
         else:
             logger.debug('---> Não foram encontrados arquivos CSV para serem traduzidos')

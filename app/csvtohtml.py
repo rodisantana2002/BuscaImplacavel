@@ -103,7 +103,7 @@ class csvtohtml(object):
         if len(arquivos) > 0:
             for arq in arquivos:
                 logger.debug(self._converterCSVtoHTML(arq))
-                logger.debug('----------------------------------------------------------------------------------------------')
+            logger.debug('----------------------------------------------------------------------------------------------')
 
         else:
             logger.debug(
