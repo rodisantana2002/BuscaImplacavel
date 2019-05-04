@@ -111,36 +111,36 @@ class csvtohtml(object):
             for arquivo in arquivos:
                 html_file = "%s.html" % os.path.basename(arquivo)[0:-4]
 
-                with open(arquivo, 'r') as arq:
-                    reader = csv.DictReader(arq)
-                    id = 1
+                # with open(arquivo, 'r') as arq:
+                #     reader = csv.DictReader(arq)
+                #     id = 1
 
 
-                    strHTML.append("</br>")
-                    for row in reader:
-                        if len(row['txtorigem']) > 0:  # não eh uma linha em branco
-                            strHTML.append("<div class='col-12'")
-                            strHTML.append("<div class='card'>")
-                            strHTML.append("<h5 class='card-header'>{}</h5>".format(row['arquivo']))
-                            strHTML.append("<div class='card-body'>")
-                            if row['tipo'] == 'TIT':
-                                strHTML.append("<h4 class='card-title'>{}</h4>".format(row['txttranslate']))
-                            else:
-                                strHTML.append("<h4 class='card-title'>Título não identificado</h4>")
+                #     strHTML.append("</br>")
+                #     for row in reader:
+                #         if len(row['txtorigem']) > 0:  # não eh uma linha em branco
+                #             strHTML.append("<div class='col-12'")
+                #             strHTML.append("<div class='card'>")
+                #             strHTML.append("<h5 class='card-header'>{}</h5>".format(row['arquivo']))
+                #             strHTML.append("<div class='card-body'>")
+                #             if row['tipo'] == 'TIT':
+                #                 strHTML.append("<h4 class='card-title'>{}</h4>".format(row['txttranslate']))
+                #             else:
+                #                 strHTML.append("<h4 class='card-title'>Título não identificado</h4>")
 
-                            if row['tipo'] == 'ABS':
-                                strHTML.append("<p class='card-text'>{}</p>".format(row['txttranslate']))
-                            else:
-                                strHTML.append("<p class='card-text'>...</p>")
+                #             if row['tipo'] == 'ABS':
+                #                 strHTML.append("<p class='card-text'>{}</p>".format(row['txttranslate']))
+                #             else:
+                #                 strHTML.append("<p class='card-text'>...</p>")
                             
-                            strHTML.append("<a href='#{}' class='btn btn-primary'>Visializar</a>".format(pathDestino + html_file))
-                            strHTML.append("</div>")                    
-                            strHTML.append("</div>")
-                            strHTML.append("</div>")
+                #             strHTML.append("<a href='#{}' class='btn btn-primary'>Visializar</a>".format(pathDestino + html_file))
+                #             strHTML.append("</div>")                    
+                #             strHTML.append("</div>")
+                #             strHTML.append("</div>")
 
-                            id += 1
+                #             id += 1
 
-                    strHTML.append("</br>")
+                #     strHTML.append("</br>")
 
         strHTML.append("<script src = 'https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity = 'sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin = 'anonymous' > </script >")
         strHTML.append("<script src = 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity = 'sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin = 'anonymous' > </script >")
