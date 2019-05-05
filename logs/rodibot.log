@@ -13,8 +13,11 @@
 --> [0] Finalizar o Bot
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
----> Iniciando tentativa [1] de downloads dos arquivos.
----> Impossível acessar a url sci-hub.se
----> 04/05/2019 19:19:35 ---[erro] Falha: 10.1007/978-1-4842-0052-0 (url) não foi possível estabeler a conexão com os servidores
+---> Iniciando geração dos arquivos HTMLs
 ----------------------------------------------------------------------------------------------
----> Iniciando tentativa [2] de downloads dos arquivos.
+---> 05/05/2019 12:50:24 ---[ ok ] Arquivo processado com sucesso [arquivo2.csv]
+---> 05/05/2019 12:50:24 ---[ ok ] Arquivo processado com sucesso [arquivo.csv]
+---> 05/05/2019 12:50:24 ---[ ok ] Indice gerado com sucesso
+----------------------------------------------------------------------------------------------
+---> Encerrando aplicativo        :-) by (Rodolfo Santana)
+----------------------------------------------------------------------------------------------

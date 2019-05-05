@@ -115,32 +115,25 @@ class csvtohtml(object):
                 #     reader = csv.DictReader(arq)
                 #     id = 1
 
+                # for row in reader:
+            #         if len(row['txtorigem']) > 0:  # não eh uma linha em branco
 
-                #     strHTML.append("</br>")
-                #     for row in reader:
-                #         if len(row['txtorigem']) > 0:  # não eh uma linha em branco
-                #             strHTML.append("<div class='col-12'")
-                #             strHTML.append("<div class='card'>")
-                #             strHTML.append("<h5 class='card-header'>{}</h5>".format(row['arquivo']))
-                #             strHTML.append("<div class='card-body'>")
-                #             if row['tipo'] == 'TIT':
-                #                 strHTML.append("<h4 class='card-title'>{}</h4>".format(row['txttranslate']))
-                #             else:
-                #                 strHTML.append("<h4 class='card-title'>Título não identificado</h4>")
 
-                #             if row['tipo'] == 'ABS':
-                #                 strHTML.append("<p class='card-text'>{}</p>".format(row['txttranslate']))
-                #             else:
-                #                 strHTML.append("<p class='card-text'>...</p>")
-                            
-                #             strHTML.append("<a href='#{}' class='btn btn-primary'>Visializar</a>".format(pathDestino + html_file))
-                #             strHTML.append("</div>")                    
-                #             strHTML.append("</div>")
-                #             strHTML.append("</div>")
+        strHTML.append("</br>")
+        strHTML.append("<div class = 'col-10'>")
+        strHTML.append("<div class = 'card'>")
+        strHTML.append("<div class = 'card-header'>")
 
-                #             id += 1
+        strHTML.append("</div>")
+        strHTML.append("<div class = 'card-body'>")
+        strHTML.append("<h5 class = 'card-title'> Special title treatment </h5>")
+        strHTML.append("<p class = 'card-text' > With supporting text below as a natural lead-in to additional content. </p>")
+        strHTML.append("<a href = '#' class = 'btn btn-primary' > Go somewhere </a>")
+        strHTML.append("</div>")
+        strHTML.append("</div>")
+        strHTML.append("</div>")
 
-                #     strHTML.append("</br>")
+        strHTML.append("</br>")
 
         strHTML.append("<script src = 'https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity = 'sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin = 'anonymous' > </script >")
         strHTML.append("<script src = 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity = 'sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin = 'anonymous' > </script >")
