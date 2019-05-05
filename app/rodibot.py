@@ -129,7 +129,7 @@ class base(object):
 
     def processarHTML(self):
         transfHTML = html.csvtohtml()
-        transfHTML.gerarHTML()
+        transfHTML.gerarHTML()        
 
 
 # carrega script e roda em modo força-bruta
@@ -141,7 +141,7 @@ def main():
     logging.getLogger("pdfminer").setLevel(logging.WARNING)
     limpar()
     logger.debug('----------------------------------------------------------------------------------------------')
-    logger.debug('--                   Seja bem vindo ao RodiBot, o que deseja que eu faça?                   --')
+    logger.debug('--                 Seja bem vindo ao RodiBot, o que deseja que eu faça?                     --')
     logger.debug('----------------------------------------------------------------------------------------------')
     logger.debug('--> [1] Preparar arquivos para download')
     logger.debug('--> [2] Download de aquivos (exibe browser para leitura do captcha)')

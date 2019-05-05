@@ -1,2 +1,2 @@
 id,title,year,author,doi,url,keywords,tipo,base,situacao,numTentativas,possuiCaptcha,valorCaptcha,msgRetorno
-Springer-2014-7,Beginning Python Visualization,2014,Shai Vaingast,10.1007/978-1-4842-0052-0,http://link.springer.com/book/10.1007/978-1-4842-0052-0,none,Springer,Book,pendente,1,yes,none,---[erro] Falha: 10.1007/978-1-4842-0052-0 (url) não foi possível estabeler a conexão com os servidores
+IEEE-2001-7,Science data processing for the Multi-angle Imaging SpectroRadiometer,2001,G. Bothwell; E. G. Hansen; R. E. Vargo,10.1109/IGARSS.2001.976874,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=976874,none,IEEE,IEEE Conferences,pendente,4,yes,none,Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
