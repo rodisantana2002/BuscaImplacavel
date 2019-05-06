@@ -1,25 +1,9 @@
 ----------------------------------------------------------------------------------------------
 ---> Iniciando geração dos arquivos HTMLs
 ----------------------------------------------------------------------------------------------
----> 05/05/2019 20:17:31 ---[ ok ] Arquivo processado com sucesso [arquivo2.csv]
----> 05/05/2019 20:17:31 ---[ ok ] Arquivo processado com sucesso [arquivo.csv]
----> 05/05/2019 20:17:31 ---[ ok ] Indice gerado com sucesso
-----------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------
---                   Seja bem vindo ao RodiBot, o que deseja que eu faça?                   --
-----------------------------------------------------------------------------------------------
---> [1] Preparar arquivos para download
---> [2] Download de aquivos (exibe browser para leitura do captcha)
---> [3] Download de aquivos (exibe apenas imagem para leitura do captcha)
---> [4] Download de aquivos (não solicita o input do catcha, quando detectado - sleep(4) sec.)
-----------------------------------------------------------------------------------------------
---> [5] Converter arquivos baixados - PDF to TXT
---> [6] Carregar repositórios CSV
---> [7] Traduzir arquivos - sleep(6) sec.)
---> [8] Gerar arquivos HTML
---> [0] Finalizar o Bot
-----------------------------------------------------------------------------------------------
----> Encerrando aplicativo        :-) by (Rodolfo Santana)
+---> 06/05/2019 10:31:57 ---[ ok ] Arquivo processado com sucesso [arquivo2.csv]
+---> 06/05/2019 10:31:57 ---[ ok ] Arquivo processado com sucesso [arquivo.csv]
+---> 06/05/2019 10:31:57 ---[ ok ] Indice gerado com sucesso
 ----------------------------------------------------------------------------------------------
 ---> Encerrando aplicativo        :-) by (Rodolfo Santana)
 ----------------------------------------------------------------------------------------------

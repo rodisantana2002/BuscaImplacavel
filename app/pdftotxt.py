@@ -37,7 +37,7 @@ class pdftotxt(object):
         # como fontes e imagens
         recursos = PDFResourceManager()
         buffer = StringIO()
-        layoutParams = LAParams(line_margin=1, word_margin=0.3, char_margin=100, line_overlap=0.1, boxes_flow=0.1)
+        layoutParams = LAParams(line_margin=1, word_margin=0.3, char_margin=100)
         dispositivo = TextConverter(recursos, buffer, laparams=layoutParams)
         process_pdf(recursos, dispositivo, arquivoPDF, check_extractable=True)
         dispositivo.close()
@@ -45,25 +45,21 @@ class pdftotxt(object):
         buffer.close()
         return conteudo
 
-    def gerarTXT(self, arquivoPDF):
+    def gerarTXT(self, arquivoRTF):
+
+        rtf_file = "%s.rtf" % os.path.basename(arquivoRTF)[0:-4]
+        txt_file = "%s.txt" % os.path.basename(arquivoRTF)[0:-4]
+
         try:
-            fp = open(arquivoPDF, 'rb')
             data_hora_atuais = datetime.now()
             data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
 
-            tmp_file = "%s.tmp" % os.path.basename(arquivoPDF)[0:-4]
-            txt_file = "%s.txt" % os.path.basename(arquivoPDF)[0:-4]
-
-            with open(arqDestino + tmp_file, "wb") as txt:
-                txt.write(self.extrairConteudoPDF(fp).encode("utf-8"))
-            txt.close()    
-
             with open(arqDestino + txt_file, "w") as txt:
-                fp = open(arqDestino + tmp_file, 'r')
-                for linha in fp:                        
+                fp = open(arqDestino + rtf_file, 'r')
+                for linha in fp:
                     x = str(linha)
 
-                    if x[0:1] =="\n":
+                    if x[0:1] == "\n":
                         y = x.replace('\n', "\n###")
                         txt.write(y)
 
@@ -89,10 +85,31 @@ class pdftotxt(object):
 
                     else:
                         txt.write(y)
-            txt.close()    
+            txt.close()
+            fp.close()
+
+            return '---> {} ---[ ok ] Arquivo convertido com sucesso [{}]'.format(data_atual, os.path.basename(arquivoRTF))
+
+        except Exception:
+            data_hora_atuais = datetime.now()
+            data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
+            return '---> {} ---[erro] Arquivo não pode ser convertido'.format(data_atual)
+
+
+    def gerarRTF(self, arquivoPDF):
+        try:
+            fp = open(arquivoPDF, 'rb')
+            data_hora_atuais = datetime.now()
+            data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
+
+            rtf_file = "%s.rtf" % os.path.basename(arquivoPDF)[0:-4]
+
+            with open(arqDestino + rtf_file, "wb") as rtf:
+                rtf.write(self.extrairConteudoPDF(fp).encode("utf-8"))
+            rtf.close()    
+
             fp.close() 
 
-            os.remove(arqDestino + tmp_file)               
             return '---> {} ---[ ok ] Arquivo convertido com sucesso [{}]'.format(data_atual, os.path.basename(arquivoPDF))
 
         except Exception:
@@ -105,15 +122,25 @@ class pdftotxt(object):
         logger.debug('---> Iniciando conversão dos arquivos.')
         logger.debug('----------------------------------------------------------------------------------------------')
 
-        arquivos = self.obterArquivos(arqOrigem)        
+        opcao = input("----------:--> Informe o tipo desejadado (RTF - ajustes ou TXT - importação):")
+
+        if opcao == 'TXT':
+            tipo = ".rtf"
+        else:    
+            tipo = ".pdf"
+
+        arquivos = self.obterArquivos(arqOrigem, tipo)        
         if len(arquivos) >= 2: 
             for arq in arquivos:
-                logger.debug(self.gerarTXT(arq))            
+                if opcao =='TXT':
+                    logger.debug(self.gerarTXT(arq))            
+                else:
+                    logger.debug(self.gerarRTF(arq))
         else:
             logger.debug('---> Não foram encontrados arquivos PDF para serem convertidos')
 
-    def obterArquivos(self, path):    
-        return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith(".pdf")])
+    def obterArquivos(self, path, tipo):    
+        return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith(tipo)])
 
 def main():
     conv = pdftotxt()   

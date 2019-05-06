@@ -129,7 +129,6 @@ class translate(object):
         if len(arquivos) > 0:
             for arq in arquivos:
                 logger.debug(self._popularDados(arq))
-
             logger.debug('----------------------------------------------------------------------------------------------')
             
         else:
