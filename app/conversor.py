@@ -67,6 +67,7 @@ class conversor(object):
                 self._carregarScience(arquivo)
 
             else:
+                strNone = '---> Nenhuma base foi localizada para ser convertida'
                 strNone = '------------------------------------------------------------'
 
         logger.debug(strNone)

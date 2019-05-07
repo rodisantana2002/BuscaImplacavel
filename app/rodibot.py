@@ -107,10 +107,10 @@ class base(object):
 
     def processarSourceDownload(self):
         logger.debug('----------------------------------------------------------------------------------------------')
-        logger.debug('--> Informe os limites para a seleção dos dados')
+        logger.debug('--> Informe os intervalos para a seleção dos dados')
         logger.debug('----------------------------------------------------------------------------------------------')
-        inf = input("----------:--> Limite inferior para conversão: ")
-        sup = input("----------:--> Limite superior para conversão: ")
+        inf = input("----------:--> Valor inicial: ")
+        sup = input("----------:--> Valor final..: ")
 
         sourceCSV = source.conversor('../bases/origem/', '../bases/source.csv', limiteInf=int(inf), limiteSup=int(sup))
         sourceCSV.gerarSource()

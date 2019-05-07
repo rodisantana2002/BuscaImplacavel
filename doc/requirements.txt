@@ -7,3 +7,5 @@ selenium
 PIL
 urllib3
 phantomjs
+pdfminer3k
+googletrans
