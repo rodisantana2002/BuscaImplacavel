@@ -6,7 +6,7 @@
 
   NOTE(** se rodar uma lista muito grande no o site scihub vai detectar a tentativa de força-bruta e ira bloquear o IP)
 -->
-python3 conversor.py -p '../bases/origem/' -inf 9 -sup 20
+python3 conversor.py -p '../bases/origem/' -inf 9 -sup 20 #comando adicionado ao menu principal
 
 <!--  -->
 <!--  mode de usar RodoBot
