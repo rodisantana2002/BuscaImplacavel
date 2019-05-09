@@ -18,7 +18,7 @@ class database(object):
             conn = sqlite3.connect(self.pathOrigem)
             return conn
         except Error as e:
-            print(e)
+            logger.debug(e)
             return None
         return sqlite3.connect(self.pathOrigem)
 
@@ -30,16 +30,18 @@ class database(object):
             cursor.execute(strSQL)
             logger.debug("tabela criada com sucesso")
         except Error as e:
-            print(e)    
+            logger.debug(e)
         cn.close()
 
     def _gerarTabelas(self):
         tabelas = []
         tabelas.append("""CREATE TABLE Pesquisa (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
                                                 descricao VARCHAR(30), 
+                                                situacao VARCHAR(20),
                                                 criado_em VARCHAR(12));""")
 
         tabelas.append("""CREATE TABLE Artigo (id VARCHAR(50) NOT NULL PRIMARY KEY , 
+                                               situacao VARCHAR(20),
                                                titulo TEXT, 
                                                ano VARCHAR(4), 
                                                autores TEXT, 
@@ -53,6 +55,7 @@ class database(object):
                                                criado_em VARCHAR(12));""")
 
         tabelas.append("""CREATE TABLE ArtigoElemento (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+                                                       situacao VARCHAR(20),
                                                        txtorigem TEXT, 
                                                        txttranslate TEXT, 
                                                        tipo VARCHAR(3), 
