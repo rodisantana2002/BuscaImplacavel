@@ -64,7 +64,7 @@ class base(object):
                     if row['situacao'] == 'pendente':
                         data_hora_atuais = datetime.now()
                         data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
-                        result = sci.download(row['doi'], destination='../files', path=row['id'] + ".pdf")
+                        result = sci.download(row['doi'], destination='../files/baixados/', path=row['id'] + ".pdf")
 
                         if 'err' in result:
                             writer.writerow({'id':row['id'],

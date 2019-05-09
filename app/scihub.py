@@ -80,7 +80,7 @@ class SciHub(object):
         """
         Busca o artigo recuperando primeiro o link direto para o pdf.
         Se o identificador for um pay-wall DOI, PMID ou URL, use o Sci-Hub
-        para acessar e baixar o papel. Caso contrário, basta baixar o papel diretamente.
+        para acessar e baixar o paper. Caso contrário, basta baixar o paper diretamente.
         """
         try:
             url = self._get_direct_url(identifier)
@@ -222,7 +222,7 @@ class SciHub(object):
         """
         Gerar nome de arquivo exclusivo para arquivo. Retorna um nome calculando
         md5 hash do conteúdo do arquivo e, em seguida, os últimos 20 caracteres foram adicionados
-        da URL que normalmente fornece um bom identificador de papel.
+        da URL que normalmente fornece um bom identificador de paper.
         """
         name = res.url.split('/')[-1]
         name = re.sub('#view=(.+)', '', name)

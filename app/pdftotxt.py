@@ -16,7 +16,7 @@ from datetime import datetime
 logging.basicConfig()
 logger = logging.getLogger('Log.')
 logger.setLevel(logging.DEBUG)
-arqOrigem = '../files/'
+arqOrigem = '../files/baixados/'
 arqDestino = '../files/convertidos/'
 
 class pdftotxt(object):
