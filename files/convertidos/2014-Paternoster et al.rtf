@@ -1,0 +1,2043 @@
+Software development in startup companies: A systematic mapping
+study
+
+Nicolò Paternoster a, Carmine Giardino a, Michael Unterkalmsteiner a, Tony Gorschek a,
+Pekka Abrahamsson b
+
+Blekinge Institute of Technology, SE-371 79 Karlskrona, Sweden
+Free University of Bolzano-Bozen, I-39100 Bolzano-Bozen, Italy
+
+Keywords:
+Software development
+Startups
+Systematic mapping study
+
+abstract: Context: Software startups are newly created companies with no operating history and fast in producing
+cutting-edge technologies. These companies develop software under highly uncertain conditions, tack
+ling fast-growing markets under severe lack of resources. Therefore, software startups present a unique
+combination of characteristics which pose several challenges to software development activities.
+Objective: This study aims to structure and analyze the literature on software development in startup
+companies, determining thereby the potential for technology transfer and identifying software develop
+ment work practices reported by practitioners and researchers.
+Method: We conducted a systematic mapping study, developing a classiﬁcation schema, ranking the
+selected primary studies according their rigor and relevance, and analyzing reported software develop
+ment work practices in startups.
+Results: A total of 43 primary studieswere identiﬁed andmapped, synthesizing the available evidence on
+software development in startups. Only 16 studies are entirely dedicated to software development in
+startups, of which 10 result in a weak contribution (advice and implications (6); lesson learned (3); tool
+(1)). Nineteen studies focus on managerial and organizational factors. Moreover, only 9 studies exhibit
+high scientiﬁc rigor and relevance. From the reviewed primary studies, 213 software engineering work
+practices were extracted, categorized and analyzed.
+Conclusion: This mapping study provides the ﬁrst systematic exploration of the state-of-art on software
+startup research. The existing body of knowledge is limited to a few high quality studies. Furthermore,
+the results indicate that software engineering work practices are chosen opportunistically, adapted
+and conﬁgured to provide value under the constrains imposed by the startup context.
+
+
+Contents
+
+1. Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1201
+2. Background and related work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1202
+2.1. Software startups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1202
+2.2. Startup lifecycle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1202
+2.3. Software development in startups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1202
+2.4. Related work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1202
+3. Research methodology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1203
+3.1. Definition of research questions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1203
+3.2. Conduct search . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1203
+3.3. Screening of relevant papers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1204
+3.4. Keywording . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1204
+3.5. Data extraction and mapping . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1204
+3.6. Rigor and relevance assessment . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1205
+3.7. Synthesis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1205
+3.8. Threats to validity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1206
+3.8.1. Publication bias . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1206
+3.8.2. Identification of primary studies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1206
+3.8.3. Study selection and data extraction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1206
+4. Classification schema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1207
+5. Results. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1208
+5.1. Startup research categorization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1208
+5.2. Context characteristics of startups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1209
+5.3. Rigor and relevance. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1210
+6. Analysis of the state-of-art . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1210
+6.1. RQ1 – The context characterizing software development in startups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1211
+6.2. RQ2 – Transferability of results to industry . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1211
+7. RQ3 – Work practices in startups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1211
+7.1. Process management practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1211
+7.1.1. Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1213
+7.2. Software development practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1213
+7.2.1. Requirements engineering practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1213
+7.2.1.1. Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1213
+7.2.2. Design and architecture practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1213
+7.2.2.1. Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1213
+7.2.3. Implementation, maintenance and deployment practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1214
+7.2.3.1. Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1214
+7.2.4. Quality assurance practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1214
+7.2.4.1. Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1214
+7.3. Managerial and organizational practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1214
+7.3.1. Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1215
+7.4. Tools and technologies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1215
+7.4.1. Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1215
+8. Conclusions and future work. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1215
+8.1. RQ1 What is the context that characterizes software development in startups? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1215
+8.2. RQ2 To what extent does the research on startups provide reliable and transferable results to industry? . . . . . . . . . . . . . . . . . . . . . . . 1216
+8.3. RQ3 What are the reported work practices in association with software engineering in startups? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1216
+8.4. Implications for practitioners, research and future work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1216
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1216
+
+1. Introduction
+
+A wide body of knowledge has been created in recent years
+through several empirical studies, investigating how companies
+leverage software engineering (SE) [1,2]. However, research on
+software development activities in newly created companies is
+scarce. In the past, very few publications have identiﬁed, character
+ized and mapped work practices in software startups [3] and no
+structured investigation of the area has been performed. Indeed,
+none of the systematic literature reviews [4] or mapping studies
+[5] in software engineering (see the tertiary review by Zhang and
+Babar [6]) address the startup phenomenon.
+
+Understanding how startups take advantage from work
+practices is essential to support the number of new businesses
+launched everyday1. New software ventures such as Facebook,
+Linkedin, Spotify, Pinterest, Instagram, and Dropbox, to name a few,
+are examples of startups that evolved into successful businesses.
+Startups typically aim to create high-tech and innovative products,
+and grow by aggressively expanding their business in highly scalable
+markets.
+
+Despite many successful stories, self-destruction rather than
+competition drives the majority of startups into failure within
+two years from their creation [8]. Software startups face intense
+time-pressure from themarket and are exposed to tough competi
+tion, operating in a chaotic, rapidly evolving and uncertain context
+[9,10]. Choosing the right features to build and adapting quickly to
+new requests, while being constrained by limited resources, is cru
+cial to the success in this environment [3].
+
+From a software engineering perspective startups are unique,
+since they develop software in a context where processes can
+hardly follow a prescriptive methodology [11]. Startups share
+some characteristics with other contexts such as small companies
+and web engineering, and present a combination of different
+factors that make the development environment different from
+established companies [12]. Therefore, research is needed to
+support startups’ engineering activities, guiding practitioners in
+taking decisions and avoiding choices that could easily lead busi
+ness failure [13,14].
+
+The goal of this paper is to identify and understand the main
+contributions of the state-of-art towards software engineering in
+startups. To this end, we perform a systematic mapping study
+(SMS) [5,15] aimed at:
+ -characterizing the state-of-art research on startups,
+
+ -understanding the context that characterizes startups,
+
+ -determining the potential for technology transfer of the state
+of-art research on startups,
+
+ -extracting and analyzing software development work practices
+used in startups.
+
+The systematic map consists of 43 primary studies that were
+identiﬁed from an initial set of 1057 papers. Practitionersmay take
+advantage of the 213 identiﬁed software engineering work
+practices, while considering however the studies’ respective rigor
+and relevance assessments. Furthermore, this ﬁrst systematic
+exploration on software startups provides researchers with direc
+tions for future work.
+
+The remainder of this paper is structured as follows: Section 2
+describes background and related work; Section 3 illustrates the
+research methodology and discusses validity threats; Section 4
+introduces the classiﬁcation schema, developed from the gathered
+data; Section 5 presents the results of the mapping study. The
+state-of-art of software development in startups is discussed in
+Section 6,whereas in Section 7 the reported software development
+work practices are analyzed. Section 8 concludes the paper,
+answering the posed research questions and providing an outlook
+for future work.
+
+2. Background and related work
+
+Modern entrepreneurship, bornmore than thirty years ago [16],
+has been boosted by the advent of the consumer Internet markets
+in the middle of the nineties and culminated with the notorious
+dot-com bubble burst of 2000 [17]. Today, with the omnipresence
+of the Internet and mobile devices, we are assisting to an impres
+sive proliferation of software ventures – metaphorically referred
+as the startup bubble. In fact, easy access to potential markets
+and low cost of services distribution are appealing conditions for
+modern entrepreneurs [18]. Inspired by success stories, a large
+number of software businesses are created every day. However,
+the great majority of these companies fail within two years from
+their creation [8].
+
+2.1. Software startups
+
+An early account for the term startup in the SE literature can be
+found in Carmel [19] who studied in 1994 the time-to-completion
+in a young package ﬁrm. He noticed how these companies were
+particularly innovative and successful, advocating the need for
+more research on their software development practices so as to
+replicate success and try to transfer it to other technology sectors.
+Sutton [3] provides a characterization of software startups,
+deﬁned by the challenges they are faced with:
+ Little or no operating history – startups have little accumulated
+experience in development processes and organization
+management.
+
+ Limited resources – startups typically focus on getting the
+product out, promoting the product and building up strategic
+alliances.
+
+ Multiple inﬂuences – pressure from investors, customers,
+partners and competitors impact the decision-making in a com
+pany. Although individually important, overall they might be
+inconsistent.
+
+ Dynamic technologies and markets – newness of software
+companies often require to develop or operate with disruptive
+technologies2 to enter into a high-potential target market.
+
+One of the objectives of this SMS is to understand the context
+that characterizes startups and to what extent Sutton’s deﬁnition
+from 2000 has been adopted or broadened.
+
+2.2. Startup lifecycle
+
+The lifetime of a startup company, from idea conception to the
+maturity level, has been identiﬁed and reported from different
+perspectives (e.g. market [21] and innovation [22]). A prominent
+contribution, from a SE viewpoint, is the model presented by
+Crowne [8], who synthesized the startup lifecycle in four stages.
+The startup stage is the time when startups create and reﬁne the
+idea conception, up to the ﬁrst sale. This time frame is character
+ized most from the need to assemble a small executive team with
+the necessary skills to start to build the product. The stabilization
+phase begins from the ﬁrst sale, and it lasts until the product is
+stable enough to be commissioned to a new customer without
+causing any overhead on product development. The growth phase
+begins with a stable product development process and lasts until
+market size, share and growth rate have been established. Finally,
+the startup evolves to a mature organization, where the product
+development becomes robust and predictable with proven pro
+cesses for new product inventions.
+
+2.3. Software development in startups
+
+The implementation of methodologies to structure and control
+the development activities in startups is a major challenge for
+engineers [11]. In general, the management of software develop
+ment is achieved through the introduction of software processes,
+which can be deﬁned as ‘‘the coherent set of policies, organiza
+tional structures, technologies, procedures, and artifacts that are
+needed to conceive, develop, deploy andmaintain a software prod
+uct’’ [23]. Several models have been introduced to drive software
+development activities in startups, howeverwithout achieving sig
+niﬁcant beneﬁts [24,11,3].
+
+In the startup context, software engineering (SE) faces complex
+andmultifaceted obstacles in understanding how tomanage devel
+opment processes. Startups are creative and ﬂexible in nature and
+reluctant to introduce process or bureaucratic measures which
+may hinder their natural attributes [3,25]. Furthermore, startups
+have very limited resources and typically wish to use them to sup
+port product development instead of establishing processes
+[11,26]. Some attempts to tailor lightweight processes to startups
+reported basic failure of their application [27]. Rejecting the notion
+of repeatable and controlled processes, startups prominently take
+advantage of unpredictable, reactive and low-precision engineer
+ing practices [3,28–30].
+
+Product-oriented practices help startups in having a ﬂexible
+team,withworkﬂows that leave them the ability to quickly change
+the direction according to the targeted market [26,3]. Therefore,
+many startups focus on team productivity, asserting more control
+to the employees insteadofproviding them rigidguidelines [28–30].
+
+Startups often develop applications to tackle a high-potential
+target market rather than developing software for a speciﬁc client
+[18,31]. Issues related to this market type are addressed in litera
+ture by market-driven software development [32]. In this regard,
+researchers emphasize the importance of time-to-market as a
+key strategic objective [33,34]. In fact, startups usually operate in
+fast-moving and uncertainmarkets and need to copewith shortage
+of resources. Other peculiar aspects inﬂuencing software develop
+ment in the market-driven context are related to requirements,
+which are reported to be often ‘‘invented by the software com
+pany’’ [35], ‘‘rarely documented’’ [36], and can be validated only
+after the product is released to market [37,38]. Under these
+circumstances, failure of product launches are largely due to
+‘‘products not meeting customer needs’’ [32].
+
+2.4. Related work
+
+The prospects of evidence-based software engineering [39]
+have motivated researchers to conduct systematic literature
+reviews and mapping studies. Zhang and Babar [6] report on 148
+SLR’s and SMS’s published between 2004 and 2010. However, none
+of these reviews nor the reviews conducted up to February 2014,3
+investigated software engineering in the context of startups. Never
+theless, there exist reviews that studied software engineering topics
+pertinent to speciﬁc contexts or environments (as opposed to
+reviews that investigated individual software engineering technolo
+gies, e.g. feature location [40] or search-based software testing [41])
+that we consider as related work. Small and medium-sized enter
+prises (SMEs) and startups possibly share some characteristics, such
+as the low number of employees (fewer than 250 [42]) and limited
+resources [43,44]. Hence, reviews that study the literature on SMEs
+are relevant related work.
+
+Fig. 1. Systematic mapping process (adapted from Petersen et al. [15]).
+
+Pino et al. [45] studied the adoption of software process
+improvement approaches in SMEs [46]. They point out that very
+few of the SMEs that were part of the reviewed studies did achieve
+one of the pursued certiﬁcations, concluding that standard-driven,
+not tailored improvement initiatives are not suitable for small com
+panies, conﬁrming also Staples’ et al. ﬁndings [47]. Taticchi et al.
+[48] observe a similar situation in the area of business performance
+measures andmanagement (PMM). Their review identiﬁes a lack of
+PMM models speciﬁcally adapted to SMEs, speculating that non
+adoption stems from fear of costs and beneﬁts incomprehension.
+
+Thorpe et al. [49] reviewed the literature on using knowledge
+within SMEs. Managers/entrepreneurs are an important organiza
+tional resource in SMEs as they are drivers for creating knowledge.
+This knowledge is best encoded in organized routines that allow
+widespread sharing within the ﬁrm. The challenge is to provide
+enough structure, allowing knowledge creation and sharing to
+scale, without limiting creativity and learning.
+
+Rosenbusch et al. [50] studied the innovation-performance rela
+tionship in SMEs by conducting a meta-analysis of 42 empirical
+studies that cover 21,270 ﬁrms. Interesting to our studied context
+is their ﬁnding that innovation has a stronger impact on younger
+ﬁrms than on more established SMEs. Furthermore, evidence sug
+gests that for small and young ﬁrms it ismore beneﬁcial to conduct
+internal innovation projects than seeking innovation by collaborat
+ing with external partners.
+
+Common to these reviews, looking at different aspects of SMEs,
+is the recognition that properties of small ﬁrms require solutions
+and technologies that are adapted to that speciﬁc context. Simi
+larly, we argue that startups, differing from SMEs in terms of their
+operating history, outside inﬂuences and market dynamism,
+require software development solutions adapted to their context.
+This SMS seeks to evaluate, synthesize and present the empirical
+ﬁndings on software development in startups to date and provide
+an overview of researched topics, ﬁndings, strength of evidence,
+and implications for research and practice.
+
+3. Research methodology
+
+We chose to perform a systematic mapping study (SMS), which
+is capable of dealing with wide and poorly-deﬁned areas [15,4].
+A systematic literature review (SLR) [4] would have been a less
+viable option due to the breadth of our overall research question:
+What is the state-of-art in literature pertaining to software engineering
+in startups?
+
+The review in this paper follows the guidelines developed by
+Kitchenham and Charters [4] and implements the systematic map
+ping process proposed by Petersen et al. [15]. Fig. 1 illustrates the
+adopted process, whereas the individual steps are explained in
+Sections 3.1,3.2,3.3, 3.4, 3.5, 3.6 and 3.7. Note that rigor and
+relevance assessment is an extension attributed to Ivarsson and
+Gorschek [51] and synthesis is based on the constant comparison
+method proposed by Strauss and Corbin [52].
+
+The SMS procedurewas led by the ﬁrst and second authors,who
+performed the steps in Fig. 1 in a co-located environment, i.e.
+working together on a single computer screen. Note-taking during
+screening of papers and keywording alleviated the resolution of
+conﬂicts among the reviewers during data extraction and rigor
+and relevance assessment. If disagreement persisted, an in-depth
+review of the paper was performed and, if necessary, the third
+and fourth authors were consulted to take a ﬁnal decision.
+
+3.1. Deﬁnition of research questions
+
+The research question driving thismapping study is:What is the
+state-of-art in literature pertaining to software engineering in
+startups? To answer this question, we state the following sub
+questions:
+
+ RQ1 What is the context that characterizes software develop
+ment in startups?
+
+ RQ2 To what extent does the research on startups provide reli
+able and transferable results to industry?
+
+ RQ3 What are the reported work practices in association with
+software engineering in startups?
+
+With RQ1 we intend to understand the properties that charac
+terize the nature of software development in startups. Such a char
+acterization illustrates the dimensions by which startups are
+deﬁned in the state-of-art. With RQ2 we intend to determine the
+scientiﬁc evidence of the results reported in the state-of-art, allow
+ing researchers to identify worthwhile avenues for further work
+and providing practitioners a tool to navigate within the state
+of-art. With RQ3 we intend to identify the software engineering
+practices applied in startups, providing a basis for determining
+necessary further research.
+
+3.2. Conduct search
+
+We identiﬁed the primary studies by exercising a search string
+on scientiﬁc databases. The search string is structured according
+to population, intervention and comparison, as proposed by
+Kitchenham and Charters [4]. We omitted however the outcome
+and context facet from the search string structure as our research
+questions do not warrant a restriction of the results to a particular
+outcome (e.g. effective/not effectivework practices) or context (e.g.
+startups in a speciﬁc product domain).
+
+Table 1 lists the ﬁnal used keywords. The core concepts, repre
+senting population, intervention and comparison, are derived from
+our research questions. Following Rumsey’s guidelines [53], we
+identiﬁed synonymous, related/broader/wider concepts, alterna
+tive spelling and part of speech for each core concept. Note that
+we did not include speciﬁc keywords from existing startup deﬁni
+tions (e.g. Sutton [3], discussed in Section 2.1) to the population set
+of terms as this could have biased the search.
+
+The selected scientiﬁc databases on which we performed the
+search are shown in Table 2, alongwith the number of publications
+retrieved from each database (up to December 2013).We selected
+the databases considering their coverage and use in the domain of
+software engineering, and their ability to handle advanced queries,
+following the example of Barney et al. [54].
+
+To increase publication coverage we also used Google Scholar,
+which indexes a large set of data, both peer and non-peer
+reviewed. Then, we proceeded to the customization of the search
+string, adapting the syntax to the particular database4.
+
+3.3. Screening of relevant papers
+
+The criterion that guided the inclusion of a paper was that the
+study presented a contribution to the body of knowledge on soft
+ware development in startups. A contribution can be in the form
+of an experience report, applied engineering practices, develop
+ment models or lessons learned. We excluded search results that
+
+were:
+ not peer-reviewed (gray literature, books, presentations, blog
+posts, etc.),
+
+ not written in English,
+
+ clearly obsolete (more than 20 years old),
+
+ related to non-software companies (biotech, manufacturing,
+electronics, etc.),
+
+ related to established companies (VSE, SME, research spin-offs),
+
+ related to technicalities of startups (algorithms, programming
+languages, etc.).
+
+For the screening of papers we followed the workﬂow in Fig. 2.
+
+With the support of a reference management tool [56] we
+merged the six result lists from the search in the scientiﬁc
+databases. Then, we removed duplicated items in two steps: ﬁrst
+we used the reference management tool to automatically detect
+duplicates based on meta-data (author, publication year and title).
+Then, we manually deleted instances that were not detected as
+duplicates by the tool, resulting in 1057 papers.
+
+Then we analyzed the metadata (title, keywords, publication
+year and type) to identify papers that matched the exclusion
+criteria, resulting in 803 papers. In a more in-depth review, we
+analyzed the abstract of each paper, determining whether it
+matched our inclusion criterion, resulting in 76 papers. As
+indicated in Fig. 2, we improved the search strings while reading
+the abstracts, adding new keywords identiﬁed in retrieved papers
+and iteratively conducting a new search.
+In case of a disagreement among the reviewers or incomplete
+abstracts we read the entire paper, leading eventually to the ﬁnal
+set of 43 primary studies. During the screening process we kept
+track of the rationale for each exclusion, as shown in Table 3.
+
+3.4. Keywording
+
+The goal of keywording is to efﬁciently create a classiﬁcation
+schema, ensuring that all relevant papers are taken into account
+[15]. We followed the process illustrated in Fig. 3.
+
+The ﬁrst step consisted in reading the abstracts of the primary
+studies, assigning them a set of keywords to identify themain con
+tribution area of the paper. Thenwe combined the keywords form
+ing a high-level set of categories, leading to a rough understanding
+of the research area represented by the primary studies. By pro
+gressively ﬁtting the papers into categories, the schema underwent
+a reﬁnement process, being continuously updated to account
+for new data. When performing data extraction and mapping
+(Section 3.5), we annotated the classiﬁcation with evidence from
+the respective paper, further reﬁning the schema and sorting. The
+resulting classiﬁcation schema is discussed in Section 4 and used in
+the analysis of the results in Sections 6 and 7.
+
+3.5. Data extraction and mapping
+
+After we deﬁned the classiﬁcation schema, resulting from the
+keywording process, we proceeded to systematically extract data
+from the primary studies. For each paper, we ﬁlled a spreadsheet,
+sorting it into the classiﬁcation schema and extracting the follow
+ing data, inspired by other similar studies [57,58]:
+ Article title
+
+ First author
+
+ Year of publication
+
+ Synthesis of results (one-line)
+
+ Keywords
+
+We took advantage of the data extraction process to identify an
+additional relevant aspect which emerged while reading abstracts
+and the full text: the recurrent patterns of common attributes
+
+Fig. 2. Screening of papers workﬂow.
+
+among startup companies resulted in themes that are reported in
+Section 5.2.Moreover, we screened the bibliography of each paper,
+identifying other possible relevant studies to our research, adopt
+ing the snowballing technique5 [59].
+
+3.6. Rigor and relevance assessment
+
+A major challenge of SE is to transfer research results and
+knowledge to practitioners, showing the ﬁndings’ validity and con
+crete advantages [51]. To assess how results are presented in the
+primary studies, we extended the traditional SMS framework with
+an additional step, that is, the evaluation of the papers’ rigor and
+relevance (see Fig. 1). With this extension we compensate for the
+SMS’ limitation of not assessing the quality of the mapped studies
+by developing and using a simple ranking function.
+
+We use a systematic and validated model [51] to evaluate the
+scientiﬁc rigor and the industrial relevance of each primary study.
+Themodel provides a set of rubrics tomeasure rigor and relevance,
+dividing these two factors into different aspects, and quantifying
+the extent to which each aspect is considered in the study (see
+Ivarson and Gorschek [60] for an application of the model).
+
+Rigor refers to the precision or exactness of the used research
+method and how the study is presented. We considered aspects
+relating to:
+
+ Context – description of development mode, speed, company
+maturity and any other important aspectswhere the evaluation
+is performed.
+
+ Study design – description of the measured variables, treat
+ments, used controls and any other design aspects.
+
+ Validity – description of different types of validity threats.
+
+Relevance refers to the realism of the environment where the
+study is performed and the degree to which the chosen research
+method contributes to the potential of transferring the results to
+practitioners. We considered aspects relating to:
+
+ Subjects – use of subjects who are representative of the
+intended users of the technology.
+
+ Context – use of settings representative of the intended usage
+setting.
+
+ Scale – use of a realistic size of the applications.
+
+ Research method – use of a research method that facilitates
+investigating real situations and relevant for practitioners.
+
+Aspects related to the rigor of the study are scored at three lev
+els: weak (0), medium (0.5) and strong (1). Aspects related to rel
+evance are scored 1 if contributing, 0 otherwise. The detailed
+rubrics, used to evaluate the studies, can be found in Ivarsson
+and Gorschek [51]. To obtain the study’s ﬁnal score, we sum the
+individual scores of the rigor and relevance aspects.
+
+In order to rank the papers,we deﬁned a function incorporating
+the classiﬁcation schema, rigor and relevance scores, and two addi
+tional factors that characterize the publication type and year. The
+ranking function provides a rough estimation of the value that a
+paper provides to practitioners and the research community, giv
+ing a stronger weight to recent rigorous journal publications
+entirely devoted to the topic and presenting empirical results rel
+evant to practitioners. We used tables for converting each factor
+into an arbitrary numerical value in the range between 0 and 10.
+The conversion tables used to quantify the internal score of each
+factor are shown in the supplementary material [55], while the
+limitations of this approach are discussed in Section 3.8.3. The ﬁnal
+ranking of the 43 primary studies is discussed in Section 6.2.
+
+3.7. Synthesis
+
+In the synthesis we identiﬁed themain concepts from each pri
+mary study, using the original author’s terms in a one line state
+ment. Those main concepts were then organized in tabular form
+to enable comparisons across studies and translation of ﬁndings
+into higher-order working practices and classiﬁcation categories.
+We used the classiﬁcation categories from Section 4. This process
+is analogous to the method of constant comparison used in quali-
+tative data analysis [52].
+
+Fig. 3. Workﬂow for classiﬁcation schema creation (adapted from [15]).
+
+In Section 7we present the identiﬁedwork practices, discussing
+their application in the startup context, their beneﬁts and liabili
+ties, and putting them in perspectivewith the results of other stud
+ies. In summary, synthesis is achieved by:
+
+ Identiﬁcation of a set of working practices and relative classiﬁ
+cation categories.
+
+ Documentation of advantages and disadvantages of reported
+results.
+
+ Elaboration of gaps on the applicability of working practices in
+startup contexts.
+
+
+3.8. Threats to validity
+
+We identiﬁed potential threats to the validity of the systematic
+mapping and its results, together with selected mitigation strate
+gies. The structure of this Section follows Unterkalmsteiner et al.
+[61].
+
+3.8.1. Publication bias
+
+Systematic reviews suffer from the common bias that positive
+outcomes are more likely to be published than negative ones [4].
+This can be observed also in our mapping study which includes
+few papers on failed startup endeavors and studies, while the
+success rates of startups is generally rather low. It is unlikely that
+research is performed only in collaboration with successful
+startups. Nevertheless, we do not consider this as a major threat
+as this bias is orthogonal to our study aim, mapping the state
+of-art on startup research. Still, this bias takes away some of the
+possibilities to analyze reported work practices with regard to
+their performance.
+
+3.8.2. Identiﬁcation of primary studies
+
+The approach we used to construct the search string (see
+Section 3.2) aimed to be inclusive with respect to the number of
+retrieved papers, related to software development in startups.
+However, a limitation of the current search string lies in the
+exclusion of the stand-alone terms ‘‘startup’’ and ‘‘start-up’’. These
+individual terms lead to unmanageable search results (more than
+20,000 papers) that are mostly irrelevant as they are related to
+the English phrasal verb ‘‘to start up’’, largely used in many disci
+plines to indicate the commencing moments of an engine. There
+fore, to mitigate the risk of excluding potential relevant primary
+studies, we constructed a search string containing qualiﬁers to
+the term ‘‘startup’’, e.g. ‘‘IT startup’’, and included synonyms, vali
+dating our search strings with the support of librarians specialized
+in software engineering.
+
+Still, the precision (ratio of retrieved relevant and all retrieved
+papers [62]) of the used search string is low (43 out of 1057, 4%).
+However we were not interested in obtaining high precision as
+much aswe aimed to obtain a high recall (ratio of existing relevant
+papers [62]). The risk of excluding relevant primary studies is fur
+ther mitigated by the use of multiple databases, which cover the
+majority of scientiﬁc publications in the ﬁeld.
+
+We were not able to retrieve 20 papers since they were neither
+available in online catalogs, in the three librarieswe consulted, nor
+on request from the authors. However, this is a minor risk as we
+had access to their titles, keywords and abstracts, which gave us
+a good degree of conﬁdence that they were not relevant. Addition
+ally, considering our 4% precision rate, the number of potentially
+relevant primary studies would be less than 1.
+
+We noticed high inconsistency in the use of the term ‘‘startup’’
+by different researchers, even in the same area. For example, Sut
+ton [3] distinguishes startups from established companies by char
+acterizing startups according to their extreme lack of resource,
+newness and immaturity (in a process sense). On the other hand,
+Deias et al. [63] deﬁne their company as a startup, withmore then
+150 employees and resources available to certify the quality of
+their development process. Under these conditions, the attempt
+to identify a body of knowledge and research scope has been highly
+challenging. Therefore, we had to identify and analyze multiple
+and conﬂicting deﬁnitions.
+
+Moreover, several contextual factors, not thoroughly analyzed in
+this study, can be identiﬁed as important. Factors regarding the
+application domain or themarket type could inﬂuence the adoption
+ofworking practices and processes.However, in this studywe com
+promised details regarding speciﬁc context challenges in favor of a
+general overview of practices reported by primary studies.
+
+Finally, since startups and entrepreneurship in general are
+appealing for many sectors of the economy, an additional threat
+lies in the fact that some relevant information can be found in
+other research areas, such as business innovation and marketing,
+not considered in this study.
+
+3.8.3. Study selection and data extraction
+
+Threats to study selection and data extraction [57] have been
+mitigated with an up-front deﬁnition of the inclusion/exclusion
+criteria [4]. The selection of relevant primary studies can be further
+biased by personal opinions of researchers executing the process.
+To mitigate this threat, we deﬁned and documented a rigid proto
+col for the study selection and, by conducting the selection
+together and dedicating a reasonable amount of time to review
+conﬂicts, mutually adjusting each others’ biases, as suggested by
+Kitchenham and Charters [4]. The screening process is threatened
+by a potential predominance of the opinion of one reviewer over
+the other, since the ﬁrst two authors performed the screening
+process collaboratively at one computer. This threat wasmitigated
+by explicitly recording the exclusion rationale for each paper,
+requiring clear evidence from the paper to support the decision,
+and supporting the consensus creating process by consulting the
+history of previously taken decisions.
+
+Another threat is related to researchers personal judgments,
+which can interfere with the evaluation of rigor and relevance of
+selected studies. Even though the rigor and relevance model pro
+vides guidelines anddetailed rubric tables to support objectivedeci
+sions, the evaluationdependson the reportingqualityandnoton the
+intrinsic quality of the study itself [51]. As such,we used the scores
+only to rank but not to exclude studies from the selection. The
+ranking itself gives an indication of the study quality, the individual
+contribution needs however to be qualiﬁed by the reader [51].
+
+The validity of the ranking function (see Section 3.6) is threa
+tened by the arbitrarily chosen scores for each category and
+weights for each dimension. To mitigate this threat, we used an
+automatic spreadsheet to compute the ﬁnal scores, allowing us
+to adjust scores and weights, observing the effect of the ﬁnal rank
+ing in real time. For validating our ranking, we tried to modify
+scores/weights values several times, andwe observed that the ﬁnal
+ranking was not signiﬁcantly altered by numerical adjustments, as
+long as we kept the ordering of concepts stable.
+
+4. Classiﬁcation schema
+
+In this section we present the classiﬁcation schema that is
+adapted from other existing taxonomies or emerged from the key
+wording process. The schema consists of four facets:
+
+ Research type: to represent the type of the undertaken study.
+ Contribution type: to map the different types of the study
+outcomes.
+
+ Focus: to describe the main focus of the research.
+
+ Pertinence: to distinguish between studies entirely devoted to
+engineering activities in startups and the ones that have a
+broader perspective.
+
+Fig. 4. Publication distribution-year.
+
+The research type facet (Table 4(a)) is used to distinguish
+between different types of studies, abstracting from the speciﬁc
+underlying research methodology. The research types were
+adapted from Wieringa [64].
+
+The contribution facet (Table 4(b)), similarly to the taxonomy
+used by Shaw [65], describes the kind of contribution a study pro
+vides. Contribution types can be divided into weak (advises and
+implications, lessons learned, tools and guidelines) and strong
+(theory, framework/method and model) contributions.
+
+Table 4
+
+Category=>Description
+(a) Research type facet (adapted from Wieringa [64])
+
+Evaluation research =>The methodology is implemented in practice and an evaluation of it is conducted. That means, it is shown how the research is implemented
+(solution implementation) and what are the consequences of the implementation in terms of beneﬁts and drawbacks (implementation
+evaluation). This also includes problems identiﬁed in industry
+
+Solution proposal =>A solution for a problem is proposed. The solution can be either novel or a signiﬁcant extension of an existing methodology. The potential
+beneﬁts and the applicability of the solution is shown by a small example or a good line of argumentation
+
+Philosophical papers=> These papers sketch a new way of looking at existing things by structuring the ﬁeld in form of a taxonomy or conceptual framework
+
+Opinion papers =>These papers express the personal opinion of somebodywhether a certain technique is good or bad, or how things should have been done. They
+do not rely on related work and research methodology
+
+Experience papers=> Experience papers explain what and how something has been done in practice. It has to be the personal experience of the author
+
+(b) Contribution facet (adapted from Shaw [65])
+
+Model =>Representation of an observed reality by concepts or related concepts after a conceptualization process.
+
+Theory =>Construct of cause-effect relationships of determined results
+
+Framework/methods =>Models related to constructing software or managing development processes
+
+Guidelines =>List of advises, synthesis of the obtained research results
+
+Lesson learned =>Set of outcomes, directly analyzed from the obtained research results
+
+Advice/implications =>Discursive and generic recommendation, deemed from personal opinions
+
+Tool =>Technology, program or application used to create, debug, maintain or support development processes
+
+
+(c) Focus facet 
+Software 
+development =>Engineering activities used to write and maintaining the source code
+ 
+Process management => Engineering methods and techniques used to manage the development activities
+Tools and technology  => Instruments used to create, debug, maintain and support development activities
+
+Managerial/ organizational =>
+Aspects that are related to software development, by means of resource management and organizational structure
+
+(d) Pertinence facet
+
+Full =>Entirely related (main focus) to engineering activities in software startups
+
+Partial => Partially related to engineering activities in software startups
+Main research focus related to engineering activities
+
+Marginal Marginally related to engineering activities in software startups.
+Main research focus different from engineering activities
+
+
+The categories in the focus facet (Table 4c) were obtained by
+clustering the sets of keywords identiﬁed in the keywording pro
+cess (Section 3.4) and abstracting them to four categories.We sep
+arated thereby studies concerning software development practices
+(e.g.writing user stories [13]) from studies focused on higher-level
+process management (e.g. use Scrum methodology [66]). Further
+more we distinguish between studies focused on speciﬁc tools
+and technologies (e.g. use of post-it notes [67]) and work focused
+on managerial/organizational aspects in startups (e.g. operate in
+cross-functional settings [19]).
+
+The pertinence facet (Table 4(d)) distinguishes the levels (full,
+partial, marginal) on which the study’s research focus is directed
+towards engineering activities in startups.
+The classiﬁcation schema in Table 4 forms the basis for the sys
+tematic maps presented and discussed in Section 5.
+
+5. Results
+
+This section presents the results of the systematic mapping
+study. From an initial sample of 1057 papers, we identiﬁed 43 pri
+mary studies answering our research questions.
+
+5.1. Startup research categorization
+
+To characterize the main themes covered within the area of
+engineering activities in software startups, we used the set of
+keywords extracted from the study’s abstract and author-deﬁned
+keywords (when available in the metadata). From the 43 primary
+studies we extracted a total of 346 keywords (125 unique) averag
+ing on about 8 keywords per paper. These formed the basis6 for the
+focus and pertinence facet of the classiﬁcation schema (Section 4).
+Table 5 applies the classiﬁcation schema on the primary studies, pro
+viding an overview of the ﬁeld of startup research.
+
+In order to illustrate potential gaps in startup research, we
+present the systematic map with multi-dimensional bubble charts
+(‘‘x–y scatter plots with bubbles in categories intersections’’ [15]),
+where the size of the bubble is determined by the number of pub
+lications corresponding to the x–y coordinates. Differently from
+other studies (e.g. [97,98]), each data point is represented by four
+features. Thus, we created three plots (Figs. 5–7) to visualize all
+six possible facets combinations from the classiﬁcation schema,
+giving a complete overview of the systematic map and providing
+means to analyze it.
+
+For example, Fig. 5 indicates that 11 studies (26% of the total)
+are focused on managerial and organizational factors, conducted
+through an evaluation type research. In the same ﬁgure it is possi
+ble to observe that 8 studies with managerial and organizational
+focus contributed to the body of knowledge with a model. How
+ever, by looking at Fig. 6, one can quickly notice that 6 out of the
+total 10 models have only a marginal pertinence with engineering
+activities in software startups.
+
+5.2. Context characteristics of startups
+
+To illustrate how authors use the term ‘‘software startup’’, we
+systematically extracted themeswhich characterize the companies
+in the selected primary studies.We were able to identify 15 main
+themes, reported in Table 6.
+
+When discussing software startups, 18 authors reported a gen
+eral lack of human, physical and economical resources (T1). For
+this reason, startups deeply depend upon external software solu
+tions such as third party APIs, COTS and OSS (T7). Other studies
+refer to companies which are able to quickly react to changes in
+the market and technologies (T2), under remarkably uncertain
+conditions (T4). Some authors indicate that these companies are
+focused on highly innovative segments of the market (T3), gener
+ally working on a single core-product (T9) under extremely high
+time-pressure (T6). Furthermore, 14 authors write about startups
+as fast growing companies (T5) designed to rapidly scale-up. Other
+researchesmention a very small founding team (T8),which is often
+composed by low-experienced people (T10) with a very ﬂat orga
+nization structure (T12),where the CEO is sometimes a core devel
+oper himself. Finally, other studies agree on the highly risky nature
+of these businesses (T13), being newly created (T11) and therefore
+with no or little working history (T15).
+
+5.3. Rigor and relevance
+
+Even though the scientiﬁc value of a study is not determined by
+the publication type, the peer-review process required for publish
+ing a journal article is generally much more rigorous and formal
+than the procedure to get an article published in a scientiﬁc mag
+azine or accepted to a conference [99]. Twenty (47%) of the
+selected 43 primary studies are journals, while 16 (37%) are pub
+lished in conference proceedings and 7 (16%) in magazines.
+Although this feature alone is not enough to represent a direct
+implication on the quality,7 it can be interpreted as a ﬁrst indicator
+of scientiﬁc quality.We formally assessed the quality of the primary
+studies with the rigor and relevance process described in Section 3.6,
+resulting in Fig. 8 (the raw data for this ﬁgure is available in the sup
+plementary material [55]).
+
+Looking at Fig. 8, nine studies (21%) lie in the upper right quad
+rant, the preferable region, of the chart (rigorP 2, relevanceP 3).
+Twenty-one studies (49%) exhibit moderate industry relevance
+(relevance P 2), showing however low scientiﬁc rigor (rigor
+6 1:5). Ten studies (23%) are located in the lower left quadrant of
+the chart (rigor 6 1:5 and relevance 6 2).
+
+6. Analysis of the state-of-art
+
+More than 65% of the 43 identiﬁed primary studies have been
+published in the last ten years (between 2004 and 2013, see
+Fig. 4). Fourteen primary studies, dated prior 2004, discuss soft
+ware startup related issues. This indicates that the research on
+startups is still in its infancy, compared to the long-standing
+history of the SE discipline, and gaining interest in the research
+community. The yearly distribution of publications attest the nov
+elty of the startup phenomenon, enabled and ampliﬁed by the
+potentially large markets and distribution channels offered by
+internet and mobile devices [20,30]. This has opened a set of
+new challenges that are difﬁcult to address using traditional
+approaches [3].
+
+By analyzing the three bubble charts (Figs. 5–7), the following
+observations can be made on the state-of-art:
+
+ Looking at the pertinence facet in Fig. 7 we can observe that
+only 16 studies (37%) are entirely dedicated to software devel
+opment in startups; Ten of those produced a weak contribution
+(advice and implications (6); lesson learned (3); tool (1)).
+
+ Observing the focus facet (Fig. 7), it is easy to see that 19 studies
+(44%) are focused on managerial and organizational factors.
+None of those 19 studies exhibits a full pertinence to engineer
+ing activities in startups.
+
+ The overall studies’ contribution types are for the greater part
+weak: advice and implication, lessons learned, tools and guide
+lines (27 studies, 63%, Fig. 5). Of the 16 remaining studies (37%)
+which exhibit a strong contribution type (theory, framework/
+method, model), only 7 focus on what we considered funda
+mental for our research questions (software development and
+process management).
+
+ Approximately half of the selected studies were carried out
+using an evaluation type research (21 studies, 49%, Fig. 5), being
+the only research type which involves a ﬁeld study. However,
+we can also observe in the same ﬁgure that 11 of these are
+related to managerial and organizational factors, and only 8
+out of 21 have a full pertinence with engineering activities in
+software startups (Fig. 7).
+
+ Looking at the studies which focus on processmanagement and
+software development (Fig. 7), the majority (16 out of 23 stud
+ies) has a full pertinence with engineering activities in software
+startups.
+
+To summarize the systematic map, we can state that Coleman
+and O’Connor [72,11,24], and Kajko-Mattson and Nikitina [13] rep
+resent the strongest contributions to the ﬁeld of startup research,
+considering strength of contribution type, pertinence to engineer
+ing activities and strength of empirical evidence. However, it must
+be noted that the three publications by Coleman and O’Connor are
+based on the same dataset originating from 21 companies.
+
+6.1. RQ1 – The context characterizing software development in
+startups
+
+The results (Table 6) indicate that there is no agreement on a
+standard deﬁnition, specifying the characteristics of a ‘‘startup’’.
+Different authors provide varying deﬁnitions and use the term
+‘‘startup’’ referring to varying contexts. This renders any attempt
+to identify a solid and coherent body of knowledge on startup
+research very challenging. Looking at Suttons startup characteriza
+tion [3] from 2000, we can observe that our understanding of the
+nature of startups expanded to aspects such as innovation, fast
+growth, time pressure, third party dependency, focus on one prod
+uct and ﬂat organizational structures (see Table 6).
+
+Deﬁning what makes a software startup unique is an interesting
+problem. Apparently, the deﬁnition is not strictly related to the size
+of the company. For instance, some authors call ‘‘startups’’ compa
+nies with 6 employees [83], whilst others refer to ‘‘startups’’ with
+more than 300 employees [76,11]. Uniqueness is not deﬁned
+through the age of the company alone: some authors studied
+startupswhich have been operating formany years [79],while oth
+ers aremore strict and limit the deﬁnition to only recently founded
+companies [13]. Other authors treat ‘‘start-up’’ as a stage of a com
+pany [8,28].Others claim that startupsworkon innovativeproducts,
+withoutprovidingan exactdeﬁnitionof ‘‘innovation’’, rendering this
+characterization less useful (a recent systematic study identiﬁed 41
+deﬁnitions of innovation in 204 selected primary SE studies [100]).
+
+The most frequent reported themes concern the general lack of
+resources, high reactiveness and ﬂexibility, innovation, uncertain
+conditions, time pressure and fast growth. Since the contextual
+boundaries of startups resulted to be highly blurred, it is the
+researchers’ responsibility who refer to ‘‘startups’’ to explicitly
+deﬁne the features of the company under study (e.g. company
+age, team size, product type, product development time).
+
+6.2. RQ2 – Transferability of results to industry
+
+Fig. 8 illustrates a major weakness of the state-of-art in startup
+research. Seven primary studies (16% of the total), received an
+average score for industrial relevance (2) but a low score (0) for sci
+entiﬁc rigor. According to the authors of the rigor-relevancemodel
+[51], this represents a major threat to the transferability of the
+results to industry. Even though ﬁndings may appear to be some
+what appealing to practitioners (average relevance), low scientiﬁc
+rigor will render knowledge transfer to industry highly unlikely or
+even dangerous. One of themost important factors contributing to
+academic results being applied in the industry is the provision of
+strong scientiﬁc evidence [101,102].
+
+In the remainder of this subsection we extend the analysis of
+rigor and relevance by integrating factors such as publication type
+and year and also the classiﬁcation schema. We follow the proce
+dure described in Section 3.6, computing a score (in the range
+½0  10) for each primary study.
+
+The design of the ranking function considers our research ques
+tion of identifying software engineeringwork practices in startups.
+Hence, the pertinence dimension from the classiﬁcation schema
+contributes the most (25%) to the score, followed by rigor and
+relevance (17.5% each). Age of the publication (15%) is factored in
+asmore recent studies are likely to provide amore relevant context
+for practitioners. The publication type accounts for 10%. The contri
+bution type, research type and focus account each for 5% of the
+total score which is the sum of all eight weighed scores. The
+conversion tables to achieve a normalized score are available in
+Supplementary material [55].
+
+Table 7 quantiﬁes the body of knowledge on startup research,
+provided by 43 primary studies analyzed in this systematic map
+ping study. The ranking gives an indication to what extent we
+can answer questions targeted at the state-of-art of the software
+engineering work practices in startups.
+
+7. RQ3 – Work practices in startups
+We have extracted a total of 213 work practices8 from the 43
+primary studies reviewed in this SMS and subsequently divided
+them in categories (Table 8), as explained in Section 3.7. The catego
+rization of working practices is deﬁned according to the focus facet
+of the classiﬁcation schema, presented in Fig. 4(c). In the remainder
+of this section, we discuss the identiﬁedwork practices, pointing out
+where gaps exist and further research is warranted.
+
+7.1. Process management practices
+
+Process management represents all the engineering activities
+used to manage product development in startups. Sutton [3]
+recognized the need for ﬂexibility to accommodate frequent
+changes in the development environment, and for reactiveness to
+obtain timely response in applying methodologies.
+
+Table 8
+
+Categorization of the identiﬁed work practices.
+
+Software development (Section 7.2) 90
+
+Managerial/organizational (Section 7.3) 70
+
+Process management (Section 7.1) 47
+
+Tools and technologies (Section 7.4) 6
+
+Sum 213
+
+
+Agile methodologies have been considered themost viable pro
+cesses for software startups, given that Agile methodologies
+embrace changes rather than avoiding them, allowing development
+to follow the business strategy [93]. In this context, fast releases
+with an iterative and incremental approach shorten the lead time
+from idea conception to production with fast deployment [93].
+The beneﬁts of having weekly releases and frequent build cycles,
+addressing the uncertainty of themarket, has been further reported
+by Blank [31], Tingling [80], Ambler [91] and Silva [67].
+
+A variant to Agile has been the Lean Startup [103,31], which
+advocates the identiﬁcation of the most risky parts of a software
+business and provide a minimum viable product (MVP) to
+systematically test and plan modiﬁcation for a next iteration. In
+this regard, in order to shorten time-to-market, prototyping is
+essential [90,19]. To allow better prototyping activities, evolution
+ary workﬂows are needed to implement ’’soft-coded’’ solutions in
+the ﬁrst phases until the optimal solution is found [90,3].
+
+Coleman [72] reports that XP is the most used development
+methodology across startup companies, due to its reduced process
+costs and low documentation requirements. Also other agile prac
+tices are explored, such as Scrumban [66], but not rigorously
+researched. In any case, ﬂexible in nature, startups’ processes do
+not strictly follow any speciﬁc methodology, but opportunistically
+select practices (e.g. pair-programming [63], backlog [80]). In fact,
+processes are tailored to the speciﬁc features that characterize
+each development context [92,72,11]. For example, Bosch et al.
+[73] advocate for adjusting the Lean startup methodology to
+accommodate the development of multiple ideas and integrate
+them when time for their testing and validation is too long. This
+concurs with the practice of allocating varying effort for formaliz
+ing speciﬁcations, design, documentation and testing in tailored
+development methodologies [91,82,19], emphasizing the impor
+tance of minimal process management.
+
+Summarizing, process management practices, reported to be
+useful in startups, are:
+
+ Light-weight methodologies to obtain ﬂexibility in choosing
+tailored practices, and reactiveness to change the product
+according to business strategies.
+
+ Fast releases to build a prototype in an evolutionary fashion and
+quickly learn from the users’ feedback to address the uncer
+tainty of the market.
+
+7.1.1. Discussion
+The Cyneﬁn framework [104] can be used to explain the orien
+tation of startups towards ﬂexible and reactive development
+approaches. Within this framework, startups cross the complex
+and chaotic domains. Those two domains represent the areas
+where applying rigorous process management to control develop
+ment activities is not effective, because no matter how much time
+is spent in analysis, it is not possible to identify all the risks or
+accurately predict what practices are required to develop a prod
+uct. Instead, ﬂexible and reactive methods, designed to stimulate
+customer feedback, increase the number of perspectives and solu
+tions available to decisionmakers.Moving from complex to chaotic
+domains, software startups open up new possibilities for creation,
+generating the condition for innovations. Therefore, any process
+tailored to the startup context needs at least to allow, but opti
+mally even facilitate movements between complex and chaotic
+domains that are intrinsic in the innovation generation of startups.
+In our opinion, this is the main requirement for future attempts of
+adapting software engineering processes to the startup context.
+
+Developers should have the freedom to choose activities
+quickly, stop immediately when results are wrong, ﬁx the
+approach and learn from previous failures. In this regard, in line
+with the Lean Startup movement, we expect methodologies and
+techniques tailored from common Agile practices to speciﬁc start
+ups’ culture and needs, where failing is completely acceptable,
+even preferred in favor of a faster learning process. However at
+some point, in preparation for growth, startups need to plan for
+scalable processes. Similarly to SMEs [49], they need to ﬁnd a bal
+ance between ﬂexibility and repeatability in their organizations’
+knowledge management and processes.
+
+7.2. Software development practices
+
+We have categorized work practices related to software devel
+opment as illustrated in Table 9, discussing them individually.
+
+7.2.1. Requirements engineering practices
+Establishing an engineering process for collecting, deﬁning and
+managing requirements in the startup context is challenging. RE
+practices are often reduced to some key basic activities [82,8].
+Su-Chan et al. [81] report on efforts in deﬁning the value-proposi
+tion that the company aims to achieve at the very ﬁrst stage of the
+project.
+
+Initially, as startups often produce software for a growing target
+market [31,19], customers and ﬁnal users are usually not
+well-known and requirements are therefore market-driven [90]
+rather than customer-speciﬁc. In such a context Mater and Subra
+manian [68] attest severe difﬁculties in eliciting and detailing the
+speciﬁcations of both functional and non-functional requirements.
+Moreover, in unexplored and innovative markets, the already
+poorly-deﬁned requirements tend to change very rapidly. This
+makes it hard for the development team tomaintain requirements
+and keep them consistent over time.
+
+Table 9
+Software development practices
+
+Requirements engineering (Section 7.2.1) 21
+
+Design and architecture (Section 7.2.2) 32
+
+Implementation, maintenance and deployment (Section 7.2.3) 14
+
+Quality assurance (Section 7.2.4) 23
+
+Sum 90
+
+
+Several authors acknowledge the importance of involving the
+customer/user in the process of eliciting and prioritizing require
+ments according to their primary needs [92,90,74,8,95]. However,
+the market-driven nature of the requirements demands for alter
+natives. For example, startups can use scenarios in order to be able
+to identify requirements in the form of user stories [67] and
+estimate the effort for each story [82]. In scenarios and in similar
+product-usage simulations, an imaginary customer can be repre
+sented by an internal member of the company [80]. An example
+of a more strict customer-development process [105] that drives
+the identiﬁcation of requirements can be found in an experience
+report by Taipale [93].
+
+7.2.1.1. Discussion. Polishing requirements that address an unsolic
+ited need is waste. To demonstrate problem/solution ﬁt it is
+required to discover the real needs of your ﬁrst customers, testing
+business speculations only by deﬁning a minimal set of functional
+requirements. In the future, developing a deep customer collabora
+tion, such as the customer development process [21] will change
+the requirements elicitation methods, moving towards testing
+the problem and understand if the solution ﬁts to real needs even
+before the product goes to the market.
+
+7.2.2. Design and architecture practices
+
+Deias and Mugheddu [63] observed a general lack of written
+architecture and design speciﬁcations in startups. Development
+in startups is usually guided by simple principles, trying to avoid
+architectural constraints that are difﬁcult to overcome as the prod
+uct and user-base grows. Tinglings [80] results suggest that a not
+well analyzed architecture causes problems in the long run. How
+ever, a good-enough architecture analysis should at least identify
+the decisions that might cause problems before obtaining product
+revenue, andwhich can be ﬁxed at a later point in time, accounting
+for increased resources after revenue cash starts to ﬂow [92].
+
+One common analysis on determining requirements is the plan
+ning game, where developers can arbitrate the cost of desired fea
+tures and delivered functionalities. However business people can
+‘‘steer’’ the process and impact adopted architectural decisions,
+which could present obstacles for refactoring activities, especially
+if the software complexity grows [91]. Then the use of design pat
+terns [106], e.g. the model-view-controller [107], can provide
+advantages to startups which need ﬂexibility in refactoring the
+product.Moreover, formulating initial architectural strategieswith
+high-level models and code-reuse from industry standards repre
+sents a viable trade-off between big up-front and ad hoc design
+[73].
+
+Jansen et al. [77] suggest that startups should take advantage of
+existing components, reducing thereby time-to-market. Leveraging
+on frameworks and code-reuse of third party components rein
+forces the architectural structure of the product and the ability to
+scale with the company size. As reported by Yofﬁe [76], scalability
+represents themost important architectural aspect in startups and
+should be addressed as soon as possible. Then, startups can beneﬁt
+from reusing components and shared architectures across projects
+as well as existing high-level frameworks and modeling practices.
+
+Summarizing, design and architectural practices reported to be
+useful in startups are:
+
+ The use of well-known frameworks able to provide fast change
+ability of the product in its refactoring activities.
+
+ The use of existing components, leveraging third party code
+reinforcing the product ability to scale.
+
+
+7.2.2.1. Discussion. Despite the general lack of written architecture
+speciﬁcations in startups, the difﬁculties presented when the
+user-base and product complexity grows can be overtaken by a lit
+tle upfront effort on framework selection and analyzing decisions
+that might cause problems before obtaining product revenue.
+When the product evolves, the use of architecture and design to
+make features modular and independent are crucial to remove or
+change functionalities. Therefore, employing architectural prac
+tices and frameworks that enable easy extension of the design
+(e.g. pluggable architecture where features can be added and
+removed as plugins [108]) can better align the product to the
+uncertainty of the market needs.
+
+7.2.3. Implementation, maintenance and deployment practices
+
+Silva and Kon [67] report on positive results from pairing up
+senior and junior developers together in pair-programming ses
+sions. During these sessions, developers also made use of coding
+standards to help cross-team code readability and reduce the risks
+related to the high-rate of developer turnover. In a different study,
+Tingling [80] attested an initial high resistance to the introduction
+of coding standards and pair-programming. These practices were
+then adopted only in later stages, when the complexity of the pro
+ject required them. Zettel et al. [82] report that the practice of
+tracking traditional code metrics has been labeled as ‘‘obsolete
+and irrelevant’’ and thatmany companies use their ad hocmethods
+of assessing processes and metrics. The software team studied by
+Zettel et al. [82] had a bug-ﬁx process centered around their
+issue-tracking tool and relied on a release system. Several authors
+reported on advantages of constant code refactoring: ensuring
+readability and understandability of the code [82], improvingmod
+ularity [80] and providing discipline to developers [93]. On the
+other hand, introducing refactoring may cause problems since
+developers had no or little experience [63] and they did not see
+immediate value in introducing high level abstractions [67]. In
+the case study described by Ambler [91], an initial lack of refactor
+ing led to the need of re-implementing the whole system after the
+number of users had grown drastically. Finally some authors
+reported work practices related to deployment claiming that some
+software teams deploy manually the code on the infrastructure
+[67] while others rely on continuous integration tools [93].
+
+7.2.3.1. Discussion. Startups tend to start the code implementation
+with an informal style, introducing standards only when the pro
+ject size requires them. This is in line with the observations made
+by Thorpe et al. [49] on knowledge management and growth in
+SMEs. The process is often driven by lightweight ad hoc systems:
+bug-tracking, simple codemetrics and pair-programming sessions.
+In this regard, startups in the early stage keep the code base small
+and simple to develop only what is currently needed, maintaining
+focus on core functionalities to validatewith ﬁrst customers. As the
+business goal drives the need of effort in refactoring and imple
+mentation, more studies will be needed to align business with
+execution of concrete development practices in startup contexts
+(e.g. GQM Strategies [109]).
+
+7.2.4. Quality assurance practices
+
+Testing software is costly in terms of calendar time and often
+compromised in startups [19,82]. Quality assurance, in the broaer
+sense, is largely absent because of the weak methodological man
+agement, discussed in Section 7.1. The complex task of implement
+ing test practices is further hindered by the lack of team experience
+[67,68].
+
+However, usability tests are important to achieve product/mar
+ket ﬁt [83]. Ongoing customer acceptance ensures that features are
+provided with tests, which can effectively attest the ﬁtness of the
+product to the market [80,92,31]. Mater and Subramanian [68]
+suggest to use a small group of early adopters or their proxies as
+quality assurance ﬁt team. Furthermore, users can be an important
+means to judge whether the system needs more tests [82]. Out
+sourcing quality assurance to external software testing experts,
+handling the independent validation work if resources are not
+available [68], can also be an alternative.
+
+Summarizing, quality assurance practices, reported to be useful
+in startups, are:
+
+ The use of ongoing customer acceptance with the use of a focus
+groups of early adopters, which targets to attest the ﬁtness of
+the product to the market.
+
+ Outsourcing tests if necessary, to maintain the focus on the
+development of core functionalities.
+
+7.2.4.1. Discussion. Even though testing software is costly, accep
+tance tests are the only practice to validate the effectiveness of
+the product in uncertainmarket conditions [31]. Therefore, provid
+ing time-efﬁcient means to develop, execute and maintain accep
+tance tests is the key to improve quality assurance in startups
+[68]. In our opinion, startups will start making use of different
+automatic testing strategies, when easily accessible (e.g. create a
+test from each ﬁxed bug [110]). For example, UI testing remains
+a complex but important task considering how fast startups change
+their products through frequent validation tests on the market. In
+this concern, more research is needed to develop practical UI test
+ing approaches that can be commercialized [111].
+
+7.3. Managerial and organizational practices
+
+Flexibility, more than structure, plays an important role in
+startup companies [85,96]. Time pressure and lack of resources
+[86,87] lead to a loose organizational structure and often lack of
+traditional project management [19]. To accommodate ﬂexibility
+of managerial and organizational practices, the empowerment of
+teammembers represents themain viable strategy to enhance per
+formance and chances of success [19,78]. The team needs to be
+able to absorb and learn from trial and error quickly enough to
+adapt to new emergent practices [74,3,78].
+
+Empowerment allows the team to move rapidly and cutting
+through the bureaucracy, approval committees and veto cultures
+[92,73]. Nevertheless, key performance indicators (e.g. customer
+attrition, cycle time) and continuous deployment processes
+can effectively assess the consumers’ demand using the least
+amount of resources possible [103]. However, in building up a
+startup company, the team needs expertise to counterbalance
+the lack of resources [29,24,92]. Working on innovative
+products requires creativity, ability to adapt to new roles and to
+face new challenges everyday [3,69,86], working overtime if
+necessary [19,28]. Previous experience in similar business
+domains [76,87,86] and a working history in a team, exhibiting
+characteristics of an entrepreneur (courage, enthusiasm, commit
+ment, leadership), also play a primary role [29,30,96] in the skill
+set of a startup employee.
+
+Nevertheless, the absence of structure might hinder important
+activities, such as sharing knowledge and team coordination, espe
+cially when the company grows [91], as also observed in the con
+text of SMEs [49]. In this case co-location is essential to facilitate
+informal communication and close interactions between develop
+ment and business concerns [72,80]. Effective organization and
+governance mechanisms need to enable and maintain alignment
+between business and technology strategies, avoiding waste of
+resources [75,82]. Moreover, Crowne suggests to plan organiza
+tional objectives in the short-medium term [8], measuring devel
+opment cycle time to ﬁnd areas for improvements [93,13].
+Finally, despite Camel [19] reports lack of documentation in
+startup companies, Kuvinka [66] argues that startups, when
+approaching the development of long user stories, can take
+advantage of documentation and sometimes UI design to facilitate
+their management in the long run, especially when interacting
+with third parties [93].
+
+Summarizing,managerial and organizational practices reported
+to be useful in startups are:
+
+ Empowerment of team responsibilities and their ability to inﬂu
+ence the ﬁnal outcomes.
+
+ The use of key performance indicators to assess the consumers’
+demand.
+
+ Plan of short-medium term objectives, measuring development
+cycle time to ﬁnd areas of improvement.
+
+7.3.1. Discussion
+
+More empowerment allows the team to move rapidly with
+less bureaucracy. Then, the development team plays a key factor
+to enhance commitment, creativity and ability to adapt to new
+roles when necessary. In addition, open communication remains
+crucial for startups to handle engineering activities, understand
+ing the progress, code conﬂicts and competences. Therefore,
+new tools and techniques for focusing, exploring and making
+observations, encouraging comparison and seeking clariﬁcation
+and validation could improve effective verbal communication
+and lead to less misunderstandings and confusion. Nevertheless,
+in view of growth, managing transferable knowledge becomes
+crucial when hiring new personnel. However, keeping it informal
+but still providing enough structure for knowledge creation is
+challenging. In this regard, Thorpe et al. [49] suggest to design
+a ﬂexible ‘‘learning architecture’’, sensitive to entrepreneurial
+characteristics and speciﬁc context of the company, without lim
+iting creativity.
+
+7.4. Tools and technologies
+
+Startups are often established to develop technologically
+innovative products, which in turn might require cutting-edge
+development tools and techniques. Technological changes in the
+IT industry swipe through new network technologies, increasing
+variety of computing devices, new programming languages,
+objects and distribution technologies [3].
+
+However, from a managerial perspective, startups still prefer
+easy-to-implement tools, such as white-boards and real-time tools
+that are easy to use for handling fast-paced changing information.
+Sophisticated solutions, such as CASE tools [112], require training
+and have high implementation and maintenance costs [89,91].
+
+In general, startups take advantage of those technologies that
+can quickly change the product and its management [67,8], avoid
+ing conﬂicts with business strategic plans. Examples include gen
+eral-purpose infrastructures, such as conﬁguration management,
+problem reporting and tracking systems, planning, scheduling
+and notiﬁcation systems. Such technologies support the needed
+activities, accommodating changes when required [3]. To mitigate
+the lack of resources, startupsmight take advantage of open source
+solutions when possible, which also gives access to a large pool of
+evaluators and evolving contributions [95,94].
+
+Summarizing, tools and technologies practices reported to be
+useful in startups are:
+
+ The use of easy-to-implement tools to work with fast-paced
+changing information.
+
+ The use of open source solutions.
+
+7.4.1. Discussion
+
+Startups can take advantage of using new technologies and
+development tools without having any legacy or being constrained
+by previous working experience. However, lack of experience can
+also be a disadvantage which could be compensated by a
+light-weight process to select technologies; this selection could
+be guided by domain-speciﬁc or product speciﬁc requirements.
+For example, if a startup is creating a product that ismeant towork
+with a growing amount and diversity of consumer mobile devices,
+to create business advantages, the platform should be easy to
+extend to support new devices [113].
+
+8. Conclusions and future work
+
+Startups are able to produce software products with a strong
+impact on the market, signiﬁcantly contributing to the global
+economy. Software development, being at the core of startups’
+daily activities, is however not supported by a scientiﬁc body of
+knowledge. The evidence provided by the 43 primary studies is,
+for the most part, inadequate to understand the underlying phe
+nomenon of software development in startups. To the current
+date, fourteen years after Sutton assessed that startups have been
+neglected from process studies [3], the gap has been only par
+tially ﬁlled.
+
+This is remarkable, considering startups’ proliferation and, at
+the same time, high failure rate. Hence, to be able to intervene
+on the software development strategywith scientiﬁc and engineer
+ing approaches, it is necessary to better understand and character
+ize the state-of-art in the software startup context.
+
+By means of a systematic mapping study, we provide a classiﬁ
+cation of the state-of-art, assess rigor and relevance of the identi
+ﬁed primary studies, and analyze software development work
+practices discussed in the surveyed literature.
+
+Looking at the 43 primary studies, 19 (44%) are focused on
+managerial and organizational factors. Only 16 studies (37%) are
+entirely dedicated to software development in startups, whereby
+10 studies constitute a weak contribution type. Overall, only 4
+contributions to the ﬁeld are entirely dedicated to engineering
+activities in startups, providing a strong contribution type and
+conducted through an evidence-based research approach
+[11,24,72,13]. However, three of these studies are based on the
+same data, leading to the conclusion that there is a lack of relevant
+primary studies on software development in the startup context. In
+the following Sections we provide answers to our initially posed
+research questions.
+
+8.1. RQ1What is the context that characterizes software development
+in startups?
+
+There is no unique deﬁnition in literature on what constitutes a
+startup. The inconsistent use of the term ‘‘startup’’ by different
+authors and lacking descriptions of context restrain the creation
+of a coherent body of knowledge on software startups. This also
+hinders the adoption of results by practitioners as the context in
+which advancements are applicable is lacking.
+
+The most frequently reported contextual features of startups
+concern the general lack of resources, high reactiveness and ﬂexi
+bility, intense time-pressure, uncertain conditions and fast growth.
+Since the contextual boundaries of startups resulted to be highly
+blurred, we believe it is responsibility of the researchers who refer
+to the term ‘‘startup’’ to explicitly deﬁne the features of the studied
+companies. In most of primary studies an explicit contextualiza
+tion has been neglected, affecting the generalizability of their
+results.
+
+Some of the features characterizing startups are common to
+other SE contexts: innovative products development, market
+driven development, small companies, short time-to-market,
+web-development. However, the coexistence of all these features
+poses a new, unique series of challenges.
+
+8.2. RQ2 To what extent does the research on startups provide reliable
+and transferable results to industry?
+
+The rigor and relevance analysis indicates that only a minority
+of the studies (9, 21%) representing the state-of-art provide trans
+ferable and reliable results to practitioners. Even more concerning
+is that more than half of the studies (23, 53%) exhibit moderate
+industry relevance, however at the same time low scientiﬁc rigor.
+This makes the transfer of results to practitioners highly unlikely
+or even dangerous [51], calling for more rigorous studies in the
+context of software startups.
+
+8.3. RQ3 What are the reported work practices in association with
+software engineering in startups?
+
+We extracted and discussed work practices commonly used in
+startups as reported in the reviewed literature. In terms of process
+management, agile andmore traditionalmethodologies struggle to
+get adopted by startups due to an excessive amount of uncertainty
+and high time-pressure. Light-weight methodologies that allow
+companies to pick and tailor practices are preferred as they facili
+tate reactiveness and allow rapid changes in the product. In this
+sense, processes in startups are evolutionary in nature, and the
+product is obtained by iterating and updating an early prototype
+driven by customer feedback.
+
+Software development practices are reported to be adopted
+only partially and mostly in a late stage of the startup life-cycle.
+Requirements are market-driven and hardly documented. The
+architecture and design is often replaced by the use of well-known
+frameworks that facilitatemaintenance and reduce documentation
+efforts. Ad-hoc code metrics, pair programming sessions, and code
+refactoring sessions are reported to be valuable practices. Testing is
+mostly conducted through customer acceptance, focus groups, and
+sometimes by outsourcing the testing activity.
+
+Managerial and organizational practices are reduced to the
+essential. With minimal bureaucracy, developers are largely
+empowered and encouraged to adapt to several roles, creatively
+impacting on the ﬁnal products. Given the unpredictability in the
+startup context, milestones and objectives are focused on the
+short–medium term and basic key performance indicators are used
+to track customers’ demands.
+Startups mainly make use of simple tools to support and trace
+the knowledge-base and manage the workﬂow, often opting for
+open-source solutions that require little or no training and
+maintenance.
+
+8.4. Implications for practitioners, research and future work
+
+Evidence from the reviewed primary studies indicates that
+startup companies, struggling to survive and operate in an unpre
+dictable context, can beneﬁt from adopting certain software engi
+neering practices. However, low rigor studies and insufﬁcient
+context information threaten the adoption of these practices by
+practitioners.
+
+Performing research on startups is challenging due to the rap
+idly-changing conditions surrounding the studied environment.
+Therefore it is crucial to explicitly deﬁne the context when study
+ing startups, describing however also study design and validity
+threats. This strengthens studies, lifting the potential of results
+transfer to industry.
+
+While the characterization of startups through recurrent
+themes presented in this paper can serve as a basis, future work
+is needed to compile a common startup terminology and a set of
+deﬁnitions. Thatwould support the generation of a consistent body
+of knowledge based on evidence-based research, aiming at sup
+porting activities and decisions of the growing number of startup
+companies. We are currently investigating early-stage startups
+that are recently founded and distributed in different geographic
+areas and market sectors. Following a grounded theory approach,
+we aim at exploring the state-of-practice in this context, identify
+ing software development strategies engineered by practitioners.
+
+References
+
+[1] B. Kitchenham, P. Brereton, D. Budgen, M. Turner, J. Bailey, S. Linkman,
+Systematic literature reviews in software engineering – a systematic
+literature review, Inf. Softw. Technol. 51 (1) (2009) 7–15.
+
+[2] F.Q.B. da Silva, A.L.M. Santos, S. Soares, A.C.C. França, C.V.F. Monteiro, F.F.
+Maciel, Six years of systematic literature reviews in software engineering: an
+updated tertiary study, Inf. Softw. Technol. 53 (9) (2011) 899–913.
+
+[3] S.M. Sutton, The role of process in software start-up, IEEE Softw. 17 (4) (2000)
+33–39.
+
+[4] B. Kitchenham, S. Charters, Guidelines for performing Systematic Literature
+Reviews in Software Engineering, Tech. Rep. EBSE 2007-001, Keele University
+and Durham University Joint Report, 2007.
+
+[5] D. Budgen, M. Turner, P. Brereton, B. Kitchenham, Using Mapping Studies in
+Software Engineering, in: Proceedings of the 20th Annual Meeting of the
+Psychology of Programming Interest Group (PPIG), 2008, pp. 195–204.
+
+[6] H. Zhang, M.A. Babar, Systematic reviews in software engineering: an
+empirical investigation, Inf. Softw. Technol. 55 (7) (2013) 1341–1354.
+
+[7] T. Kane, The Importance of Startups in Job Creation and Job Destruction, Tech.
+rep., Kauffman Foundation, July 2010.
+
+[8] M. Crowne, Why software product startups fail and what to do about it, in:
+Proceedings of the International Engineering Management Conference
+(IEMC), 2002, pp. 338–343.
+
+[9] A. Maccormack, How internet companies build software, MIT Sloan Manage.
+Rev. 42 (2) (2001) 75–84.
+
+[10] K.M. Eisenhardt, S.L. Brown, Time pacing: competing in markets that won’t
+stand still, Harvard Bus. Rev. 76 (2) (1998) 59–69.
+
+[11] G. Coleman, R. O’Connor, An investigation into software development process
+formation in software start-ups, J. Enterprise Inf. Manage. 21 (6) (2008)
+633–648.
+
+[12] S. Blank, The four steps to the epiphany, Cafepress, 2005.
+
+[13] M. Kajko-Mattsson, N. Nikitina, From knowing nothing to knowing a little:
+experiences gained from process improvement in a start-up company, in:
+Proceedings of the International Conference on Computer Science and
+Software Engineering (CSSE), 2008, pp. 617–621.
+
+[14] G. Coleman, An empirical study of software process in practice, in:
+Proceedings of the 38th Annual Hawaii International Conference on System
+Sciences (HICSS), 2005, pp. 315c.
+
+[15] K. Petersen, R. Feldt, S. Mujtaba, M. Mattsson, Systematic Mapping Studies in
+Software Engineering, in: Proceedings of the 12th International Conference
+on Evaluation and Assessment in Software Engineering (EASE), 2007,
+pp. 1–10.
+
+[16] D. Storey, Entrepreneurship and the New Firm, Croom Helm, 1982.
+
+[17] A.B. Perkins, M.C. Perkins, The Internet Bubble: Inside the OvervaluedWorld
+of High-Tech Stocks – And What You Need to Know to Avoid the Coming
+Catastrophe, HarperInformation, 1999.
+
+[18] M. Marmer, B.L. Herrmann, E. Dogrultan, R. Berman, C. Eesley, S. Blank,
+Startup Genome Report Extra: Premature Scaling, Tech. rep., Startup Genome,
+2011).
+
+[19] E. Carmel, Time-to-completion in software package startups, Proceedings of
+the 27th Hawaii International Conference on System Sciences (HICSS), 1994,
+pp. 498–507.
+
+[20] C.M. Christensen, The Innovator’s Dilemma, Harvard Business School Press,
+1997.
+
+[21] S. Blank, Embrace failure to start up success, Nature 477 (7363) (2011) 133.
+
+[22] I. Heitlager, S. Jansen, R. Helms, S. Brinkkemper, Understanding the dynamics
+of product software development using the concept of coevolution, in:
+Proceedings of the 2nd International Workshop on Software Evoluability,
+IEEE Computer Society, Washington, DC, USA, 2006, pp. 16–22.
+
+[23] A. Fuggetta, Software process: a roadmap, in: Proceedings of the Conference
+on The Future of Software Engineering (ICSE), ACM, 2000, pp. 25–34.
+
+[24] G. Coleman, R. O’Connor, Investigating software process in practice: a
+grounded theory perspective, J. Syst. Softw. 81 (5) (2008) 772–784.
+
+[25] J. Bach, Microdynamics of process evolution, Computer 31 (1998) 111–113.
+
+[26] I. Heitlager, R. Helms, S. Brinkkemper, A tentative technique for the study and
+planning of co-evolution in product software startups, in: Proceedings of the
+3rd International Workshop on Software Evolvability, 2007, pp. 42–47.
+
+[27] K. Martin, B. Hoffman, An open source approach to developing software in a
+small organization, IEEE Softw. 24 (1) (2007) 46–53.
+
+[28] M. Tanabian, Building high-performance team through effective job design
+for an early stage software start-up, in: Proceedings of the International
+Engineering Management Conference (IEMC), 2005, pp. 789–792.
+
+[29] S. Chorev, A.R. Anderson, Success in Israeli high-tech start-ups; critical factors
+and process, Technovation 26 (2) (2006) 162–174.
+
+[30] M. Kakati, Success criteria in high-tech new ventures, Technovation 23 (5)
+(2003) 447–457.
+
+[31] S. Blank,Why the lean start-up changes everything, Harvard Bus. Rev. 91 (5)
+(2013) 64+.
+
+[32] C. Alves, S. Pereira, J. Castro, A Study in Market-Driven Requirements
+Engineering, Tech. rep., Universidade Federal de Pernambuco, 2006.
+
+[33] J. Natt Och Dag, Elicitation andManagement of User Requirements inMarket
+Driven Software Development, Ph.D. Thesis, Department of Communication
+Systems Lund Institute of Technology, 2002.
+
+[34] P. Sawyer, I. Sommerville, G. Kotonya, Improvingmarket-driven re processes,
+in: Proceedings of the International Conference on Product-Focused Software
+Process Improvement (PROFES), 1999.
+
+[35] C. Potts, Invented requirements and imagined customers: requirements
+engineering for off-the-shelf software, in: Proceedings of the 2nd
+International Symposium on Requirements Engineering (RE), 1995, pp.
+128–130.
+
+[36] L. Karlsson, Å. G. Dahlstedt, J. Natt Och Dag, B. Regnell, A. Persson, Challenges
+in market-driven requirements engineering – an industrial interview study,
+in: Proceedings of the 8th International Workshop on Requirements
+Engineering: Foundation for Software Quality (REFSQ), 2002.
+
+[37] A. Dahlstedt, Study of current practices in marketdriven requirements
+engineering, in: Proceedings of the 3rd Conference for the Promotion of
+Research in IT, 2003.
+
+[38] M. Keil, E. Carmel, Customer–developer links in software development,
+Commun. ACM 38 (5) (1995) 33–44.
+
+[39] B.A. Kitchenham, T. Dybå, M. Jørgensen, Evidence-based software
+engineering, in: Proceedings of the 26th International Conference on
+Software Engineering (ICSE), IEEE Computer Society, Los Alamitos, CA, USA,
+2004, pp. 273–281.
+
+[40] B. Dit, M. Revelle, M. Gethers, D. Poshyvanyk, Feature location in source
+code: a taxonomy and survey, J. Softw. Maint. Evol.: Res. Pract. 25 (1) (2011)
+53–95.
+
+[41] W. Afzal, R. Torkar, R. Feldt, A systematic review of search-based testing for
+non-functional system properties, Inf. Softw. Technol. 51 (6) (2009) 957–976.
+
+[42] Enterprise – SME Deﬁnition. February 2014. <http://www.ec.europa.eu/
+enterprise/enterprise_policy/sme_deﬁnition/sme_user_guide.pdf>.
+
+[43] E. Kamsties, K. Hörmann, M. Schlich, Requirements engineering in small and
+medium enterprises, Requirements Eng. 3 (2) (1998) 84–90.
+
+[44] C. Laporte, S. Alexandre, R. O’Connor, A software engineering lifecycle
+standard for very small enterprises, in: R. O’Connor, N. Baddoo, K.
+Smolander, R. Messnarz (Eds.), Software Process Improvement,
+Communications in Computer and Information Science, vol. 16, Springer,
+Berlin, Heidelberg, 2008, pp. 129–141.
+
+[45] F.J. Pino, F. García, M. Piattini, Software process improvement in small and
+medium software enterprises: a systematic review, Softw. Qual. J. 16 (2)
+(2008) 237–261.
+
+[46] I. Richardson, C.G. von Wangenheim, Guest editors’ introduction: why are
+small software organizations different?, IEEE Softw 24 (1) (2007) 18–22.
+
+[47] M. Staples, M. Niazi, R. Jeffery, A. Abrahams, P. Byatt, R. Murphy, An
+exploratory study of why organizations do not adopt {CMMI}, J. Syst. Softw.
+80 (6) (2007) 883–895.
+
+[48] P. Taticchi, F. Tonelli, L. Cagnazzo, Performance measurement and
+management: a literature review and a research agenda, Meas. Bus. Excell.
+14 (1) (2010) 4–18.
+
+[49] R. Thorpe, R. Holt, A.Macpherson, L. Pittaway, Using knowledge within small
+and medium-sized ﬁrms: a systematic review of the evidence, Int. J.Manage.
+Rev. 7 (4) (2005) 257–281.
+
+[50] N. Rosenbusch, J. Brinckmann, A. Bausch, Is innovation always beneﬁcial? A
+meta-analysis of the relationship between innovation and performance in
+{SMEs}, J. Bus. Venturing 26 (4) (2011) 441–457.
+
+[51] M. Ivarsson, T. Gorschek, A method for evaluating rigor and industrial
+relevance of technology evaluations, Empirical Softw. Eng. 16 (3) (2010) 365–
+395.
+
+[52] A. Strauss, J. Corbin, Basics of Qualitative Research, second ed., SAGE
+Publications, 1998.
+
+[53] S. Rumsey, How to Find Information: A Guide for Researchers, McGraw-Hill,
+2008.
+
+[54] S. Barney, K. Petersen, M. Svahnberg, A. Aurum, H. Barney, Software quality
+trade-offs: a systematic map, Inf. Softw. Technol. 54 (7) (2012) 651–662.
+
+[55] N. Paternoster, C. Giardino,M. Unterkalmsteiner, T. Gorschek, Supplementary
+material to Software development in startup companies: a systematic
+mapping study, 2013. <http://www.bth.se/com/mun.nsf/pages/startup-
+sysmap>.
+
+[56] BibDesk. <http://bibdesk.sourceforge.net/> (accessed 25.11.2013).
+
+[57] T. Dybå, T. Dingsøyr, Empirical studies of agile software development: a
+systematic review, Inf. Softw. Technol. 50 (9-10) (2008) 833–859.
+
+[58] M. Jorgensen, M. Shepperd, A systematic review of software development
+cost estimation studies, Trans. Softw. Eng. 33 (1) (2007) 33–53.
+
+[59] A. Sayers, Tips and tricks in performing a systematic review, Brit. J. Gen. Pract.
+1 (57) (2007) 542–759.
+
+[60] M. Ivarsson, T. Gorschek, Technology transfer decision support in
+requirements engineering research: a systematic review of REj,
+Requirements Eng. 14 (3) (2009) 155–175.
+
+[61] M. Unterkalmsteiner, T. Gorschek, A. Islam, C.K. Cheng, R. Permadi, R. Feldt,
+Evaluation and measurement of software process improvement – a
+systematic literature review, Trans. Softw. Eng. 38 (2) (2012) 398–424.
+
+[62] T. Saracevic, Evaluation of evaluation in information retrieval, in: Proceedings
+of the 18th Annual International ACM SIGIR Conference on Research and
+Development in Information Retrieval, 1995, pp. 138–146.
+
+[63] R. Deias, G.Mugheddu, O.Murru, Introducing xp in a start-up, in: Proceedings
+3rd International Conference on eXtreme Programming and Agile Processes
+in Software Engineering (XP), 2002, pp. 62–65.
+
+[64] R.Wieringa, N.Maiden, N.Mead, C. Rolland, Requirements engineering paper
+classiﬁcation and evaluation criteria: a proposal and a discussion,
+Requirements Eng. 11 (1) (2005) 102–107.
+
+[65] M. Shaw,Writing good software engineering research papers, in: Proceedings
+of the 25th International Conference on Software Engineering (ICSE), 2003,
+pp. 726–736.
+
+[66] K. Kuvinka, Scrum and the single writer, in: Proceedings of Technical
+Communication Summit, 2011, pp. 18–19.
+
+[67] A. da Silva, F. Kon, Xp south of the equator: an experience implementing XP in
+Brazil, Extreme Program. Agile Process. (2005) 10–18.
+
+[68] J. Mater, B. Subramanian, Solving the software quality management problem
+in Internet startups, in: Proceedings of the 18th Annual Paciﬁc Northwest
+Software Quality Conference, 2000, pp. 297–306.
+
+[69] M. Häsel, N. Breugst, T. Kollmann, IT competence in internet founder teams
+an analysis of preferences and product innovativity, Bus. Inf. Syst. Eng. 52 (4)
+(2010) 210–217.
+
+[70] R. Hanna, T.U. Daim, Information technology acquisition in the service sector,
+Int. J. Serv. Sci. 3 (1) (2010) 21–39.
+
+[71] E. Kim, S. Tadisina, Factors impacting customers’ initial trust in e-businesses:
+an empirical study, in: Proceedings of the 38th Annual Hawaii International
+Conference on System Sciences (HICSS), 2005, pp. 1–10.
+
+[72] G. Coleman, R. O’Connor, Using grounded theory to understand software
+process improvement: a study of Irish software product companies, Inf.
+Softw. Technol. 49 (6) (2007) 654–667.
+
+[73] J. Bosch, H.H. Olsson, J. Björk, J. Ljungblad, The early stage software startup
+development model: a framework for operationalizing lean principles in
+software startups, in: Lean Enterprise Software and Systems, Springer, 2013,
+pp. 1–15.
+
+[74] C. Midler, P. Silberzahn, Managing robust development process for high-tech
+startups through multi-project learning: the case of two European start-ups,
+Int. J. Project Manage. 26 (5) (2008) 479–486.
+
+[75] S. Yogendra, Aligning business and technology strategies: a comparison of
+established and start-up business contexts, in: Proceedings of the Internal
+Engineering Management Conference (IEMC), 2002, pp. 2–7.
+
+[76] D. Yofﬁe, Building a company on Internet time: lessons from Netscape,
+California Management Review 4 (3) (1999).
+
+[77] S. Jansen, S. Brinkkemper, I. Hunink, Pragmatic and opportunistic reuse in
+innovative start-up companies, IEEE Softw. (2008) 42–49.
+
+[78] H.-J. Steenhuis, E. de Bruijn, Innovation and technology based economic
+development: are there short-cuts? in: Proceedings of the International
+Conference onManagement of Innovation and Technology (ICMIT), 2008, pp.
+837–841.
+
+[79] S.-l. Lai, Chinese entrepreneurship in the internet age: lessons from
+Alibaba.com, World Acad. Sci. Eng. Technol. 72 (2010) 405–411.
+
+[80] P. Tingling, Extreme programming in action: a longitudinal case study, in:
+Proceedings of the 12th International Conference on Human–computer
+Interaction: Interaction Design and Usability (HCI), 2007, pp. 242–251.
+
+[81] S.-C. Li, The role of value proposition and value co-production in new internet
+startups: how new venture e-businesses achieve competitive advantage, in:
+Portland International Center for Management of Engineering and
+Technology (PICMET), 2007, pp. 1126–1132.
+
+[82] J. Zettel, F. Maurer, J. Münch, L. Wong, LIPE: a lightweight process for e-
+business startup companies based on extreme programming, in: Proceedings
+3rd international conference on product focused software process
+improvement (PROFES), Springer, 2001, pp. 255–270.
+
+[83] B. Mirel, Product, process, and proﬁt: the politics of usability in a software
+venture, ACM J. Comput. Doc. (JCD) 24 (4) (2000) 185–203.
+
+[84] R. Stanﬁll, T. Astleford, Improving entrepreneurship team performance
+through market feasibility analysis, early identiﬁcation of technical
+requirements, and intellectual property support, in: Proceedings of the
+American Society for Engineering Education Annual Conference & Exposition,
+2007.
+
+[85] O.-P. Hilmola, P. Helo, L. Ojala, The value of product development lead time in
+software startup, Syst. Dyn. Rev. 19 (1) (2003) 75–82.
+
+[86] C. Yoo, D. Yang, H. Kim, E. Heo, Key value drivers of startup companies in the
+newmedia industry – the case of online games in Korea, J.Media Econ. 25 (4)
+(2012) 244–260.
+
+[87] Y.-W. Yu, Y.-S. Chang, Y.-F. Chen, L.-S. Chu, Entrepreneurial success for high
+tech start-ups – case study of taiwan high-tech companies, Palermo, Italy,
+2012, pp. 933 – 937.
+
+[88] M. Fayad, Process assessment considered wasteful, Commun. ACM 40 (11)
+(1997) 125–128.
+
+[89] L. Bean, D.D. Hott, Wiki: a speedy new tool to manage projects, J. Corp.
+Account. Financ. 16 (5) (2005) 3–8.
+
+[90] E. Deakins, S. Dillon, A helical model for managing innovative product and
+service initiatives in volatile commercial environments, Int. J. ProjectManage.
+23 (1) (2005) 65–74.
+
+[91] S. Ambler, Lessons in agility from internet-based development, IEEE Softw.
+(April) (2002) 66–73.
+
+[92] B.May, Applying lean startup: an experience report – lean and lean ux by a ux
+veteran: Lessons learned in creating and launching a complex consumer app,
+in: Agile Conference (AGILE), 2012, 2012, pp. 141–147.
+
+[93] M. Taipale, Huitale – a story of a Finnish lean startup, in: Lean Enterprise
+Software and Systems, vol. 65, Lecture Notes in Business Information
+Processing, 2010, pp. 111–114.
+
+[94] D.Wood, Open Source Software Strategies for Venture-Funded Startups, Tech.
+Rep. TR-MS1287, MIND Laboratory, University of Maryland, 2005.
+
+[95] D.Wall, Using open source for a proﬁtable startup, Computer 34 (12) (2001)
+158–160.
+
+[96] T. Clark, P.-A. Muller, Exploiting model driven technology: a tale of two
+startups, Softw. Syst. Model. 11 (4) (2012) 481–493.
+
+[97] D. Šmite, C.Wohlin, T.Gorschek, R. Feldt, Empirical evidence in global software
+engineering: a systematic review, Empirical Softw. Eng. 15 (1) (2009) 91–118.
+
+[98] T. Dybå, V.B. Kampenes, D.I. Sjøberg, A systematic review of statistical power
+in software engineering experiments, Inf. Softw. Technol. 48 (8) (2006)
+745–755.
+
+[99] Colin Robson, Real World Research: A Resource for Social Scientists and
+Practitioner–Researchers, John Wiley and Sons, 2009.
+
+[100] N. Ali, H. Edison, Towards Innovation Measurement in Software Industry,
+Master’s thesis, Blekinge Institute of Technology, May 2010.
+
+[101] T. Dybå, B. Kitchenham, M. Jorgensen, Evidence-based software engineering
+for practitioners, IEEE Softw. 22 (1) (2005) 58–65.
+
+[102] B. Kitchenham, T. Dybå, M. Jorgensen, Evidence-based software engineering,
+in: Proceedings of the 26th International Conference on Software Engineering
+(ICSE), 2004, pp. 273–281.
+
+[103] E. Ries, The Lean Startup: How Today’s Entrepreneurs Use Continuous
+Innovation to Create Radically Successful Businesses, Crown Business, 2011.
+
+[104] C.F. Kurtz, D.J. Snowden, The new dynamics of strategy: sense-making in a
+complex and complicated world, IBM Syst. J. 42 (3) (2003) 462–483.
+
+[105] D. Adebanjo, Challenges and approaches to customer development in co-
+located high-tech start-ups, in: Proceedings of the International Conference
+on Industrial Engineering and Engineering Management (IEEM), 2010,
+pp. 163–167.
+
+[106] E. Gamma, R. Helm, R. Johnson, J. Vlissides, Design Patterns: Elements of
+Reusable Object-Oriented Software, ﬁrst ed., Addison-Wesley, Boston,
+1994.
+
+[107] E. Gamma, R. Helm, R.E. Johnson, J.M. Vlissides, Design patterns: Abstraction
+and reuse of object-oriented design, in: Proceedings of the 7th European
+Conference on Object-Oriented Programming (ECOOP), 1993, pp. 406–431.
+
+[108] N. Paspallis, R. Rouvoy, P. Barone, G. Papadopoulos, F. Eliassen, A. Mamelli, A
+pluggable and reconﬁgurable architecture for a context-aware enabling
+middleware system, in: Proceedings of the OTM 2008 Confederated
+International Conferences, 2008, pp. 553–570.
+
+[109] V.R. Basili, M. Lindvall, M. Regardie, C. Seaman, J. Heidrich, J. Munch, D.
+Rombach, A. Trendowicz, Linking software development and business
+strategy through measurement, Computer 43 (4) (2010) 57–65.
+
+[110] C. Liu, J. Yang, L. Tan,M. Haﬁz, R2ﬁx: Automatically generating bug ﬁxes from
+bug reports, in: Sixth International Conference on Software Testing,
+Veriﬁcation and Validation (ICST), 2013, pp. 282–291.
+
+[111] I. Banerjee, B. Nguyen, V. Garousi, A. Memon, Graphical user interface (gui)
+testing: systematic mapping and repository, Inf. Softw. Technol. 55 (10)
+(2013) 1679–1694.
+
+[112] D. Kuhn, Selecting and effectively using a computer aided software
+engineering tool, in: Annual Westinghouse Computer Symposium, 1989.
+
+[113] P. Smutny, Mobile development tools and cross-platform solutions, in: 13th
+International Carpathian Control Conference (ICCC), 2012, pp. 653–656.
