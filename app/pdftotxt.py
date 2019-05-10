@@ -84,7 +84,8 @@ class pdftotxt(object):
                         txt.write(y)
 
                     else:
-                        txt.write(y)
+                        txt.write(y)                        
+            
             txt.close()
             fp.close()
 
@@ -126,10 +127,11 @@ class pdftotxt(object):
 
         if opcao == 'TXT':
             tipo = ".rtf"
+            arquivos = self.obterArquivos(arqDestino, tipo)
         else:    
             tipo = ".pdf"
-
-        arquivos = self.obterArquivos(arqOrigem, tipo)        
+            arquivos = self.obterArquivos(arqOrigem, tipo)        
+        
         if len(arquivos) >= 2: 
             for arq in arquivos:
                 if opcao =='TXT':

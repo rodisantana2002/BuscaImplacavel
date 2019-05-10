@@ -55,7 +55,7 @@ class translate(object):
                             writer.writerow({'id':id,
                                             'arquivo':os.path.basename(arquivoTXT)[0:-4],
                                             'tipo': row[0:3],
-                                            'txtorigem':row[3:].rstrip(),
+                                             'txtorigem': row[3:].replace("- ", "").strip(),
                                             'txttranslate':'',
                                             'datahoracarga':data_atual,
                                             'datahoratranslate': ''

@@ -13,15 +13,10 @@
 --> [0] Finalizar o Bot
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
----> Iniciando conversão dos arquivos.
+---> Iniciando processo de carga nos repositórios CSV.
 ----------------------------------------------------------------------------------------------
----> 09/05/2019 11:37:37 ---[ ok ] Arquivo convertido com sucesso [2014-Giardino (IEEE Software).pdf]
----> 09/05/2019 11:37:38 ---[ ok ] Arquivo convertido com sucesso [2014-Paternoster et al.pdf]
----> 09/05/2019 11:37:41 ---[ ok ] Arquivo convertido com sucesso [2015-Klotins et al.pdf]
----> 09/05/2019 11:37:43 ---[ ok ] Arquivo convertido com sucesso [2016-Giardino et al.pdf]
----> 09/05/2019 11:37:46 ---[ ok ] Arquivo convertido com sucesso [2016-Tripathi et al (SLR).pdf]
----> 09/05/2019 11:37:47 ---[ ok ] Arquivo convertido com sucesso [2017-Fitzgerald (DEVOPS).pdf]
----> 09/05/2019 11:37:54 ---[ ok ] Arquivo convertido com sucesso [2018-Berg et al.pdf]
----> 09/05/2019 11:37:57 ---[ ok ] Arquivo convertido com sucesso [2018-Tripathi et al.pdf]
+---> 09/05/2019 23:21:50 ---[ ok ] Foram carregadas [703] linhas com sucesso
+---> 09/05/2019 23:21:50 ---[ ok ] Foram carregadas [198] linhas com sucesso
+----------------------------------------------------------------------------------------------
 ---> Encerrando aplicativo        :-) by (Rodolfo Santana)
 ----------------------------------------------------------------------------------------------
