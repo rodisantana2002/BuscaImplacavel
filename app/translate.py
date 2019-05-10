@@ -51,7 +51,7 @@ class translate(object):
                         data_hora_atuais = datetime.now()
                         data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
 
-                        if row[0:3] == '###' or row[0:3] == 'TIT' or row[0:3] == 'ABS' or row[0:3] == 'AUT' or row[0:3] == 'WOR' or row[0:3] == 'REF':
+                        if row[0:3] == '###' or row[0:3] == 'TIT' or row[0:3] == 'ABS' or row[0:3] == 'AUT' or row[0:3] == 'WOR' or row[0:3] == 'REF' or row[0:3] == 'INT' or row[0:3] == 'MET' or row[0:3] == 'CON' or row[0:3] == 'RES' or row[0:3] == 'DES' or row[0:3] == 'BCK' or row[0:3] == 'ANA':
                             writer.writerow({'id':id,
                                             'arquivo':os.path.basename(arquivoTXT)[0:-4],
                                             'tipo': row[0:3],
