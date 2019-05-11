@@ -65,41 +65,43 @@ class base(object):
                         data_hora_atuais = datetime.now()
                         data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
                         result = sci.download(row['doi'], destination='../files/baixados/', path=row['id'] + ".pdf")
-
+                        file = {}
                         if 'err' in result:
-                            writer.writerow({'id':row['id'],
-                                             'title':row['title'],
-                                             'year':row['year'],
-                                             'author':row['author'],
-                                             'doi':row['doi'],
-                                             'url':row['url'],
-                                             'keywords':row['keywords'],
-                                             'tipo':row['tipo'],
-                                             'base':row['base'],
-                                             'numTentativas':numTentativa,
-                                             'situacao':'pendente',
-                                             'possuiCaptcha':'yes',
-                                             'valorCaptcha':'none',
-                                             'msgRetorno': result['err']
-                                            })
+                            file = {'id': row['id'],
+                                    'title': row['title'],
+                                    'year': row['year'],
+                                    'author': row['author'],
+                                    'doi': row['doi'],
+                                    'url': row['url'],
+                                    'keywords': row['keywords'],
+                                    'tipo': row['tipo'],
+                                    'base': row['base'],
+                                    'numTentativas': numTentativa,
+                                    'situacao': 'pendente',
+                                    'possuiCaptcha': 'yes',
+                                    'valorCaptcha': 'none',
+                                    'msgRetorno': result['err']
+                                    }
+                            writer.writerow(file)
                             logger.debug('---> %s %s', data_atual, result['err'])
                             status=True
                         else:
-                            writer.writerow({'id':row['id'],
-                                             'title':row['title'],
-                                             'year':row['year'],
-                                             'author':row['author'],
-                                             'doi':row['doi'],
-                                             'url':row['url'],
-                                             'keywords':row['keywords'],
-                                             'tipo':row['tipo'],
-                                             'base':row['base'],
-                                             'numTentativas':numTentativa,
-                                             'situacao':'finalizado',
-                                             'possuiCaptcha':'none',
-                                             'valorCaptcha':'none',
-                                             'msgRetorno': 'Arquivo baixado com sucesso'
-                                            })
+                            file = {'id': row['id'],
+                                    'title': row['title'],
+                                    'year': row['year'],
+                                    'author': row['author'],
+                                    'doi': row['doi'],
+                                    'url': row['url'],
+                                    'keywords': row['keywords'],
+                                    'tipo': row['tipo'],
+                                    'base': row['base'],
+                                    'numTentativas': numTentativa,
+                                    'situacao': 'finalizado',
+                                    'possuiCaptcha': 'none',
+                                    'valorCaptcha': 'none',
+                                    'msgRetorno': 'Arquivo baixado com sucesso'
+                                    }
+                            writer.writerow(file)
                             logger.debug('---> %s ---[ ok ] Arquivo baixado com sucesso com identificador [%s]', data_atual, row['id'] + ".pdf")
         os.rename(tmp_file, self.fileOUT)
         return status

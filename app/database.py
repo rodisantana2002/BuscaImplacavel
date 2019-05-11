@@ -2,6 +2,8 @@ import sys
 import sqlite3
 import os
 import logging
+import csv
+
 from sqlite3 import Error
 
 # log config
@@ -12,6 +14,7 @@ logger.setLevel(logging.DEBUG)
 class database(object):
     def __init__(self):
         self.pathOrigem = '../bases/database/bot.db'
+        self.pathConvertido = '../bases/source.csv'
 
     def _getConn(self):
         try:
@@ -71,9 +74,62 @@ class database(object):
         for tabela in tabelas:
             self._criarTabela(tabela)
 
+    def salvarArtigo(self):
+        cn = self._getConn()
+        # string insert
+        strSQL_INSERT = """INSERT INTO Artigo (id,situacao,titulo,ano,autores,resumo,keywords,doi,url,tipo_publicacao,base_origem,pesquisa_id,criado_em)  
+                           VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)"""
+        # string busca
+        strSQL_BUSCAR = """SELECT id FROM Artigo WHERE id = ?"""                         
+
+        try:
+            cursor_reader = cn.cursor()
+            with open(self.pathConvertido, 'r') as arq:
+                reader = csv.DictReader(arq)
+                cursor_reader = cn.cursor()
+                for row in reader:                        
+                        cursor_reader.execute(strSQL_BUSCAR, (row['id'],))
+                        if cursor_reader.fetchall().__len__() == 0:
+                            cursor_exec = cn.cursor()
+                            artigo = [(row['id'], 
+                                       row['situacao'],
+                                       row['title'], 
+                                       row['year'], 
+                                       row['author'], 
+                                       '', 
+                                       row['keywords'], 
+                                       row['doi'], 
+                                       row['url'], 
+                                       row['tipo'], 
+                                       row['base'], 
+                                       '', 
+                                       '')]
+
+                            cursor_exec.executemany(strSQL_INSERT, artigo)
+                            cn.commit()
+                            logger.debug("Artigos salvos com sucesso")
+                        else:
+                            logger.debug("Artigos já foi registrado")
+
+        except Error as e:
+            cn.rollback()
+            logger.debug(e)
+        cn.close()
+                    
+
+    def salvarArtigoElemento(self):
+        pass    
+
+    def salvarReferencias(self):
+        pass    
+
+    def _obterArquivos(self, path, tipo):
+        return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith("." + tipo)])
+
 def main():
     db = database()
-    db._gerarTabelas()
+    # db._gerarTabelas()
+    db.salvarArtigo()
 
 
 if __name__ == '__main__':
