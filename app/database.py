@@ -76,11 +76,16 @@ class database(object):
 
     def salvarArtigo(self):
         cn = self._getConn()
+
+        # string busca
+        strSQL_BUSCAR = """SELECT id FROM Artigo WHERE id = ?"""
+
         # string insert
         strSQL_INSERT = """INSERT INTO Artigo (id,situacao,titulo,ano,autores,resumo,keywords,doi,url,tipo_publicacao,base_origem,pesquisa_id,criado_em)  
-                           VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)"""
-        # string busca
-        strSQL_BUSCAR = """SELECT id FROM Artigo WHERE id = ?"""                         
+                           VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)"""       
+
+        # string de atualização da situação
+        strSQL_UPDATE = """ UPDATE Artigo SET situacao = ? WHERE id = ?"""    
 
         try:
             cursor_reader = cn.cursor()
@@ -107,10 +112,14 @@ class database(object):
 
                             cursor_exec.executemany(strSQL_INSERT, artigo)
                             cn.commit()
-                            logger.debug("Artigos salvos com sucesso")
+                            logger.debug("Artigos inseridos com sucesso")
                         else:
-                            logger.debug("Artigos já foi registrado")
+                            cursor_exec = cn.cursor()
+                            artigo = (row['situacao'], row['id'],)
 
+                            cursor_exec.execute(strSQL_UPDATE, artigo)
+                            cn.commit()
+                            logger.debug("Artigos atualizados com sucesso")
         except Error as e:
             cn.rollback()
             logger.debug(e)
