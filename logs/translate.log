@@ -1,8 +1,11 @@
 ----------------------------------------------------------------------------------------------
----> Iniciando processo de carga nos repositórios CSV.
+---> Iniciando processo de tradução dos arquivos. (timer 6 seg.)
 ----------------------------------------------------------------------------------------------
----> 09/05/2019 23:21:50 ---[ ok ] Foram carregadas [703] linhas com sucesso
----> 09/05/2019 23:21:50 ---[ ok ] Foram carregadas [198] linhas com sucesso
-----------------------------------------------------------------------------------------------
----> Encerrando aplicativo        :-) by (Rodolfo Santana)
-----------------------------------------------------------------------------------------------
+---> Processando tradução do arquivo [Experiments].
+-----> traduzindo texto [1]
+-----> traduzindo texto [2]
+-----> traduzindo texto [3]
+-----> traduzindo texto [4]
+-----> traduzindo texto [5]
+-----> traduzindo texto [6]
+-----> traduzindo texto [7]
