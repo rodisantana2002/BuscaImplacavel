@@ -76,3 +76,5 @@ files/baixados/_template
 files/convertidos/_template
 files/
 logs/
+logs/translate.log
+logs/rodibot.log
