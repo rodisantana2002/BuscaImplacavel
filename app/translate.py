@@ -107,7 +107,7 @@ class translate(object):
                                         'datahoratranslate': data_atual
                                         })
                         id += 1
-                        time.sleep(6)
+                        time.sleep(5)
 
             os.remove(pathPendentes+csv_file)
             return '---> {} ---[ ok ] Foram lidas [{}] linhas com sucesso'.format(data_atual, id)
