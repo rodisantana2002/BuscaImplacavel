@@ -63,16 +63,12 @@ class pdftotxt(object):
                         y = x.replace('\n', "\n###")
                         txt.write(y)
 
-                    elif x.startswith('\f'):
-                        y = x.replace('\f', "\n@@@")
-                        txt.write(y)
-
                     elif x.startswith(' \n'):
-                        y = x.replace(' \n', "\n%%%")
+                        y = x.replace(' \n', "\n###")
                         txt.write(y)
 
                     elif x.startswith('\n '):
-                        y = x.replace('\n ', "\n%%%")
+                        y = x.replace('\n ', "\n###")
                         txt.write(y)
 
                     elif x.endswith('\n'):
@@ -80,7 +76,7 @@ class pdftotxt(object):
                         txt.write(y)
 
                     elif x.startswith(' '):
-                        y = x.replace('\n', "\n%%%")
+                        y = x.replace('\n', "\n###")
                         txt.write(y)
 
                     else:
@@ -132,7 +128,7 @@ class pdftotxt(object):
             tipo = ".pdf"
             arquivos = self.obterArquivos(arqOrigem, tipo)        
         
-        if len(arquivos) >= 2: 
+        if len(arquivos) >= 1: 
             for arq in arquivos:
                 if opcao =='TXT':
                     logger.debug(self.gerarTXT(arq))            
