@@ -1,9 +1,27 @@
 ----------------------------------------------------------------------------------------------
 ---> Iniciando geração dos arquivos HTMLs
 ----------------------------------------------------------------------------------------------
----> 07/05/2019 12:09:03 ---[ ok ] Arquivo processado com sucesso [arquivo2.csv]
----> 07/05/2019 12:09:03 ---[ ok ] Arquivo processado com sucesso [IEEE-2016-12.csv]
----> 07/05/2019 12:09:03 ---[ ok ] Indice gerado com sucesso
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [Experiments.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [Teaching-Software-Eengineering.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [Software Design and Architecture-dup.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [prototyping_design_experiments.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [Experimental design research_ genealogy - intervention - argument.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [collaborative_design_apps.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [Fischer2003_Article_DesertIslandSoftwareEngineerin.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [Integrating_the_Rational_Unified_Process_and_parti.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [Ways-of-drifting-cam_ready_sub.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [situated_Experiments.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [Fischer2008_Article_RethinkingSoftwareDesignInPart.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [software_inception_games.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [Software_engineering_themes_for_the_future.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [Collaborative_Software_Engineering.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [metadesign_domain_experts.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [Playful_Holistic_Support_to_HCI_Requirem.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [collaborative_se.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [active_learning_lego.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [physical_prototyping.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Arquivo processado com sucesso [participatory_design_softw.csv]
+---> 14/05/2019 12:08:01 ---[ ok ] Indice gerado com sucesso
 ----------------------------------------------------------------------------------------------
 ---> Encerrando aplicativo        :-) by (Rodolfo Santana)
 ----------------------------------------------------------------------------------------------

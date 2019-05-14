@@ -97,6 +97,7 @@ class translate(object):
                             logger.debug('-----> traduzindo texto [%s]', id)
                             txt = trans.translate(row['txtorigem'], dest='pt')
                             txtTranslate = txt.text                        
+                            time.sleep(5)
                                 
                         writer.writerow({'id': row['id'],
                                         'arquivo': row['arquivo'],
@@ -107,7 +108,6 @@ class translate(object):
                                         'datahoratranslate': data_atual
                                         })
                         id += 1
-                        time.sleep(5)
 
             os.remove(pathPendentes+csv_file)
             return '---> {} ---[ ok ] Foram lidas [{}] linhas com sucesso'.format(data_atual, id)
