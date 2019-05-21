@@ -133,6 +133,23 @@ class base(object):
         transfHTML = html.csvtohtml()
         transfHTML.gerarHTML()        
 
+    def processarInicializacao(self):    
+        logger.debug('----------------------------------------------------------------------------------------------')
+        logger.debug('--> Informe o nome para que a pasta atual seja renomeada')
+        logger.debug('----------------------------------------------------------------------------------------------')
+        name = input("----------:--> nome: ")
+        os.rename("../files/", "../" + name)
+        os.mkdir("../files")
+        os.mkdir("../files/baixados")
+        os.mkdir("../files/convertidos")
+        os.mkdir("../files/pendentes")
+        os.mkdir("../files/processados")
+        os.mkdir("../files/traduzidos")
+
+        logger.debug('--> Repositórios atualizados com sucesso!')
+        logger.debug('----------------------------------------------------------------------------------------------')
+
+        
 
 # carrega script e roda em modo força-bruta
 def main():
@@ -154,6 +171,8 @@ def main():
     logger.debug('--> [6] Carregar repositórios CSV')
     logger.debug('--> [7] Traduzir arquivos - sleep(6) sec.)')
     logger.debug('--> [8] Gerar arquivos HTML')
+    logger.debug('----------------------------------------------------------------------------------------------')
+    logger.debug('--> [Z] Inicializar os repositórios')
     logger.debug('--> [0] Finalizar o Bot')
     logger.debug('----------------------------------------------------------------------------------------------')
     opcao = input("----------:--> Informe a opção desejada:")
@@ -187,6 +206,9 @@ def main():
 
     elif str(opcao) == "8":
         bs.processarHTML()
+
+    elif str(opcao) == "Z" or str(opcao) == "z":
+        bs.processarInicializacao()
 
     elif str(opcao) == "0":
         pass

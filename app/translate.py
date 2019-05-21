@@ -117,6 +117,17 @@ class translate(object):
             data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
             return '---> {} ---[erro] Arquivo não pode ser traduzido'.format(data_atual)
 
+    def _obterLinhasTraducao(self, arquivoCSV):
+        numLinhas = 0
+
+        csv_file = "%s.csv" % os.path.basename(arquivoCSV)[0:-4]
+        with open(pathPendentes + csv_file, 'r') as arq:
+            reader = csv.DictReader(arq)    
+            for row in reader:
+                if len(row['txtorigem'])> 0 and row['tipo'] != 'REF':                           
+                    numLinhas+=1
+        return numLinhas
+
 
     def carregarRepositoriosCSV(self):
         logger.debug('----------------------------------------------------------------------------------------------')
@@ -136,16 +147,38 @@ class translate(object):
 
     def traduzirArquivo(self):
         logger.debug('----------------------------------------------------------------------------------------------')
-        logger.debug('---> Iniciando processo de tradução dos arquivos. (timer 6 seg.)')
+        logger.debug('---> Iniciando processo de tradução dos arquivos.')
         logger.debug('----------------------------------------------------------------------------------------------')
 
         # Passo 01 ler arquivos csv e processar tradução e atualização dos dados
         arquivos = self._obterArquivos(pathPendentes, "csv")
 
         if len(arquivos) > 0:
+            # realiza analise detalhada para a tradução
+            logger.debug('---> Foram encontrados [%04d] arquivos para serem traduzidos.', len(arquivos))
+            logger.debug('----------------------------------------------------------------------------------------------')
+            logger.debug('---> Arquivo                                                          |  Linhas  |  Duração  |')           
+            logger.debug('----------------------------------------------------------------------------------------------')
             for arq in arquivos:
-                logger.debug('---> Processando tradução do arquivo [%s].', os.path.basename(arq)[0:-4])
-                logger.debug(self._processarTraducao(arq))
+                strArq = os.path.basename(arq)[:-4]
+                tempo = self._obterLinhasTraducao(arq) * 7
+                horas = int(tempo/3600)
+                minutos = int(tempo / 60)
+
+                logger.debug('---> |%s|  %06d  |   %02d:%02d   |', strArq[:62].lower().ljust(64),  self._obterLinhasTraducao(arq), horas,  minutos)
+
+            logger.debug('----------------------------------------------------------------------------------------------')
+
+            confirma = input("----------:--> Confirma tradução dos arquivos (S/N): ")           
+
+            if str(confirma) == "S" or str(confirma) == "s":
+                for arq in arquivos:                            
+                    logger.debug('---> Processando tradução do arquivo [%s].', os.path.basename(arq)[0:-4])
+                    logger.debug(self._processarTraducao(arq))
+
+            else:
+                logger.debug('--> Operação cancelada pelo usuário')
+
             logger.debug('----------------------------------------------------------------------------------------------')
 
         else:

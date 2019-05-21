@@ -10,20 +10,45 @@
 --> [6] Carregar repositórios CSV
 --> [7] Traduzir arquivos - sleep(6) sec.)
 --> [8] Gerar arquivos HTML
+----------------------------------------------------------------------------------------------
+--> [Z] Inicializar os repositórios
 --> [0] Finalizar o Bot
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
----> Iniciando geração dos arquivos HTMLs
+---> Iniciando processo de tradução dos arquivos.
 ----------------------------------------------------------------------------------------------
----> 14/05/2019 16:08:48 ---[ ok ] Arquivo processado com sucesso [2018-Tripathi et al.csv]
----> 14/05/2019 16:08:48 ---[ ok ] Arquivo processado com sucesso [2016-Giardino et al.csv]
----> 14/05/2019 16:08:48 ---[ ok ] Arquivo processado com sucesso [2014-Giardino (IEEE Software).csv]
----> 14/05/2019 16:08:48 ---[ ok ] Arquivo processado com sucesso [2015-Klotins et al.csv]
----> 14/05/2019 16:08:48 ---[ ok ] Arquivo processado com sucesso [2014-Paternoster et al.csv]
----> 14/05/2019 16:08:48 ---[ ok ] Arquivo processado com sucesso [2017-Fitzgerald (DEVOPS).csv]
----> 14/05/2019 16:08:48 ---[ ok ] Arquivo processado com sucesso [2016-Tripathi et al (SLR).csv]
----> 14/05/2019 16:08:48 ---[ ok ] Arquivo processado com sucesso [2018-Berg et al.csv]
----> 14/05/2019 16:08:48 ---[ ok ] Indice gerado com sucesso
+---> Foram encontrados [0026] arquivos para serem traduzidos.
+----------------------------------------------------------------------------------------------
+---> Arquivo                                                          |  Linhas  |  Duração  |
+----------------------------------------------------------------------------------------------
+---> |mckinsey_paper--delivering-large-scale-i                        |  000046  |   00:05   |
+---> |teaching-software-eengineering                                  |  000083  |   00:09   |
+---> |1306.1068                                                       |  000063  |   00:07   |
+---> |book49                                                          |  000076  |   00:08   |
+---> |software design and architecture-dup                            |  000175  |   00:20   |
+---> |harper1992                                                      |  000028  |   00:03   |
+---> |prototyping_design_experiments                                  |  000083  |   00:09   |
+---> |experimental design research_ genealogy - intervention - argum  |  000061  |   00:07   |
+---> |blomberg_ethnography_design1993--                               |  000141  |   00:16   |
+---> |collaborative_design_apps                                       |  000148  |   00:17   |
+---> |fischer2003_article_desertislandsoftwareengineerin              |  000020  |   00:02   |
+---> |integrating_the_rational_unified_process_and_parti              |  000154  |   00:17   |
+---> |ways-of-drifting-cam_ready_sub                                  |  000057  |   00:06   |
+---> |toward_a_new_model_of_strategy-making_as_serious_p              |  000061  |   00:07   |
+---> |situated_experiments                                            |  000097  |   00:11   |
+---> |fischer2008_article_rethinkingsoftwaredesigninpart              |  000056  |   00:06   |
+---> |software_inception_games                                        |  000131  |   00:15   |
+---> |software_engineering_themes_for_the_future                      |  000025  |   00:02   |
+---> |collaborative_software_engineering                              |  000118  |   00:13   |
+---> |metadesign_domain_experts                                       |  000091  |   00:10   |
+---> |playful_holistic_support_to_hci_requirem                        |  000080  |   00:09   |
+---> |connolly2007                                                    |  000072  |   00:08   |
+---> |collaborative_se                                                |  000082  |   00:09   |
+---> |active_learning_lego                                            |  000109  |   00:12   |
+---> |physical_prototyping                                            |  000149  |   00:17   |
+---> |participatory_design_softw                                      |  000075  |   00:08   |
+----------------------------------------------------------------------------------------------
+--> Operação cancelada pelo usuário
 ----------------------------------------------------------------------------------------------
 ---> Encerrando aplicativo        :-) by (Rodolfo Santana)
 ----------------------------------------------------------------------------------------------
