@@ -156,20 +156,37 @@ class translate(object):
         if len(arquivos) > 0:
             # realiza analise detalhada para a tradução
             logger.debug('---> Foram encontrados [%04d] arquivos para serem traduzidos.', len(arquivos))
-            logger.debug('----------------------------------------------------------------------------------------------')
-            logger.debug('---> Arquivo                                                          |  Linhas  |  Duração  |')           
-            logger.debug('----------------------------------------------------------------------------------------------')
+            logger.debug('----------------------------------------------------------------------+----------+-----------+')
+            logger.debug('---> Arquivo(s)                                                       |  Linhas  |  Duração  |')           
+            logger.debug('----------------------------------------------------------------------+----------+-----------+')
+            totTempo = 0
             for arq in arquivos:
                 strArq = os.path.basename(arq)[:-4]
-                tempo = self._obterLinhasTraducao(arq) * 7
-                horas = int(tempo/3600)
-                minutos = int(tempo / 60)
+                linhas = self._obterLinhasTraducao(arq)
 
-                logger.debug('---> |%s|  %06d  |   %02d:%02d   |', strArq[:62].lower().ljust(64),  self._obterLinhasTraducao(arq), horas,  minutos)
+                arqTempo = self._obterLinhasTraducao(arq) * 6
+                arqHoras = arqTempo // 3600
+                segundos_rest = arqTempo % 3600
+                arqMinutos = segundos_rest // 60
+                segundos_rest = segundos_rest % 60
 
-            logger.debug('----------------------------------------------------------------------------------------------')
+                logger.debug('---> | %s|  %06d  |   %02d:%02d   |', strArq[:62].lower().ljust(63),  self._obterLinhasTraducao(arq), arqHoras,  arqMinutos)
+                # somatorios
+                totTempo += linhas
+            logger.debug('-----+----------------------------------------------------------------+----------+-----------+')
 
-            confirma = input("----------:--> Confirma tradução dos arquivos (S/N): ")           
+
+            totLinhas = totTempo * 6            
+            totHoras = totLinhas // 3600
+            segundos_tot = totLinhas % 3600
+            totMinutos = segundos_tot // 60
+            segundos_tot = segundos_tot % 60
+
+            strTotal = ' Resumo processo'
+            logger.debug('---> |%s|  %06d  |   %02d:%02d   |', strTotal[:63].ljust(64), totTempo, totHoras, totMinutos)
+            logger.debug('-----+----------------------------------------------------------------+----------+-----------+')
+
+            confirma = input("----------:---> Confirma tradução dos arquivos (S/N): ")           
 
             if str(confirma) == "S" or str(confirma) == "s":
                 for arq in arquivos:                            
@@ -177,7 +194,7 @@ class translate(object):
                     logger.debug(self._processarTraducao(arq))
 
             else:
-                logger.debug('--> Operação cancelada pelo usuário')
+                logger.debug('---> Operação cancelada pelo usuário')
 
             logger.debug('----------------------------------------------------------------------------------------------')
 
