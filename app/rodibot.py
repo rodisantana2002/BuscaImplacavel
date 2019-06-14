@@ -186,6 +186,7 @@ def main():
             tentativa += 1
 
     elif str(opcao) == "3": 
+        print("aqui")
         while (condicao):
             condicao = bs.processarDownload(tentativa, "hide")
             tentativa += 1

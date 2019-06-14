@@ -15,42 +15,10 @@
 --> [0] Finalizar o Bot
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
----> Iniciando processo de tradução dos arquivos.
-----------------------------------------------------------------------------------------------
----> Foram encontrados [0026] arquivos para serem traduzidos.
-----------------------------------------------------------------------+----------+-----------+
----> Arquivo(s)                                                       |  Linhas  |  Duração  |
-----------------------------------------------------------------------+----------+-----------+
----> | mckinsey_paper--delivering-large-scale-i                       |  000046  |   00:04   |
----> | teaching-software-eengineering                                 |  000083  |   00:08   |
----> | 1306.1068                                                      |  000063  |   00:06   |
----> | book49                                                         |  000076  |   00:07   |
----> | software design and architecture-dup                           |  000175  |   00:17   |
----> | harper1992                                                     |  000028  |   00:02   |
----> | prototyping_design_experiments                                 |  000083  |   00:08   |
----> | experimental design research_ genealogy - intervention - argum |  000061  |   00:06   |
----> | blomberg_ethnography_design1993--                              |  000141  |   00:14   |
----> | collaborative_design_apps                                      |  000148  |   00:14   |
----> | fischer2003_article_desertislandsoftwareengineerin             |  000020  |   00:02   |
----> | integrating_the_rational_unified_process_and_parti             |  000154  |   00:15   |
----> | ways-of-drifting-cam_ready_sub                                 |  000057  |   00:05   |
----> | toward_a_new_model_of_strategy-making_as_serious_p             |  000061  |   00:06   |
----> | situated_experiments                                           |  000097  |   00:09   |
----> | fischer2008_article_rethinkingsoftwaredesigninpart             |  000056  |   00:05   |
----> | software_inception_games                                       |  000131  |   00:13   |
----> | software_engineering_themes_for_the_future                     |  000025  |   00:02   |
----> | collaborative_software_engineering                             |  000118  |   00:11   |
----> | metadesign_domain_experts                                      |  000091  |   00:09   |
----> | playful_holistic_support_to_hci_requirem                       |  000080  |   00:08   |
----> | connolly2007                                                   |  000072  |   00:07   |
----> | collaborative_se                                               |  000082  |   00:08   |
----> | active_learning_lego                                           |  000109  |   00:10   |
----> | physical_prototyping                                           |  000149  |   00:14   |
----> | participatory_design_softw                                     |  000075  |   00:07   |
------+----------------------------------------------------------------+----------+-----------+
----> | Resumo processo                                                |  002281  |   03:48   |
------+----------------------------------------------------------------+----------+-----------+
----> Operação cancelada pelo usuário
-----------------------------------------------------------------------------------------------
----> Encerrando aplicativo        :-) by (Rodolfo Santana)
-----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [1] de downloads dos arquivos.
+---> 13/06/2019 22:00:10 ---[ ok ] Arquivo baixado com sucesso com identificador [Alias2017.pdf]
+---> 13/06/2019 22:00:12 ---[ ok ] Arquivo baixado com sucesso com identificador [Pogue2016.pdf]
+---> 13/06/2019 22:00:13 ---[erro] Falha: 10.1109/GlobalSIP.2016.7905865 (url) captcha informado esta incorreto
+---> 13/06/2019 22:00:41 ---[ ok ] Arquivo baixado com sucesso com identificador [Koskela-Huotari2016.pdf]
+---> 13/06/2019 22:00:43 ---[ ok ] Arquivo baixado com sucesso com identificador [Herterich2016.pdf]
+---> 13/06/2019 22:00:46 ---[ ok ] Arquivo baixado com sucesso com identificador [Fujita2016.pdf]

@@ -94,7 +94,7 @@ class SciHub(object):
 
                 elif self.viewPDF == "view":
                     # View com abertura do Browser
-                    driver = webdriver.Chrome(ChromeDriverManager().install())
+                    driver = webdriver.Chrome(ChromeDriverManager("2,41").install())
                     driver.get(url)
 
                     # tratamento cado carrege a pagina com o pdf e sem o captcha
