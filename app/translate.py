@@ -112,7 +112,7 @@ class translate(object):
             os.remove(pathPendentes+csv_file)
             return '---> {} ---[ ok ] Foram lidas [{}] linhas com sucesso'.format(data_atual, id)
 
-        except Exception as exc:
+        except Exception:
             data_hora_atuais = datetime.now()
             data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
             return '---> {} ---[erro] Arquivo não pode ser traduzido'.format(data_atual)
