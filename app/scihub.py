@@ -33,7 +33,7 @@ logger.setLevel(logging.DEBUG)
 
 # constants
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/20100101 Firefox/27.0'}
-AVAILABLE_SCIHUB_BASE_URL = ['sci-hub.se','sci-hub.fun']
+AVAILABLE_SCIHUB_BASE_URL = ['sci-hub.tw','sci-hub.fun']
 
 class SciHub(object):
     """
@@ -45,7 +45,7 @@ class SciHub(object):
         self.sess = requests.Session()
         self.sess.headers = HEADERS
         self.available_base_url_list = AVAILABLE_SCIHUB_BASE_URL
-        self.base_url = 'http://' + self.available_base_url_list[0] + '/'
+        self.base_url = 'https://' + self.available_base_url_list[0] + '/'
         self.viewPDF = viewPDF
         urllib3.disable_warnings()
 
@@ -56,13 +56,13 @@ class SciHub(object):
         :return:
         '''
         if proxy:
-            self.sess.proxies = {"http": proxy, "https": proxy, }
+            self.sess.proxies = {"https": proxy, "https": proxy, }
             
     def _change_base_url(self):
         if len(self.available_base_url_list) > 1:
             del self.available_base_url_list[0]
 
-        self.base_url = 'http://' + self.available_base_url_list[0] + '/'
+        self.base_url = 'https://' + self.available_base_url_list[0] + '/'
         logger.debug("---> Alterando source {}".format(self.available_base_url_list[0]))
 
     @retry(wait_random_min=2000, wait_random_max=10000, stop_max_attempt_number=2)
@@ -130,8 +130,8 @@ class SciHub(object):
                         for image in images:
                             src = image.get_attribute('src')
                             name = identifier.split('/')[-1]
-                            urllib.request.urlretrieve(src, "../imagens/" + name + ".png")
-                            im = Image.open("../imagens/" + name + ".png")
+                            urllib.request.urlretrieve(src, "../imagens/" + name.lower() + ".png")
+                            im = Image.open("../imagens/" + name.lower() + ".png")
                             im.show()
 
                             elem = driver.find_element_by_name("answer")
