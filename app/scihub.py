@@ -14,6 +14,7 @@ import logging
 import os
 import sys
 import requests
+import certifi
 import urllib3
 import time
 
@@ -46,6 +47,7 @@ class SciHub(object):
         self.available_base_url_list = AVAILABLE_SCIHUB_BASE_URL
         self.base_url = 'http://' + self.available_base_url_list[0] + '/'
         self.viewPDF = viewPDF
+        urllib3.disable_warnings()
 
     def set_proxy(self, proxy):
         '''

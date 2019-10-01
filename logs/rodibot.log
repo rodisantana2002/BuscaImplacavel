@@ -15,8 +15,24 @@
 --> [0] Finalizar o Bot
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
----> Iniciando conversão dos arquivos.
+---> Iniciando tentativa [1] de downloads dos arquivos.
+---> 01/10/2019 14:23:24 ---[ ok ] Arquivo baixado com sucesso com identificador [Cho2018.pdf]
+---> 01/10/2019 14:23:50 ---[erro] Falha: 10.23919/PICMET.2017.8125346 (url) captcha informado esta incorreto
+---> 01/10/2019 14:24:48 ---[ ok ] Arquivo baixado com sucesso com identificador [Pratama2017.pdf]
 ----------------------------------------------------------------------------------------------
----> 15/07/2019 14:03:34 ---[ ok ] Arquivo convertido com sucesso [Saldana-2013.rtf]
+---> Iniciando tentativa [2] de downloads dos arquivos.
+---> 01/10/2019 14:25:08 ---[erro] Falha: 10.23919/PICMET.2017.8125346 (url) captcha informado esta incorreto
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [3] de downloads dos arquivos.
+---> 01/10/2019 14:25:29 ---[erro] Falha: 10.23919/PICMET.2017.8125346 (url) não foi localizada a imagem do captcha, verifique manualmente o DOI
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [4] de downloads dos arquivos.
+---> 01/10/2019 14:25:34 ---[erro] Falha: 10.23919/PICMET.2017.8125346 (url) captcha informado esta incorreto
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [5] de downloads dos arquivos.
+---> 01/10/2019 14:25:52 ---[erro] Falha: 10.23919/PICMET.2017.8125346 (url) captcha informado esta incorreto
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [6] de downloads dos arquivos.
+---> 01/10/2019 14:26:11 ---[ ok ] Arquivo baixado com sucesso com identificador [Sudo2017.pdf]
 ---> Encerrando aplicativo        :-) by (Rodolfo Santana)
 ----------------------------------------------------------------------------------------------
