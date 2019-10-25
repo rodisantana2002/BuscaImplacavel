@@ -16,17 +16,16 @@
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
 ---> Iniciando tentativa [1] de downloads dos arquivos.
----> 01/10/2019 17:45:16 ---[ ok ] Arquivo baixado com sucesso com identificador [Pratama2017.pdf]
----> 01/10/2019 17:45:19 ---[ ok ] Arquivo baixado com sucesso com identificador [Hu2017.pdf]
----> 01/10/2019 17:45:20 ---[ ok ] Arquivo baixado com sucesso com identificador [Alias2017.pdf]
----> 01/10/2019 17:45:21 ---[ ok ] Arquivo baixado com sucesso com identificador [Pogue2016.pdf]
----> 01/10/2019 17:45:22 ---[ ok ] Arquivo baixado com sucesso com identificador [Miller2016.pdf]
----> 01/10/2019 17:45:23 ---[ ok ] Arquivo baixado com sucesso com identificador [Koskela-Huotari2016.pdf]
----> 01/10/2019 17:45:26 ---[ ok ] Arquivo baixado com sucesso com identificador [Herterich2016.pdf]
----> 01/10/2019 17:45:28 ---[ ok ] Arquivo baixado com sucesso com identificador [Fujita2016.pdf]
----> 01/10/2019 17:45:30 ---[ ok ] Arquivo baixado com sucesso com identificador [Ekman2016.pdf]
----> 01/10/2019 17:45:32 ---[ ok ] Arquivo baixado com sucesso com identificador [Chen2016.pdf]
----> 01/10/2019 17:45:48 ---[ ok ] Arquivo baixado com sucesso com identificador [Ateetanan2016.pdf]
----> 01/10/2019 17:46:02 ---[ ok ] Arquivo baixado com sucesso com identificador [Yu2015.pdf]
+---> 14/10/2019 12:25:27 ---[ ok ] Arquivo baixado com sucesso com identificador [NAKAJIMA2018.pdf]
+---> 14/10/2019 12:25:44 ---[ ok ] Arquivo baixado com sucesso com identificador [Lee2018.pdf]
+---> 14/10/2019 12:26:01 ---[erro] Falha: 10.1109/SOCA.2018.00020 (url) captcha informado esta incorreto
+---> 14/10/2019 12:26:13 ---[erro] Falha: 10.1109/TCSS.2018.2826532 (url) não foi localizada a imagem do captcha, verifique manualmente o DOI
+---> 14/10/2019 12:26:17 ---[ ok ] Arquivo baixado com sucesso com identificador [Sudo2017.pdf]
+---> 14/10/2019 12:26:43 ---[ ok ] Arquivo baixado com sucesso com identificador [Pratama2017.pdf]
+---> 14/10/2019 12:26:58 ---[ ok ] Arquivo baixado com sucesso com identificador [Hu2017.pdf]
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [2] de downloads dos arquivos.
+---> 14/10/2019 12:27:12 ---[ ok ] Arquivo baixado com sucesso com identificador [Kayabay2018.pdf]
+---> 14/10/2019 12:27:26 ---[ ok ] Arquivo baixado com sucesso com identificador [Cho2018.pdf]
 ---> Encerrando aplicativo        :-) by (Rodolfo Santana)
 ----------------------------------------------------------------------------------------------
