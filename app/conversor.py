@@ -92,7 +92,7 @@ class conversor(object):
                 for row in reader:
                     if count >= self.limiteInf and count <= self.limiteSup:
                         if row['DOI'] != '':
-                            writer.writerow({'id': row['Identifier'],
+                            writer.writerow({'id': 'JABREF-{0}-{1}'.format(row['Year'], count),
                                              'title': row['Title'],
                                              'year': row['Year'],
                                              'author': row['Author'],
