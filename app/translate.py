@@ -113,6 +113,7 @@ class translate(object):
             return '---> {} ---[ ok ] Foram lidas [{}] linhas com sucesso'.format(data_atual, id)
 
         except Exception:
+            
             data_hora_atuais = datetime.now()
             data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
             return '---> {} ---[erro] Arquivo não pode ser traduzido'.format(data_atual)
@@ -152,54 +153,57 @@ class translate(object):
 
         # Passo 01 ler arquivos csv e processar tradução e atualização dos dados
         arquivos = self._obterArquivos(pathPendentes, "csv")
+        try:
+            if len(arquivos) > 0:
+                # realiza analise detalhada para a tradução
+                logger.debug('---> Foram encontrados [%04d] arquivos para serem traduzidos.', len(arquivos))
+                logger.debug('----------------------------------------------------------------------+----------+-----------+')
+                logger.debug('---> Arquivo(s)                                                       |  Linhas  |  Duração  |')           
+                logger.debug('----------------------------------------------------------------------+----------+-----------+')
+                totTempo = 0
+                for arq in arquivos:
+                    strArq = os.path.basename(arq)[:-4]
+                    linhas = self._obterLinhasTraducao(arq)
 
-        if len(arquivos) > 0:
-            # realiza analise detalhada para a tradução
-            logger.debug('---> Foram encontrados [%04d] arquivos para serem traduzidos.', len(arquivos))
-            logger.debug('----------------------------------------------------------------------+----------+-----------+')
-            logger.debug('---> Arquivo(s)                                                       |  Linhas  |  Duração  |')           
-            logger.debug('----------------------------------------------------------------------+----------+-----------+')
-            totTempo = 0
-            for arq in arquivos:
-                strArq = os.path.basename(arq)[:-4]
-                linhas = self._obterLinhasTraducao(arq)
+                    arqTempo = self._obterLinhasTraducao(arq) * 6
+                    arqHoras = arqTempo // 3600
+                    segundos_rest = arqTempo % 3600
+                    arqMinutos = segundos_rest // 60
+                    segundos_rest = segundos_rest % 60
 
-                arqTempo = self._obterLinhasTraducao(arq) * 6
-                arqHoras = arqTempo // 3600
-                segundos_rest = arqTempo % 3600
-                arqMinutos = segundos_rest // 60
-                segundos_rest = segundos_rest % 60
-
-                logger.debug('---> | %s|  %06d  |   %02d:%02d   |', strArq[:62].lower().ljust(63),  self._obterLinhasTraducao(arq), arqHoras,  arqMinutos)
-                # somatorios
-                totTempo += linhas
-            logger.debug('-----+----------------------------------------------------------------+----------+-----------+')
+                    logger.debug('---> | %s|  %06d  |   %02d:%02d   |', strArq[:62].lower().ljust(63),  self._obterLinhasTraducao(arq), arqHoras,  arqMinutos)
+                    # somatorios
+                    totTempo += linhas
+                logger.debug('-----+----------------------------------------------------------------+----------+-----------+')
 
 
-            totLinhas = totTempo * 6            
-            totHoras = totLinhas // 3600
-            segundos_tot = totLinhas % 3600
-            totMinutos = segundos_tot // 60
-            segundos_tot = segundos_tot % 60
+                totLinhas = totTempo * 6            
+                totHoras = totLinhas // 3600
+                segundos_tot = totLinhas % 3600
+                totMinutos = segundos_tot // 60
+                segundos_tot = segundos_tot % 60
 
-            strTotal = ' Resumo processo'
-            logger.debug('---> |%s|  %06d  |   %02d:%02d   |', strTotal[:63].ljust(64), totTempo, totHoras, totMinutos)
-            logger.debug('-----+----------------------------------------------------------------+----------+-----------+')
+                strTotal = ' Resumo processo'
+                logger.debug('---> |%s|  %06d  |   %02d:%02d   |', strTotal[:63].ljust(64), totTempo, totHoras, totMinutos)
+                logger.debug('-----+----------------------------------------------------------------+----------+-----------+')
 
-            confirma = input("----------:---> Confirma tradução dos arquivos (S/N): ")           
+                confirma = input("----------:---> Confirma tradução dos arquivos (S/N): ")           
 
-            if str(confirma) == "S" or str(confirma) == "s":
-                for arq in arquivos:                            
-                    logger.debug('---> Processando tradução do arquivo [%s].', os.path.basename(arq)[0:-4])
-                    logger.debug(self._processarTraducao(arq))
+                if str(confirma) == "S" or str(confirma) == "s":
+                    for arq in arquivos:                            
+                        logger.debug('---> Processando tradução do arquivo [%s].', os.path.basename(arq)[0:-4])
+                        logger.debug(self._processarTraducao(arq))
+
+                else:
+                    logger.debug('---> Operação cancelada pelo usuário')
+
+                logger.debug('----------------------------------------------------------------------------------------------')
 
             else:
-                logger.debug('---> Operação cancelada pelo usuário')
+                logger.debug('---> Não foram encontrados arquivos CSV para serem traduzidos')
 
-            logger.debug('----------------------------------------------------------------------------------------------')
-
-        else:
-            logger.debug('---> Não foram encontrados arquivos CSV para serem traduzidos')
+        except Exception:
+            logger.debug('---> |erro ao ler arquivo| %s.csv ', strArq[:62].lower())
 
     def _obterArquivos(self, path, tipo):
         return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith("." + tipo)])
