@@ -1,0 +1,20 @@
+@inproceedings{Tang_2010,
+ doi = {10.1109/icebe.2010.67},
+ url = {https://doi.org/10.1109%2Ficebe.2010.67},
+ year = 2010,
+ month = {nov},
+ publisher = {{IEEE}},
+ author = {Kai Tang and Zhong Bo Jiang and Wei Sun and Xin Zhang and Wei Shan Dong},
+ title = {Research on Tenant Placement Based on Business Relations},
+ booktitle = {2010 {IEEE} 7th International Conference on E-Business Engineering}
+}
+,
+@inproceedings{2010,
+	doi = {10.1109/icebe.2010.8},
+	url = {https://doi.org/10.1109%2Ficebe.2010.8},
+	year = 2010,
+	month = {nov},
+	publisher = {{IEEE}},
+	title = {{ICEBE} 2010 Program Committee},
+	booktitle = {2010 {IEEE} 7th International Conference on E-Business Engineering}
+}

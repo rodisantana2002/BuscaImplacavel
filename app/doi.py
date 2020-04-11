@@ -32,7 +32,7 @@ logger.setLevel(logging.DEBUG)
 
 # constants
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/20100101 Firefox/27.0'}
-AVAILABLE_SCIHUB_BASE_URL = ['search.crossref.org/']
+AVAILABLE_SCIHUB_BASE_URL = ['search.crossref.org']
 
 
 class doi(object):
@@ -67,11 +67,7 @@ class doi(object):
             res = self.sess.get(url, verify=False)
             driver = webdriver.Chrome(ChromeDriverManager("2.41").install())
             driver.get(url)
-            # elem = driver.find_element_by_xpath('//*[@id="tabs-search"]/li[2]/a')
-            # elem = driver.find_element_by_xpath('//*[@id="tabs-search"]/li[2]/a')
-            # elem.click()
 
-            # elem = driver.find_element_by_id('metadatasearchbox')
             elem = driver.find_element_by_id('search-input')
             strCaptcha = "Tang, K., Jiang, Z.B., Sun, W., Zhang, X., Dong, W.S., 2010. Research on tenant placement based on business relations. In: IEEE 7th Inter- national Conference on e-Business Engineering (ICEBE), 2010. IEEE, pp. 479–483."
             elem.send_keys(strCaptcha)
@@ -80,8 +76,16 @@ class doi(object):
             elem = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/table/tbody/tr[1]/td/div/div/span/a')
             elem.click()
 
-            elem = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/table/tbody/tr[1]/td/div/div/span/ul/li[3]/a')
+            elem = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/table/tbody/tr[1]/td/div/div/span/ul/li[1]/a')
             elem.click()
+            
+
+            elem = driver.find_element_by_xpath('//*[@id="bibtex"]/a') 
+            elem.click()
+            
+            time.sleep(10)
+            elem = driver.find_element_by_xpath('//*[@id="citation-text"]')
+            print(elem.text)
 
             # res = self.sess.get(driver.current_url, verify=False)
             # soup = BeautifulSoup(res.content, 'html.parser')
