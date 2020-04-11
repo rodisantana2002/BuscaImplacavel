@@ -1,6 +1,7 @@
 ----------------------------------------------------------------------------------------------
 --                 Seja bem vindo ao RodiBot, o que deseja que eu faça?                     --
 ----------------------------------------------------------------------------------------------
+--> [0] Carregar referências para BibText e gerar matriz de conferência
 --> [1] Preparar arquivos para download
 --> [2] Download de aquivos (exibe browser para leitura do captcha)
 --> [3] Download de aquivos (exibe apenas imagem para leitura do captcha)
@@ -12,5 +13,7 @@
 --> [8] Gerar arquivos HTML
 ----------------------------------------------------------------------------------------------
 --> [Z] Inicializar os repositórios
---> [0] Finalizar o Bot
+--> [X] Finalizar o Bot
+----------------------------------------------------------------------------------------------
+---> Encerrando aplicativo        :-) by (Rodolfo Santana)
 ----------------------------------------------------------------------------------------------

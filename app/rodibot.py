@@ -11,6 +11,7 @@ import pdftotxt as conv
 import translate as trans
 import csvtohtml as html
 import conversor as source
+import referencia as refe
 
 from datetime import datetime
 
@@ -117,6 +118,10 @@ class base(object):
         sourceCSV = source.conversor('../bases/origem/', '../bases/source.csv', limiteInf=int(inf), limiteSup=int(sup))
         sourceCSV.gerarSource()
 
+    def carregarReferencias(self):
+        ref = refe.referencia()
+        ref.gerarReferencias()
+
     def processarConversaoPDFtoTXT(self):    
         convPDF = conv.pdftotxt()
         convPDF.converterPDF()
@@ -162,6 +167,7 @@ def main():
     logger.debug('----------------------------------------------------------------------------------------------')
     logger.debug('--                 Seja bem vindo ao RodiBot, o que deseja que eu faça?                     --')
     logger.debug('----------------------------------------------------------------------------------------------')
+    logger.debug('--> [0] Carregar referências para BibText e gerar matriz de conferência')
     logger.debug('--> [1] Preparar arquivos para download')
     logger.debug('--> [2] Download de aquivos (exibe browser para leitura do captcha)')
     logger.debug('--> [3] Download de aquivos (exibe apenas imagem para leitura do captcha)')
@@ -173,11 +179,14 @@ def main():
     logger.debug('--> [8] Gerar arquivos HTML')
     logger.debug('----------------------------------------------------------------------------------------------')
     logger.debug('--> [Z] Inicializar os repositórios')
-    logger.debug('--> [0] Finalizar o Bot')
+    logger.debug('--> [X] Finalizar o Bot')
     logger.debug('----------------------------------------------------------------------------------------------')
     opcao = input("----------:--> Informe a opção desejada:")
 
-    if str(opcao) == "1":
+    if str(opcao) == "0":
+        bs.carregarReferencias()
+
+    elif str(opcao) == "1":
         bs.processarSourceDownload()
 
     elif str(opcao) == "2":
@@ -186,7 +195,6 @@ def main():
             tentativa += 1
 
     elif str(opcao) == "3": 
-        print("aqui")
         while (condicao):
             condicao = bs.processarDownload(tentativa, "hide")
             tentativa += 1
@@ -211,7 +219,7 @@ def main():
     elif str(opcao) == "Z" or str(opcao) == "z":
         bs.processarInicializacao()
 
-    elif str(opcao) == "0":
+    elif str(opcao) == "X" or str(opcao) == "x":
         pass
 
     else:
