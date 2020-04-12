@@ -119,8 +119,7 @@ class base(object):
         sourceCSV.gerarSource()
 
     def carregarReferencias(self):
-        ref = refe.referencia()
-        ref.gerarReferencias()
+        refe.main()        
 
     def processarConversaoPDFtoTXT(self):    
         convPDF = conv.pdftotxt()

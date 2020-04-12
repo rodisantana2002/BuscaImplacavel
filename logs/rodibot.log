@@ -15,5 +15,13 @@
 --> [Z] Inicializar os repositórios
 --> [X] Finalizar o Bot
 ----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---> Iniciando processo de Extração das Refrências.
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+---> 12/04/2020 00:32:15 ---[ work ] extraindo referência [Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).]
+---> 12/04/2020 00:32:15 ---[  ok  ] referência extraída com sucesso! [Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).]
+---> 12/04/2020 00:33:12 ---[ work ] extraindo referência [Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).]
+---> 12/04/2020 00:33:12 ---[  ok  ] referência extraída com sucesso! [Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).]
 ---> Encerrando aplicativo        :-) by (Rodolfo Santana)
 ----------------------------------------------------------------------------------------------
