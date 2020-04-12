@@ -30,8 +30,8 @@ logger.setLevel(logging.DEBUG)
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/20100101 Firefox/27.0'}
 AVAILABLE_SCIHUB_BASE_URL = ['search.crossref.org']
 
-pathOrigem = '../bases/referencias/'
-pathDestino = '../bases/origem/'
+pathDestino = '../bases/referencias/'
+pathOrigem = '../bases/origem/'
 
 class referencia(object):
     
@@ -68,7 +68,7 @@ class referencia(object):
         with open(pathDestino + 'pendentes.BibText', 'w') as erro:
             for err in errs:
                 erro.write(err + "\n")
-        err.close()    
+        erro.close()    
            
         return ""        
 
@@ -167,13 +167,14 @@ def main():
     errs=[]
 
     logger.debug('----------------------------------------------------------------------------------------------')
-    logger.debug('---> Iniciando processo de Extração das Refrências.')
+    logger.debug('---> Iniciando processo de Extração das Referências.')
     logger.debug('----------------------------------------------------------------------------------------------')
     
     # carregas os arquivos
     for file in sh._carregarRepositoriosTXT():
         for ref in sh._popularDados(file):
             str_ref = str(ref).replace("\n", "")
+            print(str_ref)
             refs.append(str_ref)
             
     bib = ""        
