@@ -65,28 +65,17 @@ class referencia(object):
         return ""        
 
 
-    def _popularDados(self, arquivoTXT):
+    def popularDados(self, arquivoTXT):
         try:
-            bib_file = "referencias.bibtext" 
-            data_hora_atuais = datetime.now()
-            data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')               
-            
-            i=0
-            with open(pathDestino + bib_file, 'a+') as tmp:
-                fp = open(arquivoTXT, 'r')
-                for linha in fp:                
-                    data_hora_atuais = datetime.now()
-                    data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')                    
-                    ref = self._obterReferencia(linha)
-                    tmp.write(ref)
-                    i=i+1
+            refs = []
+            fp = open(arquivoTXT, 'r')
+            for linha in fp:                
+                refs.append(linha)
+            fp.close() 
+                       
+            return refs
 
-            tmp.close()
-            fp.close()        
-
-            return '---> {} ---[ ok ] Foram carregadas [{}] referências com sucesso do arquivo [{}]'.format(data_atual, i, os.path.basename(arquivoTXT))
-
-        except Exception:
+        except Exception as exc:
             data_hora_atuais = datetime.now()
             data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
             return '---> {} ---[erro] Arquivo não pode ser carregado'.format(data_atual)
@@ -96,154 +85,94 @@ class referencia(object):
         logger.debug('---> Iniciando processo de carga nos repositórios TXT.')
         logger.debug('----------------------------------------------------------------------------------------------')
 
-        # Passo 01 carregar dos dados para os arquivos csv 
-        arquivos = self._obterArquivos(pathOrigem, "txt")
-
+        # Passo 01 carregar dos dados para os arquivos txt
+        arquivos = self.obterArquivos(pathOrigem, "txt")
+        files=[]
+        
         if len(arquivos) > 0:
             for arq in arquivos:
-                logger.debug(self._popularDados(arq))
-            logger.debug('----------------------------------------------------------------------------------------------')
+                files.append(arq)
+                logger.debug('----------------------------------------------------------------------------------------------')
             
         else:
             logger.debug('---> Não foram encontrados arquivos TXT para serem lidos')
+        
+        return files    
 
 
-    def _obterArquivos(self, path, tipo):
+    def obterArquivos(self, path, tipo):
         return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith("." + tipo)])
 
-    def _obterReferencia(self, referencia):
-        return "oi"
-#         """
-#         Busca o artigo recuperando primeiro o link direto para o pdf.
-#         Se o identificador for um pay-wall DOI, PMID ou URL, use o Sci-Hub
-#         para acessar e baixar o paper. Caso contrário, basta baixar o paper diretamente.
-#         """
-
-#         try:
-#             res = self.sess.get(url, verify=False)
-#             driver = webdriver.Chrome(ChromeDriverManager("2.41").install())
-#             driver.get(url)
-
-#             elem = driver.find_element_by_id('search-input')
-#             strCaptcha = "Tang, K., Jiang, Z.B., Sun, W., Zhang, X., Dong, W.S., 2010. Research on tenant placement based on business relations. In: IEEE 7th Inter- national Conference on e-Business Engineering (ICEBE), 2010. IEEE, pp. 479–483."
-#             elem.send_keys(strCaptcha)
-#             elem.submit()
-
-#             elem = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/table/tbody/tr[1]/td/div/div/span/a')
-#             elem.click()
-
-#             elem = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/table/tbody/tr[1]/td/div/div/span/ul/li[1]/a')
-#             elem.click()
+    
+    @retry(wait_random_min=2000, wait_random_max=10000, stop_max_attempt_number=2)
+    def obterReferencia(self, referencia):
+        """
+        Busca o artigo recuperando primeiro o link direto para o pdf.
+        """
+        try:
+            # carrega a página de pesquisa da CROSSREF
+            # res = self.sess.get(self.base_url, verify=False)
+            driver = webdriver.Chrome(ChromeDriverManager("2.41").install())
+            # driver = webdriver.PhantomJS()
+            driver.get(self.base_url)
             
-
-#             elem = driver.find_element_by_xpath('//*[@id="bibtex"]/a') 
-#             elem.click()
+            # localiza input de pesquisa e injeta referencia a ser pesquisada
+            elem = driver.find_element_by_id('search-input')
+            elem.send_keys(referencia)
+            elem.submit()  
+            time.sleep(5)                     
             
-#             time.sleep(10)
-#             elem = driver.find_element_by_xpath('//*[@id="citation-text"]')
-#             print(elem.text)
+            # localiza primeira ref. e aciona a opção "actions"
+            elem = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/table/tbody/tr[1]/td/div/div/span/a')
+            elem.click()
+            time.sleep(5)
 
-#             # res = self.sess.get(driver.current_url, verify=False)
-#             # soup = BeautifulSoup(res.content, 'html.parser')
-#             # print(soup)
+            # localiza e aciona a opção BIBTEXT
+            elem = driver.find_element_by_xpath('/html/body/div[2]/div[2]/div[2]/table/tbody/tr[1]/td/div/div/span/ul/li[1]/a')
+            elem.click()
+            time.sleep(5)
             
-#             # str_path = soup.findAll("pre", {"id": "citation-text"})
-#             # for attr in elem.get_property('attributes'):
-#             #     attrs.append([attr['name'], attr['value']])
+            # aciona a opção no modal para garantir que seja carregado
+            elem = driver.find_element_by_xpath('//*[@id="bibtex"]/a') 
+            elem.click()           
+            time.sleep(15)
+            
+            # localiza e extrai o valor do BIBTEXT
+            elem = driver.find_element_by_xpath('//*[@id="citation-text"]')            
+            var = elem.text
+            
+            return var                    
+            driver.quit()            
 
-
-#             # soup = BeautifulSoup(res.content, 'html.parser')
-#             # str_doi = soup.findAll("div", {"id": "item-links"})
-#             # i=0
-#             # lin=0
-#             # for linha in str_doi[0]:                
-#             #     if i==1:
-#             #         for x in linha:                    
-#             #             if lin==2:
-#             #                 print(x)
-#             #             lin=lin+1    
-#             #     i=i+1    
-
-#             driver.close()
-#             return "x"
-
-
-        #             # tratamento cado carrege a pagina com o pdf e sem o captcha
-        #             elem = driver.find_element_by_name("answer")
-        #             if elem.is_displayed():
-        #                 strCaptcha = input("informe o captcha: ")
-        #                 elem.send_keys(strCaptcha)
-        #                 elem.submit()
-        #                 res = self.sess.get(driver.current_url, verify=False)
-        #                 driver.close()
-
-        #             if res.headers['Content-Type'] != 'application/pdf':
-        #                 return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
-
-        #             else:
-        #                 return {
-        #                     'pdf': res.content,
-        #                     'url': url,
-        #                     'name': self._generate_name(res)
-        #                 }
-
-        #         elif self.viewPDF == "hide":
-        #             # View com abertura do Browser
-        #             driver = webdriver.PhantomJS()
-        #             driver.get(url)
-
-        #             driver.set_window_size(1300, 550)
-        #             images = driver.find_elements_by_tag_name('img')
-
-        #             if len(images) > 0:
-        #                 for image in images:
-        #                     src = image.get_attribute('src')
-        #                     name = identifier.split('/')[-1]
-        #                     urllib.request.urlretrieve(
-        #                         src, "../imagens/" + name.lower() + ".png")
-        #                     im = Image.open(
-        #                         "../imagens/" + name.lower() + ".png")
-        #                     im.show()
-
-        #                     elem = driver.find_element_by_name("answer")
-        #                     strCaptcha = input("informe o captcha: ")
-        #                     elem.send_keys(strCaptcha)
-        #                     elem.submit()
-        #                     res = self.sess.get(
-        #                         driver.current_url, verify=False)
-
-        #                 if res.headers['Content-Type'] != 'application/pdf':
-        #                     return {'err': '---[erro] Falha: %s (url) captcha informado esta incorreto' % (identifier)}
-
-        #                 else:
-        #                     return {
-        #                         'pdf': res.content,
-        #                         'url': url,
-        #                         'name': self._generate_name(res)
-        #                     }
-
-        #             else:
-        #                 return {'err': '---[erro] Falha: %s (url) não foi localizada a imagem do captcha, verifique manualmente o DOI' % (identifier)}
-
-        #     else:
-        #         return {
-        #             'pdf': res.content,
-        #             'url': url,
-        #             'name': self._generate_name(res)
-        #         }
-
-        # except requests.exceptions.ConnectionError:
-        #     logger.debug(
-        #         '---> Impossível acessar a url {}'.format(self.available_base_url_list[0]))
-        #     return {'err': '---[erro] Falha: %s (url) não foi possível estabeler a conexão com os servidores' % (identifier)}
-
-        # except requests.exceptions.RequestException as exc:
-        #     return {'err': exc}
-
+        except requests.exceptions.ConnectionError:
+            return 'err'
+        except requests.exceptions.RequestException as exc:
+            return 'err'
 
 def main():
     sh = referencia()
-    sh.gerarReferencias()
+    refs=[]
+    bibs=[]
+    
+    # carregas os arquivos
+    for file in sh.carregarRepositoriosTXT():
+        for ref in sh.popularDados(file):
+            refs.append(ref)
+            
+    for ref in refs:
+        bibs.append(sh.obterReferencia(ref))
+
+    
+    # var = [] 
+    # var.append('Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).')
+    # var.append('Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).')
+    
+    
+    
+    # for i in var:
+    #     bibs.append(sh.obterReferencia(i))
+        
+    print(refs)
 
 if __name__ == '__main__':
     main()
