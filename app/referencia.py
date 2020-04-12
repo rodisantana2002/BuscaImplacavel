@@ -95,8 +95,7 @@ class referencia(object):
         if len(arquivos) > 0:
             for arq in arquivos:
                 files.append(arq)
-                logger.debug('----------------------------------------------------------------------------------------------')
-            
+           
         else:
             logger.debug('---> Não foram encontrados arquivos TXT para serem lidos')
         
@@ -168,13 +167,11 @@ def main():
 
     logger.debug('----------------------------------------------------------------------------------------------')
     logger.debug('---> Iniciando processo de Extração das Referências.')
-    logger.debug('----------------------------------------------------------------------------------------------')
-    
+   
     # carregas os arquivos
     for file in sh._carregarRepositoriosTXT():
         for ref in sh._popularDados(file):
             str_ref = str(ref).replace("\n", "")
-            print(str_ref)
             refs.append(str_ref)
             
     bib = ""        
