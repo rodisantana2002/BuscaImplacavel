@@ -57,12 +57,18 @@ class referencia(object):
                             'source']               
 
 
-    def gerarReferencias(self, refs):
-        with open(pathDestino + 'referencias.bibtext', "w") as txt:
-            str = ""
+    def gerarReferencias(self, refs, errs):
+        # grava somente as refs de sucesso
+        with open(pathDestino + 'referencias.BibText', "w") as txt:
             for ref in refs:
                 txt.write(ref + '\n,\n')
         txt.close()        
+        
+        # grava as incidencias de erro para posterior recuperação e novo processamento
+        with open(pathDestino + 'pendentes.BibText', 'w') as erro:
+            for err in errs:
+                erro.write(err + "\n")
+        err.close()    
            
         return ""        
 
@@ -158,6 +164,7 @@ def main():
     
     refs=[]
     bibs=[]
+    errs=[]
 
     logger.debug('----------------------------------------------------------------------------------------------')
     logger.debug('---> Iniciando processo de Extração das Refrências.')
@@ -180,10 +187,10 @@ def main():
             bibs.append(str(var))
             logger.debug('---> {} ---[  ok  ] referência extraída com sucesso! [{}]'.format(data_atual, ref))                    
         else:            
-            bibs.append('*** VAZIO [{}]'.format(ref))    
+            errs.append('*** VAZIO [{}]'.format(ref))    
             logger.debug('---> {} ---[ erro ] referência não foi extraída [{}]'.format(data_atual, ref))                                
 
-    sh.gerarReferencias(bibs)
+    sh.gerarReferencias(bibs, errs)
 
   
 
