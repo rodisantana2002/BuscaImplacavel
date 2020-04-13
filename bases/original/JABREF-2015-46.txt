@@ -57,18 +57,14 @@ Copi, I.M., Miller, R.W., 1972. Introduction to Logic: Study Guide. Macmillan, N
 Du, J., Gu, X., Reeves, D.S., 2010. Highly available component sharing in large-scale multi-tenant cloud systems. In: Proceedings of the 19th ACM International Sym- posium on High Performance Distributed Computing, pp. 85–94.
 Eisenhardt, K.M., 1989. Building theories from case study research. Acad. Manage. Rev. 14 (4), 532–550.
 Fisher, S.,2007. The architecture of the apex platform, salesforce. com’s platform for building on-demand applications. In: 29th International Conference on Software Engineering-Companion (ICSE2007). IEEE, 3–3.
-Forbes, 2012, November. Cloud Computing and Enterprise Software Forecast Update.http://goo.gl/K3LnNS
 Guo, C., Sun, W., Huang, Y., Wang, Z., Gao, B., 2007. A framework for native multi-tenancy application development and management. In: Proceedings of the 9th IEEE International Conference on E-Commerce Technology, IEEE Computer Soci- ety, pp. 551–558.
-IBM, 2011, July. Best Practices for Cloud Computing Multi-Tenancy.http://goo.gl/Txzbu4
 Kabbedijk, J., Jansen, S.,2012. The role of variability patterns in multi-tenant business software. In: Proceedings of the WICSA/ECSA 2012 Companion Volume. ACM, pp. 143–146.
 Kitchenham, B., 2004. Procedures for Performing Systematic Reviews. Tech. rep., Keele. Keele University, UK.
 Kitchenham, B., Pearl Brereton, O., Budgen, D., Turner, M., Bailey, J., Linkman, S., 2009. Systematic literature reviews in software engineering-a systematic literature review. Inf. Softw. Technol. 51 (1), 7–15.
 Kitchenham, B.A., Budgen, D., Brereton, P., 2010. The value of mapping studies-a participant-observer case study. In: Proceedings of Evaluation and Assessment of Software Engineering (EASE2010), pp. 195–204.
 Kwok, T., Nguyen, T., Lam, L.,2008. A software as a service with multi-tenancy support for an electronic contract management application. In: Proceedings of the IEEE International Conference on Services Computing (SCC‘08). Vol. 2. IEEE, pp. 179–186.
 Li, X., Liu, T., Li, Y., Chen, Y., 2008. Spin: service performance isolation infrastructure in multi-tenancy environment. In: Proceedings of the International Conference on Service-Oriented Computing (ICSOC 2008), pp. 649–663.
-Microsoft, 2012, June. Principles of Sharing in a Shared First World: Multi-Tenancy, urlhttp://goo.gl/x3yybzhttp://goo.gl/x3yybz.
 Natis, Y.V., 2008. Reference architecture for multitenancy: enterprise computing in the cloud. Gartner 3, 4–8.
-Oracle, 2009, October. Multi-Tenancy (Non Virtualized). http://goo.gl/Ogn8xV 
 Osipov, C., Goldszmidt, G., Taylor, M., Poddar, I., 2009. Develop and Deploy Multi- Tenant Web-Delivered Solutions Using IBM Middleware: Part 2: Approaches for Enabling Multi-Tenancy. Tech. rep., IBM Corporation.
 Petersen, K., Feldt, R., Mujtaba, S., Mattsson, M., 2008. Systematic mapping studies in software engineering. In: Proceedings of the 12th International Conference on Evaluation and Assessment in Software Engineering, pp. 71–80.
 Petticrew, M., Roberts, H., 2009. Systematic Reviews in the Social Sciences: A Practical Guide. Blackwell Publishing, Oxford.
