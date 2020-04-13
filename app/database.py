@@ -13,7 +13,8 @@ logger.setLevel(logging.DEBUG)
 
 class database(object):
     def __init__(self):
-        self.pathOrigem = '../bases/database/bot.db'
+        # self.pathOrigem = '../bases/database/bot.db'
+        self.pathOrigem = '../BuscaImplacavel/bases/database/bot.db'
 
     def _getConn(self):
         try:
@@ -22,12 +23,10 @@ class database(object):
         except Error as e:
             logger.debug(e)
             return None
-        return sqlite3.connect(self.pathOrigem)
 
-    def _criarTabela(self, strSQL):
-        cn = self._getConn()
-        
+    def _criarTabela(self, strSQL):             
         try:
+            cn = self._getConn()                    
             cursor = cn.cursor()
             cursor.execute(strSQL)
             logger.debug("tabela criada com sucesso")
@@ -40,7 +39,7 @@ class database(object):
         tabelas.append("""CREATE TABLE Pesquisa (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
                                                 situacao VARCHAR(20),
                                                 descricao VARCHAR(30), 
-                                                objetivo,
+                                                objetivo TEXT,
                                                 criado_em VARCHAR(20));""")
 
         tabelas.append("""CREATE TABLE Referencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
@@ -52,18 +51,21 @@ class database(object):
                                                 keywords TEXT, 
                                                 doi TEXT, 
                                                 url TEXT, 
+                                                publisher TEXT,
                                                 bookTitulo TEXT, 
                                                 arquivo_origem VARCHAR(20), 
                                                 pesquisa_id INTEGER,
+                                                texto_rtf TEXT,
                                                 criado_em VARCHAR(20));""")
 
-        # tabelas.append("""CREATE TABLE ArtigoElemento (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
-        #                                                situacao VARCHAR(20),
-        #                                                txtorigem TEXT, 
-        #                                                txttranslate TEXT, 
-        #                                                tipo VARCHAR(3), 
-        #                                                artigo_id VARCHAR(50),
-        #                                                criado_em VARCHAR(12));""")
+        tabelas.append("""CREATE TABLE ReferenciaElemento (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+                                                       situacao VARCHAR(20),
+                                                       tipo VARCHAR(10),
+                                                       linha_pos INTEGER,
+                                                       txt_origem TEXT, 
+                                                       txt_translate TEXT, 
+                                                       referencia_id VARCHAR(50),
+                                                       criado_em VARCHAR(12));""")
 
         for tabela in tabelas:
             self._criarTabela(tabela)

@@ -1,7 +1,7 @@
 import bibtexparser
 
 def main():
-    with open('/Users/mac/Documents/projetos/automator/buscaimplacavel/bases/referencias/JABREF-2015-46.BibText') as bibtex_file:
+    with open('/home/rodolfosantana/Documentos/projetos/automator/BuscaImplacavel/bases/referencias/JABREF-2015-46.BibText') as bibtex_file:
         bib_database = bibtexparser.load(bibtex_file)
     print(bib_database.entries[0]['title'])
 
