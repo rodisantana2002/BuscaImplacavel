@@ -1,7 +1,7 @@
 import os
 import datetime
 import sqlalchemy
-import lista as list
+import model.lista as list
 from datetime import datetime
 
 from sqlalchemy import create_engine
@@ -72,7 +72,7 @@ class Referencia(Base):
     data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')  
      
     id = Column(Integer, primary_key=True)
-    situacao = Column(String(20), default="Ativa")
+    situacao = Column(String(20), default="Iniciada")
     titulo = Column(String(1000))
     resumo = Column(String())
     ano = Column(String(10))
@@ -92,8 +92,7 @@ class Referencia(Base):
     pesquisas = relationship("Pesquisa", back_populates="referencias")    
     translates = relationship("Translate")
     
-    
-        
+            
     def add(self, referencia):   
         session.add(referencia)
         session.commit()    
@@ -182,6 +181,7 @@ class Translate(Base):
 # Teste de Classe
 # ---------------------------------------------------------------------------
 def main():
+    pass
     # pesquisa = Pesquisa()
     # pesquisa.descricao="Rodolfo"
     # pesquisa.situacao="rr"
@@ -208,16 +208,13 @@ def main():
     # ref = ref.find_by_id(5)
     # print(ref.__str__())
 
-    linha = Translate() 
-    linha.linha_pos = 1
-    linha.tipo ="ABS"
-    linha.txt_origem = "origem"
-    linha.txt_translate = "translate"
-    linha.referencia_id = 1
-    linha.add(linha)
-    
-
-
+    # linha = Translate() 
+    # linha.linha_pos = 1
+    # linha.tipo ="ABS"
+    # linha.txt_origem = "origem"
+    # linha.txt_translate = "translate"
+    # linha.referencia_id = 1
+    # linha.add(linha)
     
     
 if __name__ == '__main__':
