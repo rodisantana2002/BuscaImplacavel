@@ -85,6 +85,7 @@ class Referencia(Base):
     arquivo_origem = Column(String(200))
     pesquisa_id = Column(Integer, ForeignKey('Pesquisa.id'))
     texto_rtf = Column(String())
+    referencia = Column(String())
     criado_em = Column(String(20), default=data_atual)
     
     # relacionamentos

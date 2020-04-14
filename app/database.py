@@ -39,6 +39,7 @@ class database(object):
                                                 arquivo_origem VARCHAR(20), 
                                                 pesquisa_id INTEGER,
                                                 texto_rtf TEXT,
+                                                referencia TEXT,
                                                 criado_em VARCHAR(20));""")
 
         tabelas.append("""CREATE TABLE Translate (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
