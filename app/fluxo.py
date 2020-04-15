@@ -8,23 +8,38 @@ logging.basicConfig()
 logger = logging.getLogger('Log.')
 logger.setLevel(logging.DEBUG)
 
+pathDestino = '../bases/referencias/'
 
 class fluxo(object):
     
     def __init__(self):
-        pass
+        self.homeDir = "../logs"
+        self.logFile = self.homeDir + '/fluxo.log'
+        self.logger_handler = logging.FileHandler(self.logFile, mode='w')
+        self.logger_handler.setLevel(logging.DEBUG)
+        # Associe o Handler ao  Logger
+        logger.addHandler(self.logger_handler)
     
-    def importarBIBFile():
+    def importarBIBFile(self):
         pass
-        
+
+    def _obterArquivos(self, path, tipo):
+        return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith("." + tipo)])
+
 
 def main():
-    pass
-    # pesquisa = Pesquisa()
-    # pesquisa.descricao="Rodolfo"
-    # pesquisa.situacao="rr"
-    # pesquisa.add(pesquisa)
-    # pesquisa.objetivo="meut "    
+    # pesquisa base nivel 0
+    pesquisa = Pesquisa()
+    pesquisa.descricao="Mapeamentos e SRL"
+    pesquisa.objetivo="Pesquisa sobre SaaS - com referencias sobre mapeamentos e srl sobre saas"
+    pesquisa.add(pesquisa)
+    # snowball nivel 1
+    pesquisa = Pesquisa()
+    pesquisa.descricao="Mapeamentos e SRL"
+    pesquisa.objetivo="Pesquisa sobre SaaS - com referencias sobre mapeamentos e srl sobre saas"
+    pesquisa.add(pesquisa)
+
+
     # pesquisa = pesquisa.find_by_id(3)
     # print(pesquisa.__str__())
     
