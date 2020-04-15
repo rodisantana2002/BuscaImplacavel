@@ -25,6 +25,12 @@ class database(object):
                                                 objetivo TEXT,
                                                 criado_em VARCHAR(20));""")
 
+        tabelas.append("""CREATE TABLE File (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+                                                situacao VARCHAR(20),
+                                                descricao VARCHAR(150), 
+                                                conteudo TEXT,
+                                                criado_em VARCHAR(20));""")                                              
+
         tabelas.append("""CREATE TABLE Referencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
                                                 situacao VARCHAR(20),
                                                 titulo TEXT, 

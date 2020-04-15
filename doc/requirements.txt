@@ -10,3 +10,4 @@ phantomjs
 pdfminer3k
 googletrans
 bibtexparser
+sqlalchemy
