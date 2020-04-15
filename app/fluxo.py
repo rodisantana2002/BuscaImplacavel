@@ -25,20 +25,34 @@ class fluxo(object):
 
     def _obterArquivos(self, path, tipo):
         return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith("." + tipo)])
+    
+    def _carregarReferencias(self):
+        # Passo 01 carregar dos dados para os arquivos txt
+        arquivos = self._obterArquivos(pathOrigem, "BibText")
+        files=[]
+        
+        if len(arquivos) > 0:
+            for arq in arquivos:
+                files.append(arq)           
+        else:
+            logger.debug('---> Não foram encontrados arquivos BibText para serem lidos')
+        
+        return files       
 
 
 def main():
-    # pesquisa base nivel 0
-    pesquisa = Pesquisa()
-    pesquisa.descricao="Mapeamentos e SRL"
-    pesquisa.objetivo="Pesquisa sobre SaaS - com referencias sobre mapeamentos e srl sobre saas"
-    pesquisa.add(pesquisa)
-    # snowball nivel 1
-    pesquisa = Pesquisa()
-    pesquisa.descricao="Mapeamentos e SRL"
-    pesquisa.objetivo="Pesquisa sobre SaaS - com referencias sobre mapeamentos e srl sobre saas"
-    pesquisa.add(pesquisa)
-
+    # # pesquisa base nivel 0
+    # pesquisa = modelo.Pesquisa()
+    # pesquisa.descricao="Mapeamentos e SRL"
+    # pesquisa.objetivo="Pesquisa sobre SaaS - com referencias sobre mapeamentos e srl sobre saas"
+    # pesquisa.add(pesquisa)
+    # # snowball nivel 1
+    # pesquisa = modelo.Pesquisa()
+    # pesquisa.descricao="Pesquisa Artigos Primários "
+    # pesquisa.objetivo="Snow-Ball nível 1"
+    # pesquisa.add(pesquisa)
+    
+    
 
     # pesquisa = pesquisa.find_by_id(3)
     # print(pesquisa.__str__())
@@ -56,19 +70,7 @@ def main():
     # ref.arquivo_origem = "arquivo origem"
     # ref.pesquisa_id = 1
     # ref.url = "url"
-    # ref.add(ref)
-    
-    # ref = ref.find_by_id(5)
-    # print(ref.__str__())
-
-    # linha = Translate() 
-    # linha.linha_pos = 1
-    # linha.tipo ="ABS"
-    # linha.txt_origem = "origem"
-    # linha.txt_translate = "translate"
-    # linha.referencia_id = 1
-    # linha.add(linha)
-      
+    # ref.add(ref)     
     
 if __name__ == '__main__':
     main()        
