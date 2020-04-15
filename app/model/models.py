@@ -13,7 +13,7 @@ from sqlalchemy import Sequence
 from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
-engine = create_engine('sqlite:///../buscaimplacavel/bases/database/bot.db')        
+engine = create_engine('sqlite:///../bases/database/bot.db')        
 Session = sessionmaker(bind=engine)
 session = Session()   
 
@@ -116,8 +116,16 @@ class Referencia(Base):
             'publisher': self.publisher,
             'doi': self.doi,
             'pesquisa_id': self.pesquisa_id,
-            'pesquisa': self.pesquisas.descricao,
-            'criado_em': self.criado_em
+            'situacao' : self.situacao,
+            'resumo' : self.resumo,
+            'autores' : self.autores,
+            'keywords' : self.keywords,
+            'url' : self.url,
+            'bookTitulo' : self.bookTitulo,
+            'arquivo_origem' : self.arquivo_origem,
+            'texto_rtf' : self.texto_rtf,
+            'referencia' : self.referencia,            
+            'criado_em': self.criado_em                    
         }
 
     def __repr__(self):
