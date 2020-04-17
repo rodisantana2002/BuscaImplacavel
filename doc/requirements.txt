@@ -1,13 +1,17 @@
 beautifulsoup4
+webdriver_manager
 requests
 retrying
 pysocks
 retry
+pillow
+Image
+ImageTK
 selenium
-PIL
 urllib3
 phantomjs
 pdfminer3k
 googletrans
 bibtexparser
 sqlalchemy
+# sudo apt-get install python3-pil.imagetk.

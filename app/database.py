@@ -59,6 +59,7 @@ class database(object):
 
         for tabela in tabelas:
             self._criarTabela(tabela)
+            self._criarTabela(tabela)
 
     def _criarTabela(self, strSQL):             
         try:
