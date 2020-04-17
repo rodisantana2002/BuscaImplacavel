@@ -1,38 +1,70 @@
-import bibtexparser
-from sqlalchemy import create_engine
+import csv
 import PySimpleGUI as sg
 
 
-class tela(object):
-
-    def __init__(self):
-        layout = [
-            [sg.Text('Nome'), sg.Input()],
-            [sg.Button('enviar')],
-            [sg.Ok('')]
-        ]
-        janela = sg.Window("Dados").layout(layout)
-        self.button, self.values = janela.Read()
-
-    def Iniciar(self):
-        print(self.values)
-
 def main():
+    # filename = os.path.join(os.path.expanduser('~'), 'Dropbox', 'Sync', 'inventarioHL.csv')
+    filename = 'inventarioHL.csv'
+    with open(filename, "r") as infile:
+        reader = csv.reader(infile)
+        header_list = next(reader)
+        data = list(reader)  # read everything else into a list of rows
+    sg.SetOptions(element_padding=(0, 10),
+                  background_color='#F3F3F3')
 
-    layout  = [[sg.Text(f'{i}. '), sg.In(key=i)] for i in range(1,6)] + [[sg.Button('Save'), sg.Button('Exit')]]
+    layout = [
+        [sg.InputText(
+            key='edit1',
+            size=(50, 20),
+            background_color='white',
+            text_color='#2687FB',
+            enable_events=True)],
+        [sg.Table(
+            key='table1',  # HELLO I EXIST
+            values=data,
+            headings=header_list,
+            max_col_width=25,
+            auto_size_columns=False,
+            justification='left',
+            background_color='#1DB954',  # Bg not changing color
+            alternating_row_color='black',  # Colors are not changing
+            # row_colors=''  # Any Examples on how to use this?
+            num_rows=20,
+            enable_events=True)],
+        [sg.StatusBar(
+            key='sb1',
+            size=(137, 0),
+            text='App Started!',
+            text_color='red')]
+    ]
 
-    window = sg.Window('To Do List Example', layout)
+    window = sg.Window(
+        title='Table Example',
+        return_keyboard_events=True,
+        grab_anywhere=False).Layout(layout)
 
-    event, values = window.read()
-    # with open('/home/rodolfosantana/Documentos/projetos/automator/buscaimplacavel/bases/referencias/JABREF-2015-46.BibText') as bibtex_file:
-    #     bib_database = bibtexparser.load(bibtex_file)
-    # print(bib_database.entries[0]['title'])
+    while True:
+        event, values = window.Read()
 
-    # engine = create_engine('sqlite:///../buscaimplacavel/bases/database/bot.db')
+        if event is None or event == 'Exit':
+            break
 
-    # x= biblib.BibTexFile('/Users/mac/Documents/projetos/automator/buscaimplacavel/bases/referencias/JABREF-2015-46.BibText')
-    # bib = biblib.FileBibDB('/Users/mac/Documents/projetos/automator/buscaimplacavel/bases/referencias/JABREF-2015-46.BibText', mode='r')
-    # print(bib)
+        if event == 'Escape:27':  # Exit on ESC
+            window.close()
 
-if __name__ == '__main__':
-    main()
+        # if event != 'Escape:27':
+        #     window.Element('edit1').focus()  # I know this does not exist but how to manually focus on a widget?
+
+        if event == 'Delete:46':  # Clear Edit1 on DEL
+            window.Element('edit1').Update('')
+
+        try:
+            sb_update = window.FindElementWithFocus().Key
+            print(window.FindElementWithFocus().Key)
+        except:
+            sb_update = window.FindElementWithFocus()
+            print(window.FindElementWithFocus())
+
+        window.Element('sb1').Update(f"Focused Key: {str(sb_update)} Event: {event} Value(s): {values}")
+
+main()
