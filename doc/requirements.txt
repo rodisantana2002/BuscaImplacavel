@@ -14,4 +14,6 @@ pdfminer3k
 googletrans
 bibtexparser
 sqlalchemy
+pySimpleGui
+
 # sudo apt-get install python3-pil.imagetk.
