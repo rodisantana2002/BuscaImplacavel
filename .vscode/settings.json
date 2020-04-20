@@ -3,11 +3,13 @@
     "editor.fontSize": 14,
     "git.confirmEmptyCommits": true,
     "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false,
     "sqltools.connections": [
         {
-            "database": "/home/osboxes/Documentos/automator/buscaimplacavel/bases/database/bot.db",
+            "database": "/home/osboxes/Documentos/automator/buscaimplacavel/web/bd/bot.db",
             "dialect": "SQLite",
             "name": "artigos"
         }
-    ]
+    ],
+    "sqltools.useNodeRuntime": true
 }

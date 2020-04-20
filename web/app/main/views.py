@@ -15,10 +15,10 @@ oper = Operacoes()
 def index():
     return redirect(url_for('views.home'))
 
+
 @views.route('/home', methods=['GET', 'POST'])
 def home():
-    pesquisa = oper.obterPesquisas()
+    pesquisa = oper.obterPesquisas()    
     return render_template('index.html', pesquisa=pesquisa)
 
-    
 

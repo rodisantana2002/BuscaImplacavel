@@ -10,45 +10,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>    
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>    
   </head>
+
     <nav id="barTitulo" class="navbar navbar-inverse" style="background-color:#F58634; border-color:#F58634" role="navigation">
       <div class="container">
-        <div class="navbar-header" >
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" style="border-color:white; background-color:#F58634">
-            <span class="sr-only">Menu</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <div class="row">
+          <div class="col-12">
+          <!-- cabecalho home -->
+            <h5 style="color:white; margin-left:5px; margin-left:1px"> 
+              <span class="pull-left" style="margin-top:-5px">
+                <a id="btn-voltar" style="color:white; background:#F58634; border-color:#F58634", type="link" class="btn btn-link btn-md"  href="#"> <i class="material-icons">android</i>    </a>                                                
+                <b style=" margin-center:-20px">Busca Implacável</b> </span>
+            <h5>           
+          </div>
         </div>
-
-        <span class="badge badge-pill badge-light pull-right" style="color:white; background-color:#F58634; margin-top:5px; margin-right:-10px">                            
-          </span>  
-
-        <div class="navbar-collapse collapse" >
-          <ul class="nav navbar-nav">
-          </ul>
-        </div>
-      </div>      
+      </div>
     </nav>
-
 
     <!-- corpo -->
     <body style="background-color:white">
-          {% for pes in pesquisa %}
-           <h1>{{pes.descricao}}</h1>
-          {% endfor %}
-
-        <div id="paneMenu" class="container" >
-            <div class="row">
-
-                <div class="col-12" style="margin-top:-15px; text-align:center">
-                    <img src="{{ url_for('static', filename='img/logo.jpg') }}" width=200  ></img>
-                </div>
-
-            </div> 
-        </div> 
-
     </body>
 </html>
 
