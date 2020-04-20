@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+  	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">       
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>    
+    <script src="{{ url_for('static', filename='js/main.js') }}" type='text/javascript'></script>
+  </head>
+    <nav id="barTitulo" class="navbar navbar-inverse" style="background-color:#F58634; border-color:#F58634" role="navigation">
+      <div class="container">
+        <div class="navbar-header" >
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" style="border-color:white; background-color:#F58634">
+            <span class="sr-only">Menu</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand"  href="{{ url_for('views.index') }}" style="color:white; text-align:left"><b><span class="glyphicon glyphicon-cutlery"></span> Resthouse</b></a></br>
+        </div>
+
+        <span class="badge badge-pill badge-light pull-right" style="color:white; background-color:#F58634; margin-top:5px; margin-right:-10px">                            
+            <a id="btn-perfil" style="color:white; font-size:15px"  type="link" class="btn btn-link" href="{{ url_for('views.atualizarPerfil')}}">
+              Olá, {{ nome }}           
+            </a>                                                
+
+            <a id="btn-carrinho" style="color:white; font-size:15px"  type="link" class="btn btn-link" href="{{ url_for('views.obterCarrinho')}}">  
+              <i style="font-size:25px" class="glyphicon glyphicon-shopping-cart"></i>             
+            </a>                                                
+          </span>  
+
+        <div class="navbar-collapse collapse" >
+          <ul class="nav navbar-nav">
+            <li><a href="{{ url_for('views.obterPedidos')}}" style="color:white"><i class="material-icons">shopping_basket</i> Meus Pedidos</a></li>
+            <li><a href="{{ url_for('views.carregarAssociados')}}" style="color:white"><i class="material-icons">storefront</i> Produtos e Ofertas</a></li>
+            <li><a href="{{ url_for('views.atualizarPerfil')}}" style="color:white"><i class="material-icons">account_circle</i> Dados Pessoais</a></li>
+            <li><a href="{{ url_for('views.sair')}}" style="color:white"><i class="material-icons">exit_to_app</i> Sair</a></li>
+          </ul>
+        </div>
+      </div>      
+    </nav>
+
+
+    <!-- corpo -->
+    <body style="background-color:white">
+        <div id="paneMenu" class="container" >
+            <div class="row">
+                <div class="col-12" style="margin-top:-15px; text-align:center">
+                    <img src="{{ url_for('static', filename='img/logo.jpg') }}" width=200  ></img>
+                </div>
+
+                <div class="col-12">
+                    <div class="panel-group"> 
+                        <div class="panel panel-default" id="pane" style="margin-bottom:15px; margin-left:30px; margin-right:30px; background:#fcf8ef">                                                  
+                          <div class="panel-body" style="margin-top:-20px">
+                              <h6 style="color:#F58634; text-align:center; margin-top:20px">conheça os produtos e as ofertas dos parceiros cadastrados</h6>
+                              <h4 style="color:white; text-align:center">
+                                  <span class="pull-center" >     
+                                      <a id="btn-vendedores" style="font-size:18px; color:white; color:#F58634" href="{{ url_for('views.carregarAssociados')}}" type="link" class="btn btn-link btn-lg" ><i class="material-icons" style="font-size:45px">storefront</i><br>Produtos e Ofertas</a>                                                
+                                  </span>
+                              </h4>
+
+                          </div>
+                        </div>
+
+                        <div class="panel panel-default" id="pane" style="margin-bottom:15px; margin-left:30px; margin-right:30px; background:#fcf8ef">                                                  
+                          <div class="panel-body" style="margin-top:-20px">
+                              <h6 style="color:#F58634; text-align:center; margin-top:20px">acompanhe o andamento de seus pedidos</h6>
+                              <h4 style="color:white; text-align:center">
+                                  <span class="pull-center" style="margin-top:-5px">     
+                                      <a id="font-size:18px; btn-pedidos" style="color:white; color:#F58634" href="{{ url_for('views.obterPedidos')}}" type="link" class="btn btn-link btn-lg" ><i class="material-icons" style="font-size:45px">shopping_basket</i><br>Pedidos</a>                                                
+                                  </span>
+                              </h4> 
+
+
+                              {% if pedidos|length > 0 %}
+                                  <div id="panePedidos" >
+                                      <h6 style="color:#563A2D; font-size:10px; margin-top:20px">Existem pedidos aguardando sua avaliação</h6>
+                                      <table class="table " id="tblSaboresSelecionados" style="display:true; margin-bottom:-5px">
+                                          <tbody style='color:#563A2D' >                    
+                                              {% for pedido in pedidos %}
+                                                  <tr>
+                                                    <td style="margin-left:30px; margin-right:30px; font-size:11px">
+                                                        <img class="pull-left" height="60rem" width="60rem" src="{{ url_for('views.media', filename=pedido.assoc.logo)}}" >
+                                                        &nbsp <b>{{pedido.numero}}</b>
+                                                        <br>&nbsp {{pedido.dtregistro}}
+                                                        <br>&nbsp {{pedido.assoc.nomefantasia}}
+                                                        <br>&nbsp R$ {{pedido.total_pedido}}
+                                                    <td>
+                                                    <tb>
+                                                        <br>
+                                                        <a href="{{ url_for('views.avaliarPedido', id=pedido.id)}}" type="button" class="btnAvaliarPedido btn-link btn-xs pull-right" style="font-size:13px; background:#fcf8ef; color:#F58634" ><i class="glyphicon glyphicon-star-empty"></i>Avaliar</a>                                                                                                       
+                                                    </td>                                                  
+                                                  </tr>
+                                              {% endfor %}  
+                                          </tbody>
+                                      </table>              
+                                  </div>             
+                              {% endif %}
+                          </div>
+                        </div>
+                       {% if adm=='True' %}
+                        <div class="panel panel-default" id="pane" style="margin-bottom:15px; margin-left:30px; margin-right:30px; background:#fcf8ef">                                                  
+                          <div class="panel-body" style="margin-top:-20px">
+                              <h6 style="color:#F58634; text-align:center; margin-top:20px">acompanhe e gerencie as operações da plataforma</h6>
+                              <h4 style="color:white; text-align:center">
+                                  <span class="pull-center" >     
+                                      <a id="btn-dashboard" style="font-size:18px; color:white; color:#F58634" href="{{ url_for('views.carregarDashboard')}}" type="link" class="btn btn-link btn-lg" ><i class="material-icons" style="font-size:45px">dashboard</i><br>Dashboard</a>                                                
+                                  </span>
+                              </h4>
+
+                          </div>
+                        </div>                          
+                       {% endif %} 
+                       
+
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+
+    </body>
+</html>
+
+

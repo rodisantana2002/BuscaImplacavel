@@ -1,0 +1,37 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+flask-bootstrap="*"
+
+
+[packages]
+flask = "*"
+flask-sqlalchemy = "*"
+flask-bootstrap="*"
+flask-mail="*"
+flask-views="*"
+flask-moment="*"
+flask-wtf="*"
+flask-login="*"
+Flask-Migrate="*"
+Flask-Script="*"
+
+itsdangerous="*"
+python-dateutil="*"
+SQLAlchemy="*"
+Werkzeug="*"
+WTForms="*"
+"psycopg2" = "*"
+gunicorn = "*"
+Jinja2 = "*"
+
+
+
+[requires]
+python_version = "3.6"
+

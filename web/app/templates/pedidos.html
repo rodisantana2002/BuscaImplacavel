@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">      
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
+    <link href="{{ url_for('static', filename='css/myStyle.css') }}" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>      
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>  
+    <script src="{{ url_for('static', filename='js/main.js') }}" type='text/javascript'></script>
+  </head>
+
+  <!-- corpo -->
+  <body style="background:#fcf8ef">
+
+      <div id="cabec" name="cabec" class="container" style="background:#F58634; border-color:#F58634">
+        <div class="row">
+          <div class="col-12">
+          <!-- cabecalho Carrinho -->
+            <h5 style="color:white; margin-left:5px; margin-left:1px">
+              <span class="pull-left" style="margin-top:-5px">     
+                <a id="btn-voltar" style="color:white; background:#F58634; border-color:#F58634" type="link" class="btn btn-link btn-md"  href="{{ url_for('views.index')}}"><i class="material-icons">arrow_back_ios</i></a>                                                
+              <b style=" margin-left:-20px">PEDIDOS</b></span>
+
+              <span class="pull-right" style="margin-top:-5px">     
+                <a id="btn-pesquisar" style="color:white; background:#F58634; border-color:#F58634" type="link" class="btn btn-link btn-md" ><i class="material-icons">search</i></a>                                                
+              </span>
+
+            <h5>           
+          </div>
+        </div>
+      </div> 
+
+      <div id="body" name="body" class="container" >
+        <div class="row">
+          <div class="col-12">
+
+              {% if pedidos|length == 0 %}
+                <div class="panel panel-default"style="display:true; margin-top: 8px; margin-left:5px; margin-right:5px">
+                  <div class="panel-body" >
+                    <h5  id="lblNenhumPedidoSelecionado" style="text-align:center; color:gray">Nenhum pedido foi localizado!</h5>
+                  </div>
+                </div>                
+              {% else %}
+
+                <div class="panel-group" style="margin-top:8px">            
+                    {% for pedido in pedidos %}
+                        <div class="panel panel-default" id="pane-pedido-{{pedido.id}}" style="margin-bottom:15px; margin-left:5px; margin-right:5px; border-color:gray">                                                  
+                          <div class="panel-body" style="margin-top:3px; margin-bottom:-15px">
+                            {% if pedido.situacao=="1" %}
+                                <span name="lblStatus" class="badge pull-right" style="color:gray; background:white; margin-top:1px"><i class="material-icons" style="color:gray">flag</i><br><b>{{pedido.status}}</b></span>
+                            {% elif pedido.situacao=="2"%}
+                                <span name="lblStatus" class="badge pull-right" style="color:#a59332; background:white; margin-top:1px"><i class="material-icons" style="color:#a59332">assignment</i><br><b>{{pedido.status}}</b></span>
+                            {% elif pedido.situacao=="3"%}
+                                <span name="lblStatus" class="badge pull-right" style="color:#1c6222; background:white; margin-top:1px"><i class="material-icons" style="color:#1c6222">directions_bike</i><br><b>{{pedido.status}}</b></span>
+                            {% elif pedido.situacao=="4"%}
+                                <span name="lblStatus" class="badge pull-right" style="color:#720fa3; background:white; margin-top:1px"><i class="material-icons" style="color:#720fa3">check</i><br><b>{{pedido.status}}</b></span>
+                            {% elif pedido.situacao=="5"%}
+                                <span name="lblStatus" class="badge pull-right" style="color:black; background:white; margin-top:1px"><i class="material-icons" style="color:black">close</i><br><b>{{pedido.status}}</b></span>
+                            {% endif %}
+
+                            <h6 style="color:gray; margin-top:-10px"><i class="glyphicon glyphicon-flag"> </i> Pedido </h6>  
+                            <h5 style="color:#563A2D; margin-top:-5px"><b> {{pedido.numero}}</b></h5>
+                            <h6 style="margin-top:-5px; font-size:11px; color:#563A2D">{{pedido.assoc.nomefantasia}} - {{pedido.dtregistro}}</h6>  
+                            <hr style="border-color:#da9b62; margin-top:-1px">
+
+                            <ul  class="nav nav-tabs" name="myTab" role="tablist" style="margin-top:-10px; font-size:11px">
+                              <li class="nav-item" >
+                                <a class="nav-link" style="color:#F58634" name="observacao" id="observacao{{pedido.id}}-tab" data-toggle="tab" href="#observacao{{pedido.id}}" role="tab" aria-controls="observacao{{pedido.id}}" aria-selected="true"><i class="glyphicon glyphicon-flash"> </i> Observação</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link"  style="color:#F58634" name="entrega" id="entrega{{pedido.id}}-tab" data-toggle="tab" href="#entrega{{pedido.id}}" role="tab" aria-controls="entrega{{pedido.id}}" aria-selected="false"><i class="glyphicon glyphicon-send"> </i> Entrega</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" style="color:#F58634" name="produtos" id="produtos{{pedido.id}}-tab" data-toggle="tab" href="#produtos{{pedido.id}}" role="tab" aria-controls="produtos{{pedido.id}}"aria-selected="false"><i class="glyphicon glyphicon-tags"> </i> Produtos</a>
+                              </li>
+                            </ul>
+                            
+                            <!-- dados observacao -->
+                            <div class="tab-content" id="myTabContent">             
+                                <div class="tab-pane fade active" id="observacao{{pedido.id}}" role="tabpanel" aria-labelledby="observacao{{pedido.id}}-tab">                                     
+                                    <h6 style="color:#563A2D; margin-bottom:35px">
+                                        <textarea class="form-control form-control-xs" style="font-size:10px; background:white" rows="2" name="txtObservacao" id="txtObservacao{{pedido.id}}" placeholder="Observação para o pedido" readonly>{{pedido.observacao}}</textarea>
+                                        {% if pedido.situacao == "1" or pedido.situacao == "2" %}
+                                          <button type="button" class="btnAdicionarComentario btn-link btn-xs pull-right" style="background:white; color:#563A2D" value='{"id":"{{pedido.id}}", "observacao":"{{pedido.observacao}}"}'><i class="material-icons">add_comment</i></button>       
+                                        {% endif %}
+                                    </h6>                                                                  
+                                </div>
+ 
+                                <!-- dados Entrega -->
+                                <div class="tab-pane fade" id="entrega{{pedido.id}}" role="tabpanel" aria-labelledby="entrega{{pedido.id}}-tab">
+                                      {% if pedido.assoc.agenda_entrega =="S" %}
+                                        <h5 name="lblTituloDataAgendamento" style="text-align:left; margin-top:10px; color:gray"> Agendamento</h5>   
+                                        {% if pedido.dtagendamento!=None %}
+                                            <h6 name="lblDataAgendamento" style="text-align:left; margin-left:8px; margin-top:10px; color:#563A2D">{{pedido.dtagendamento}}</h6>  
+                                        {% else %}
+                                            <h6 name="lblDataAgendamento" style="text-align:left; margin-left:8px; margin-top:10px; color:#563A2D">Data e Hora da entrega deverão ser agendadas</h6>    
+                                        {% endif %}                                                                 
+                                        
+                                        <hr style="margin-top:-5px">              
+                                      {% endif %}                                                    
+                                     
+                                      <h5 style="text-align:left; color:gray"> Local de Entrega</h5>                                                                    
+                                      <table class="table table-striped" id="tblSaboresSelecionados" style="margin-bottom:5px; margin-top:5px">
+                                          <tbody style='color:#563A2D; font-size:11px'>
+                                            <tr>
+                                              <td style="text-align:left">{{pedido.user.logradouro}}, {{pedido.user.numero}} {{pedido.user.complemento}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">{{pedido.user.bairro}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">{{pedido.user.cidade}}-{{pedido.user.estado}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:left">{{pedido.user.cep}}</td>
+                                            </tr>
+                                          </tbody>
+                                      </table>                                
+                                </div>
+
+                                <div class="tab-pane fade" id="produtos{{pedido.id}}" role="tabpanel" aria-labelledby="produtos{{pedido.id}}-tab">
+                                      <table class="table table-striped" id="tblSaboresSelecionados" style="margin-top:10px; margin-bottom:-10px">
+                                          <tbody style='color:#F58634' >
+                                            {% for produto in pedido.itens  %}     
+                                              {% if produto.categoria == "PIZZAS" %}
+                                                  <tr>                              
+                                                    <td style='background:#f9f9f9; color:#563A2D; font-size:11px'><h5 style="margin-top:1px; margin-bottom:8px"><b>{{produto.categoria}}</b> - {{produto.resumo}}</h5> 
+                                                        <img class="pull-left" width="75rem" src="{{ url_for('views.media', filename=produto.prods.logo)}}"> 
+                                                        &nbsp {{produto.categoria}} - {{produto.tamanho}}
+                                                        <br> &nbsp {{produto.valor_unitario}} 
+                                                        <br> &nbsp {{produto.quantidade}} {{produto.prods.medida}}
+                                                        <br> &nbsp <b>R$ {{produto.total_item}}</b>                                                                                                   
+                                                    </td>
+                                                  </tr>
+                                                  <tr><td></td></tr>
+
+                                              {% else %}
+                                                  <tr>                              
+                                                    <td style='background:#f9f9f9; color:#563A2D; font-size:11px'><h5 style="margin-top:1px; margin-bottom:8px"><b>{{produto.prods.descricao}}</b> - {{produto.prods.resumo}}</h5>
+                                                        <img class="pull-left" width="75rem" src="{{ url_for('views.media', filename=produto.prods.logo)}}"> 
+                                                        &nbsp {{produto.categoria}} 
+                                                        <br> &nbsp {{produto.valor_unitario}} 
+                                                        <br> &nbsp {{produto.quantidade}} {{produto.prods.medida}}
+                                                        <br> &nbsp <b>R$ {{produto.total_item}}</b> 
+                                                    </td>
+                                                  </tr>
+                                                  <tr><td></td></tr>
+                                              {% endif %}                                  
+                                            {% endfor %}                      
+                                          </tbody>
+                                      </table>                       
+
+                                </div>
+                            </div>            
+
+                            <hr >       
+                            
+                            {% if pedido.situacao == "1" %}
+                              <span class="badge badge-pill badge-light pull-left" style="background:#F58634; margin-top:-10px; margin-right:-1px; margin-bottom:5px">                                 
+                                    <button name="btnFinalizarPedido" style="color:white; font-size:12px"  type="button" class="btnFinalizarPedido btn btn-link" value='{"id":"{{pedido.id}}", "agenda_entrega":"{{pedido.assoc.agenda_entrega}}"}'>
+                                      <i class="material-icons" style="color:white">done</i><br>Finalizar<br>Compra
+                                    </button>                                                
+                              </span>  
+                            {% endif %}                  
+
+                            {% if pedido.situacao == "1" or pedido.situacao == "2" %}
+                              <span class="badge badge-pill badge-light pull-left" style="background:#c0c0c0; margin-top:-10px; margin-left:5px; margin-bottom:5px">
+                                    <button name="btnCancelarPedido" style="color:white; font-size:12px" type="button" class="btnCancelarPedido btn btn-link" value='{"id":"{{pedido.id}}"}'>                         
+                                      <i class="material-icons">clear</i><br>Cancelar<br>Pedido
+                                    </button>                                                
+                              </span>
+                            {% endif %}                  
+
+
+                            {% set number = pedido.avaliacao_pontos | int %}
+                            {% if number>0 %}
+                              <span class="badge badge-pill badge-light pull-left" style="background:white; color:#563A2D; margin-top:-10px; margin-right:-5px; margin-bottom:5px" >                                                             
+                                    <h6 style="text-align:left">Avaliação</h6>
+                                      <h6 style="text-align:left; margin-left:-5px">
+                                        {% for i in range(number) %}
+                                            <i class="material-icons" style="color:#F58634">star</i>
+                                        {% endfor %}
+                                      </h6>
+                              </span>
+                            {% endif %}
+
+                            <span class="badge badge-pill badge-light pull-right" style="background:white; color:#563A2D; margin-top:-10px; margin-right:-5px; margin-bottom:5px" >                                                             
+                                  <h6 style="text-align:right">(R$) Produtos: {{pedido.total_itens}}</h6>
+                                  <h6 style="text-align:right">(R$) Entrega :  {{pedido.taxa_entrega}}</h6>
+
+                                  <hr style="margin-top:-1px; margin-bottom:-1px">
+                                  <h6 style="text-align:right"><b>(R$) Pedido: {{pedido.total_pedido}}</b></h6>
+                             </span>
+
+                          </div> 
+                        </div> 
+
+                    {% endfor %}  
+                </div>
+              {% endif %}
+
+          </div>
+        </div>
+    </div>
+
+  </body>    
+ </html> 
+

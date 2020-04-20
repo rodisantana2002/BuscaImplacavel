@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">      
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
+    <link href="{{ url_for('static', filename='css/myStyle.css') }}" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>      
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>  
+    <script src="{{ url_for('static', filename='js/main.js') }}" type='text/javascript'></script>
+  </head>
+
+  <!-- corpo -->
+  <body style="background:#fcf8ef">
+
+      <div id="cabec" name="cabec" class="container" style="background:#F58634; border-color:#F58634">
+        <div class="row">
+          <div class="col-12">
+          <!-- cabecalho Carrinho -->
+            <h5 style="color:white; margin-left:5px; margin-left:1px">
+              <span class="pull-left" style="margin-top:-5px">     
+                <a id="btn-voltar" style="color:white; background:#F58634; border-color:#F58634", type="link" class="btn btn-link btn-md"  href="{{ url_for('views.carregarAssociados')}}"><i class="material-icons">arrow_back_ios</i></a>                                                
+              <b style=" margin-left:-20px">Continuar comprando</b></span>
+            <h5>           
+          </div>
+        </div>
+      </div> 
+
+      {% if carrinho|length == 0 %}
+        <div class="panel panel-default"style="display:true; margin-top:5px; margin-left:5px; margin-right:5px">
+          <div class="panel-body" >
+            <h5  id="lblCarrinoVazio" style="text-align:center; color:gray">Seu carrinho esta vazio</h5>
+          </div>
+        </div>                
+      {% else %}
+        <div class="container">
+          <div class="row">             
+              <div class="panel panel-default" style="margin-top:5px; margin-left:5px; margin-right:5px">
+                  <div class="panel-heading">
+                      <h4 style="color:#F58634; text-align:center;margin-top:1px">Itens disponíveis no seu carrinho</h4>                        
+                      <h6 style="color:#F58634; text-align:center;margin-bottom:-5px; margin-top:-5px"> <span class="badge" style="background:#F58634">{{carrinho|length}} produto(s)</span> </h6>                                            
+                  </div>                  
+
+                  <div class="panel-body" style="margin-bottom:-10px" >
+                      <div class="panel-group"> 
+
+                        <table class="table table-striped" id="tblSaboresSelecionados" style="display:true; margin-bottom:-10px">
+                            <tbody style='color:#F58634' >
+                              {% for produto in carrinho  %}     
+                                 {% if produto.categoria == "PIZZAS" %}
+                                    <tr>                              
+                                      <td style='background:#f9f9f9; color:#563A2D; font-size:11px'><h5 style="margin-top:1px; margin-bottom:8px"><b>{{produto.categoria}}</b> - {{produto.resumo}}</h5> 
+                                          <img class="pull-left" width="75rem" src="{{ url_for('views.media', filename=produto.prods.logo)}}"> 
+                                          &nbsp {{produto.categoria}} - {{produto.tamanho}}
+                                          <br> &nbsp {{produto.valor_unitario}} 
+                                          <br> &nbsp {{produto.quantidade}} {{produto.prods.medida}}
+                                          <br> &nbsp <b>R$ {{produto.total_item}}</b>                                           
+                                          <br> &nbsp {{produto.assoc.nomefantasia}}
+                                          
+                                      </td>
+                                      <td style='background:#f9f9f9'><br><br><button type='button' style='color:#563A2D' class='btnDeleteItemCarrinho btn-link' value="{{produto.id}}"> <i class='material-icons'>cancel</i></button></td>
+                                    </tr>
+                                    <tr><td></td><td></td></tr>
+
+                                 {% else %}
+                                    <tr>                              
+                                      <td style='background:#f9f9f9; color:#563A2D; font-size:11px'><h5 style="margin-top:1px; margin-bottom:8px"><b>{{produto.prods.descricao}}</b> - {{produto.prods.resumo}}</h5>
+                                          <img class="pull-left" width="75rem" src="{{ url_for('views.media', filename=produto.prods.logo)}}"> 
+                                          &nbsp {{produto.categoria}} 
+                                          <br> &nbsp {{produto.valor_unitario}} 
+                                          <br> &nbsp {{produto.quantidade}} {{produto.prods.medida}}
+                                          <br> &nbsp <b>R$ {{produto.total_item}}</b> 
+                                          <br> &nbsp {{produto.assoc.nomefantasia}}
+
+                                      </td>
+                                      <td style='background:#f9f9f9'><br><br><button type='button' style='color:#563A2D' class='btnDeleteItemCarrinho btn-link' value="{{produto.id}}"> <i class='material-icons'>cancel</i></button></td>
+                                    </tr>
+                                    <tr><td> </td><td></td></tr>
+                                 {% endif %}                                  
+                              {% endfor %}                      
+                            </tbody>
+                        </table>                       
+                      <div>
+                      
+ 
+                      <span class="badge badge-pill badge-light pull-right" style="background:#F58634; margin-top: 4px; margin-right:-1px; margin-bottom:5px">                                 
+                          <button id="btnFinalizarCompra" style="color:white; font-size:15px"  type="button" class="btn btn-link" href="#">
+                          <i class="material-icons" style="color:white">shopping_basket</i><br>Comprar <br>Produto(s)
+                          </button>                                                
+                      </span>  
+                      <span class="badge badge-pill badge-light pull-right" style="background:#c0c0c0; margin-top: 4px; margin-right:5px">
+                          <button id="btnLimparCarrinho" style="color:white; font-size:15px"  type="button" class="btn btn-link" href="#">                         
+                          <i class="material-icons">remove_shopping_cart</i><br>Limpar <br>Carrinho
+                          </button>                                                
+                      </span>  
+                  </div>                    
+          
+            </div>
+            </div>     
+
+          </div>
+        </div>
+      {% endif %}
+
+  </body>
+  </html

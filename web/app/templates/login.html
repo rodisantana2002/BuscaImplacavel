@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% import "bootstrap/wtf.html" as wtf %}
+<html lang="pt">
+  <head>
+  	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">       
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>    
+  
+    <script src="{{ url_for('static', filename='js/main.js') }}" type='text/javascript'></script>
+  </head>
+
+  <body >
+    <div class="row" style="margin-top:10px;margin-left:10px;margin-right:10px">       
+        <!-- login -->
+        <div id="loginbox" style="margin-top:20px;margin-left:20px;margin-right:20px" class="col-12">                    
+            <div class="panel panel-warning" style="border-color:#563A2D">                           
+                <div style="padding-top:20px; text-align:left" class="panel-body">
+                    
+                    {% block content_login %}
+                        <div class="alert alert-warning" id="login-alerta" style="display:none; text-align:center">{{ page.msg }}</div>
+                    {% endblock %}
+
+                    <div class="col-12" style="padding-bottom: 20px; text-align:center">
+                        <img src="{{ url_for('static', filename='img/logo.jpg') }}" width=300  ></img>
+                    </div>
+
+                    <form id="loginform" class="form-horizontal" style="align:center" role="form" action="/login" method="post">     
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="email-login" type="email" class="form-control" name="email-login" value="" placeholder="Email*" maxlength="100" required>                                        
+                        </div>
+                            
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password" class="form-control" name="password" placeholder="Senha*" maxlength="20" required>
+                        </div>
+                            
+                        <div style="margin-top:10px; text-align:center" class="form-group ">
+                            <!-- Button -->
+                            <div class="col-12">
+                                <button id="btn-login" type="submit" href="#" class="btn btn-warning" style="border-color:#F58634; background-color:#F58634">Entrar  </button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h5><div style="float:right; position: relative; top:-10px; padding-right:15px"><a id="btn-recuperasenha" href="{{ url_for('views.recuperar_senha') }}" action="/home" style="text; color: gray">Esqueçi a senha?</a></div></h5>
+                        </div>
+
+                        <div class="col-12">
+                            <div style="border-top: 1px solid#888; text-align:left">                           
+                                <a href="{{ url_for('views.cadastro') }}" id="btn-registrar"  style="text; font-weight:bold; color:#F58634; text-align:left"><h4>Criar Conta</h4></a>
+                            </div>
+                        </div>
+                    </form>                                                        
+                </div> 
+            </div>                         
+        </div>                         
+    </div>                                        
+
+  </body> 
+</html>
+        
+

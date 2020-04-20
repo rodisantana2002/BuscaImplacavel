@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% import "bootstrap/wtf.html" as wtf %}
+<html lang="pt">
+  <head>
+  	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">       
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type='text/javascript'></script>
+  </head>
+
+  <body >
+    <div class="row" style="margin-top:5px;margin-left:10px;margin-right:10px">       
+        <!-- registro -->
+        <div id="signupbox" style="display:true; margin-top:15px;margin-left:5px;margin-right:5px" class="col-12">                            
+            <div class="panel panel-default" style="border-color:#563A2">        
+                <div class="panel-heading" style="color:#F58634" >
+                    <div class="input-group" style="margin-left:-10px; margin-top:10px"> 
+                        <a id="btn-voltar" style="color:#F58634" type="link" class="btn btn-link" href="{{ url_for('views.index') }}"><i class="material-icons">arrow_back_ios</i></a>                                                
+                        <label style="color:#F58634; margin-left:-15px"><h4>Informe seus dados</h4></label>
+                    </div>                        
+                </div>
+
+                <div class="panel-body" >
+
+                    {% block content_registro %}
+                        <div class="alert alert-warning" id="registro-alerta" style="display:none; text-align:center">{{ page.msg }}</div>        
+                    {% endblock %}
+
+
+                    <div class="col-12">
+                        <label style="color:#563A2D"> Identificação </label>
+                        <div style="border-top: 1px solid#888; padding-top:15px; text-align:center" >
+                    </div>
+
+                    <div class="col-12">
+                        <input type="text" maxlength="100" style="margin-bottom: 15px" class="form-control form-control-lg" name="nomecompleto" id="nomecompleto" placeholder="Nome Completo *" required>
+                    </div>
+
+                    <div class="col-12">
+                        <input type="email" maxlength="100" style="margin-bottom: 15px" class="form-control form-control-lg" name="email" id="email" placeholder="Email *" required>
+                    </div>
+
+                    <div class="col-12">
+                        <input type="text" style="margin-bottom: 15px" class="form-control form-control-lg" name="celular" id="celular" placeholder="Telefone Celular *" required>
+                        <script type="text/javascript">$("#celular").mask("(99) 99999-9999");</script>
+                    </div>
+
+                    <div style="margin-bottom: 15px" class="input-group">
+                        <span class="input-group-addon">Data Nascimento</span>
+                        <input type="date" class="form-control" name="dtnascimento" id="dtnascimento" placeholder="Data Nascimento *" required>
+                    </div>
+
+                    <div class="col-12">
+                        <select name="sexo" id="sexo" class="form-control" style="margin-bottom: 15px; color=gray " required>
+                            <option selected>Sexo *</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>                                                
+
+                    <div class="col-12">
+                        <input type="password" maxlength="20" style="margin-bottom: 15px" class="form-control form-control-lg" name="senha" id="senha" placeholder="Senha *" required>
+                    </div>
+                        
+                    <div class="col-12">
+                        <input type="password" maxlength="20" style="margin-bottom: 15px" class="form-control form-control-lg" name="resenha" id="resenha" placeholder="Digite novamente a senha *" required>
+                    </div>
+
+                    <!-- Endereço --> 
+                    <div class="col-12">
+                        <label style="color:#563A2D"> Endereço </label>
+                        <div style="border-top: 1px solid#888; padding-top:15px; text-align:center" >
+                    </div>
+
+                    <div class="col-12">
+                        <input type="text" style="margin-bottom: 15px" class="form-control form-control-lg" name="cep" id="cep" placeholder="Cep *" required>
+                    </div>
+
+                    <div class="col-12">
+                        <input type="text" maxlength="100" style="margin-bottom: 15px" class="form-control form-control-lg" name="logradouro" id="logradouro" placeholder="Logradouro *" required>
+                    </div>
+
+                    <div class="col-12">
+                        <input type="text" maxlength="10" style="margin-bottom: 15px" class="form-control form-control-lg" name="numero" id="numero" placeholder="Número *" required>
+                    </div>
+
+                    <div class="col-12">
+                        <input type="text" maxlength="50" style="margin-bottom: 15px" class="form-control form-control-lg" name="complemento" id="complemento" placeholder="Complemento">
+                    </div>
+
+                    <div class="col-12">
+                        <input type="text" maxlength="50" style="margin-bottom: 15px" class="form-control form-control-lg" name="bairro" id="bairro" placeholder="Bairro *" required>
+                    </div>
+
+                    <div class="col-12">
+                        <input type="text" maxlength="60"style="margin-bottom: 15px" class="form-control form-control-lg" name="cidade" id="cidade" placeholder="Cidade *" required>
+                    </div>
+
+                    <div class="col-12">
+                        <select name="estado" id="estado" maxlength="30" class="form-control" style="margin-bottom: 15px; color=gray " required>
+                            <option selected>Estado *</option>
+                            <option value="AC">AC</option> 
+                            <option value="AL">AL</option> 
+                            <option value="AP">AP</option> 
+                            <option value="AM">AM</option> 
+                            <option value="BA">BA</option> 
+                            <option value="CE">CE</option> 
+                            <option value="DF">DF</option> 
+                            <option value="ES">ES</option> 
+                            <option value="GO">GO</option> 
+                            <option value="MA">MA</option> 
+                            <option value="MT">MT</option> 
+                            <option value="MS">MS</option> 
+                            <option value="MG">MG</option> 
+                            <option value="PA">PA</option> 
+                            <option value="PB">PB</option> 
+                            <option value="PR">PR</option> 
+                            <option value="PE">PE</option> 
+                            <option value="PI">PI</option> 
+                            <option value="RJ">RJ</option> 
+                            <option value="RN">RN</option> 
+                            <option value="RS">RS</option> 
+                            <option value="RO">RO</option> 
+                            <option value="RR">RR</option> 
+                            <option value="SC">SC</option> 
+                            <option value="SP">SP</option> 
+                            <option value="SE">SE</option> 
+                            <option value="TO">TO</option> 
+                        </select>
+                    </div>
+
+                    <!-- comandos --> 
+                    <div class="form-group" style="text-align:center; padding-right:15px; margin-bottom:-1px">                                       
+                        <div class="col-12">
+                            <button href="#" name="btn-signup" id="btn-signup" type="button" class="btn btn-warning" style="border-color:#F58634;background-color:#F58634" ><i class="icon-hand-right"></i> Enviar </button>                            
+                        </div>
+                    </div>    
+                </div>            
+            </div>    
+        </div>
+    </div>
+
+  </body> 
+</html>
+        
