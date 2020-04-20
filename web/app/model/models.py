@@ -1,53 +1,49 @@
 import os
-import datetime
 import sqlalchemy
-import model.lista as list
+
 from datetime import datetime
+from enum import Enum
 
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import DateTime, func
-from sqlalchemy.orm import relationship, backref
+from flask import Flask, Blueprint
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, ForeignKey, Table
-from sqlalchemy import Sequence
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import relationship, backref
 
-Base = declarative_base()
-engine = create_engine('sqlite:///../bases/database/bot.db')        
-Session = sessionmaker(bind=engine)
-session = Session()   
+from werkzeug.security import generate_password_hash, check_password_hash
+
+models = Blueprint("models", __name__)
+
+app = Flask(__name__)
+db = SQLAlchemy(app)
 
 # ---------------------------------------------------------------------------
 # Classe Pesquisa
 # ---------------------------------------------------------------------------
-class Pesquisa(Base):
+
+
+class Pesquisa(db.Model):
     __tablename__ = 'Pesquisa'
     data_hora = datetime.now()
-    data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')  
-     
-    id = Column(Integer, primary_key=True)
-    situacao = Column(String(20), default="Ativa")
-    descricao = Column(String(100))
-    objetivo = Column(String(300))
-    criado_em = Column(String(20), default=data_atual)
-    
+    data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')
+
+    id = db.Column(db.Integer, primary_key=True)
+    situacao = db.Column(db.String(20), default="Ativa")
+    descricao = db.Column(db.String(100))
+    objetivo = db.Column(db.String(300))
+    criado_em = db.Column(db.String(20), default=data_atual)
+
     referencias = relationship("Referencia", back_populates="pesquisas")
-    
-    
-    def add(self, pesquisa):   
-        session.add(pesquisa)
-        session.commit()    
-        
+
+    def add(self, pesquisa):
+        db.session.add(pesquisa)
+        db.session.commit()
+
     def addAll(self, pesquisas):
-        session.add_all(pesquisas)
-        
+        db.session.add_all(pesquisas)
+        db.session.commit()
+
     def update(self):
-        session.commit()
-        
-    def find_by_id(self, id):
-        pesq =  session.query(Pesquisa).filter_by(id=id)
-        self = pesq[0]
-        print(self.__str__())
+        db.session.commit()
 
     def serialize(self):
         return {
@@ -59,54 +55,50 @@ class Pesquisa(Base):
         }
 
     def __repr__(self):
-       return self.serialize()        
-
+        return self.serialize()
 
 
 # ---------------------------------------------------------------------------
 # Classe Referencia
 # ---------------------------------------------------------------------------
-class Referencia(Base):
+class Referencia(db.Model):
     __tablename__ = 'Referencia'
     data_hora = datetime.now()
-    data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')  
-     
-    id = Column(Integer, primary_key=True)
-    situacao = Column(String(20), default="Iniciada")
-    titulo = Column(String(1000))
-    resumo = Column(String())
-    ano = Column(String(10))
-    autores = Column(String(1000))
-    keywords = Column(String(1000))
-    doi = Column(String(300))
-    url = Column(String(300))
-    publisher = Column(String(200))
-    bookTitulo = Column(String(1000))
-    arquivo_origem = Column(String(200))
-    pesquisa_id = Column(Integer, ForeignKey('Pesquisa.id'))
-    texto_rtf = Column(String())
-    referencia = Column(String())
-    criado_em = Column(String(20), default=data_atual)
+    data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')
+
+    id = db.Column(db.Integer, primary_key=True)
+    situacao = db.Column(db.String(20), default="Iniciada")
+    titulo = db.Column(db.String(1000))
+    resumo = db.Column(db.String())
+    ano = db.Column(db.String(10))
+    autores = db.Column(db.String(1000))
+    keywords = db.Column(db.String(1000))
+    doi = db.Column(db.String(300))
+    url = db.Column(db.String(300))
+    publisher = db.Column(db.String(200))
+    bookTitulo = db.Column(db.String(1000))
+    arquivo_origem = db.Column(db.String(200))
+    pesquisa_id = db.Column(db.Integer, db.ForeignKey('Pesquisa.id'))
+    texto_rtf = db.Column(db.String())
+    referencia = db.Column(db.String())
+    criado_em = db.Column(db.String(20), default=data_atual)
     
+
+
     # relacionamentos
-    pesquisas = relationship("Pesquisa", back_populates="referencias")    
+    pesquisas = relationship("Pesquisa", back_populates="referencias")
     translates = relationship("Translate")
-    
-            
-    def add(self, referencia):   
-        session.add(referencia)
-        session.commit()    
-        
+
+    def add(self, referencia):
+        db.session.add(referencia)
+        db.session.commit()
+
     def addAll(self, referencias):
-        session.add_all(referencias)
-        
+        db.session.add_all(referencias)
+        db.session.commit()
+
     def update(self):
-        self.session.commit()
-        
-    def find_by_id(self, id):
-        pesq =  session.query(Referencia).filter_by(id=id)
-        self = pesq[0]
-        return self
+        db.session.commit()
 
     def serialize(self):
         return {
@@ -116,56 +108,50 @@ class Referencia(Base):
             'publisher': self.publisher,
             'doi': self.doi,
             'pesquisa_id': self.pesquisa_id,
-            'situacao' : self.situacao,
-            'resumo' : self.resumo,
-            'autores' : self.autores,
-            'keywords' : self.keywords,
-            'url' : self.url,
-            'bookTitulo' : self.bookTitulo,
-            'arquivo_origem' : self.arquivo_origem,
-            'texto_rtf' : self.texto_rtf,
-            'referencia' : self.referencia,            
-            'criado_em': self.criado_em                    
+            'situacao': self.situacao,
+            'resumo': self.resumo,
+            'autores': self.autores,
+            'keywords': self.keywords,
+            'url': self.url,
+            'bookTitulo': self.bookTitulo,
+            'arquivo_origem': self.arquivo_origem,
+            'texto_rtf': self.texto_rtf,
+            'referencia': self.referencia,
+            'criado_em': self.criado_em
         }
 
     def __repr__(self):
-       return self.serialize()        
-
-
+        return self.serialize()
 
 
 # ---------------------------------------------------------------------------
 # Classe Translate
 # ---------------------------------------------------------------------------
-class Translate(Base):
+class Translate(db.Model):
     __tablename__ = 'Translate'
-    
+
     data_hora = datetime.now()
-    data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')  
-     
-    id = Column(Integer, primary_key=True)
-    tipo = Column(String(10))
-    situacao = Column(String(20), default="Pendente")
-    linha_pos = Column(Integer)
-    txt_origem = Column(String())
-    txt_translate = Column(String())
-    referencia_id = Column(Integer, ForeignKey('Referencia.id'))
-    criado_em = Column(String(20), default=data_atual)
-    
-    def add(self, translate):   
-        session.add(translate)
-        session.commit()    
-        
+    data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')
+
+    id = db.Column(db.Integer, primary_key=True)
+    tipo = db.Column(db.String(10))
+    situacao = db.Column(db.String(20), default="Pendente")
+    linha_pos = db.Column(db.Integer)
+    txt_origem = db.Column(db.String())
+    txt_translate = db.Column(db.String())
+    referencia_id = db.Column(db.Integer, db.ForeignKey('Referencia.id'))
+    criado_em = db.Column(db.String(20), default=data_atual)
+
+    def add(self, translate):
+        db.session.add(translate)
+        db.session.commit()
+
     def addAll(self, translate):
-        session.add_all(translate)
-        
+        db.session.add_all(translate)
+        db.session.commit()
+
     def update(self):
-        self.session.commit()
-        
-    def find_by_id(self, id):
-        pesq =  session.query(Translate).filter_by(id=id)
-        self = pesq[0]
-        return self
+        db.session.commit()
 
     def serialize(self):
         return {
@@ -180,9 +166,7 @@ class Translate(Base):
         }
 
     def __repr__(self):
-       return self.serialize()        
-
-
+        return self.serialize()
 
 
 # ---------------------------------------------------------------------------
@@ -190,40 +174,9 @@ class Translate(Base):
 # ---------------------------------------------------------------------------
 def main():
     pass
-    # pesquisa = Pesquisa()
-    # pesquisa.descricao="Rodolfo"
-    # pesquisa.situacao="rr"
-    # pesquisa.add(pesquisa)
-    # pesquisa.objetivo="meut "    
-    # pesquisa = pesquisa.find_by_id(3)
-    # print(pesquisa.__str__())
-    
-    # ref = Referencia()
-    # ref.ano = 2019
-    # ref.bookTitulo = "bookTitulo"
-    # ref.keywords = "key"
-    # ref.resumo = "resumo"
-    # ref.publisher = "publisher"
-    # ref.texto_rtf = "titulo"
-    # ref.titulo = "titulo"
-    # ref.autores = "Rodolfo e Ines"
-    # ref.doi = "19545454"
-    # ref.arquivo_origem = "arquivo origem"
-    # ref.pesquisa_id = 1
-    # ref.url = "url"
-    # ref.add(ref)
-    
-    # ref = ref.find_by_id(5)
-    # print(ref.__str__())
 
-    # linha = Translate() 
-    # linha.linha_pos = 1
-    # linha.tipo ="ABS"
-    # linha.txt_origem = "origem"
-    # linha.txt_translate = "translate"
-    # linha.referencia_id = 1
     # linha.add(linha)
-    
-    
+
+
 if __name__ == '__main__':
-    main()        
+    main()

@@ -20,11 +20,12 @@ logging.basicConfig()
 logger = logging.getLogger('Log.')
 logger.setLevel(logging.DEBUG)
 
+
 class base(object):
     """construtor"""
     def __init__(self, fileOUT):
         self.homeDir = "../logs"
-        self.logFile= self.homeDir + '/rodibot.log'
+        self.logFile = self.homeDir + '/rodibot.log'
         self.logger_handler = logging.FileHandler(self.logFile, mode='w')
         self.logger_handler.setLevel(logging.DEBUG)
         # Associe o Handler ao  Logger
@@ -106,7 +107,6 @@ class base(object):
                             logger.debug('---> %s ---[ ok ] Arquivo baixado com sucesso com identificador [%s]', data_atual, row['id'] + ".pdf")
         os.rename(tmp_file, self.fileOUT)
         return status
-
 
     def processarSourceDownload(self):
         logger.debug('----------------------------------------------------------------------------------------------')

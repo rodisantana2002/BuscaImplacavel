@@ -1,12 +1,12 @@
 {
-  "name": "Flask Heroku Sample",
-  "description": "A sample Flask app on Heroku",
+  "name": "Busca Implacavel",
+  "description": "Mais completo da internet",
   "keywords": [
     "flask",
     "python",
     "sample"
   ],
-  "repository": "https://github.com/yefim/flask-heroku-sample",
+  "repository": "",
   "scripts": {
     "postdeploy": "python -c 'from app import db; db.create_all()'"
   },

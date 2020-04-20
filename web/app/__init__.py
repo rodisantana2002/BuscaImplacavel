@@ -4,7 +4,6 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
 from app.main.views import views
-from app.controls.auth import auth
 from app.controls.operacoes import operacoes
 from app.model.models import models
 
@@ -16,7 +15,7 @@ def create_app():
     app = Flask(__name__)
     app.config.from_mapping(SECRET_KEY=os.environ.get('SECRET_KEY') or 'key hesthouse')
 
-    DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:////home/osboxes/Documentos/projetos/automator/buscaimplacavel/web/app/bd/flask_app.db')
+    DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:////home/osboxes/Documentos/projetos/automator/buscaimplacavel/web/app/bd/bot.db')
     
     app.config['MEDIA_ROOT'] = os.path.join(app_dir, 'gallery/')
     
@@ -30,7 +29,6 @@ def create_app():
     app.config['MAIL_DEFAULT_SENDER'] = 'resthouse.oficial@gmail.com'
 
     app.register_blueprint(views)
-    app.register_blueprint(auth)
     app.register_blueprint(models)
     app.register_blueprint(operacoes)
 

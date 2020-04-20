@@ -4,10 +4,8 @@ url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [dev-packages]
 flask-bootstrap="*"
-
 
 [packages]
 flask = "*"
@@ -29,8 +27,6 @@ WTForms="*"
 "psycopg2" = "*"
 gunicorn = "*"
 Jinja2 = "*"
-
-
 
 [requires]
 python_version = "3.6"
