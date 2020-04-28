@@ -14,7 +14,7 @@ logger.setLevel(logging.DEBUG)
 
 class database(object):
     def __init__(self):
-        self.pathOrigem = 'sqlite:///../buscaimplacavel/bases/database/bot.db'
+        self.pathOrigem = 'sqlite:///../buscaimplacavel/web/app/bd/bot.db'
         self.engine = create_engine(self.pathOrigem)        
 
     def gerarTabelas(self):
@@ -25,10 +25,22 @@ class database(object):
                                                 objetivo TEXT,
                                                 criado_em VARCHAR(20));""")
 
-        tabelas.append("""CREATE TABLE File (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+        tabelas.append("""CREATE TABLE Processo (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
                                                 situacao VARCHAR(20),
                                                 descricao VARCHAR(150), 
-                                                conteudo TEXT,
+                                                objetivo TEXT,
+                                                criado_em VARCHAR(20));""")                                              
+
+        tabelas.append("""CREATE TABLE ProcessoFile (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+                                                name_file VARCHAR(150), 
+                                                processo_id INTEGER,
+                                                criado_em VARCHAR(20));""")                                              
+
+        tabelas.append("""CREATE TABLE ProcessoFileReferencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+                                                situacao VARCHAR(20),
+                                                linha INTEGER,                                                
+                                                referencia TEXT,
+                                                processo_file_id INTEGER,
                                                 criado_em VARCHAR(20));""")                                              
 
         tabelas.append("""CREATE TABLE Referencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
@@ -43,7 +55,6 @@ class database(object):
                                                 publisher TEXT,
                                                 bookTitulo TEXT, 
                                                 arquivo_origem VARCHAR(20), 
-                                                pesquisa_id INTEGER,
                                                 texto_rtf TEXT,
                                                 referencia TEXT,
                                                 criado_em VARCHAR(20));""")
@@ -58,7 +69,6 @@ class database(object):
                                                        criado_em VARCHAR(12));""")
 
         for tabela in tabelas:
-            self._criarTabela(tabela)
             self._criarTabela(tabela)
 
     def _criarTabela(self, strSQL):             

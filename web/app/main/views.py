@@ -22,3 +22,13 @@ def home():
     return render_template('index.html', pesquisa=pesquisa)
 
 
+@views.route('/processo', methods=['GET', 'POST'])
+def carregarProcessos():
+    processos = oper.obterProcessos()
+    return render_template('processos.html', processos = processos)
+
+
+@views.route('/processo/<id>')
+def carregarProcessoDetail(id):
+    processo = oper.obterProcessoById(id)
+    return render_template('processosDetail.html', processo=processo)

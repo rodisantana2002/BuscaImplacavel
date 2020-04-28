@@ -19,8 +19,6 @@ db = SQLAlchemy(app)
 # ---------------------------------------------------------------------------
 # Classe Pesquisa
 # ---------------------------------------------------------------------------
-
-
 class Pesquisa(db.Model):
     __tablename__ = 'Pesquisa'
     data_hora = datetime.now()
@@ -32,7 +30,6 @@ class Pesquisa(db.Model):
     objetivo = db.Column(db.String(300))
     criado_em = db.Column(db.String(20), default=data_atual)
 
-    referencias = relationship("Referencia", back_populates="pesquisas")
 
     def add(self, pesquisa):
         db.session.add(pesquisa)
@@ -40,6 +37,44 @@ class Pesquisa(db.Model):
 
     def addAll(self, pesquisas):
         db.session.add_all(pesquisas)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'situacao': self.situacao,
+            'descricao': self.descricao,
+            'objetivo': self.objetivo,
+            'criado_em': self.criado_em
+        }
+
+    def __repr__(self):
+        return self.serialize()
+
+
+# ---------------------------------------------------------------------------
+# Classe Processo
+# ---------------------------------------------------------------------------
+class Processo(db.Model):
+    __tablename__ = 'Processo'    
+    data_hora = datetime.now()
+    data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')
+
+    id = db.Column(db.Integer, primary_key=True)
+    situacao = db.Column(db.String(20), default="Pendente")
+    descricao = db.Column(db.String(100))
+    objetivo = db.Column(db.String(300))
+    criado_em = db.Column(db.String(20), default=data_atual)
+
+    def add(self, processo):
+        db.session.add(processo)
+        db.session.commit()
+
+    def addAll(self, processos):
+        db.session.add_all(processos)
         db.session.commit()
 
     def update(self):
@@ -78,7 +113,6 @@ class Referencia(db.Model):
     publisher = db.Column(db.String(200))
     bookTitulo = db.Column(db.String(1000))
     arquivo_origem = db.Column(db.String(200))
-    pesquisa_id = db.Column(db.Integer, db.ForeignKey('Pesquisa.id'))
     texto_rtf = db.Column(db.String())
     referencia = db.Column(db.String())
     criado_em = db.Column(db.String(20), default=data_atual)
@@ -86,7 +120,6 @@ class Referencia(db.Model):
 
 
     # relacionamentos
-    pesquisas = relationship("Pesquisa", back_populates="referencias")
     translates = relationship("Translate")
 
     def add(self, referencia):
@@ -173,7 +206,11 @@ class Translate(db.Model):
 # Teste de Classe
 # ---------------------------------------------------------------------------
 def main():
-    pass
+    pro = Processo()
+    pro.descricao = "ssd"
+    pro.objetivo = "teste"
+
+    pro.add(pro)
 
     # linha.add(linha)
 

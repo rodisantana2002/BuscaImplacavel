@@ -12,10 +12,33 @@ operacoes = Blueprint("operacoes", __name__)
 class Operacoes():
 
     def __init__(self):
+        self.authentic = {"code": "", "msg": "", "id": "", "value": "", "superuser": ""}
         self.pesquisa = Pesquisa()
+        self.processo = Processo()
 
     def obterPesquisas(self):
         return self.pesquisa.query.all()
+
+    def obterProcessos(self):
+        return self.processo.query.all()      
+
+    def obterProcessoById(self, id):
+        return self.processo.query.filter_by(id=id).first()
+
+    def registrarProcesso(self, Processo):
+        try:
+            obj = Processo
+            obj.add(obj)
+
+            self.authentic["code"] = "200"
+            self.authentic["msg"] = "Registro efetuado com sucesso!"
+            return self.authentic
+
+        except:
+            self.authentic["code"] = "500"
+            self.authentic["msg"] = "Erro desconhecido"
+
+
 
     # def obterAssociados(self):
     #     return self.associado.query.order_by(Associado.nomefantasia).all()
