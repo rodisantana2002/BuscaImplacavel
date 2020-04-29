@@ -38,7 +38,7 @@ def carregarFormProcesso():
     return render_template('processosNew.html', page=None)
 
 
-@views.route('/processo/registro/envio', methods=['POST'])
+@views.route('/processo/registro', methods=['POST'])
 def registrarProcesso():
         processo = Processo()
 

@@ -5,7 +5,7 @@ import csv
 from flask import Flask, Blueprint
 from app.model.models import *
 from app.controls.utils import *
-from sqlalchemy import DateTime, func
+from sqlalchemy import DateTime, func, desc
 
 operacoes = Blueprint("operacoes", __name__)
 
@@ -20,13 +20,14 @@ class Operacoes():
         return self.pesquisa.query.all()
 
     def obterProcessos(self):
-        return self.processo.query.all()      
+        return self.processo.query.order_by(Processo.id.desc()).all()
 
     def obterProcessoById(self, id):
         return self.processo.query.filter_by(id=id).first()
 
     def registrarProcesso(self, Processo):
         try:
+
             obj = Processo
             obj.add(obj)
 

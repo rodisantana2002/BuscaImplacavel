@@ -1,7 +1,7 @@
 import os
 import sqlalchemy
+import datetime
 
-from datetime import datetime
 from enum import Enum
 
 from flask import Flask, Blueprint
@@ -21,14 +21,12 @@ db = SQLAlchemy(app)
 # ---------------------------------------------------------------------------
 class Pesquisa(db.Model):
     __tablename__ = 'Pesquisa'
-    data_hora = datetime.now()
-    data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')
 
     id = db.Column(db.Integer, primary_key=True)
     situacao = db.Column(db.String(20), default="Ativa")
     descricao = db.Column(db.String(100))
     objetivo = db.Column(db.String(300))
-    criado_em = db.Column(db.String(20), default=data_atual)
+    criado_em = db.Column(db.String(20), default=datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S'))
 
 
     def add(self, pesquisa):
@@ -60,14 +58,14 @@ class Pesquisa(db.Model):
 # ---------------------------------------------------------------------------
 class Processo(db.Model):
     __tablename__ = 'Processo'    
-    data_hora = datetime.now()
-    data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')
 
     id = db.Column(db.Integer, primary_key=True)
     situacao = db.Column(db.String(20), default="Pendente")
     descricao = db.Column(db.String(100))
     objetivo = db.Column(db.String(300))
-    criado_em = db.Column(db.String(20), default=data_atual)
+    criado_em = db.Column(db.String(20), default=datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S'))
+
+    files = relationship('ProcessoFile')
 
     def add(self, processo):
         db.session.add(processo)
@@ -94,12 +92,44 @@ class Processo(db.Model):
 
 
 # ---------------------------------------------------------------------------
+# Classe ProcessoFile
+# ---------------------------------------------------------------------------
+class ProcessoFile(db.Model):
+    __tablename__ = 'ProcessoFile'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name_file = db.Column(db.String(150))
+    criado_em = db.Column(db.String(20), default=datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S'))
+    processo_id = db.Column(db.Integer, db.ForeignKey('Processo.id'))
+    
+
+    def add(self, processoFile):
+        db.session.add(processoFile)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'name': self.name_file,
+            'processo_id': self.processo_id,
+            'criado_em': self.criado_em
+        }
+
+    def __repr__(self):
+        return self.serialize()
+
+
+
+
+
+# ---------------------------------------------------------------------------
 # Classe Referencia
 # ---------------------------------------------------------------------------
 class Referencia(db.Model):
     __tablename__ = 'Referencia'
-    data_hora = datetime.now()
-    data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')
 
     id = db.Column(db.Integer, primary_key=True)
     situacao = db.Column(db.String(20), default="Iniciada")
@@ -115,7 +145,7 @@ class Referencia(db.Model):
     arquivo_origem = db.Column(db.String(200))
     texto_rtf = db.Column(db.String())
     referencia = db.Column(db.String())
-    criado_em = db.Column(db.String(20), default=data_atual)
+    criado_em = db.Column(db.String(20), default=datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S'))
     
 
 
@@ -163,9 +193,6 @@ class Referencia(db.Model):
 class Translate(db.Model):
     __tablename__ = 'Translate'
 
-    data_hora = datetime.now()
-    data_atual = data_hora.strftime('%d/%m/%Y %H:%M:%S')
-
     id = db.Column(db.Integer, primary_key=True)
     tipo = db.Column(db.String(10))
     situacao = db.Column(db.String(20), default="Pendente")
@@ -173,7 +200,7 @@ class Translate(db.Model):
     txt_origem = db.Column(db.String())
     txt_translate = db.Column(db.String())
     referencia_id = db.Column(db.Integer, db.ForeignKey('Referencia.id'))
-    criado_em = db.Column(db.String(20), default=data_atual)
+    criado_em = db.Column(db.String(20), default=datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S'))
 
     def add(self, translate):
         db.session.add(translate)
