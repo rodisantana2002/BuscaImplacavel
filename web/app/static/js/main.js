@@ -30,6 +30,12 @@ $(document).ready(function () {
             });
         }
     });    
+
+    $('.custom-file-input').on('change', function () {
+        let fileName = $(this).val().split('\\').pop();
+        $(this).next('.custom-file-label').addClass("selected").html(fileName);
+    });
+
     // valida dados formulario processo
     function validarDadosProcesso() {
         var msg = "O campo deve ser informado!"

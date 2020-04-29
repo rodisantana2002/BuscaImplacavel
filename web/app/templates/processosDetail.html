@@ -14,10 +14,7 @@
             <div class="container-fluid">
 
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Processo [{{processo.id}} - {{processo.situacao}}]</h1>
-                    {% if processo.situacao =='Pendente' %}
-                        <a href="{{ url_for('views.carregarFormProcesso')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus fa-md text-white-300"></i><br>Adicionar Arquivo</a>                    
-                    {% endif %}                                        
+                    <h1 class="h3 mb-0 text-gray-800">Processo [{{processo.id}} - {{processo.situacao}}]</h1>                                    
                 </div>
 
                 <div class="col-12" style="padding-bottom:10px">
@@ -27,6 +24,11 @@
                     <div style="border-top: 1px solid#888; text-align:center" ></div>
                 </div>
 
+
+                <div class="col-12" style="padding-bottom:30px">
+                    <input id="logo" type="file" class="custom-file-input">
+                    <label for="logo" class="custom-file-label text-truncate">Selecione o arquivo...</label>
+                </div>
 
                 <!-- Cards Arquivos -->
                 {% for file in processo.files %}
