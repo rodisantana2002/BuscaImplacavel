@@ -21,8 +21,25 @@
 
                     <div class="card-body">
 
-                    </div>
-                    
+                        {% block content_registro %}
+                            <div class="alert alert-warning" id="registro-alerta" style="display:none; text-align:center">{{ page.msg }}</div>        
+                        {% endblock %}
+
+
+                        <div class="col-12">
+                            <label style="color:#563A2D"> Identificação </label>
+                            <div style="border-top: 1px solid#888; padding-top:15px; text-align:center" >
+                        </div>
+
+                        <div class="col-12">
+                            <input type="text" maxlength="100" style="margin-bottom: 15px" class="form-control form-control-lg" name="nomecompleto" id="nomecompleto" placeholder="Nome Completo *" required>
+                        </div>
+
+                        <div class="col-12">
+                            <input type="email" maxlength="100" style="margin-bottom: 15px" class="form-control form-control-lg" name="email" id="email" placeholder="Email *" required>
+                        </div>
+
+                    </div>                    
                 </div>
 
                 <div  class="mx-auto" style="width: 250px;">
