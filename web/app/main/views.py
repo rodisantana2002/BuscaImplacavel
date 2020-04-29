@@ -25,10 +25,10 @@ def home():
 @views.route('/processo', methods=['GET', 'POST'])
 def carregarProcessos():
     processos = oper.obterProcessos()
-    return render_template('processos.html', processos = processos)
+    return render_template('processos.html', processos=processos)
 
 
-@views.route('/processo/<id>')
+@views.route('/processo/<id>', methods=['GET', 'POST'])
 def carregarProcessoDetail(id):
     processo = oper.obterProcessoById(id)
     return render_template('processosDetail.html', processo=processo)
