@@ -15,6 +15,7 @@ oper = Operacoes()
 def index():
     return redirect(url_for('views.home'))
 
+
 @views.route('/home', methods=['GET', 'POST'])
 def home():
     pesquisa = oper.obterPesquisas()    
@@ -22,24 +23,21 @@ def home():
 
 
 @views.route('/processo', methods=['GET'])
-def carregarProcessos():
-    processos = oper.obterProcessos()
-    return render_template('processos.html', processos=processos)
+@views.route('/processo/<id>', methods=['GET'])
+def carregarProcesso(id=None):
+    if id == None:
+        processos = oper.obterProcessos()
+        return render_template('processos.html', processos=processos)
+    else:
+        processo = oper.obterProcessoById(id)
+        return render_template('processosDetail.html', processo=processo)
 
 
-@views.route('/processo/<id>', methods=['GET', 'POST'])
-def carregarProcessoDetail(id):
-    processo = oper.obterProcessoById(id)
-    return render_template('processosDetail.html', processo=processo)
-
-
-@views.route('/processo/registro', methods=['GET'])
+@views.route('/processo/registro', methods=['GET', 'POST'])
 def carregarFormProcesso():
-    return render_template('processosNew.html', page=None)
-
-
-@views.route('/processo/registro', methods=['POST'])
-def registrarProcesso():
+    if request.method == 'GET':
+        return render_template('processosNew.html', page=None)
+    else:
         processo = Processo()
 
         processo.descricao = request.values.get('descricao')
@@ -47,3 +45,28 @@ def registrarProcesso():
         # ------------------------------------------------------------------
         result = oper.registrarProcesso(processo)
         return result.get("code")
+
+
+@views.route('/processo/arquivo', methods=['POST'])
+def registrarProcessoArquivo():
+    file = ProcessoFile()
+    file.name_file = request.values.get('name_file')
+    file.processo_id = request.values.get('processo_id')
+    print(request.values.get('conteudo'))
+
+    # ------------------------------------------------------------------
+    result = oper.registrarProcessoArquivo(file)
+    return result.get("code")
+
+# @views.route('/pedido', methods=['GET'])
+# @views.route('/pedido/<status>', methods=['GET'])
+# def obterPedidos(status=None):
+#     if 'email' in session:
+#         if status == None:
+#             Pedidos = oper.obterPedidos(session.get('id'))
+#         else:
+#             Pedidos = oper.obterPedidosByStatus(session.get('id'), status)
+#         return render_template('pedidos.html', pedidos=Pedidos)
+
+#     else:
+#         return render_template('login.html', page=None)

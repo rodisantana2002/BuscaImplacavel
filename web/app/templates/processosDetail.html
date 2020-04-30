@@ -14,27 +14,38 @@
             <div class="container-fluid">
 
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Processo [{{processo.id}} - {{processo.situacao}}]</h1>                                    
+                    <h1 id="processo_id" class="h3 mb-0 text-gray-800">Processo [{{processo.id}} - {{processo.situacao}}]</h1>                                    
                 </div>
 
-                <div class="col-12" style="padding-bottom:10px">
-                    <label style="color:#563A2D"> Descrição </label>
+                <div class="col-12">
                     <h5 class="m-0 font-weight-bold text-primary">{{processo.descricao}}</h5>
                     <h6 class="m-0 font-weight-normal text-primary" style="padding-bottom:10px">{{processo.objetivo}}</h6>
-                    <div style="border-top: 1px solid#888; text-align:center" ></div>
+                    <hr>
+                    
                 </div>
 
+                {% if processo.situacao =='Pendente' %}
+                    <div class="col-12" >
+                        <h4>Arquivo referências</h4>
+                    </div>
 
-                <div class="col-12" style="padding-bottom:30px">
-                    <input id="logo" type="file" class="custom-file-input">
-                    <label for="logo" class="custom-file-label text-truncate">Selecione o arquivo...</label>
-                </div>
+                    <div class="col-12" style="padding-bottom:10px">
+                        <input id="name-file" type="file" class="custom-file-input" accept="TEXT/*">
+                        <label for="lbl-filelogo" class="custom-file-label text-truncate">Selecione o arquivo...</label>                    
+                    </div>
+
+                    <div class="col-12" style="text-align:center">
+                        <button href="#" id="btn-adicionar-arquivo" type="button" class="btn btn-primary" value='{"id":"{{processo.id}}"}'><i class="icon-hand-right"></i> Adicionar Arquivo </button>                            
+                        <hr>                    
+                    </div>                
+                {% endif %}
 
                 <!-- Cards Arquivos -->
                 {% for file in processo.files %}
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 style="text-align: end; " class="m-0 font-weight-normal text-primary">{{file.name_file}}</h5>                                                                            
+                            <h6 style="text-align: end; padding-bottom:5px" class="m-0 font-weight-normal text-primary">{{file.criado_em}}</h6>                                                                            
+                            <h5 style="text-align: start; " class="m-0 font-weight-bold text-primary">{{file.name_file}}</h5>                                                                                                        
                         </div>
 
                         <div class="card-body">                         

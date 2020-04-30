@@ -1,10 +1,6 @@
 $(document).ready(function () {
    var url_base = "http://localhost:5000/";
-
-    $('#dataTable').DataTable({
-        "order":[[4, "desc"]]
-    });
-
+  var url_files = "static/files/"
 
     // exibe alerta regsitro
     if ($("#registro-alerta").html() === "") {
@@ -12,6 +8,17 @@ $(document).ready(function () {
     } else {
         $("#registro-alerta").show();
     };
+
+
+    $('#dataTable').DataTable({
+        "order":[[4, "desc"]]
+    });
+    
+    $('.custom-file-input').on('change', function () {
+        let fileName = $(this).val().split('\\').pop();
+        $(this).next('.custom-file-label').addClass("selected").html(fileName);
+    });
+
 
     // registrar processo
     $("#btn-enviar-processo").click(function () {
@@ -31,9 +38,38 @@ $(document).ready(function () {
         }
     });    
 
-    $('.custom-file-input').on('change', function () {
-        let fileName = $(this).val().split('\\').pop();
-        $(this).next('.custom-file-label').addClass("selected").html(fileName);
+    // adicionar arquivo ao processo
+    $("#btn-adicionar-arquivo").click(function () {
+        var processo = jQuery.parseJSON($(this).val());
+
+        if (validarDadosFile()) {
+            // carrega conteudo do arquivo selecionado
+            jQuery.get(url_base + url_files + $("#name-file").val().split('\\').pop(), 
+                function (data) {   
+                    conteudo = data;
+                    $.ajax({
+                        type: "POST",
+                        url: url_base + "processo/arquivo",
+                        data: {
+                            name_file: $("#name-file").val().split('\\').pop().toLowerCase(),
+                            processo_id: processo.id,
+                            conteudo: conteudo
+                        },
+                        async: false,
+                        success: function (data) {
+                            $(location).attr('href', url_base + 'processo/' + processo.id);
+                        }
+                    });        
+                }
+            );
+        }    
+        else {
+            bootbox.alert({
+                message: "Selecione um arquivo",
+                size: 'small'
+            });          
+            $("#name-file").focus();
+        }
     });
 
     // valida dados formulario processo
@@ -56,4 +92,15 @@ $(document).ready(function () {
 
         return true;
     }
+
+    // valida dados arquivo upload
+    function validarDadosFile() {
+        if ($("#name-file").val().trim().length === 0) {
+            return false;
+        }
+        return true;
+    }
+
+    //processar leitura e garavação das linhas do arquivo
+
 });

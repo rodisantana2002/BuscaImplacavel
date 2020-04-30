@@ -27,7 +27,6 @@ class Operacoes():
 
     def registrarProcesso(self, Processo):
         try:
-
             obj = Processo
             obj.add(obj)
 
@@ -38,6 +37,20 @@ class Operacoes():
         except:
             self.authentic["code"] = "500"
             self.authentic["msg"] = "Erro desconhecido"
+
+    def registrarProcessoArquivo(self, ProcessoFile):
+        try:
+            obj = ProcessoFile
+            obj.add(obj)
+
+            self.authentic["code"] = "200"
+            self.authentic["msg"] = "Registro efetuado com sucesso!"
+            return self.authentic
+
+        except:
+            self.authentic["code"] = "500"
+            self.authentic["msg"] = "Erro desconhecido"
+
 
 
 
