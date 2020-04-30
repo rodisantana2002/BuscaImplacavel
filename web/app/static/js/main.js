@@ -1,7 +1,7 @@
 $(document).ready(function () {
    var url_base = "http://localhost:5000/";
-  var url_files_import = "static/files/import/"
-  var url_files_export = "static/files/export/"
+   var url_files_import = "static/files/import/"
+   var url_files_export = "static/files/export/"
 
     // exibe alerta regsitro
     if ($("#registro-alerta").html() === "") {
@@ -10,16 +10,14 @@ $(document).ready(function () {
         $("#registro-alerta").show();
     };
 
+    $('table.display').DataTable({      
+        "displayLength": 5
+    });
 
-    $('#dataTable').DataTable({
+    $('#dataTableProcessos').DataTable({
         "order":[[4, "desc"]]
     });
     
-    $('#dataTableRef').DataTable({
-        "order": [[1, "asc"]]
-    });
-
-
     $('.custom-file-input').on('change', function () {
         let fileName = $(this).val().split('\\').pop();
         $(this).next('.custom-file-label').addClass("selected").html(fileName);
@@ -49,25 +47,38 @@ $(document).ready(function () {
         var processo = jQuery.parseJSON($(this).val());
 
         if (validarDadosFile()) {
-            // carrega conteudo do arquivo selecionado
-            jQuery.get(url_base + url_files_import + $("#name-file").val().split('\\').pop(), 
-                function (data) {   
-                    conteudo = data;
-                    $.ajax({
-                        type: "POST",
-                        url: url_base + "processo/arquivo",
-                        data: {
-                            name_file: $("#name-file").val().split('\\').pop().toLowerCase(),
-                            processo_id: processo.id,
-                            conteudo: conteudo
-                        },
-                        async: false,
-                        success: function (data) {
-                            $(location).attr('href', url_base + 'processo/' + processo.id);
+
+            var dialog = bootbox.dialog({
+                message: '<p><i class="fa fa-spin fa-spinner"></i> Processando arquivo...</p>'
+            });
+
+            dialog.init(function () {
+                setTimeout(function () {
+                    dialog.find('.bootbox-body').html('Arquivo processado com sucesso!');
+
+                    // carrega conteudo do arquivo selecionado
+                    jQuery.get(url_base + url_files_import + $("#name-file").val().split('\\').pop(),
+                        function (data) {
+                            conteudo = data;
+                            $.ajax({
+                                type: "POST",
+                                url: url_base + "processo/arquivo",
+                                data: {
+                                    name_file: $("#name-file").val().split('\\').pop().toLowerCase(),
+                                    processo_id: processo.id,
+                                    conteudo: conteudo
+                                },
+                                async: false,
+                                success: function (data) {
+                                    $(location).attr('href', url_base + 'processo/' + processo.id);
+                                }
+                            });
                         }
-                    });        
-                }
-            );
+                    );
+
+                }, 2000);
+            });
+
         }    
         else {
             bootbox.alert({

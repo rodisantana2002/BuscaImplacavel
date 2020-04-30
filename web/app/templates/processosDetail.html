@@ -24,9 +24,9 @@
                     
                 </div>
 
-                {% if processo.situacao =='Pendente' %}
+                {% if processo.situacao =='Pendente' %}                    
                     <div class="col-12" >
-                        <h4>Arquivo referências</h4>
+                        <h4>Arquivo</h4>
                     </div>
 
                     <div class="col-12" style="padding-bottom:10px">
@@ -34,25 +34,28 @@
                         <label for="lbl-filelogo" class="custom-file-label text-truncate">Selecione o arquivo...</label>                    
                     </div>
 
-                    <div class="col-12" style="text-align:center">
-                        <button href="#" id="btn-adicionar-arquivo" type="button" class="btn btn-primary" value='{"id":"{{processo.id}}"}'><i class="icon-hand-right"></i> Adicionar Arquivo </button>                            
+                    <div class="col-12" style="text-align:end">
+                        <button href="#" id="btn-adicionar-arquivo" class="btn btn-primary" value='{"id":"{{processo.id}}"}'> 
+                            <i class="fas fa-plus"></i> Adicionar
+                        </button>
                         <hr>                    
                     </div>                
                 {% endif %}
 
                 <!-- Cards Arquivos -->
                 {% for file in processo.files %}
-                    <div class="card shadow mb-4">
+                    <div class="card shadow mb-4">                    
                         <div class="card-header py-3">
-                            <h6 style="text-align: start; " class="m-0 font-weight-bold text-primary">{{file.name_file}}</h6>                                                                                                        
-                            <h6 style="text-align: end" class="m-0 font-weight-normal text-primary">{{file.criado_em}}</h6>                             
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h5 style="text-align: start; " class="m-0 font-weight-bold text-primary">{{file.name_file}}</h5>
+                                <h6 style="text-align: start" class="m-0 font-weight-normal text-primary">{{file.criado_em}}</h6>                             
+                            </div>
+                            <span style="text-align: start" class="m-0 font-weight-normal text-primary">Referências</span> 
                         </div>
 
-                        <div class="card-body">       
-                            <h6 style="text-align: start; padding-bottom:15px" class="m-0 font-weight-normal text-primary">Referências</h6> 
-
+                        <div class="card-body">                                   
                             <div class="table-responsive">
-                                <table class="table table-default" id="dataTableRef" width="100%" cellspacing="0">
+                                <table class="display table-striped" id="dataTableRef" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
                                     <th style="text-align:center">Linha</th>
