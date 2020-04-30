@@ -52,21 +52,9 @@ def registrarProcessoArquivo():
     file = ProcessoFile()
     file.name_file = request.values.get('name_file')
     file.processo_id = request.values.get('processo_id')
-    print(request.values.get('conteudo'))
+    file.conteudo = request.values.get('conteudo')
 
     # ------------------------------------------------------------------
     result = oper.registrarProcessoArquivo(file)
     return result.get("code")
 
-# @views.route('/pedido', methods=['GET'])
-# @views.route('/pedido/<status>', methods=['GET'])
-# def obterPedidos(status=None):
-#     if 'email' in session:
-#         if status == None:
-#             Pedidos = oper.obterPedidos(session.get('id'))
-#         else:
-#             Pedidos = oper.obterPedidosByStatus(session.get('id'), status)
-#         return render_template('pedidos.html', pedidos=Pedidos)
-
-#     else:
-#         return render_template('login.html', page=None)

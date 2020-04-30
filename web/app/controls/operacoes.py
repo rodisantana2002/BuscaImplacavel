@@ -32,26 +32,36 @@ class Operacoes():
 
             self.authentic["code"] = "200"
             self.authentic["msg"] = "Registro efetuado com sucesso!"
-            return self.authentic
 
         except:
             self.authentic["code"] = "500"
             self.authentic["msg"] = "Erro desconhecido"
+        return self.authentic
 
     def registrarProcessoArquivo(self, ProcessoFile):
         try:
-            obj = ProcessoFile
-            obj.add(obj)
+            processoFile = ProcessoFile
+            processoFile.add(processoFile)
+
+            # adiciona referencias do arquivo 
+            refs = processoFile.conteudo.split('\n')
+            linha=1
+            for ref in refs:
+                if len(ref.strip())>0:
+                    processoFileReferencia = ProcessoFileReferencia()
+                    processoFileReferencia.referencia = ref
+                    processoFileReferencia.linha = linha
+                    processoFileReferencia.processo_file_id = processoFile.id
+                    processoFileReferencia.add(processoFileReferencia)
+                    linha = linha +1
 
             self.authentic["code"] = "200"
             self.authentic["msg"] = "Registro efetuado com sucesso!"
-            return self.authentic
 
         except:
             self.authentic["code"] = "500"
             self.authentic["msg"] = "Erro desconhecido"
-
-
+        return self.authentic
 
 
     # def obterAssociados(self):

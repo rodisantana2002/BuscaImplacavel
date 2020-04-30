@@ -67,6 +67,9 @@ class Processo(db.Model):
 
     files = relationship('ProcessoFile')
 
+    def getTotalFiles(self):
+        return str(len(self.files)).zfill(4)        
+
     def add(self, processo):
         db.session.add(processo)
         db.session.commit()
@@ -101,7 +104,9 @@ class ProcessoFile(db.Model):
     name_file = db.Column(db.String(150))
     criado_em = db.Column(db.String(20), default=datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S'))
     processo_id = db.Column(db.Integer, db.ForeignKey('Processo.id'))
-    
+    # ----------------
+    conteudo = None    
+    referencias = relationship('ProcessoFileReferencia')
 
     def add(self, processoFile):
         db.session.add(processoFile)
@@ -122,7 +127,44 @@ class ProcessoFile(db.Model):
         return self.serialize()
 
 
+# ---------------------------------------------------------------------------
+# Classe ProcessoFileReferencia
+# ---------------------------------------------------------------------------
+class ProcessoFileReferencia(db.Model):
+    __tablename__ = 'ProcessoFileReferencia'
 
+    id = db.Column(db.Integer, primary_key=True)
+    situacao = db.Column(db.String(20), default="Pendente") 
+    linha = db.Column(db.Integer)
+    referencia = db.Column(db.String())
+    bibtext = db.Column(db.String())
+    criado_em = db.Column(db.String(20), default=datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S'))
+    processo_file_id = db.Column(db.Integer, db.ForeignKey('ProcessoFile.id'))
+    
+    def add(self, Referencia):
+        db.session.add(Referencia)
+        db.session.commit()
+
+    def addAll(self, Referencias):
+        db.session.add_all(Referencias)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'situacao': self.situacao,
+            'linha': self.linha,
+            'referncia': self.referencia,
+            'bibtext': self.bibtext,
+            'processo_file_id': self.processo_id,
+            'criado_em': self.criado_em
+        }
+
+    def __repr__(self):
+        return self.serialize()
 
 
 # ---------------------------------------------------------------------------

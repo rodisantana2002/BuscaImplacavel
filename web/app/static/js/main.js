@@ -1,6 +1,7 @@
 $(document).ready(function () {
    var url_base = "http://localhost:5000/";
-  var url_files = "static/files/"
+  var url_files_import = "static/files/import/"
+  var url_files_export = "static/files/export/"
 
     // exibe alerta regsitro
     if ($("#registro-alerta").html() === "") {
@@ -14,6 +15,11 @@ $(document).ready(function () {
         "order":[[4, "desc"]]
     });
     
+    $('#dataTableRef').DataTable({
+        "order": [[1, "asc"]]
+    });
+
+
     $('.custom-file-input').on('change', function () {
         let fileName = $(this).val().split('\\').pop();
         $(this).next('.custom-file-label').addClass("selected").html(fileName);
@@ -44,7 +50,7 @@ $(document).ready(function () {
 
         if (validarDadosFile()) {
             // carrega conteudo do arquivo selecionado
-            jQuery.get(url_base + url_files + $("#name-file").val().split('\\').pop(), 
+            jQuery.get(url_base + url_files_import + $("#name-file").val().split('\\').pop(), 
                 function (data) {   
                     conteudo = data;
                     $.ajax({
