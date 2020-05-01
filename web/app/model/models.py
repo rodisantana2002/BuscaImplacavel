@@ -81,6 +81,12 @@ class Processo(db.Model):
     def update(self):
         db.session.commit()
 
+    def delete(self, processo):
+        for file in processo.files:    
+            file.delete(file)
+        db.session.delete(processo)
+        db.session.commit()
+
     def serialize(self):
         return {
             'id': self.id,
@@ -113,6 +119,13 @@ class ProcessoFile(db.Model):
         db.session.commit()
 
     def update(self):
+        db.session.commit()
+
+    def delete(self, processoFile):
+        for referencia in processoFile.referencias:
+            referencia.delete(referencia)
+
+        db.session.delete(processoFile)    
         db.session.commit()
 
     def serialize(self):
@@ -152,6 +165,10 @@ class ProcessoFileReferencia(db.Model):
     def update(self):
         db.session.commit()
 
+    def delete (self, Referencia):
+        db.session.delete(Referencia)
+        db.session.commit()
+    
     def serialize(self):
         return {
             'id': self.id,
@@ -189,8 +206,6 @@ class Referencia(db.Model):
     referencia = db.Column(db.String())
     criado_em = db.Column(db.String(20), default=datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S'))
     
-
-
     # relacionamentos
     translates = relationship("Translate")
 
@@ -205,6 +220,10 @@ class Referencia(db.Model):
     def update(self):
         db.session.commit()
 
+    def delete(self, referencia):
+        db.session.delete(referencia)
+        db.session.commit()
+    
     def serialize(self):
         return {
             'id': self.id,

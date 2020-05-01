@@ -56,6 +56,19 @@ def registrarProcessoArquivo():
 
     # ------------------------------------------------------------------
     result = oper.registrarProcessoArquivo(file)
-    print(result)
     return result.get("code")
 
+@views.route('/processo/arquivo/remover', methods=['POST'])
+def removerProcessoArquivo():
+    id = request.values.get('id')
+    result = oper.removerFile(id)
+    
+    return result.get("code")
+
+
+@views.route('/processo/arquivo/referencia', methods=['POST'])
+def removerReferencia():
+    id = request.values.get('id')
+
+    result = oper.removerReferencia(id)
+    return result.get("code")

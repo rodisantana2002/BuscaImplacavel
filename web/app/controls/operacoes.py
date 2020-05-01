@@ -16,6 +16,7 @@ class Operacoes():
         self.pesquisa = Pesquisa()
         self.processo = Processo()
         self.processoFile = ProcessoFile()
+        self.processoFileReferencia = ProcessoFileReferencia()
 
     def obterPesquisas(self):
         return self.pesquisa.query.all()
@@ -64,7 +65,40 @@ class Operacoes():
                 self.authentic["code"] = "200"
                 self.authentic["msg"] = "Registro efetuado com sucesso!"
 
+        except :
+            self.authentic["code"] = "500"
+            self.authentic["msg"] = "Erro desconhecido"
+        return self.authentic
+
+    def removerReferencia(self, id):
+        try:
+            obj = ProcessoFileReferencia()
+            obj = self.processoFileReferencia.query.filter_by(id=id).first()
+            obj.delete(obj)
+
+            self.authentic["code"] = "200"
+            self.authentic["msg"] = "Registro deletado com sucesso!"
+
         except:
             self.authentic["code"] = "500"
             self.authentic["msg"] = "Erro desconhecido"
         return self.authentic
+
+    def removerFile(self, id):
+        try:            
+            obj = ProcessoFile()
+            obj = self.processoFile.query.filter_by(id=id).first()            
+            obj.delete(obj)
+
+            self.authentic["code"] = "200"
+            self.authentic["msg"] = "Registro deletado com sucesso!"
+            
+
+        except:
+            self.authentic["code"] = "500"
+            self.authentic["msg"] = "Erro desconhecido"
+
+        return self.authentic
+
+    def removerProcesso(self, referencia):
+        pass

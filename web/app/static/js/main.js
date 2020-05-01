@@ -43,7 +43,7 @@ $(document).ready(function () {
     });    
 
     // adicionar arquivo ao processo
-    $("#btn-adicionar-arquivo").click(function () {
+    $("#btn-arquivo-adicionar").click(function () {
         var processo = jQuery.parseJSON($(this).val());
 
         if (validarDadosFile()) {
@@ -93,20 +93,116 @@ $(document).ready(function () {
         }
     });
 
+    // processa a remoção do arquivo selecionado
+    $(".btn-arquivo-remover").click(function () {
+        var file = jQuery.parseJSON($(this).val());
+
+        bootbox.confirm({
+            message: "Confirma a remoção da Arquivo?",
+            size: "small",
+            centerVertical: true,
+            buttons: {
+                confirm: {
+                    label: 'Sim',
+                    label: '<i class="fa fa-check"></i> Confirm',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: 'Não',
+                    label: '<i class="fa fa-times"></i> Cancel',
+                    className: 'btn-danger'
+                }
+            },
+            callback: function (result) {
+                if (result) {
+                    $.ajax({
+                        type: "POST",
+                        data: { id: file.id },
+                        url: url_base + "/processo/arquivo/remover",
+                        async: true,
+                        success: function (data) {
+                            if (data === "200") {
+                                location.reload();
+                            }
+                            else{    
+                                bootbox.alert({
+                                    message: "Não foi possível excluir o registro",
+                                    size: 'small'
+                                });
+                            }                            
+                        }
+                    });                    
+                }
+            }
+        });           
+
+    });
+
+    // processa a busca pelas referencias do arquivo selecionado
+    $(".btn-arquivo-processar").click(function () {
+        var file = jQuery.parseJSON($(this).val());
+        alert(file.id);
+
+    });
+
+    // processa a exportação das referencias do arquivo selecionado
+    $(".btn-arquivo-exportar").click(function () {
+        var file = jQuery.parseJSON($(this).val());
+        alert(file.id);
+    });
+    
+    // exibe popup com detalhes da referencia
     $(".btn-referencia-detail").click(function () {
         var referencia = jQuery.parseJSON($(this).val());
         bootbox.alert({
-            message: "<p> lin.: " + referencia.linha + "</p>" + 
-                     "<p> ref.: " + referencia.referencia + "</p>" + 
-                     "<p> bib.: " + referencia.bibtext + "</p>", 
+            message: "<p> lin.: " + referencia.linha + "</p>" +
+                "<p> ref.: " + referencia.referencia + "</p>" +
+                "<p> bib.: " + referencia.bibtext + "</p>",
             size: 'large',
             centerVertical: true
-        });   
+        });
     });
-    
-    $(".btn-referencia-processar").click(function (){
-        var file = jQuery.parseJSON($(this).val());        
-        alert(file.id);
+
+    // exclusão individual da referencia
+    $(".btn-referencia-remove").click(function (){
+        var referencia = jQuery.parseJSON($(this).val());        
+
+        bootbox.confirm({
+            message: "Confirma a remoção da Referência?",
+            size: "small",
+            centerVertical: true,
+            buttons: {
+                confirm: {
+                    label: 'Sim',
+                    label: '<i class="fa fa-check"></i> Confirm',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: 'Não',
+                    label: '<i class="fa fa-times"></i> Cancel',
+                    className: 'btn-danger'
+                }
+            },
+            callback: function (result) {
+                if (result) {
+                    $.ajax({
+                        type: "POST",
+                        data: { id: referencia.id },
+                        url: url_base + "/processo/arquivo/referencia",
+                        async: false,
+                        success: function (data) {
+                            if (data !="200"){
+                                bootbox.alert({
+                                    message: "Não foi possível excluir o registro",
+                                    size: 'small'
+                                });  
+                            }                            
+                        }
+                    });
+                    location.reload();
+                }
+            }
+        });        
 
     });
 
