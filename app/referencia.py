@@ -8,6 +8,7 @@
 import re
 import logging
 import os
+import requests
 import sys
 import urllib3
 import time
@@ -31,7 +32,7 @@ HEADERS = {
 AVAILABLE_SCIHUB_BASE_URL = ['search.crossref.org']
 
 pathDestino = '../bases/referencias/'
-pathOrigem = '../bases/origem/'
+pathOrigem = '../bases/original/'
 
 
 class referencia(object):
