@@ -5,103 +5,111 @@
 <body id="page-top">
     <div id="wrapper">
         {% include 'reuse/sideBar.html' %}
-
         <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                {% include 'reuse/headBar.html' %}
 
-        <div id="content">
-            {% include 'reuse/headBar.html' %}
+                <div class="container-fluid">
 
-            <div class="container-fluid">
-
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 id="processo_id" class="h3 mb-0 text-gray-800">Processo [{{processo.id}} - {{processo.situacao}}]</h1>                                    
-                </div>
-
-                <div class="col-12">
-                    <h5 class="m-0 font-weight-bold text-primary">{{processo.descricao}}</h5>
-                    <h6 class="m-0 font-weight-normal text-primary" style="padding-bottom:10px">{{processo.objetivo}}</h6>
-                    <hr>
-                    
-                </div>
-
-                {% if processo.situacao =='Pendente' %}                    
-                    <div class="col-12" >
-                        <h4>Arquivo</h4>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-1">
+                        <h4><a href="{{ url_for('views.carregarProcesso', id=None)}}"><i class="fas fa-chevron-left fa-md"></i> Voltar</a></h4>
                     </div>
 
-                    <div class="col-12" style="padding-bottom:10px">
-                        <input id="name-file" type="file" class="custom-file-input" accept="TEXT/*">
-                        <label for="lbl-filelogo" class="custom-file-label text-truncate">Selecione o arquivo...</label>                    
-                    </div>
+                    <div class="row" style="padding-bottom:20px">
+                        <!-- Processos e pendentes -->
+                        <div class="col-xl-12">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xm font-weight-bold text-primary text-uppercase mb-1">Processo</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{processo.id}}-{{processo.descricao}}</div>
+                                        </div>                                        
+                                        <div class="h6 mb-0 font-weight-bold text-gray-800">Arqs.<br>{{processo.getTotalFiles()}}</div>
+                                    </div>
+                                    <hr>
 
-                    <div class="col-12" style="text-align:end">
-                        <button href="#" id="btn-adicionar-arquivo" class="btn btn-primary" value='{"id":"{{processo.id}}"}'> 
-                            <i class="fas fa-plus"></i> Adicionar
-                        </button>
-                        <hr>                    
-                    </div>                
-                {% endif %}
+                                    <div class="col-12" style="padding-bottom:10px">
+                                        <input id="name-file" type="file" class="custom-file-input" accept="TEXT/*">
+                                        <label for="lbl-filelogo" class="custom-file-label text-truncate">Selecione o arquivo...</label>                    
+                                    </div>
 
-                <!-- Cards Arquivos -->
-                {% for file in processo.files %}
-                    <div class="card shadow mb-4">                    
-                        <div class="card-header py-3">
-                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h5 style="text-align: start; " class="m-0 font-weight-bold text-primary">{{file.name_file}}</h5>
-                                <h6 style="text-align: start" class="m-0 font-weight-normal text-primary">{{file.criado_em}}</h6>                             
+                                    <div class="col-12" style="text-align:center">
+                                        <button href="#" id="btn-adicionar-arquivo" class="btn btn-primary" value='{"id":"{{processo.id}}"}'> 
+                                            <i class="fas fa-plus"></i> Adicionar
+                                        </button>
+                                    </div>                
+
+                                </div>
                             </div>
-                            <span style="text-align: start" class="m-0 font-weight-normal text-primary">Referências</span> 
                         </div>
+                    </div>
 
-                        <div class="card-body">                                   
-                            <div class="table-responsive">
-                                <table class="display table-striped" id="dataTableRef" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                    <th style="text-align:center">Linha</th>
-                                    <th style="text-align:center">Situação</th>
-                                    <th>Referência</th>
-                                    <th style="text-align:center"> **</th>                      
-                                    </tr>
-                                </thead>
-                                <tfoot>
-                                    <tr>
-                                    <th style="text-align:center">Linha</th>
-                                    <th style="text-align:center">Situação</th>
-                                    <th>Referência</th>
-                                    <th style="text-align:center"> **</th>                      
-                                    </tr>
-                                </tfoot>
-                                <tbody>
-                                        {% for referencia in file.referencias %}
-                                        <tr>
-                                            <td style="text-align:center">{{referencia.linha}}</td>
-                                            <td style="text-align:center">{{referencia.situacao}}</td>
-                                            <td>{{referencia.referencia}}</td>
-                                            <td style="text-align:center">
-                                                <a id="btn-processo-detail"  type="link" class="btn btn-link"  href="{{ url_for('views.carregarProcesso', id=processo.id)}}"> 
-                                                    <i class="fas fa-eye"></i>
-                                                </a>
+                    <!-- Cards Arquivos -->
 
-                                                <a id="btn-processo-remove" class="btn btn-link" type="link" value="{{processo.id}}">
-                                                    <i class="far fa-trash-alt" style="color:red"></i>
-                                                </a>                           
-                                            </td>
-                                        </tr>
-                                    {% endfor %}
-                                </tbody>
-                                </table>
+                    {% for file in processo.files %}
+                        <div class="card shadow mb-4">                    
+                            <div class="card-header py-1">
+                                <div class="d-sm-flex align-items-center justify-content-between mb-0">
+                                    <h6 style="text-align: start; " class="m-0 font-weight-bold text-primary">{{file.name_file}} - {{file.criado_em}}</h6>
+                                    <h6 style="text-align: start" class="m-0 font-weight-normal text-primary">
+                                        <button class="btn-referencia-exportar btn btn-link"  type="link" value='{"id":"{{file.id}}"}'>[exportar]</button>
+                                        <button class="btn-referencia-processar btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[processar]</button>
+                                    </h6>                             
+                                </div>                                
+                                
                             </div>
+
+                            <div class="card-body">                                   
+                                <div class="table-responsive">
+                                    <table class="display table-striped" id="dataTableRef" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                        <th style="text-align:center">Linha</th>
+                                        <th style="text-align:center">Situação</th>
+                                        <th>Referência</th>
+                                        <th style="text-align:center"> **</th>                      
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                        <th style="text-align:center">Linha</th>
+                                        <th style="text-align:center">Situação</th>
+                                        <th>Referência</th>
+                                        <th style="text-align:center"> **</th>                      
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        {% for referencia in file.referencias %}
+                                            <tr>
+                                                <td style="text-align:center">{{referencia.linha}}</td>
+                                                <td style="text-align:center">{{referencia.situacao}}</td>
+                                                <td>{{referencia.referencia}}</td>
+                                                <td style="text-align:center">
+                                                    <button id="btn-referencia-detail" type="link" class="btn-referencia-detail btn btn-link"  href="#" value='{"linha":"{{referencia.linha}}", "referencia":"{{referencia.referencia}}", "bibtext":"{{referencia.bibtext}}"}'> 
+                                                        <i class="far fa-file-code"></i>
+                                                    </button>
+
+                                                    <a id="btn-referencia-remove" class="btn btn-link" type="link" value="{{processo.id}}">
+                                                        <i class="far fa-trash-alt" style="color:red"></i>
+                                                    </a>                           
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                    </table>
+                                </div>
+
+                            </div>    
 
                         </div>                    
-                    </div>                    
-                {% endfor %}
-                
+                    {% endfor %}
+                    
+                </div>
+            
             </div>
-        
+            {% include 'reuse/footer.html' %}
         </div>
-        {% include 'reuse/footer.html' %}
-
     </div>
 </body>
 </html>

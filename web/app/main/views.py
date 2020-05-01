@@ -56,5 +56,6 @@ def registrarProcessoArquivo():
 
     # ------------------------------------------------------------------
     result = oper.registrarProcessoArquivo(file)
+    print(result)
     return result.get("code")
 

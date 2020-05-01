@@ -47,15 +47,14 @@ $(document).ready(function () {
         var processo = jQuery.parseJSON($(this).val());
 
         if (validarDadosFile()) {
-
             var dialog = bootbox.dialog({
-                message: '<p><i class="fa fa-spin fa-spinner"></i> Processando arquivo...</p>'
+                title: 'Atenção!',
+                message: '<div class="text-center"><i class="fa fa-spin fa-spinner"></i>Aguarde processando arquivo...</div>',
+                centerVertical: true
             });
 
             dialog.init(function () {
                 setTimeout(function () {
-                    dialog.find('.bootbox-body').html('Arquivo processado com sucesso!');
-
                     // carrega conteudo do arquivo selecionado
                     jQuery.get(url_base + url_files_import + $("#name-file").val().split('\\').pop(),
                         function (data) {
@@ -68,17 +67,22 @@ $(document).ready(function () {
                                     processo_id: processo.id,
                                     conteudo: conteudo
                                 },
-                                async: false,
-                                success: function (data) {
-                                    $(location).attr('href', url_base + 'processo/' + processo.id);
+                                async: true,
+                                success: function (data) {                                   
+                                    if (data === "200") {
+                                        $(location).attr('href', url_base + 'processo/' + processo.id);
+                                    }
+                                    else{
+                                        dialog.find('.bootbox-body').html("Arquivo já esta registrado no processo!");
+                                    }
                                 }
                             });
                         }
-                    );
-
-                }, 2000);
+                    );            
+                    
+                }, 1);
             });
-
+            
         }    
         else {
             bootbox.alert({
@@ -89,6 +93,27 @@ $(document).ready(function () {
         }
     });
 
+    $(".btn-referencia-detail").click(function () {
+        var referencia = jQuery.parseJSON($(this).val());
+        bootbox.alert({
+            message: "<p> lin.: " + referencia.linha + "</p>" + 
+                     "<p> ref.: " + referencia.referencia + "</p>" + 
+                     "<p> bib.: " + referencia.bibtext + "</p>", 
+            size: 'large',
+            centerVertical: true
+        });   
+    });
+    
+    $(".btn-referencia-processar").click(function (){
+        var file = jQuery.parseJSON($(this).val());        
+        alert(file.id);
+
+    });
+
+
+    // **********************************************************************************************
+    // FUNÇÔES
+    // **********************************************************************************************
     // valida dados formulario processo
     function validarDadosProcesso() {
         var msg = "O campo deve ser informado!"
@@ -117,7 +142,4 @@ $(document).ready(function () {
         }
         return true;
     }
-
-    //processar leitura e garavação das linhas do arquivo
-
 });
