@@ -5,6 +5,7 @@ import csv
 from flask import Flask, Blueprint
 from app.model.models import *
 from app.controls.utils import *
+from app.controls.referencia import *
 from sqlalchemy import DateTime, func, desc
 
 operacoes = Blueprint("operacoes", __name__)
@@ -17,6 +18,7 @@ class Operacoes():
         self.processo = Processo()
         self.processoFile = ProcessoFile()
         self.processoFileReferencia = ProcessoFileReferencia()
+        self.referencia = Referencia()
 
     def obterPesquisas(self):
         return self.pesquisa.query.all()
@@ -70,6 +72,36 @@ class Operacoes():
             self.authentic["msg"] = "Erro desconhecido"
         return self.authentic
 
+    def removerProcesso(self, id):
+        try:
+            obj = Processo()
+            obj = self.processo.query.filter_by(id=id).first()
+            obj.delete(obj)
+
+            self.authentic["code"] = "200"
+            self.authentic["msg"] = "Registro deletado com sucesso!"
+
+        except:
+            self.authentic["code"] = "500"
+            self.authentic["msg"] = "Erro desconhecido"
+
+        return self.authentic
+
+    def removerFile(self, id):
+        try:
+            obj = ProcessoFile()
+            obj = self.processoFile.query.filter_by(id=id).first()
+            obj.delete(obj)
+
+            self.authentic["code"] = "200"
+            self.authentic["msg"] = "Registro deletado com sucesso!"
+
+        except:
+            self.authentic["code"] = "500"
+            self.authentic["msg"] = "Erro desconhecido"
+
+        return self.authentic
+
     def removerReferencia(self, id):
         try:
             obj = ProcessoFileReferencia()
@@ -84,21 +116,19 @@ class Operacoes():
             self.authentic["msg"] = "Erro desconhecido"
         return self.authentic
 
-    def removerFile(self, id):
-        try:            
-            obj = ProcessoFile()
-            obj = self.processoFile.query.filter_by(id=id).first()            
-            obj.delete(obj)
+    def buscarReferencias(self, id):
+        # try:
+        file = self.processoFile.query.filter_by(id=id).first()
 
-            self.authentic["code"] = "200"
-            self.authentic["msg"] = "Registro deletado com sucesso!"
+        for referencia in file.referencias:
+            print(self.referencia.obterReferencia(referencia.referencia))
+            # print(referencia.referencia)
+        
+        self.authentic["code"] = "200"
+        self.authentic["msg"] = "Processamento finalizado com sucesso"
+
+        # except:
+        #     self.authentic["code"] = "500"
+        #     self.authentic["msg"] = "Erro desconhecido"
             
-
-        except:
-            self.authentic["code"] = "500"
-            self.authentic["msg"] = "Erro desconhecido"
-
         return self.authentic
-
-    def removerProcesso(self, referencia):
-        pass

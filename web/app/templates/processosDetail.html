@@ -46,65 +46,70 @@
                     </div>
 
                     <!-- Cards Arquivos -->
+                    {% if processo.files|length == 0 %}
+                        <h3 style="text-align:center">Nenhum arquivo registrado</h3>
 
-                    {% for file in processo.files %}
-                        <div class="card shadow mb-4">                    
-                            <div class="card-header py-1">
-                                <div class="d-sm-flex align-items-center justify-content-between mb-0">
-                                    <h6 style="text-align: start; " class="m-0 font-weight-bold text-primary">{{file.name_file}} - {{file.criado_em}}</h6>
-                                    <h6 style="text-align: start" class="m-0 font-weight-normal text-primary">
-                                        <button class="btn-arquivo-remover   btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[remover]</button>
-                                        <button class="btn-arquivo-exportar  btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[exportar]</button>
-                                        <button class="btn-arquivo-processar btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[processar]</button>
-                                    </h6>                             
-                                </div>                                
-                                
-                            </div>
-
-                            <div class="card-body">                                   
-                                <div class="table-responsive">
-                                    <table class="display table-striped" id="dataTableRef" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                        <th style="text-align:center">Linha</th>
-                                        <th style="text-align:center">Situação</th>
-                                        <th>Referência</th>
-                                        <th style="text-align:center"> **</th>                      
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                        <th style="text-align:center">Linha</th>
-                                        <th style="text-align:center">Situação</th>
-                                        <th>Referência</th>
-                                        <th style="text-align:center"> **</th>                      
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        {% for referencia in file.referencias %}
-                                            <tr>
-                                                <td style="text-align:center">{{referencia.linha}}</td>
-                                                <td style="text-align:center">{{referencia.situacao}}</td>
-                                                <td>{{referencia.referencia}}</td>
-                                                <td style="text-align:center">
-                                                    <button class="btn-referencia-detail btn btn-link" type="link" href="#" value='{"linha":"{{referencia.linha}}", "referencia":"{{referencia.referencia}}", "bibtext":"{{referencia.bibtext}}"}'> 
-                                                        <i class="far fa-file-code"></i>
-                                                    </button>
-
-                                                    <button class="btn-referencia-remove btn btn-link" type="link" value='{"id":"{{referencia.id}}", "linha":"{{referencia.linha}}", "referencia":"{{referencia.referencia}}", "bibtext":"{{referencia.bibtext}}"}'>
-                                                        <i class="far fa-trash-alt" style="color:red"></i>
-                                                    </button>                           
-                                                </td>
-                                            </tr>
-                                        {% endfor %}
-                                    </tbody>
-                                    </table>
+                    {% else %}
+                        {% for file in processo.files %}
+                            <div class="card shadow mb-4">                    
+                                <div class="card-header py-1">
+                                    <div class="d-sm-flex align-items-center justify-content-between mb-0">
+                                        <h6 style="text-align: start; " class="m-0 font-weight-bold text-primary">{{file.name_file}} - {{file.criado_em}}</h6>
+                                        <h6 style="text-align: start" class="m-0 font-weight-normal text-primary">
+                                            <button class="btn-arquivo-remover   btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[remover]</button>
+                                            <button class="btn-arquivo-exportar  btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[exportar]</button>
+                                            <button class="btn-arquivo-processar btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[processar]</button>
+                                        </h6>                             
+                                    </div>                                
+                                    
                                 </div>
 
-                            </div>    
+                                <div class="card-body">                                   
+                                    <div class="table-responsive">
+                                        <table class="display table-striped" id="dataTableRef" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                            <th style="text-align:center">Linha</th>
+                                            <th style="text-align:center">Situação</th>
+                                            <th>Referência</th>
+                                            <th style="text-align:center"> **</th>                      
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                            <th style="text-align:center">Linha</th>
+                                            <th style="text-align:center">Situação</th>
+                                            <th>Referência</th>
+                                            <th style="text-align:center"> **</th>                      
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            {% for referencia in file.referencias %}
+                                                <tr>
+                                                    <td style="text-align:center">{{referencia.linha}}</td>
+                                                    <td style="text-align:center">{{referencia.situacao}}</td>
+                                                    <td>{{referencia.referencia}}</td>
+                                                    <td style="text-align:center">
+                                                        <button class="btn-referencia-detail btn btn-link" type="link" href="#" value='{"linha":"{{referencia.linha}}", "referencia":"{{referencia.referencia}}", "bibtext":"{{referencia.bibtext}}"}'> 
+                                                            <i class="far fa-file-code"></i>
+                                                        </button>
 
-                        </div>                    
-                    {% endfor %}
+                                                        <button class="btn-referencia-remove btn btn-link" type="link" value='{"id":"{{referencia.id}}", "linha":"{{referencia.linha}}", "referencia":"{{referencia.referencia}}", "bibtext":"{{referencia.bibtext}}"}'>
+                                                            <i class="far fa-trash-alt" style="color:red"></i>
+                                                        </button>                           
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>    
+
+                            </div>                    
+                        {% endfor %}
+                        
+                    {% endif %}
                     
                 </div>
             

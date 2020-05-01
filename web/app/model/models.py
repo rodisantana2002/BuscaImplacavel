@@ -84,6 +84,7 @@ class Processo(db.Model):
     def delete(self, processo):
         for file in processo.files:    
             file.delete(file)
+            
         db.session.delete(processo)
         db.session.commit()
 
@@ -109,9 +110,9 @@ class ProcessoFile(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name_file = db.Column(db.String(150))
     criado_em = db.Column(db.String(20), default=datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S'))
-    processo_id = db.Column(db.Integer, db.ForeignKey('Processo.id'))
+    processo_id = db.Column(db.Integer, db.ForeignKey('Processo.id'))    
+    conteudo = db.Column(db.String())
     # ----------------
-    conteudo = None    
     referencias = relationship('ProcessoFileReferencia')
 
     def add(self, processoFile):

@@ -9,7 +9,6 @@ import re
 import logging
 import os
 import sys
-import requests
 import urllib3
 import time
 import urllib.request

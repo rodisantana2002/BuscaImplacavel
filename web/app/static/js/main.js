@@ -25,7 +25,7 @@ $(document).ready(function () {
 
 
     // registrar processo
-    $("#btn-enviar-processo").click(function () {
+    $("#btn-processo-enviar").click(function () {
         if (validarDadosProcesso()) {
             $.ajax({
                 type: "POST",
@@ -42,6 +42,61 @@ $(document).ready(function () {
         }
     });    
 
+    $(".btn-processo-remover").click(function (){
+        var processo = jQuery.parseJSON($(this).val());
+        
+        bootbox.confirm({
+            message: "Confirma a remoção do Processo?",
+            size: "small",
+            centerVertical: true,
+            buttons: {
+                confirm: {
+                    label: 'Sim',
+                    label: '<i class="fa fa-check"></i> Confirm',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: 'Não',
+                    label: '<i class="fa fa-times"></i> Cancel',
+                    className: 'btn-danger'
+                }
+            },
+
+            callback: function (result) {
+                if (result) {
+                    var dialog = bootbox.dialog({
+                        message: '<p class="text-center mb-0"><i class="fa fa-spin fa-cog"></i> Aguarde... processando exclusão...</p>',
+                        centerVertical: true,
+                        closeButton: true
+                    });
+
+                    dialog.init(function () {
+                        setTimeout(function () {
+                        //processa a exlusão dos dados do processo
+                            $.ajax({
+                                type: "POST",
+                                data: { id: processo.id },
+                                url: url_base + "/processo/remover",
+                                async: true,
+                                success: function (data) {
+                                    if (data === "200") {
+                                        location.reload();
+                                    }
+                                    else {
+                                        dialog.find('.bootbox-body').html("Não foi possível excluir o registro!");
+                                    }
+                                }
+                            });
+
+                        }, 1);
+                    });
+
+                }
+            }
+        });    
+
+    });
+
     // adicionar arquivo ao processo
     $("#btn-arquivo-adicionar").click(function () {
         var processo = jQuery.parseJSON($(this).val());
@@ -49,7 +104,8 @@ $(document).ready(function () {
         if (validarDadosFile()) {
             var dialog = bootbox.dialog({
                 title: 'Atenção!',
-                message: '<div class="text-center"><i class="fa fa-spin fa-spinner"></i>Aguarde processando arquivo...</div>',
+                message: '<div class="text-center"><i class="fa fa-spin fa-spinner"></i>Aguarde... processando arquivo...</div>',
+                closeButton:true,
                 centerVertical: true
             });
 
@@ -93,12 +149,48 @@ $(document).ready(function () {
         }
     });
 
+    // *****
+    //processamento da busca online das referencias
+    $(".btn-arquivo-processar").click(function (){
+        var file = jQuery.parseJSON($(this).val());
+
+        var dialog = bootbox.dialog({
+            title: 'Atenção!',
+            message: '<div class="text-center"><i class="fa fa-spin fa-spinner"></i>Aguarde... atualizando referências...</div>',
+            closeButton: true,
+            centerVertical: true
+        });
+
+        dialog.init(function () {
+            setTimeout(function () {
+                $.ajax({
+                    type: "POST",
+                    data: { id: file.id },
+                    url: url_base + "/processo/arquivo/processar",
+                    async: true,
+                    success: function (data) {
+                        if (data === "200") {
+                            location.reload();
+                        }
+                        else {
+                            dialog.find('.bootbox-body').html("Não foi possível processar o arquivo");
+                        }
+                    }
+                });                    
+
+            }, 1);
+        });
+
+
+    });     
+
+
     // processa a remoção do arquivo selecionado
     $(".btn-arquivo-remover").click(function () {
         var file = jQuery.parseJSON($(this).val());
 
         bootbox.confirm({
-            message: "Confirma a remoção da Arquivo?",
+            message: "Confirma a remoção do Arquivo?",
             size: "small",
             centerVertical: true,
             buttons: {
@@ -113,13 +205,14 @@ $(document).ready(function () {
                     className: 'btn-danger'
                 }
             },
+
             callback: function (result) {
-                if (result) {
+                if (result) {                    
                     $.ajax({
                         type: "POST",
                         data: { id: file.id },
                         url: url_base + "/processo/arquivo/remover",
-                        async: true,
+                        async: false,
                         success: function (data) {
                             if (data === "200") {
                                 location.reload();
@@ -138,12 +231,6 @@ $(document).ready(function () {
 
     });
 
-    // processa a busca pelas referencias do arquivo selecionado
-    $(".btn-arquivo-processar").click(function () {
-        var file = jQuery.parseJSON($(this).val());
-        alert(file.id);
-
-    });
 
     // processa a exportação das referencias do arquivo selecionado
     $(".btn-arquivo-exportar").click(function () {
@@ -188,7 +275,7 @@ $(document).ready(function () {
                     $.ajax({
                         type: "POST",
                         data: { id: referencia.id },
-                        url: url_base + "/processo/arquivo/referencia",
+                        url: url_base + "/processo/arquivo/referencia/remover",
                         async: false,
                         success: function (data) {
                             if (data !="200"){

@@ -31,18 +31,19 @@ class database(object):
         #                                         objetivo TEXT,
         #                                         criado_em VARCHAR(20));""")                                              
 
-        # tabelas.append("""CREATE TABLE ProcessoFile (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
-        #                                         name_file VARCHAR(150), 
-        #                                         processo_id INTEGER,
-        #                                         criado_em VARCHAR(20));""")                                              
-
-        tabelas.append("""CREATE TABLE ProcessoFileReferencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
-                                                situacao VARCHAR(20),
-                                                linha INTEGER,                                                
-                                                referencia TEXT,
-                                                bibtext TEXT,
-                                                processo_file_id INTEGER,
+        tabelas.append("""CREATE TABLE ProcessoFile (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+                                                name_file VARCHAR(150), 
+                                                processo_id INTEGER,
+                                                conteudo TEXT,  
                                                 criado_em VARCHAR(20));""")                                              
+
+        # tabelas.append("""CREATE TABLE ProcessoFileReferencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+        #                                         situacao VARCHAR(20),
+        #                                         linha INTEGER,                                                
+        #                                         referencia TEXT,
+        #                                         bibtext TEXT,
+        #                                         processo_file_id INTEGER,
+        #                                         criado_em VARCHAR(20));""")                                              
 
         # tabelas.append("""CREATE TABLE Referencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
         #                                         situacao VARCHAR(20),
