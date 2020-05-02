@@ -1,0 +1,36 @@
+﻿[1] J. Ru and J. Keung, “An empirical investigation on the simulation of priority and shortest-job-first scheduling for cloud-based software systems,” in Software Engineering Conference. IEEE, 2013, pp. 78–87.
+[2] S. Tai, J. Nimis, A. Lenk, and M. Klems, “Cloud service engineering,” in 32nd Int. Conf. on Software Engineering, 2010, pp. 475–476.
+[3] P. Mell and T. Grance, “The nist definition of cloud computing,” NIS, Tech. Rep., 2010.
+[4] L. M. Vaquero, L. Rodero-Merino, J. Caceres, and M. Lindner, “A break in the clouds,” ACM Computer Communication Review, vol. 39, no. 1, p. 50, 2008. [Online]. Available: http://dl.acm.org/citation.cfm? id=1496091.1496100
+[5] I. Chana and P. Chawla, “Testing perspectives for cloud-based applica- tions,” in Software Engineering Frameworks for the Cloud Computing Paradigm. Springer, 2013, pp. 145–164.
+[6] C.-P. Bezemer and A. Zaidman, “Multi-tenant saas applications: Main- tenance dream or nightmare?” in Work. on Software Evolution and Int. Work. on Principles of Software Evolution, 2010, pp. 88–92.
+[7] B. Sengupta and A. Roychoudhury, “Engineering multi-tenant software- as-a-service systems,” in 3rd Int. Work. on Principles of Engineering Service-Oriented Systems, 2011, pp. 15–21.
+[8] W.-T. Tsai, Q. Li, C. J. Colbourn, and X. Bai, “Adaptive fault detection for testing tenant applications in multi-tenancy saas systems,” in IEEE Int. Conf. on Cloud Engineering, 2013, pp. 183–192.
+[9] B. Kitchenham, “Procedures for performing systematic reviews,” Keele University, Tech. Rep., 2004.
+[10] S. Kang, J. Myung, J. Yeon, S.-w. Ha, T. Cho, J.-m. Chung, and S.- g. Lee, “A general maturity model and reference architecture for saas service,” in Database Systems for Advanced Apps., 2010, pp. 337–346.
+[11] J.Ru,J.Grundy,andJ.Keung,“Softwareengineeringformulti-tenancy computing challenges and implications,” in Int. Work. on Innovative Soft. Dev. Methodologies and Practices, 2014, pp. 1–10.
+[12] E. Truyen, N. Cardozo, S. Walraven, J. Vallejos, E. Bainomugisha, S. Gu ̈nther, T. D’Hondt, and W. Joosen, “Context-oriented programming for customizable SaaS applications,” in 27th ACM symposium on applied computing, 2012, pp. 418–425.
+[13] S. Walraven, D. Van Landuyt, E. Truyen, K. Handekyn, and W. Joosen, “Efficient customization of multi-tenant software-as-a-service applica- tions with service lines,” JSS, vol. 91, pp. 48–62, 2014.
+[14] S. S. Kale and R. H. Borhade, “Development of multitenant saas framework at single instance and with zero effort multitenancy,” in Advances in Computing, Communications and Informatics (ICACCI). IEEE, 2013, pp. 834–839.
+[15] T. Nam and K. Yeom, “Ontology model to support multi-tenancy in software as a service environment,” in Int. Conf. on Future Internet of Things and Cloud, 2014, pp. 146–151.
+[16] A. M. Manduca, E. V. Munson, R. P. Fortes, and M. G. C. Pimentel, “A nonintrusive approach for implementing single database, multitenant services from web applications,” in 29th ACM Symposium on Applied Computing, 2014, pp. 751–756.
+[17] P. Morakos and A. Meliones, “Design and implementation of a cloud saas framework for multi-tenant applications,” in 5th Int. Conf. on Information, Intelligence, Systems and Applications, 2014, pp. 273–278.
+[18] H. Sun, T. Zhao, Y. Tang, and X. Liu, “A qos-aware load balancing policy in multi-tenancy environment,” in 8th Int. Symposium on Service Oriented System Engineering, 2014, pp. 140–147.
+[19] H. J. Moon, H. Hacigumus, Y. Chi, and W.-P. Hsiung, “Swat: A lightweight load balancing method for multitenant databases,” in 16th Int. Conf. on Extending Database Technology, 2013, pp. 65–76.
+[20] T. Patikirikorala, I. Kumara, A. Colman, J. Han, L. Wang, D. Weerasiri, and W. Ranasinghe, “Dynamic performance management in multi- tenanted business process servers using nonlinear control,” in Int. Conf. on Service-Oriented Computing, 2012, pp. 206–221.
+[21] R. Krebs, A. Wert, and S. Kounev, “Multi-tenancy performance bench- mark for web application platforms,” in Int. Conf. on Web Eng., 2013, pp. 424–438.
+[22] W.-T. Tsai and X. Sun, “SaaS multi-tenant application customization,” in IEEE 7th Int. Symposium on Service Oriented System Engineering, 2013, pp. 1–12.
+[23] L. Ramachandran, N. C. Narendra, and K. Ponnalagu, “Dynamic pro- visioning in multi-tenant service clouds,” Service Oriented Computing and Applications, vol. 6, no. 4, pp. 283–302, 2012.
+[24] S.Walraven,E.Truyen,andW.Joosen,“Amiddlewarelayerforflexible and cost-efficient multi-tenant applications,” in Int. Conf. on Middleware. Springer, 2011, pp. 370–389.
+[25] H. Alkhatib, P. Faraboschi, E. Frachtenberg, H. Kasahara, D. Lange, P. Laplante, A. Merchant, D. Milojicic, and K. Schwan, ““IEEE CS 2022 report”,” IEEE Computer Society, Tech. Rep., 2014.
+[26] K. Wood and M. Anderson, “Understanding the complexity surrounding multitenancy in cloud computing,” in IEEE 8th Int. Conf. on e-Business Engineering, 2011, pp. 119–124.
+[27] M. Almorsy, J. Grundy, and A. S. Ibrahim, “Collaboration-based cloud computing security management framework,” in IEEE Int. Conf. on Cloud Computing, 2011, pp. 364–371.
+[28] W.-T. Tsai, Q. Shao, Y. Huang, and X. Bai, “Towards a scalable and robust multi-tenancy SaaS,” in Asia-Pacific Symp. on Internetware, 2010, p. 8.
+[29] E. Saleh, J. Sianipar, I. Takouna, and C. Meinel, “Secplace: A security- aware placement model for multi-tenant SaaS environments,” in Int. Conf. on Ubiquitous Intell. and Comp., 2014, pp. 596–602.
+[30] M. Almorsy, J. Grundy, and A. S. Ibrahim, “Tossma: A tenant-oriented saas security management architecture,” in IEEE 5th Int. Conf. on Cloud Computing, 2012, pp. 981–988.
+[31] K. Zhang, Q. Li, and Y. Shi, “Data privacy preservation during schema evolution for multi-tenancy applications in cloud computing,” in Web Information Systems and Mining. Springer, 2011, pp. 376–383.
+[32] Q. He, J. Han, Y. Yang, J. Grundy, and H. Jin, “Qos-driven service selection for multi-tenant saas,” in Int. Conf. on Cloud Computing, 2012, pp. 566–573.
+[33] M. Saraswathi and T. Bhuvaneswari, “Multitenant SaaS model of cloud computing: Issues and solutions,” in Communication and Network Technologies. IEEE, 2014, pp. 27–32.
+[34] P.-J. Maenhaut, H. Moens, M. Decat, J. Bogaerts, B. Lagaisse, W. Joosen, V. Ongenae, and F. De Turck, “Characterizing the perfor- mance of tenant data management in multi-tenant cloud authorization systems,” in Network Operations and Management Symposium (NOMS), IEEE, 2014, pp. 1–8.
+[35] H.YaishandM.Goyal,“Amulti-tenantdatabasearchitecturedesignfor software applications,” in ICCSE, 2013, pp. 933–940.
+[36] Z. Mahmood and S. Saeed, Software engineering frameworks for the View publication stats cloud computing paradigm. Springer, 2013.

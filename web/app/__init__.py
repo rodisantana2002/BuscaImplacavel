@@ -16,6 +16,8 @@ def create_app():
     app.config.from_mapping(SECRET_KEY=os.environ.get('SECRET_KEY') or 'key hesthouse')
 
     DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:////home/osboxes/Documentos/projetos/automator/buscaimplacavel/web/app/bd/bot.db')
+    # DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:////home/osboxes/Documentos/projetos/automator/buscaimplacavel/web/app/bd/bot.db')
+    
     
     app.config['MEDIA_ROOT'] = os.path.join(app_dir, 'gallery/')
     

@@ -9,7 +9,7 @@ Image
 ImageTK
 selenium
 urllib3
-phantomjs
+# phantomjs (nmp ou download)
 pdfminer3k
 googletrans
 bibtexparser

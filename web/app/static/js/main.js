@@ -76,7 +76,7 @@ $(document).ready(function () {
                             $.ajax({
                                 type: "POST",
                                 data: { id: processo.id },
-                                url: url_base + "/processo/remover",
+                                url: url_base + "processo/remover",
                                 async: true,
                                 success: function (data) {
                                     if (data === "200") {
@@ -166,7 +166,7 @@ $(document).ready(function () {
                 $.ajax({
                     type: "POST",
                     data: { id: file.id },
-                    url: url_base + "/processo/arquivo/processar",
+                    url: url_base + "processo/arquivo/processar",
                     async: true,
                     success: function (data) {
                         if (data === "200") {
@@ -211,7 +211,7 @@ $(document).ready(function () {
                     $.ajax({
                         type: "POST",
                         data: { id: file.id },
-                        url: url_base + "/processo/arquivo/remover",
+                        url: url_base + "processo/arquivo/remover",
                         async: false,
                         success: function (data) {
                             if (data === "200") {
@@ -275,7 +275,7 @@ $(document).ready(function () {
                     $.ajax({
                         type: "POST",
                         data: { id: referencia.id },
-                        url: url_base + "/processo/arquivo/referencia/remover",
+                        url: url_base + "processo/arquivo/referencia/remover",
                         async: false,
                         success: function (data) {
                             if (data !="200"){

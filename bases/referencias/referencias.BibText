@@ -1,0 +1,24 @@
+@inproceedings{Badr_2010,
+ doi = {10.1109/aina.2010.131},
+ url = {https://doi.org/10.1109%2Faina.2010.131},
+ year = 2010,
+ publisher = {{IEEE}},
+ author = {Youakim Badr and Guy Caplat},
+ title = {Software-as-a-Service and Versionology: Towards Innovative Service Differentiation},
+ booktitle = {2010 24th {IEEE} International Conference on Advanced Information Networking and Applications}
+}
+,
+@article{Banerjee_2011,
+ doi = {10.1109/mc.2011.67},
+ url = {https://doi.org/10.1109%2Fmc.2011.67},
+ year = 2011,
+ month = {mar},
+ publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+ volume = {44},
+ number = {3},
+ pages = {36--43},
+ author = {Prith Banerjee and Richard Friedrich and Cullen Bash and Patrick Goldsack and Bernardo Huberman and John Manley and Chandrakant Patel and Parthasarathy Ranganathan and Alistair Veitch},
+ title = {Everything as a Service: Powering the New Information Economy},
+ journal = {Computer}
+}
+,

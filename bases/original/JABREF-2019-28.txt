@@ -1,0 +1,87 @@
+﻿[1] R. Vidhyalakshmi, V. Kumar, Design comparison of traditional application and saas, in: Computing for Sustainable Global Development (INDIACom), 2014 International Conference on, IEEE, 2014, pp. 541–544.
+[2] M. Almorsy, J. Grundy, A. S. Ibrahim, Adaptable, model-driven security engineering for saas cloud-based applications, Automated Software Engineering 21 (2) (2014) 187–224.
+[3] M. Janssen, A. Joha, Challenges for adopting cloud-based software as a service (saas) in the public sector., in: ECIS, 2011.
+[4] S. Bhardwaj, B. Sahoo, A particle swarm optimization approach for cost effective saas placement on cloud, in: Computing, Communication & Automation (ICCCA), 2015 International Conference on, IEEE, 2015, pp. 686–690.
+[5] X. Jiang, Y. Zhang, S. Liu, A well-designed saas application platform based on model-driven approach, in: Grid and Cooperative Computing (GCC), 2010 9th International Conference on, IEEE, 2010, pp. 276–281.
+[6] M. Mcsi, Configurability in saas (software as a service) applications, in: Proceedings of 2nd Annual Conference on India Software Engineering Conference, 2009, pp. 19–26.
+[7] W. Tsai, X. Bai, Y. Huang, Software-as-a-service (saas): perspectives and challenges, Science China Information Sciences 57 (5) (2014) 1–15.
+[8] F. Chong, G. Carraro, Architecture strategies for catching the long tail, MSDN Library, Microsoft Corporation (2006) 9–10.
+[9] J. Ju, Y. Wang, J. Fu, J. Wu, Z. Lin, Research on key technology in saas, in: Intelligent Computing and Cognitive Informatics (ICICCI), 2010 International Conference on, IEEE, 2010, pp. 384– 387.
+[10] S. Aleem, L. F. Capretz, and F. Ahmed, "Game development software engineering process life cycle: a systematic review,"Journal of Software Engineering Research and Development, Vol. 4(6):1-30, DOI: 10.1186/s40411-016-0032-7p. 6, 2016.
+[11] R. Mietzner, F. Leymann, Generation of bpel customization processes for saas applications from variability descriptors, in: Services Computing, 2008. SCC’08. IEEE International Conference on, Vol. 2, IEEE, 2008, pp. 359–366.
+[12] S. Luan, Y. Shi, H. Wang, A mechanism of modeling and verification for saas customization based on tla, in: International Conference on Web Information Systems and Mining, Springer, 2009, pp. 337–344.
+[13] A.A.Shahin,Multi-dimensionalcustomizationmodellingbased on metagraph for saas multi-tenant applications, arXiv preprint arXiv:1402.6045.
+[14] W.-T. Tsai, X. Sun, Saas multi-tenant application customization, in: Service Oriented System Engineering (SOSE), 2013 IEEE 7th International Symposium on, IEEE, 2013, pp. 1–12.
+[15] C. Lizhen, W. Haiyang, J. Lin, H. Pu, Customization modeling based on metagraph for multi-tenant applications, in: Pervasive Computing and Applications (ICPCA), 2010 5th International Conference on, IEEE, 2010, pp. 255–260.
+[16] H. Li, Y. Shi, Q. Li, A multi-granularity customization relationship model for saas, in: Web Information Systems and Mining, 2009. WISM 2009. International Conference on, IEEE, 2009, pp. 611–615.
+[17] A. A. Shahin, A. Samir, A. Khamis, An aspect-oriented approach for saas application customization, arXiv preprint arXiv:1409.1656.
+[18] W. Lee, M. Choi, A multi-tenant web application framework for saas, in: Cloud computing (cloud), 2012 ieee 5th international conference on, IEEE, 2012, pp. 970–971.
+[19] C. Han, C. Wu, W. Gong, Research on saas oriented business process customization method, in: Computational Intelligence and Design (ISCID), 2016 9th International Symposium on, Vol.2, IEEE, 2016, pp. 412–416.
+[20] J. Gao, P. Pattabhiraman, X. Bai, W.-T. Tsai, Saas performance and scalability evaluation in clouds, in: Service Oriented System Engineering (SOSE), 2011 IEEE 6th International Symposium on, IEEE, 2011, pp. 61–71
+[21] W.-T. Tsai, Y. Huang, Q. Shao, Testing the scalability of saas applications, in: Service-Oriented Computing and Applications (SOCA), 2011 IEEE International Conference on, IEEE, 2011, pp. 1–4.
+[22] W. Xiong, W.-T. Tsai, Hla-based saas-oriented simulation frameworks, in: Service Oriented System Engineering (SOSE), 2014 IEEE 8th International Symposium on, IEEE, 2014, pp. 376– 383.
+[23] W.-T. Tsai, G. Qi, Z. Zhu, Scalable saas indexing algorithms with automated redundancy and recovery management, Int J Software Informatics 7 (1) (2013) 63–84.
+[24] Z. I. M. Yusoh, M. Tang, Composite saas scaling in cloud computing using a hybrid genetic algorithm, in: Evolutionary Computation (CEC), 2014 IEEE Congress on, IEEE, 2014, pp. 1609–1616.
+[25] V. Nuthula, N. R. Challa, Cloudifying apps-a study of design and architectural considerations for developing cloudenabled applications with case study, in: Cloud Computing in Emerging Markets (CCEM), 2014 IEEE International Conference on, IEEE, 2014, pp. 1–7.
+[26] W.-T. Tsai, P. Zhong, Multi-tenancy and sub-tenancy architecture in software-as-a-service (saas), in: Service Oriented System Engineering (SOSE), 2014 IEEE 8th International Symposium on, IEEE, 2014, pp. 128–139.
+[27] J. Espadas, A. Molina, G. Jim ́enez, M. Molina, R. Ram ́ırez, D. Concha, A tenant-based resource allocation model for scaling software-as-a-service applications over cloud computing infrastructures, Future Generation Computer Systems 29 (1) (2013) 273–286.
+[28] H. Wu, B. Kemme, A unified framework for load distribution and faulttolerance of application servers, Euro-Par 2009 Parallel Processing (2009) 178–190.
+[29] L.M.Vaquero,L.Rodero-Merino,R.Buyya,Dynamicallyscaling applications in the cloud, ACM SIGCOMM Computer Communication Review 41 (1) (2011) 45–52.
+[30] P. Jamshidi, A. Ahmad, C. Pahl, Autonomic resource provisioning for cloud-based software, in: Proceedings of the 9th International Symposium on Software Engineering for Adaptive and Self-Managing Systems, ACM, 2014, pp. 95–104.
+[31] Y. Chen, X.-H. Sun, Stas: A scalability testing and analysis system, in: Cluster Computing, 2006 IEEE International Conference on, IEEE, 2006, pp. 1–10.
+[32] S. Lehrig, Applying architectural templates for design-time scalability and elasticity analyses of saas applications, in: Proceedings of the 2nd International Workshop on Hot Topics in Cloud service Scalability, ACM, 2014,p. 2.
+[33] J.Gao,K.Manjula,P.Roopa,E.Sumalatha,X.Bai,W.-T.Tsai,T. Uehara, A cloud-based taas infrastructure with tools for saas validation, performance and scalability evaluation, in: Cloud Computing Technology and Science (CloudCom), 2012 IEEE 4th International Conference on, IEEE, 2012, pp. 464–471.
+[34] S.Kang,S.Kang,S.Hur,Adesignoftheconceptualarchitecture for a multitenant saas application platform, in: Computers, Networks, Systems and Industrial Engineering (CNSI), 2011 First ACIS/JNU International Conference on, IEEE, 2011, pp. 462–467.
+[35] C.-P. Bezemer, A. Zaidman, Multi-tenant saas applications: maintenance dream or nightmare?, in: Proceedings of the Joint ERCIM Workshop on Software Evolution (EVOL) and International Workshop on Principles of Software Evolution (IWPSE), ACM, 2010, pp. 88–92.
+[36] G. Laatikainen, A. Ojala, Saas architecture and pricing models, in: Services Computing (SCC), 2014 IEEE International Conference on, IEEE, 2014, pp. 597–604.
+[37] J. Kabbedijk, S. Jansen, Variability in multi-tenant environments: Architectural design patterns from industry, in: International Conference on Conceptual Modeling, Springer, 2011, pp. 151–160
+[38] R. Mietzner, T. Unger, R. Titze, F. Leymann, Combining different multitenancy patterns in service-oriented applications, in: Enterprise Distributed Object Computing Conference, 2009. EDOC’09. IEEE International, IEEE, 2009, pp. 131–140.
+[39] T. Kwok, A. Mohindra, Resource calculations with constraints, and placement of tenants and instances for multi-tenant saas applications, in: International Conference on Service-Oriented Computing, Springer, 2008, pp. 633–648.
+[40] F. Chong, G. Carraro, R. Wolter, Multi-tenant data architecture, MSDN Library, Microsoft Corporation (2006) 14–30.
+[41] Z. H. Wang, C. J. Guo, B. Gao, W. Sun, Z. Zhang, W. H. An, A study and performance evaluation of the multi-tenant data tier design patterns for service oriented computing, in: E-Business Engineering, 2008. ICEBE’08. IEEE International Conference on, IEEE, 2008, pp. 94–101.
+[42] Y. Wang, Q. He, Y. Yang, Qos-aware service recommendation for multitenant saas on the cloud, in: Services Computing (SCC), 2015 IEEE International Conference on, IEEE, 2015, pp. 178–185.
+[43] F. Gey, D. Van Landuyt, W. Joosen, V. Jonckers, Continuous evolution of multi-tenant saas applications: A customizable dynamic adaptation approach, in: Proceedings of the Seventh International Workshop on Principles of Engineering Service- Oriented and Cloud Systems, IEEE Press, 2015, pp. 10–16.
+[44] A. Jumagaliyev, J. N. D. Whittle, Y. S. S. A. Elkhatib, Evolving multitenant saas cloud applications using model-driven engineering.
+[45] P. K. Chouhan, F. Yao, S. Y. Yerima, S. Sezer, Software as a service: Analyzing security issues, arXiv preprint arXiv:1505.01711.
+[46] E. Saleh, J. Sianipar, I. Takouna, C. Meinel, Secplace: A security- aware placement model for multi-tenant saas environments, in:Ubiquitous Intelligence and Computing, 2014 IEEE 11th Intl Conf on and IEEE 11th Intl Conf on and Autonomic and Trusted Computing, and IEEE 14th Intl Conf on Scalable Computing and Communications and Its Associated Workshops (UTC-ATC- ScalCom), IEEE, 2014, pp. 596–602.
+[47] S. Subashini, V. Kavitha, A survey on security issues in service delivery models of cloud computing, Journal of network and computer applications 34 (1) (2011) 1–11.
+[48] M. Almorsy, J. Grundy, A. S. Ibrahim, Tossma: A tenant-oriented saas security management architecture, in: Cloud computing (cloud), 2012 ieee 5th international conference on, IEEE, 2012, pp. 981–988.
+[49] M. Samrajesh, N. Gopalan, Secure multi-tenant application in software as a service’, in: Proceedings of the International Conference on Emerging Research in Computing, Information, Communication and Applications, 2013, pp. 2–3.
+[50] M. A. Abdelrazek, J. Grundy, A. S. Ibrahim, Improving tenants’ trust in saas applications using dynamic security monitors, in: Engineering of Complex Computer Systems (ICECCS), 2015 20th International Conference on, IEEE, 2015, pp. 70–79.
+[51] R. Rai, G. Sahoo, S. Mehfuz, Securing software as a service model of cloud computing: Issues and solutions, arXiv preprint arXiv:1309.2426.
+[52] K. Hashizume, D. G. Rosado, E. Fern ́andez-Medina, E. B. Fernandez, An analysis of security issues for cloud computing, Journal of Internet Services and Applications 4 (1) (2013) 5.
+[53] P. K. Chouhan, F. Yao, S. Sezer, Software as a service: Understanding security issues, in: Science and Information Conference (SAI), 2015, IEEE, 2015, pp. 162–170.
+[54] P. Matos, D. Lopes, Z. Abdelouahab, A model driven engineering approach to support the development of secure software as a service., JSW 11 (2) (2016) 118–132.
+[55] S. Pachauri, R. Srivastava, U. B. Trivedi, Cloud-computing: Challenges, security and solutions using, saas.
+[56] J.-H.Park,S.-H.Na,J.-Y.Park,E.-N.Huh,C.-W.Lee,H.-C.Kim, A study on cloud forensics and challenges in saas application environment, in: High Performance Computing and Communications; IEEE 14th International Conference on Smart City; IEEE 2nd International Conference on Data Science and Systems (HPCC/SmartCity/DSS), 2016 IEEE 18th International Conference on, IEEE, 2016, pp. 734–740.
+[57] D. Cotroneo, A. Paudice, A. Pecchia, Automated root cause identification of security alerts: Evaluation in a saas cloud, Future Generation Computer Systems 56 (2016) 375–387.
+[58] S. Goode, C. Lin, J. C. Tsai, J. J. Jiang, Rethinking the role of security in client satisfaction with software-as-a-service (saas) providers, Decision Support Systems 70 (2015) 73–85.
+[59] J.-H.Park,S.-H.Na,J.-Y.Park,E.-N.Huh,C.-W.Lee,H.-C.Kim, A study on cloud forensics and challenges in saas application environment, in: High Performance Computing and Communications; IEEE 14th International Conference on Smart City; IEEE 2nd International Conference on Data Science and Systems (HPCC/SmartCity/DSS), 2016 IEEE 18th International Conference on, IEEE, 2016, pp. 734–740.
+[60] F.Liu,L.Li,W.Chou,Communicationsenablementofsoftware- as-aservice (saas) applications, in: Global Telecommunications Conference, 2009. GLOBECOM 2009. IEEE, IEEE, 2009, pp. 1–8.
+[61] W.Sun,K.Zhang,S.-K.Chen,X.Zhang,H.Liang,Softwareasa service: An integration perspective, in: International Conference on ServiceOriented Computing, Springer, 2007, pp. 558–569.
+[62] H. Hai, S. Sakoda, Saas and integration best practices, Fujitsu Scientific and Technical Journal 45 (3) (2009) 257–264.
+[63] M. Potoˇcnik, M. B. Juric, Integration of saas using ipaas, in: The 1st International Conference on CLoud Assisted ServiceS, 2012, p. 35.
+[64] J.Gao,X.Bai,W.-T.Tsai,Cloudtesting-issues,challenges,needs and practice, Software Engineering: An International Journal 1 (1) (2011) 9– 23.
+[65] M. Xin, N. Levina, Software-as-a-service model: Elaborating client-side adoption factors.
+[66] M. Lechesa, L. Seymour, J. Schuler, Erp software as service (saas): factors affecting adoption in south africa, in: Re- conceptualizing Enterprise Information Systems, Springer, 2012, pp. 152–167.
+[67] W. Kim, J. H. Lee, C. Hong, C. Han, H. Lee, B. Jang, An innovative method for data and software integration in saas, Computers & Mathematics with Applications 64 (5) (2012) 1252– 1258.
+[68] D. Merkel, F. Santas, A. Heberle, T. Ploom, Cloud integration patterns, in: European Conference on Service-Oriented and Cloud Computing, Springer, 2015, pp. 199–213.
+[69] S. Jain, A. Verma, R. K. Saluja, Fault detection and tolerant system (fdts) for saas layer in cloud computing, International Journal of Engineering and Computer Science ISSN 2319–7242.
+[70] P. Narasimhan, L. E. Moser, P. M. Melliar-Smith, Strongly consistent replication and recovery of fault-tolerant corba applications, Comput. Syst. Sci. Eng. 17 (2) (2002) 103–114.
+[71] A. Ganesh, M. Sandhya, S. Shankar, A study on fault tolerance methods in cloud computing, in: Advance Computing Conference (IACC), 2014 IEEE International, IEEE, 2014, pp. 844– 849.
+[72] W.-T. Tsai, Y. Huang, X. Bai, J. Gao, Scalable architectures for saas, in: Object/component/service-oriented real-time distributed computing workshops (isorcw), 2012 15th ieee international symposium on, IEEE, 2012, pp. 112–117.
+[73] R.Barga,D.Lomet,G.Weikum,Recoveryguaranteesforgeneral multi-tier applications, in: Data Engineering, 2002. Proceedings. 18th International Conference on, IEEE, 2002, pp. 543–554.
+[74] Y. Wang, Q. He, D. Ye, Y. Yang, Formulating criticality-based costeffective fault tolerance strategies for multi-tenant service- based systems, IEEE Transactions on Software Engineering.
+[75] J.Espadas,D.Concha,A.Molina,Applicationdevelopmentover softwareas-a-service platforms, in: Software Engineering Advances, 2008. ICSEA’08. The Third International Conference on, IEEE, 2008, pp. 97–104.
+[76] L. J. Cronbach, Coefficient alpha and the internal structure of tests, psychometrika 16 (3) (1951) 297–334.
+[77] Comrey A L, Lee H B. A First Course in Factor Analysis (2nd edition). Lawrence Erlbaum, 1992.
+[78] Kaiser H F. The application of electronic computers to factor analysis. Educational and Psychological Measurement, 1960, 20(1): 141-151.
+[79] KaiserHF.Asecondgenerationlittlejiffy.Psychometrika,1970, 35(4): 401-417.
+[80] C. Fornell, F. L. Bookstein, Two structural equation models: Lisrel and pls applied to consumer exit-voice theory, Journal of Marketing research (1982) 440–452.
+[81] K.G.J ̈oreskog,H.O.Wold,Systemsunderindirectobservation: Causality, structure, prediction, Vol. 139, North Holland, 1982.
+[82] S. Easterbrook, J. Singer, M.-A. Storey, D. Damian, Selecting empirical methods for software engineering research, in: Guide to advanced empirical software engineering, Springer, 2008, pp. 285–311.
+[83] W. Claes, R. Per, H. Martin, C. Magnus, R. Bj ̈orn, A. Wessl ́en, Experimentation in software engineering: an introduction, Online Available: http://books. google. com/books.
+[84] B.Gran,Socialresearchmethods(2008).
+[85] A. Hackshaw, Small studies: strengths and limitations (2008).
+[86] S.-C.Chow,H.Wang,J.Shao,Samplesizecalculationsinclinical research, CRC press, 2007.
+[87] P. X. Wen, L. Dong, Quality model for evaluating saas service, in: Emerging Intelligent Data and Web Technologies (EIDWT), 2013 Fourth International Conference on, IEEE, 2013, pp. 83–87.

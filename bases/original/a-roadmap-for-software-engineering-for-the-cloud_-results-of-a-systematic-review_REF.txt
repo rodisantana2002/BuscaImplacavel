@@ -1,3 +1,29 @@
 Badr, Y., & Caplat, G. (2010). Software-as-a- service and versionology: Towards innovative service differentiation. 24th IEEE International Conference on Advanced Information Networking and Applications (pp. 237 –243). IEEE.
 Banerjee, P., Friedrich, R., Bash, C., Goldsack, P., Huberman, B., & Manley, J. (2011, March). Everything as a service: Powering the new in- formation economy. Computer, 44(3), 36–43. doi:10.1109/MC.2011.67
 Burg, S., Jonge, M., Dolstra, E., & Visser, E. (2009). Software deployment in a dynamic cloud: From device to service orientation in a hospital environment. ICSE Workshop Software Engineer- ing Challenges of Cloud Computing (pp. 61-66). ACM.
+CDW. (2009). Introduction to cloud computing architecture. Retrieved March 1, 2011, from http://webobjects.cdw.com/webobjects/media/ pdf/Sun_CloudComputing.pdf
+Chabbra, B., Verma, D., & Taneja, B. (2010). Software engineering issues from the cloud ap- plication perspective. International Journal of Information Technology Knowledge Management, 2(2), 669–673.
+Chong, F., & Carraro, G. (2006). Architecture strategies for catching the long tail. Retrieved from http://msdn.microsoft.com/en-us/library/ aa479069.aspx
+Cunsolo, D. V., Distefano, S., Puliafito, A., & Scarpa, M. (2010). Applying software engineering principles for designing cloud@home. 10th IEEE/ ACM International Conference on Cluster, Cloud and Grid Computing (pp. 618-624). Washington, DC: IEEE.
+Ensell, J. (2011, April 12). Agile development in the cloud. Retrieved May 1, 2011, from http:// www.agilejournal.com/articles/columns/column- articles/6018
+Guha, R., & Al-Dabass, D. (2010). Impact of web 2.0 and cloud computing platform on software en- gineering. International Symposium on Electronic System Design (pp. 213-218). IEEE.
+IBM. (2009, April). Staying aloft in tough times. Retrieved March 1, 2011, from ftp://ftp.software. ibm.com/common/ssi/ecm/en/ciw03059usen/ CIW03059USEN.PDF
+Ju, J., Wang, Y., Fu, J., Wu, J., & Lin, Z. (2010). Research on key technology in saas. International Conference on Intelligent Computing and Cogni- tive Informatics (pp. 384-387). IEEE.
+Kitchenham, B., & Charters, S. (2007). Guidelines for performing systematic literature reviews in software engineering. Keele University and Dur- ham University Joint Report. EBSE 2007-001.
+La, H. J., Choi, S. W., & Kim, S. D. (2009). Tech- nical challenges and solution space for developing SaaS and mash-up cloud services. IEEE Interna- tional Conference on e-Business Engineering (pp. 359-364). IEEE.
+La,H.J.,&Kim,S.D.(2009).Asystematicprocess for developing high quality SaaS cloud services. 1st International Conference on Cloud Computing (pp. 278-289). Berlin, Germany: Springer-Verlag.
+Lee, J. Y., Lee, J. W., Cheun, D. W., & Kim, S. D. (2009). A quality model for evaluating software-as-a-service in cloud computing. ACIS International Conference on Software Engineer- ing Research, Management and Applications (pp. 261-266). ACIS.
+Lenk, A., Klems, M., Nimis, J., Tai, S., & Sand- holm, T. (2009). What’s inside the cloud? An architectural map of the cloud landscape. ICSE Workshop on Software Engineering Challenges of Cloud Computing (pp. 23-31). ACM.
+Mei, L., Zhang, Z., & Chan, W. (2009). More tales of clouds: Software engineering research issues from the cloud application perspective. 33rd An- nual IEEE International Computer Software and Applications Conference (pp. 525-530). IEEE.
+Mian, P., Conte, T., Natali, A., Biolchini, J., & Travassos, G. (2005). A systematic review process for software engineering. 3rd International Work- shop Guidelines for Empirical Work, Workshop Series on Empirical Software Engineering, (pp. 1-6). Kaiserslautern, Germany.
+Moreira, M. (2011, April 12). Winning combina- tion of agile and the cloud. Retrieved May 1, 2011, from Agile Journal: http://www.agilejournal.com/ articles/columns/column-articles/6017-winning- combination-of-agile-and-the-cloud
+NIST. (2011, January). The NIST definition of cloud computing. Retrieved April 1, 2011, from http://csrc.nist.gov/publications/drafts/800-145/ Draft-SP-800-145_cloud-definition.pdf
+Pant, R. (2009, March 17). Organizing a Web technology department. Retrieved March 1, 2011, from http://www.rajiv.com/blog/2009/03/17/ technology-department/
+Parveen, T., & Tilley, S. (2010). When to migrate softwaretestingtothecloud?ThirdInternational Conference on Software Testing, Veri□cation, and Validation Workshops (pp. 424-427). IEEE.
+Peng, Z., Mei, L., Fei, W., & Fei, Y. (2010). The analisis of gis software engineering pattern under the cloud computing environment. International Conference on Educational and Information Technology (pp. 450-452). IEEE.
+Plummer, K. (2011, March 26). Enterprise software engineering to the cloud, via agile and DevOps. Retrieved May 1, 2011, from http:// www.maestrodev.com/blogs/enterprise-software- engineering-to-the-cloud-via-agile-and-devops
+Portelli, B. (2010, October 18). The beauty of agile in the cloud. Retrieved March 1, 2011, from http://www.cmcrossroads.com/cm-articles/ columns/agile-in-the-cloud/13759-the-beauty- of-agile-in-the-cloud
+Rellermeyer, J. S., Duller, M., & Alonso, G. (2009). Engineering the cloud from software modules. ICSE Workshop on Software Engineer- ing Challenges of Cloud Computing (pp. 32-37). Washington, DC.: IEEE.
+Riungu, M. L., Taipale, O., & Smolander, K. (2010). Research issues for software testing in the cloud. IEEE Second International Conference on Cloud Computing Technology and Science (pp. 557-564). IEEE.
+Vouk, M. A. (2008). Cloud computing- Issues, research and implementations. 30th International Conference on Information Technology Interfaces (pp. 31-40). IEEE.
+Yara, P., Ramachandran, R., Balasubramanian, G., Muthuswamy, K., & Chandrasekar, D. (2009). Global software development with cloud platforms (pp. 81–95). Software EngineeringApproaches for Offshore and Outsourced Development.

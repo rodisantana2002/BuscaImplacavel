@@ -17,4 +17,11 @@
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
 ---> Iniciando processo de Extração das Referências.
----> 01/05/2020 19:21:16 ---[ work ] extraindo referência [Badr, Y., & Caplat, G. (2010). Software-as-a- service and versionology: Towards innovative service differentiation. 24th IEEE International Conference on Advanced Information Networking and Applications (pp. 237 –243). IEEE.]
+---> 01/05/2020 23:15:04 ---[ work ] extraindo referência [Badr, Y., & Caplat, G. (2010). Software-as-a- service and versionology: Towards innovative service differentiation. 24th IEEE International Conference on Advanced Information Networking and Applications (pp. 237 –243). IEEE.]
+---> 01/05/2020 23:15:04 ---[  ok  ] referência extraída com sucesso! [Badr, Y., & Caplat, G. (2010). Software-as-a- service and versionology: Towards innovative service differentiation. 24th IEEE International Conference on Advanced Information Networking and Applications (pp. 237 –243). IEEE.]
+---> 01/05/2020 23:15:46 ---[ work ] extraindo referência [Banerjee, P., Friedrich, R., Bash, C., Goldsack, P., Huberman, B., & Manley, J. (2011, March). Everything as a service: Powering the new in- formation economy. Computer, 44(3), 36–43. doi:10.1109/MC.2011.67]
+---> 01/05/2020 23:15:46 ---[  ok  ] referência extraída com sucesso! [Banerjee, P., Friedrich, R., Bash, C., Goldsack, P., Huberman, B., & Manley, J. (2011, March). Everything as a service: Powering the new in- formation economy. Computer, 44(3), 36–43. doi:10.1109/MC.2011.67]
+---> 01/05/2020 23:16:28 ---[ work ] extraindo referência [Burg, S., Jonge, M., Dolstra, E., & Visser, E. (2009). Software deployment in a dynamic cloud: From device to service orientation in a hospital environment. ICSE Workshop Software Engineer- ing Challenges of Cloud Computing (pp. 61-66). ACM.]
+---> 01/05/2020 23:16:28 ---[ erro ] referência não foi extraída [Burg, S., Jonge, M., Dolstra, E., & Visser, E. (2009). Software deployment in a dynamic cloud: From device to service orientation in a hospital environment. ICSE Workshop Software Engineer- ing Challenges of Cloud Computing (pp. 61-66). ACM.]
+---> Encerrando aplicativo        :-) by (Rodolfo Santana)
+----------------------------------------------------------------------------------------------

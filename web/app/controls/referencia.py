@@ -40,12 +40,12 @@ class Referencia(object):
         self.base_url = 'https://' + self.available_base_url_list[0] + '/'
         urllib3.disable_warnings()
 
-        # self.homeDir = "../web/app/logs"
-        # self.logFile = self.homeDir + '/referencia.log'
-        # self.logger_handler = logging.FileHandler(self.logFile, mode='w')
-        # self.logger_handler.setLevel(logging.DEBUG)
-        # # Associe o Handler ao  Logger
-        # logger.addHandler(self.logger_handler)
+        self.homeDir = "../web/app/logs"
+        self.logFile = self.homeDir + '/referencia.log'
+        self.logger_handler = logging.FileHandler(self.logFile, mode='w')
+        self.logger_handler.setLevel(logging.DEBUG)
+        # Associe o Handler ao  Logger
+        logger.addHandler(self.logger_handler)
 
     @retry(wait_random_min=2000, wait_random_max=10000, stop_max_attempt_number=2)
     def obterReferencia(self, referencia):
@@ -53,10 +53,18 @@ class Referencia(object):
         Busca o artigo recuperando primeiro o link direto para o pdf.
         """
         try:
+
+            logger.debug('----------------------------------------------------------------------------------------------')
+            logger.debug('---> Iniciando processo de Extração das Referências.')            
+            data_hora_atuais = datetime.now()
+            data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
+
+            logger.debug('---> {} ---[ work ] extraindo referência [{}]'.format(data_atual, referencia))
+
             # carrega a página de pesquisa da CROSSREF
             # res = self.sess.get(self.base_url, verify=False)
             # driver = webdriver.Chrome(ChromeDriverManager("2.41").install())
-            driver = webdriver.PhantomJS(executable_path="/home/osboxes/.local/lib/python3.7/site-packages/selenium/webdriver/phantomjs/")
+            driver = webdriver.PhantomJS()
             driver.get(self.base_url)
 
             # localiza input de pesquisa e injeta referencia a ser pesquisada
@@ -85,6 +93,11 @@ class Referencia(object):
             # localiza e extrai o valor do BIBTEXT
             elem = driver.find_element_by_xpath('//*[@id="citation-text"]')
             var = elem.text
+
+            if str(var).lstrip().__len__() > 0:
+                logger.debug('---> {} ---[  ok  ] referência extraída com sucesso! [{}]'.format(data_atual, referencia))
+            else:
+                logger.debug('---> {} ---[ erro ] referência não foi extraída [{}]'.format(data_atual, referencia))
 
             return var
             driver.quit()
