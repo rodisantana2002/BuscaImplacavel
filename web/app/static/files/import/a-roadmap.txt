@@ -1,0 +1,3 @@
+Badr, Y., & Caplat, G. (2010). Software-as-a- service and versionology: Towards innovative service differentiation. 24th IEEE International Conference on Advanced Information Networking and Applications (pp. 237 –243). IEEE.
+Banerjee, P., Friedrich, R., Bash, C., Goldsack, P., Huberman, B., & Manley, J. (2011, March). Everything as a service: Powering the new in- formation economy. Computer, 44(3), 36–43. doi:10.1109/MC.2011.67.
+Burg, S., Jonge, M., Dolstra, E., & Visser, E. (2009). Software deployment in a dynamic cloud: From device to service orientation in a hospital environment. ICSE Workshop Software Engineer- ing Challenges of Cloud Computing (pp. 61-66). ACM.

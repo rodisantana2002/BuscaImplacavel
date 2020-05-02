@@ -1,0 +1,1070 @@
+﻿1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
+13. Damanpour, F., Gopalakrishnan, S.: The dynamics of the adoption of product and process innovations in organizations. Journal of Management Studies. 38, 1, 45–65 (2001).
+14. Durao, F. et al.: A systematic review on cloud computing. The Journal of Supercomputing. 68, 3, 1321–1346 (2014). 
+15. El-Gazzar, R.F.: A Literature Review on Cloud Computing Adoption Issues in Enterprises. In: International Working Conference on Transfer and Diffusion of IT Proceedings. pp. 214–242 (2014).
+16. Erek, K. et al.: Common Patterns of Cloud Business Models. In: AMCIS Proceedings. (2013).
+17. Ermakova, T., Fabian, B.: Secret sharing for health data in multi-provider clouds. In: IEEE International Conference on Business Informatics, CBI. pp. 93–100 IEEE (2013).
+18. Ferri, L. et al.: Analyzing Cloud-based Startups: Evidence from a Case Study in Italy. International Business Research. 10, 5, 73 (2017).
+19. Gopalakrishnan, S., Damanpour, F.: Patterns of generation and adoption of innovation in organizations: Contingency models of innovation attributes. Journal of Engineering and Technology Management. 11, 2, 95–116 (1994).
+20. Haag, S., Eckhardt, A.: Organizational cloud service adoption: a scientometric and content-based literature analysis. Journal of Business Economics. 84, 3, 407–440 (2014).
+21. Hartmann, P.M. et al.: Capturing Value from Big Data - A Taxonomy of Data-driven Business Models Used by Start-up Firms. International Journal of Operations & Production Management. 36, 10, 1382–1406 (2016).
+22. Heart, T. et al.: Software-as-a-Service Vendors: Are They Ready to Successfully Deliver? In: International Workshop on Global Sourcing of Information Technology and Business Processes. pp. 151–184 (2010).
+23. Hoberg, P. et al.: The business perspective on cloud computing - A literature review of research on cloud computing. In: AMCIS Proceedings. 5 (2012).
+24. Hsu, P.-F. et al.: Examining cloud computing adoption intention, pricing mechanism, and deployment model. International Journal of Information Management. 34, 4, 474–488 (2014).
+25. Iacovou, C.L. et al.: Electronic Data Interchange and Small Organizations: Adoption and Impact of Technology. MIS Quarterly. 19, 4, 465–485 (1995).
+26. Janssen, M., Joha, A.: Challenges for adopting cloud-based software as a service (SAAS) in the public sector. In: ECIS Proceedings. 80 (2011).
+27. Joachim, N.: A Literature Review of Research on Service- Oriented Architectures (SOA): Characteristics, Adoption Determinants, Governance Mechanisms, and Business Impact. In: AMCIS Proceedings. 339 (2011).
+28. Kabbedijk, J. et al.: Multi-tenant Architecture Comparison. In: European Conference on Software Architecture. pp. 202–209 Springer, Cham (2014).
+29. Kaltencker, N. et al.: The disruptive potential of software as a service: Validation and application of an ex-ante methodology. ICIS Proceedings. 3808–3826 (2013).
+30. Kaltenecker, N.: Managing Disruptive Change: Successful Transformation from On-premises to SaaS in B2C Software Companies. PACIS Proceedings. (2015).
+31. Kaltenecker, N., Hess, T.: From on-Premises To on-Demand: Learning From Two Cases of Transformation of Software Companies. ECIS Proceedings. 1–15 (2014).
+32. Kitchenham, B.A. et al.: Using mapping studies as the basis for further research - A participant-observer case study. Information and Software Technology. 53, 6, 638–651 (2011).
+33. Kranz, J.J. et al.: Understanding the influence of absorptive capacity and ambidexterity on the process of business model change – the case of on-premise and cloud-computing software. Information Systems Journal. 26, 5, 477–517 (2016).
+34. Kupiainen, E. et al.: Using Metrics in Agile and Lean Software Development - A Systematic Literature Review of Industrial Studies. Information and Software Technology. 62, 1, 143–163 (2015).
+35. Labes, S. et al.: Success Factors of Cloud Business Models. In: ECIS Proceedings. pp. 1–14 (2015).
+36. Labes, S. et al.: Successful Business Model Types of Cloud Providers. Business and Information Systems Engineering. 59, 4, 223–233 (2017).
+37. Lewandowski, J. et al.: SaaS Enterprise Resource Planning Systems: Challenges of Their Adoption in SMEs. In: IEEE International Conference on e-Business Engineering. pp. 56–61 (2013).
+38. Liao, H.: SaaS Business Model for Software Enterprise. In: IEEE International Conference on Information Management and Engineering (ICIME) Proceedings. pp. 604–607 (2010).
+39. Loske, A. et al.: Perceived it security risks in cloud adoption: The role of perceptual incongruence between users and providers. In: ECIS Proceedings. (2014).
+40. Luoma, E.: Examining Business Models of Software-as-a-Service Firms. In: International Conference on Grid Economics and Business Models. pp. 1–15 Springer, Cham (2013).
+41. Maglyas, A. et al.: What do we know about software product management? - A systematic mapping study. In: International Workshop on Software Product Management, IWSPM. pp. 26–35 (2011).
+42. Mahowald, R.P. et al.: Worldwide Software as a Service and Cloud Software Forecast, 2017-2021. (2017).
+43. Mäkilä, T. et al.: How to define Software-as-a-Service - An empirical study of Finnish SaaS providers. In: International Conference of Software Business Proceedings. pp. 115–124 (2010).
+44. Mell, P.M., Grance, T.: The NIST Definition of Cloud Computing. (2011).
+45. Misra, S.C., Mondal, A.: Identification of a company’s suitability for the adoption of cloud computing and modelling its corresponding Return on Investment. Mathematical and Computer Modelling. 53, 3–4, 504–521 (2011).
+46. De Paula, A.C.M., De Figueiredo Carneiro, G.: Cloud computing adoption, cost-benefit relationship and strategies for selecting providers: A systematic review. In: Proceedings
+1. Ali, M. et al.: Security in cloud computing: Opportunities and challenges. Information Sciences. 305, 357–383 (2015).
+2. Alshamaila, Y. et al.: Cloud computing adoption by SMEs in the north east of England: A multi-perspective framework. Journal of Enterprise Information Management. 26, 3, (2013).
+3. Asatiani, A.: Why cloud? - A review of cloud adoption determinants in organizations. In: ECIS Proceedings. pp. 1–17 (2015).
+4. Baliyan, N., Kumar, S.: Towards software engineering paradigm for software as a service. In: International Conference on Contemporary Computing (IC3) Proceedings. pp. 329–333 (2014).
+5. Baur, A.W. et al.: Customer is King? A Framework to Shift from Cost- to Value-Based Pricing in Software as a Service: The Case of Business Intelligence Software. In: Conference on e-Business, e-Services and e-Society Proceedings. pp. 1–13 (2014).
+6. Benlian, A., Hess, T.: Opportunities and risks of software-as-a-service: Findings from a survey of IT executives. Decision Support Systems. 52, 1, 232–246 (2011).
+7. Bokhari, M.U. et al.: Cloud Computing Service Models: A Comparative Study. IEEE International Conference on Computing for Sustainable Global Development, INDIACom. 16–18 (2016).
+8. Chun, S.-H., Choi, B.-S.: Service models and pricing schemes for cloud computing. Cluster Computing. 17, 2, (2014).
+9. Chwelos, P. et al.: Research Report: Empirical Test of an EDI Adoption Model. Information Systems Research. 12, 3, 304–321 (2001).
+10. Clegg, B. et al.: Transformation of a small-to-medium-sized enterprise to a multi-organisation product-service solution provider. International Journal of Production Economics. 192, 81–91 (2015).
+11. Cusumano, M.A.: The changing software business: Moving from products to services. Computer. 41, 1, 20–27 (2008).
+12. D’souza, A. et al.: Software-as-a-Service: Implications for Business and Technology in Product Software Companies. In: PACIS Proceedings. (2012).
