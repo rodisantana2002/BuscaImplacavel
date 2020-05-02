@@ -143,7 +143,8 @@ $(document).ready(function () {
         else {
             bootbox.alert({
                 message: "Selecione um arquivo",
-                size: 'small'
+                size: 'small',
+                centerVertical:true
             });          
             $("#name-file").focus();
         }
@@ -153,34 +154,43 @@ $(document).ready(function () {
     //processamento da busca online das referencias
     $(".btn-arquivo-processar").click(function (){
         var file = jQuery.parseJSON($(this).val());
-
-        var dialog = bootbox.dialog({
-            title: 'Atenção!',
-            message: '<div class="text-center"><i class="fa fa-spin fa-spinner"></i>Aguarde... atualizando referências...</div>',
-            closeButton: true,
-            centerVertical: true
-        });
-
-        dialog.init(function () {
-            setTimeout(function () {
-                $.ajax({
-                    type: "POST",
-                    data: { id: file.id },
-                    url: url_base + "processo/arquivo/processar",
-                    async: true,
-                    success: function (data) {
-                        if (data === "200") {
-                            location.reload();
+        
+        if (file.pendentes>0){
+            var dialog = bootbox.dialog({
+                title: 'Atenção!',
+                message: '<div class="text-center"><i class="fa fa-spin fa-spinner fa-2x"></i><br>Aguarde... atualizando referências <br> Tempo Estimado [ ' + file.tempo + ' ]</div>',
+                closeButton: true,
+                centerVertical: true
+            });
+    
+            dialog.init(function () {
+                setTimeout(function () {
+                    $.ajax({
+                        type: "POST",
+                        data: { id: file.id },
+                        url: url_base + "processo/arquivo/processar",
+                        async: true,
+                        success: function (data) {
+                            if (data === "200") {
+                                location.reload();
+                            }
+                            else {
+                                dialog.find('.bootbox-body').html("Não foi possível processar o arquivo");
+                            }
                         }
-                        else {
-                            dialog.find('.bootbox-body').html("Não foi possível processar o arquivo");
-                        }
-                    }
-                });                    
-
-            }, 1);
-        });
-
+                    });                    
+    
+                }, 1);
+            });
+    
+        }
+        else{
+            bootbox.alert({
+                message: "Não existem referências para serem processadas!",
+                size: 'large',
+                centerVertical:true
+            }); 
+        }
 
     });     
 
@@ -243,8 +253,7 @@ $(document).ready(function () {
         var referencia = jQuery.parseJSON($(this).val());
         bootbox.alert({
             message: "<p> lin.: " + referencia.linha + "</p>" +
-                "<p> ref.: " + referencia.referencia + "</p>" +
-                "<p> bib.: " + referencia.bibtext + "</p>",
+                "<p> ref.: " + referencia.referencia + "</p>",
             size: 'large',
             centerVertical: true
         });

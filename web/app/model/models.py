@@ -115,6 +115,16 @@ class ProcessoFile(db.Model):
     # ----------------
     referencias = relationship('ProcessoFileReferencia')
 
+    def getTotalRefPendentes(self):
+        return len(list(filter(lambda x: x.situacao=='Pendente', self.referencias)))
+
+    def getTempoProcessamento(self):
+        totLinhas = len(list(filter(lambda x: x.situacao=='Pendente', self.referencias)))
+                   
+        totHoras = totLinhas // 60
+        totMinutos = totLinhas % 60
+        return '{}h:{}m'.format(str(totHoras).zfill(2), str(totMinutos).zfill(2))
+
     def add(self, processoFile):
         db.session.add(processoFile)
         db.session.commit()

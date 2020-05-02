@@ -7,6 +7,12 @@ from app.model.models import *
 from app.controls.utils import *
 from app.controls.referencia import *
 from sqlalchemy import DateTime, func, desc
+from datetime import datetime
+
+# log config
+logging.basicConfig()
+logger = logging.getLogger('Log.')
+logger.setLevel(logging.DEBUG)
 
 operacoes = Blueprint("operacoes", __name__)
 
@@ -19,6 +25,14 @@ class Operacoes():
         self.processoFile = ProcessoFile()
         self.processoFileReferencia = ProcessoFileReferencia()
         self.referencia = Referencia()
+
+        # logs
+        self.homeDir = "../web/app/logs"
+        self.logFile = self.homeDir + '/referencia.log'
+        self.logger_handler = logging.FileHandler(self.logFile, mode='w')
+        self.logger_handler.setLevel(logging.DEBUG)
+        # Associe o Handler ao  Logger
+        logger.addHandler(self.logger_handler)
 
     def obterPesquisas(self):
         return self.pesquisa.query.all()
@@ -117,18 +131,37 @@ class Operacoes():
         return self.authentic
 
     def buscarReferencias(self, id):
-        # try:
-        file = self.processoFile.query.filter_by(id=id).first()
+        try:
+            file = self.processoFile.query.filter_by(id=id).first()
 
-        for referencia in file.referencias:
-            print(self.referencia.obterReferencia(referencia.referencia))
-            # print(referencia.referencia)
-        
-        self.authentic["code"] = "200"
-        self.authentic["msg"] = "Processamento finalizado com sucesso"
+            logger.debug('----------------------------------------------------------------------------------------------')
+            logger.debug('---> Iniciando processo de Extração das Referências.')            
 
-        # except:
-        #     self.authentic["code"] = "500"
-        #     self.authentic["msg"] = "Erro desconhecido"
+            data_hora_atuais = datetime.now()
+            data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
+
+            for referencia in list(filter(lambda x: x.situacao=='Pendente', file.referencias)):
+                ref = self.referencia.obterReferencia(referencia.referencia)
+                print(referencia.situacao)
+                logger.debug('---> {} ---[ work ] extraindo referência [{}]'.format(data_atual, referencia.referencia))
+                
+                if str(ref).lstrip().__len__() > 0:
+                    if ref != 'err':
+                        referencia.bibtext = ref
+                        referencia.situacao = "Processado"
+                        referencia.update()
+
+                        logger.debug('---> {} ---[  ok  ] referência extraída com sucesso! [{}]'.format(data_atual, ref))
+                    else:
+                        logger.debug('---> {} ---[  erro  ] erro ao tentar acessar processo! [{}]'.format(data_atual, referencia.referencia))
+                else:
+                    logger.debug('---> {} ---[ erro ] referência não foi extraída [{}]'.format(data_atual, referencia.referencia))
+
+            self.authentic["code"] = "200"
+            self.authentic["msg"] = "Processamento finalizado com sucesso"
+
+        except:
+            self.authentic["code"] = "500"
+            self.authentic["msg"] = "Erro desconhecido"
             
         return self.authentic

@@ -58,7 +58,7 @@
                                         <h6 style="text-align: start" class="m-0 font-weight-normal text-primary">
                                             <button class="btn-arquivo-remover   btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[remover]</button>
                                             <button class="btn-arquivo-exportar  btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[exportar]</button>
-                                            <button class="btn-arquivo-processar btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[processar]</button>
+                                            <button class="btn-arquivo-processar btn btn-link" type="link" value='{"id":"{{file.id}}", "pendentes":"{{file.getTotalRefPendentes()}}", "tempo":"{{file.getTempoProcessamento()}}" }'>[processar]</button>
                                         </h6>                             
                                     </div>                                
                                     
@@ -90,11 +90,11 @@
                                                     <td style="text-align:center">{{referencia.situacao}}</td>
                                                     <td>{{referencia.referencia}}</td>
                                                     <td style="text-align:center">
-                                                        <button class="btn-referencia-detail btn btn-link" type="link" href="#" value='{"linha":"{{referencia.linha}}", "referencia":"{{referencia.referencia}}", "bibtext":"{{referencia.bibtext}}"}'> 
+                                                        <button class="btn-referencia-detail btn btn-link" type="link" href="#" value='{"linha":"{{referencia.linha}}", "referencia":"{{referencia.referencia}}"}'> 
                                                             <i class="far fa-file-code"></i>
                                                         </button>
 
-                                                        <button class="btn-referencia-remove btn btn-link" type="link" value='{"id":"{{referencia.id}}", "linha":"{{referencia.linha}}", "referencia":"{{referencia.referencia}}", "bibtext":"{{referencia.bibtext}}"}'>
+                                                        <button class="btn-referencia-remove btn btn-link" type="link" value='{"id":"{{referencia.id}}", "linha":"{{referencia.linha}}", "referencia":"{{referencia.referencia}}"}'>
                                                             <i class="far fa-trash-alt" style="color:red"></i>
                                                         </button>                           
                                                     </td>

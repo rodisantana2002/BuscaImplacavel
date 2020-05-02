@@ -87,5 +87,4 @@ def removerReferencia():
 def processarArquivoReferencias():
     file_id = request.values.get('id')
     result = oper.buscarReferencias(file_id)
-    
     return result.get("code")
