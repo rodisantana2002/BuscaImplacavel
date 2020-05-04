@@ -42,6 +42,7 @@ $(document).ready(function () {
         }
     });    
 
+    // remover processo
     $(".btn-processo-remover").click(function (){
         var processo = jQuery.parseJSON($(this).val());
         
@@ -150,7 +151,6 @@ $(document).ready(function () {
         }
     });
 
-    // *****
     //processamento da busca online das referencias
     $(".btn-arquivo-processar").click(function (){
         var file = jQuery.parseJSON($(this).val());
@@ -239,13 +239,6 @@ $(document).ready(function () {
             }
         });           
 
-    });
-
-
-    // processa a exportação das referencias do arquivo selecionado
-    $(".btn-arquivo-exportar").click(function () {
-        var file = jQuery.parseJSON($(this).val());
-        alert(file.id);
     });
     
     // exibe popup com detalhes da referencia

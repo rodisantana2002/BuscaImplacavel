@@ -88,3 +88,14 @@ def processarArquivoReferencias():
     file_id = request.values.get('id')
     result = oper.buscarReferencias(file_id)
     return result.get("code")
+
+
+@views.route('/processo/arquivo/exportar', methods=['GET'])    
+def exportarArquivo():
+    bibText =""    
+    file_id = request.values.get('id')
+    file = oper.obterProcessoArquivoById(file_id)
+    referencias = oper.exportarProcessoArquivoById(file_id)
+
+    bibText = [ref.bibtext + ", \n"  for ref in referencias]
+    return Response(bibText, mimetype="text/txt", headers={"Content-disposition":"attachment; filename=" + file.name_file[:-4] + ".bib"})        

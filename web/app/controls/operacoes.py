@@ -86,6 +86,13 @@ class Operacoes():
             self.authentic["msg"] = "Erro desconhecido"
         return self.authentic
 
+    def obterProcessoArquivoById(self, id):
+        return self.processoFile.query.filter_by(id=id).first()
+
+    def exportarProcessoArquivoById(self, id):
+        file = self.processoFile.query.filter_by(id=id).first()
+        return list(filter(lambda x : x.situacao=='Processado', file.referencias))  
+    
     def removerProcesso(self, id):
         try:
             obj = Processo()

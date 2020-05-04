@@ -57,7 +57,9 @@
                                         <h6 style="text-align: start; " class="m-0 font-weight-bold text-primary">{{file.name_file}} - {{file.criado_em}}</h6>
                                         <h6 style="text-align: start" class="m-0 font-weight-normal text-primary">
                                             <button class="btn-arquivo-remover   btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[remover]</button>
-                                            <button class="btn-arquivo-exportar  btn btn-link" type="link" value='{"id":"{{file.id}}"}'>[exportar]</button>
+                                            {% if file.getTotalRefProcessadas()>0 %}
+                                                <a class="btn-arquivo-exportar  btn btn-link" type="link" value='{"id":"{{file.id}}"' href="{{ url_for('views.exportarArquivo', id=file.id)}}">[exportar]</a>
+                                            {% endif %}
                                             <button class="btn-arquivo-processar btn btn-link" type="link" value='{"id":"{{file.id}}", "pendentes":"{{file.getTotalRefPendentes()}}", "tempo":"{{file.getTempoProcessamento()}}" }'>[processar]</button>
                                         </h6>                             
                                     </div>                                

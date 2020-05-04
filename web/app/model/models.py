@@ -118,6 +118,9 @@ class ProcessoFile(db.Model):
     def getTotalRefPendentes(self):
         return len(list(filter(lambda x: x.situacao=='Pendente', self.referencias)))
 
+    def getTotalRefProcessadas(self):
+        return len(list(filter(lambda x: x.situacao=='Processado', self.referencias)))
+
     def getTempoProcessamento(self):
         totLinhas = len(list(filter(lambda x: x.situacao=='Pendente', self.referencias)))
                    
