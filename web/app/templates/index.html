@@ -28,12 +28,22 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Processos</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">000</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{processos|length}}</div>
                     </div>
 
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Aguardando</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">000</div>
+                      <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Arquivos</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{files}}</div>
+                    </div>
+
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Processadas</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{refProcessadas}}</div>
+                    </div>
+
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Pendentes</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{refPendentes}}</div>
                     </div>
 
                     <div class="col-auto">

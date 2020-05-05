@@ -18,8 +18,11 @@ def index():
 
 @views.route('/home', methods=['GET', 'POST'])
 def home():
-    pesquisa = oper.obterPesquisas()    
-    return render_template('index.html', pesquisa=pesquisa)
+    processos = oper.obterProcessos()    
+    files = sum(int(processo.getTotalFiles()) for processo in processos)
+    refPendentes = 0
+    refProcessadas = 0
+    return render_template('index.html', processos=processos, files=files, refPendentes=refPendentes, refProcessadas=refProcessadas)
 
 
 @views.route('/processo', methods=['GET'])
