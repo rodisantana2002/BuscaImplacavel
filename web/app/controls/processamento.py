@@ -26,7 +26,7 @@ HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/2010010
 AVAILABLE_SCIHUB_BASE_URL = ['search.crossref.org']
 
 
-class Referencia(object):
+class Processamento(object):
 
     def __init__(self):
         self.sess = requests.Session()

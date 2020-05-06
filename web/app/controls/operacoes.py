@@ -5,7 +5,7 @@ import csv
 from flask import Flask, Blueprint
 from app.model.models import *
 from app.controls.utils import *
-from app.controls.referencia import *
+from app.controls.processamento import *
 from sqlalchemy import DateTime, func, desc
 from datetime import datetime
 
@@ -20,11 +20,13 @@ class Operacoes():
 
     def __init__(self):
         self.authentic = {"code": "", "msg": "", "id": "", "value": "", "superuser": ""}
+        self.dashboard = {"processos": 0, "files": 0, "processadas": 0, "pendentes": 0, "referencias": 0, "traduzidas":0, "pendentes":0, "duplicadas":0}
         self.pesquisa = Pesquisa()
         self.processo = Processo()
         self.processoFile = ProcessoFile()
         self.processoFileReferencia = ProcessoFileReferencia()
         self.referencia = Referencia()
+        self.processamento = Processamento()
 
         # logs
         self.homeDir = "../web/app/logs"
@@ -33,6 +35,23 @@ class Operacoes():
         self.logger_handler.setLevel(logging.DEBUG)
         # Associe o Handler ao  Logger
         logger.addHandler(self.logger_handler)
+
+    def obterDashBoard(self):
+        processos = self.obterProcessos()    
+        files = str(sum(int(processo.getTotalFiles()) for processo in processos)).zfill(4)
+        fileReferencias = self.processoFileReferencia.query.all()
+        # ---
+        referencias = self.referencia.query.all()
+       
+
+        self.dashboard["processos"] = len(processos)
+        self.dashboard["files"] = files
+        self.dashboard["pendentes"] = str(len(list(filter(lambda x: x.situacao=='Pendente', fileReferencias)))).zfill(4)
+        self.dashboard["processadas"] = str(len(list(filter(lambda x: x.situacao=='Processado', fileReferencias)))).zfill(4)
+        self.dashboard["referencias"] = len(referencias)
+        # self.dashboard[""] = 0
+
+        return self.dashboard
 
     def obterPesquisas(self):
         return self.pesquisa.query.all()
@@ -60,8 +79,8 @@ class Operacoes():
         try:
             file = self.processoFile.query.filter_by(name_file=ProcessoFile.name_file, processo_id=ProcessoFile.processo_id).first()
             if file != None:
-               self.authentic["code"] = "500"
-               self.authentic["msg"] = "Arquivo já esta registrado no processo!"
+                self.authentic["code"] = "500"
+                self.authentic["msg"] = "Arquivo já esta registrado no processo!"
             else:                        
                 processoFile = ProcessoFile
                 processoFile.add(processoFile)
@@ -72,7 +91,7 @@ class Operacoes():
                 for ref in refs:
                     if len(ref.strip())>0:
                         processoFileReferencia = ProcessoFileReferencia()
-                        processoFileReferencia.referencia = ref
+                        processoFileReferencia.txt_referencia = ref
                         processoFileReferencia.linha = linha
                         processoFileReferencia.processo_file_id = processoFile.id
                         processoFileReferencia.add(processoFileReferencia)
@@ -138,37 +157,36 @@ class Operacoes():
         return self.authentic
 
     def buscarReferencias(self, id):
-        try:
-            file = self.processoFile.query.filter_by(id=id).first()
+        # try:
+        file = self.processoFile.query.filter_by(id=id).first()
 
-            logger.debug('----------------------------------------------------------------------------------------------')
-            logger.debug('---> Iniciando processo de Extração das Referências.')            
+        logger.debug('----------------------------------------------------------------------------------------------')
+        logger.debug('---> Iniciando processo de Extração das Referências.')            
 
-            data_hora_atuais = datetime.now()
-            data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
+        data_hora_atuais = datetime.now()
+        data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
 
-            for referencia in list(filter(lambda x: x.situacao=='Pendente', file.referencias)):
-                ref = self.referencia.obterReferencia(referencia.referencia)
-                print(referencia.situacao)
-                logger.debug('---> {} ---[ work ] extraindo referência [{}]'.format(data_atual, referencia.referencia))
-                
-                if str(ref).lstrip().__len__() > 0:
-                    if ref != 'err':
-                        referencia.bibtext = ref
-                        referencia.situacao = "Processado"
-                        referencia.update()
+        for referencia in list(filter(lambda x: x.situacao=='Pendente', file.referencias)):
+            ref = self.processamento.obterReferencia(referencia.txt_referencia)
+            logger.debug('---> {} ---[ work ] extraindo referência [{}]'.format(data_atual, referencia.txt_referencia))
+            
+            if str(ref).lstrip().__len__() > 0:
+                if ref != 'err':
+                    referencia.bibtext = ref
+                    referencia.situacao = "Processado"
+                    referencia.update()
 
-                        logger.debug('---> {} ---[  ok  ] referência extraída com sucesso! [{}]'.format(data_atual, ref))
-                    else:
-                        logger.debug('---> {} ---[  erro  ] erro ao tentar acessar processo! [{}]'.format(data_atual, referencia.referencia))
+                    logger.debug('---> {} ---[  ok  ] referência extraída com sucesso! [{}]'.format(data_atual, ref))
                 else:
-                    logger.debug('---> {} ---[ erro ] referência não foi extraída [{}]'.format(data_atual, referencia.referencia))
+                    logger.debug('---> {} ---[  erro  ] erro ao tentar acessar processo! [{}]'.format(data_atual, referencia.txt_referencia))
+            else:
+                logger.debug('---> {} ---[ erro ] referência não foi extraída [{}]'.format(data_atual, referencia.txt_referencia))
 
-            self.authentic["code"] = "200"
-            self.authentic["msg"] = "Processamento finalizado com sucesso"
+        self.authentic["code"] = "200"
+        self.authentic["msg"] = "Processamento finalizado com sucesso"
 
-        except:
-            self.authentic["code"] = "500"
-            self.authentic["msg"] = "Erro desconhecido"
+        # except:
+        #     self.authentic["code"] = "500"
+        #     self.authentic["msg"] = "Erro desconhecido"
             
         return self.authentic

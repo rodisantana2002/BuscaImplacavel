@@ -18,11 +18,9 @@ def index():
 
 @views.route('/home', methods=['GET', 'POST'])
 def home():
-    processos = oper.obterProcessos()    
-    files = sum(int(processo.getTotalFiles()) for processo in processos)
-    refPendentes = 0
-    refProcessadas = 0
-    return render_template('index.html', processos=processos, files=files, refPendentes=refPendentes, refProcessadas=refProcessadas)
+    dashboard = oper.obterDashBoard()
+    return render_template('index.html', processos=dashboard.get('processos'), files=dashboard.get('files'), 
+                                         refPendentes=dashboard.get('pendentes'), refProcessadas=dashboard.get('processadas'))
 
 
 @views.route('/processo', methods=['GET'])

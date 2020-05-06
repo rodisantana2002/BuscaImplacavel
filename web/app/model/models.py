@@ -136,8 +136,8 @@ class ProcessoFile(db.Model):
         db.session.commit()
 
     def delete(self, processoFile):
-        for referencia in processoFile.referencias:
-            referencia.delete(referencia)
+        for refer in processoFile.referencias:
+            refer.delete(refer)
 
         db.session.delete(processoFile)    
         db.session.commit()
@@ -163,24 +163,24 @@ class ProcessoFileReferencia(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     situacao = db.Column(db.String(20), default="Pendente") 
     linha = db.Column(db.Integer)
-    referencia = db.Column(db.String())
+    txt_referencia = db.Column(db.String())
     bibtext = db.Column(db.String())
     criado_em = db.Column(db.String(20), default=datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S'))
     processo_file_id = db.Column(db.Integer, db.ForeignKey('ProcessoFile.id'))
     
-    def add(self, Referencia):
-        db.session.add(Referencia)
+    def add(self, fileReferencia):
+        db.session.add(fileReferencia)
         db.session.commit()
 
-    def addAll(self, Referencias):
-        db.session.add_all(Referencias)
+    def addAll(self, fileReferencias):
+        db.session.add_all(fileReferencias)
         db.session.commit()
 
     def update(self):
         db.session.commit()
 
-    def delete (self, Referencia):
-        db.session.delete(Referencia)
+    def delete (self, fileReferencia):
+        db.session.delete(fileReferencia)
         db.session.commit()
     
     def serialize(self):
@@ -188,7 +188,7 @@ class ProcessoFileReferencia(db.Model):
             'id': self.id,
             'situacao': self.situacao,
             'linha': self.linha,
-            'referncia': self.referencia,
+            'referencia': self.txt_referencia,
             'bibtext': self.bibtext,
             'processo_file_id': self.processo_id,
             'criado_em': self.criado_em
@@ -199,7 +199,7 @@ class ProcessoFileReferencia(db.Model):
 
 
 # ---------------------------------------------------------------------------
-# Classe Referencia
+# Classe ReferenciaDoc
 # ---------------------------------------------------------------------------
 class Referencia(db.Model):
     __tablename__ = 'Referencia'
@@ -215,9 +215,6 @@ class Referencia(db.Model):
     url = db.Column(db.String(300))
     publisher = db.Column(db.String(200))
     bookTitulo = db.Column(db.String(1000))
-    arquivo_origem = db.Column(db.String(200))
-    texto_rtf = db.Column(db.String())
-    referencia = db.Column(db.String())
     criado_em = db.Column(db.String(20), default=datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S'))
     
     # relacionamentos
@@ -252,9 +249,6 @@ class Referencia(db.Model):
             'keywords': self.keywords,
             'url': self.url,
             'bookTitulo': self.bookTitulo,
-            'arquivo_origem': self.arquivo_origem,
-            'texto_rtf': self.texto_rtf,
-            'referencia': self.referencia,
             'criado_em': self.criado_em
         }
 

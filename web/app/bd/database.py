@@ -31,35 +31,32 @@ class database(object):
         #                                         objetivo TEXT,
         #                                         criado_em VARCHAR(20));""")                                              
 
-        tabelas.append("""CREATE TABLE ProcessoFile (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
-                                                name_file VARCHAR(150), 
-                                                processo_id INTEGER,
-                                                conteudo TEXT,  
-                                                criado_em VARCHAR(20));""")                                              
+        # tabelas.append("""CREATE TABLE ProcessoFile (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+        #                                         name_file VARCHAR(150), 
+        #                                         processo_id INTEGER,
+        #                                         conteudo TEXT,  
+        #                                         criado_em VARCHAR(20));""")                                              
 
         # tabelas.append("""CREATE TABLE ProcessoFileReferencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
         #                                         situacao VARCHAR(20),
         #                                         linha INTEGER,                                                
-        #                                         referencia TEXT,
+        #                                         txt_referencia TEXT,
         #                                         bibtext TEXT,
         #                                         processo_file_id INTEGER,
         #                                         criado_em VARCHAR(20));""")                                              
 
-        # tabelas.append("""CREATE TABLE Referencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
-        #                                         situacao VARCHAR(20),
-        #                                         titulo TEXT, 
-        #                                         ano VARCHAR(4), 
-        #                                         autores TEXT, 
-        #                                         resumo TEXT, 
-        #                                         keywords TEXT, 
-        #                                         doi TEXT, 
-        #                                         url TEXT, 
-        #                                         publisher TEXT,
-        #                                         bookTitulo TEXT, 
-        #                                         arquivo_origem VARCHAR(20), 
-        #                                         texto_rtf TEXT,
-        #                                         referencia TEXT,
-        #                                         criado_em VARCHAR(20));""")
+        tabelas.append("""CREATE TABLE Referencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+                                                situacao VARCHAR(20),
+                                                titulo TEXT, 
+                                                ano VARCHAR(4), 
+                                                autores TEXT, 
+                                                resumo TEXT, 
+                                                keywords TEXT, 
+                                                doi TEXT, 
+                                                url TEXT, 
+                                                publisher TEXT,
+                                                bookTitulo TEXT, 
+                                                criado_em VARCHAR(20));""")
 
         # tabelas.append("""CREATE TABLE Translate (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
         #                                                situacao VARCHAR(20),

@@ -28,7 +28,6 @@ WTForms="*"
 gunicorn = "*"
 Jinja2 = "*"
 
-
 [requires]
 python_version = "3.7.5"
 
