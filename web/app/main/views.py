@@ -20,7 +20,8 @@ def index():
 def home():
     dashboard = oper.obterDashBoard()
     return render_template('index.html', processos=dashboard.get('processos'), files=dashboard.get('files'), 
-                                         refPendentes=dashboard.get('pendentes'), refProcessadas=dashboard.get('processadas'))
+                                         refPendentes=dashboard.get('pendentes'), refProcessadas=dashboard.get('processadas'),
+                                         referencias=dashboard.get('referencias'))
 
 
 @views.route('/processo', methods=['GET'])

@@ -41,14 +41,13 @@ class Operacoes():
         files = str(sum(int(processo.getTotalFiles()) for processo in processos)).zfill(4)
         fileReferencias = self.processoFileReferencia.query.all()
         # ---
-        referencias = self.referencia.query.all()
-       
+        referencias = self.referencia.query.all()       
 
         self.dashboard["processos"] = len(processos)
         self.dashboard["files"] = files
         self.dashboard["pendentes"] = str(len(list(filter(lambda x: x.situacao=='Pendente', fileReferencias)))).zfill(4)
         self.dashboard["processadas"] = str(len(list(filter(lambda x: x.situacao=='Processado', fileReferencias)))).zfill(4)
-        self.dashboard["referencias"] = len(referencias)
+        self.dashboard["referencias"] = str(len(referencias)).zfill(4)
         # self.dashboard[""] = 0
 
         return self.dashboard
@@ -157,36 +156,36 @@ class Operacoes():
         return self.authentic
 
     def buscarReferencias(self, id):
-        # try:
-        file = self.processoFile.query.filter_by(id=id).first()
+        try:
+            file = self.processoFile.query.filter_by(id=id).first()
 
-        logger.debug('----------------------------------------------------------------------------------------------')
-        logger.debug('---> Iniciando processo de Extração das Referências.')            
+            logger.debug('----------------------------------------------------------------------------------------------')
+            logger.debug('---> Iniciando processo de Extração das Referências.')            
 
-        data_hora_atuais = datetime.now()
-        data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
+            data_hora_atuais = datetime.now()
+            data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')
 
-        for referencia in list(filter(lambda x: x.situacao=='Pendente', file.referencias)):
-            ref = self.processamento.obterReferencia(referencia.txt_referencia)
-            logger.debug('---> {} ---[ work ] extraindo referência [{}]'.format(data_atual, referencia.txt_referencia))
-            
-            if str(ref).lstrip().__len__() > 0:
-                if ref != 'err':
-                    referencia.bibtext = ref
-                    referencia.situacao = "Processado"
-                    referencia.update()
+            for referencia in list(filter(lambda x: x.situacao=='Pendente', file.referencias)):
+                ref = self.processamento.obterReferencia(referencia.txt_referencia)
+                logger.debug('---> {} ---[ work ] extraindo referência [{}]'.format(data_atual, referencia.txt_referencia))
+                
+                if str(ref).lstrip().__len__() > 0:
+                    if ref != 'err':
+                        referencia.bibtext = ref
+                        referencia.situacao = "Processado"
+                        referencia.update()
 
-                    logger.debug('---> {} ---[  ok  ] referência extraída com sucesso! [{}]'.format(data_atual, ref))
+                        logger.debug('---> {} ---[  ok  ] referência extraída com sucesso! [{}]'.format(data_atual, ref))
+                    else:
+                        logger.debug('---> {} ---[  erro  ] erro ao tentar acessar processo! [{}]'.format(data_atual, referencia.txt_referencia))
                 else:
-                    logger.debug('---> {} ---[  erro  ] erro ao tentar acessar processo! [{}]'.format(data_atual, referencia.txt_referencia))
-            else:
-                logger.debug('---> {} ---[ erro ] referência não foi extraída [{}]'.format(data_atual, referencia.txt_referencia))
+                    logger.debug('---> {} ---[ erro ] referência não foi extraída [{}]'.format(data_atual, referencia.txt_referencia))
 
-        self.authentic["code"] = "200"
-        self.authentic["msg"] = "Processamento finalizado com sucesso"
+            self.authentic["code"] = "200"
+            self.authentic["msg"] = "Processamento finalizado com sucesso"
 
-        # except:
-        #     self.authentic["code"] = "500"
-        #     self.authentic["msg"] = "Erro desconhecido"
+        except:
+            self.authentic["code"] = "500"
+            self.authentic["msg"] = "Erro desconhecido"
             
         return self.authentic
