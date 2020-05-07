@@ -1,3 +1,6 @@
+import os
+import sys
+
 from flask import render_template, current_app, Blueprint
 from threading import Thread
 from flask_mail import Message, Mail
@@ -21,3 +24,5 @@ class Utils():
 
         return thr
 
+    def _obterArquivos(self, path, tipo):    
+        return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith(tipo)])

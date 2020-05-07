@@ -13,7 +13,9 @@ import requests
 import urllib3
 import time
 import urllib.request
+import bibtexparser
 
+from app.model.models import *
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
@@ -24,7 +26,6 @@ from datetime import datetime
 # constants
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/20100101 Firefox/27.0'}
 AVAILABLE_SCIHUB_BASE_URL = ['search.crossref.org']
-
 
 class Processamento(object):
 
@@ -77,3 +78,66 @@ class Processamento(object):
             return 'err'
         except requests.exceptions.RequestException as exc:
             return 'err'
+
+    def importarReferencia(self, pathOrigem):
+        # Passo 01 carregar dos dados para os arquivos bibtext
+        arquivos = self._obterArquivos(pathOrigem, "bib")
+
+        refs=[]        
+        if len(arquivos) > 0:            
+            for arq in arquivos:                                                
+                with open(arq) as bibtex_file:
+                    bib_database = bibtexparser.load(bibtex_file)
+                    for ref in bib_database.entries:
+                        # popula valores no objeto
+                        referencia = Referencia()
+
+                        if 'doi' in ref:
+                            referencia.doi = ref['doi']
+                        else:
+                            referencia.doi = ""
+
+                        if 'url' in ref:
+                            referencia.url = ref['url']
+                        else:
+                            referencia.url = ""
+
+                        if 'title' in ref:
+                            referencia.titulo = ref['title']
+                        else:
+                            referencia.titulo = ""
+
+                        if 'year' in ref:
+                            referencia.ano = ref['year']
+                        else:
+                            referencia.ano = ""
+
+                        if 'publisher' in ref:
+                            referencia.publisher = ref['publisher']
+                        else:
+                            referencia.publisher = ""
+                                
+                        if 'booktitle' in ref:
+                            referencia.bookTitulo = ref['booktitle']
+                        else:
+                            referencia.bookTitulo = ""
+                            
+                        if 'author' in ref:
+                            referencia.autores = ref['author']
+                        else:
+                            referencia.autores = ""
+
+                        if 'abstract' in ref:
+                            referencia.autores = ref['resumo']
+                        else:
+                            referencia.autores = ""
+
+                        if 'keywords' in ref:
+                            referencia.autores = ref['keywords']
+                        else:
+                            referencia.autores = ""
+
+                        # adiciona na coleção
+                        refs.append(referencia)                        
+                        referencia.add(referencia)                       
+        return refs

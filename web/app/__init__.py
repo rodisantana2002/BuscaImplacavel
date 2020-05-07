@@ -15,11 +15,11 @@ def create_app():
     app = Flask(__name__)
     app.config.from_mapping(SECRET_KEY=os.environ.get('SECRET_KEY') or 'key hesthouse')
 
-    DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:////home/osboxes/Documentos/projetos/automator/buscaimplacavel/web/app/bd/bot.db')
     # DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:////home/osboxes/Documentos/projetos/automator/buscaimplacavel/web/app/bd/bot.db')
-    
+    DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:///' + app_dir +  '/bd/bot.db')
     
     app.config['MEDIA_ROOT'] = os.path.join(app_dir, 'gallery/')
+    app.config['FILES'] = os.path.join(app_dir, 'files/')
     
     app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
     app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -33,7 +33,7 @@ def create_app():
     app.register_blueprint(views)
     app.register_blueprint(models)
     app.register_blueprint(operacoes)
-
+    
     bootstrap = Bootstrap(app)
     db.init_app(app)
 

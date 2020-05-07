@@ -9,6 +9,7 @@ from decimal import Decimal
 views = Blueprint("views", __name__)
 oper = Operacoes()
 
+
 # Classes referentes a autenticação e regsitro no sistema
 # ----------------------
 @views.route('/', methods=['GET', 'POST'])
@@ -18,10 +19,11 @@ def index():
 
 @views.route('/home', methods=['GET', 'POST'])
 def home():
-    dashboard = oper.obterDashBoard()
+    dashboard = oper.obterDashBoard()                          
     return render_template('index.html', processos=dashboard.get('processos'), files=dashboard.get('files'), 
                                          refPendentes=dashboard.get('pendentes'), refProcessadas=dashboard.get('processadas'),
                                          referencias=dashboard.get('referencias'))
+
 
 
 @views.route('/processo', methods=['GET'])
