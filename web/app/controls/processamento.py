@@ -79,65 +79,65 @@ class Processamento(object):
         except requests.exceptions.RequestException as exc:
             return 'err'
 
-    def importarReferencia(self, pathOrigem):
-        # Passo 01 carregar dos dados para os arquivos bibtext
-        arquivos = self._obterArquivos(pathOrigem, "bib")
+    # def importarReferencia(self, pathOrigem):
+    #     # Passo 01 carregar dos dados para os arquivos bibtext
+    #     arquivos = self._obterArquivos(pathOrigem, "bib")
 
-        refs=[]        
-        if len(arquivos) > 0:            
-            for arq in arquivos:                                                
-                with open(arq) as bibtex_file:
-                    bib_database = bibtexparser.load(bibtex_file)
-                    for ref in bib_database.entries:
-                        # popula valores no objeto
-                        referencia = Referencia()
+    #     refs=[]        
+    #     if len(arquivos) > 0:            
+    #         for arq in arquivos:                                                
+    #             with open(arq) as bibtex_file:
+    #                 bib_database = bibtexparser.load(bibtex_file)
+    #                 for ref in bib_database.entries:
+    #                     # popula valores no objeto
+    #                     referencia = Referencia()
 
-                        if 'doi' in ref:
-                            referencia.doi = ref['doi']
-                        else:
-                            referencia.doi = ""
+    #                     if 'doi' in ref:
+    #                         referencia.doi = ref['doi']
+    #                     else:
+    #                         referencia.doi = ""
 
-                        if 'url' in ref:
-                            referencia.url = ref['url']
-                        else:
-                            referencia.url = ""
+    #                     if 'url' in ref:
+    #                         referencia.url = ref['url']
+    #                     else:
+    #                         referencia.url = ""
 
-                        if 'title' in ref:
-                            referencia.titulo = ref['title']
-                        else:
-                            referencia.titulo = ""
+    #                     if 'title' in ref:
+    #                         referencia.titulo = ref['title']
+    #                     else:
+    #                         referencia.titulo = ""
 
-                        if 'year' in ref:
-                            referencia.ano = ref['year']
-                        else:
-                            referencia.ano = ""
+    #                     if 'year' in ref:
+    #                         referencia.ano = ref['year']
+    #                     else:
+    #                         referencia.ano = ""
 
-                        if 'publisher' in ref:
-                            referencia.publisher = ref['publisher']
-                        else:
-                            referencia.publisher = ""
+    #                     if 'publisher' in ref:
+    #                         referencia.publisher = ref['publisher']
+    #                     else:
+    #                         referencia.publisher = ""
                                 
-                        if 'booktitle' in ref:
-                            referencia.bookTitulo = ref['booktitle']
-                        else:
-                            referencia.bookTitulo = ""
+    #                     if 'booktitle' in ref:
+    #                         referencia.bookTitulo = ref['booktitle']
+    #                     else:
+    #                         referencia.bookTitulo = ""
                             
-                        if 'author' in ref:
-                            referencia.autores = ref['author']
-                        else:
-                            referencia.autores = ""
+    #                     if 'author' in ref:
+    #                         referencia.autores = ref['author']
+    #                     else:
+    #                         referencia.autores = ""
 
-                        if 'abstract' in ref:
-                            referencia.autores = ref['resumo']
-                        else:
-                            referencia.autores = ""
+    #                     if 'abstract' in ref:
+    #                         referencia.resumo = ref['abstract']
+    #                     else:
+    #                         referencia.resumo = ""
 
-                        if 'keywords' in ref:
-                            referencia.autores = ref['keywords']
-                        else:
-                            referencia.autores = ""
+    #                     if 'keywords' in ref:
+    #                         referencia.keywords = ref['keywords']
+    #                     else:
+    #                         referencia.keywords = ""
 
-                        # adiciona na coleção
-                        refs.append(referencia)                        
-                        referencia.add(referencia)                       
-        return refs
+    #                     # adiciona na coleção
+    #                     refs.append(referencia)                        
+    #                     referencia.add(referencia)                       
+    #     return refs
