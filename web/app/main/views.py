@@ -35,6 +35,13 @@ def carregarReferencia(id=None):
         referencia = oper.obterReferenciaById(id)
         return render_template('referenciasDetail.html', referencia = referencia)
 
+@views.route('/referencia/importar', methods=['POST'])
+def importarBibText():
+    strBibText = request.values.get('strBibText')
+    result = oper.importarBibText(strBibText)
+    
+    return result.get("code")
+
 
 @views.route('/processo', methods=['GET'])
 @views.route('/processo/<id>', methods=['GET'])
@@ -113,7 +120,5 @@ def exportarArquivo():
 
     bibText = [ref.bibtext + ", \n"  for ref in referencias]
     return Response(bibText, mimetype="text/txt", headers={"Content-disposition":"attachment; filename=" + file.name_file[:-4] + ".bib"})        
-
-
 
 
