@@ -141,7 +141,7 @@ class Operacoes():
 
         return self.authentic
 
-    def removerReferencia(self, id):
+    def removerFileReferencia(self, id):
         try:
             obj = ProcessoFileReferencia()
             obj = self.processoFileReferencia.query.filter_by(id=id).first()
@@ -155,7 +155,7 @@ class Operacoes():
             self.authentic["msg"] = "Erro desconhecido"
         return self.authentic
 
-    def buscarReferencias(self, id):
+    def buscarFileReferencias(self, id):
         try:
             file = self.processoFile.query.filter_by(id=id).first()
 
@@ -189,3 +189,9 @@ class Operacoes():
             self.authentic["msg"] = "Erro desconhecido"
             
         return self.authentic
+
+    def obterReferencias(self):
+        return self.referencia.query.all()        
+
+    def obterReferenciaById(self, id):
+       return self.referencia.query.filter_by(id=id).first()        

@@ -25,6 +25,16 @@ def home():
                                          referencias=dashboard.get('referencias'))
 
 
+@views.route('/referencia', methods=['GET'])
+@views.route('/referencia/<id>', methods=['GET'])
+def carregarReferencia(id=None):
+    if id == None:
+        referencias = oper.obterReferencias()
+        return render_template('referencias.html', referencias = referencias)
+    else:
+        referencia = oper.obterReferenciaById(id)
+        return render_template('referenciasDetail.html', referencia = referencia)
+
 
 @views.route('/processo', methods=['GET'])
 @views.route('/processo/<id>', methods=['GET'])
@@ -82,7 +92,7 @@ def removerProcessoArquivo():
 @views.route('/processo/arquivo/referencia/remover', methods=['POST'])
 def removerReferencia():
     referencia_id = request.values.get('id')
-    result = oper.removerReferencia(referencia_id)
+    result = oper.removerFileReferencia(referencia_id)
 
     return result.get("code")
 
@@ -90,7 +100,7 @@ def removerReferencia():
 @views.route('/processo/arquivo/processar', methods=['POST'])
 def processarArquivoReferencias():
     file_id = request.values.get('id')
-    result = oper.buscarReferencias(file_id)
+    result = oper.buscarFileReferencias(file_id)
     return result.get("code")
 
 
@@ -103,3 +113,7 @@ def exportarArquivo():
 
     bibText = [ref.bibtext + ", \n"  for ref in referencias]
     return Response(bibText, mimetype="text/txt", headers={"Content-disposition":"attachment; filename=" + file.name_file[:-4] + ".bib"})        
+
+
+
+
