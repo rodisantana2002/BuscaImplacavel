@@ -23,6 +23,8 @@ $(document).ready(function () {
         $(this).next('.custom-file-label').addClass("selected").html(fileName);
     });
 
+    // $('#card-estatistica-bibtext').hide();
+
 
     // registrar processo
     $("#btn-processo-enviar").click(function () {

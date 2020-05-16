@@ -12,6 +12,10 @@
                 {% include 'reuse/headBar.html' %}
 
                 <div class="container-fluid">
+                    <div class="d-md-flex align-items-center justify-content-between mb-2">
+                        <h4><a href="{{ url_for('views.carregarProcesso', id=None)}}"><i class="fas fa-chevron-left fa-md"></i> Voltar</a></h4>
+                    </div>
+
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-1 font-weight-bold text-primary">Registrar Processo</h6>
