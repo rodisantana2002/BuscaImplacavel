@@ -82,7 +82,7 @@ class Processamento(object):
     def importarReferencia(self, strBibText):
         refs=[]        
         if len(strBibText.strip()) > 0:            
-            bib_database = bibtexparser.load(strBibText)
+            bib_database = bibtexparser.loads(strBibText)
             
             for ref in bib_database.entries:
                 # popula valores no objeto

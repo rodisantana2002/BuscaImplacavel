@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+{% include 'reuse/base.html' %}
+<body id="page-top">
+    <div id="wrapper">
+        {% include 'reuse/sideBar.html' %}
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                {% include 'reuse/headBar.html' %}
+
+                <div class="container-fluid">
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-1">
+                        <h4><a href="{{ url_for('views.carregarReferencia', id=None)}}"><i class="fas fa-chevron-left fa-md"></i> Voltar</a></h4>
+                    </div>
+
+                    <div class="row" style="padding-bottom:10px" id="card-estatistica-bibtext" >
+                        <!-- Processos e pendentes -->
+                        <div class="col-xl-12">
+                            <div class="card border-left-success shadow h-100 py-2" >
+                                <div class="card-body">
+
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Lidas</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0000</div>
+                                        </div>
+
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Disponíveis</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0000</div>
+                                        </div>
+
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Duplicadas</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0000</div>
+                                        </div>
+
+                                        <div class="col-auto">
+                                        <i class="fas fa-cog fa-3x text-gray-300"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <!-- Tabela BibTexts -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                          <h6 class="m-0 font-weight-bold text-primary">Registros Localizados</h6>
+                        </div>
+                        
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="dataTableProcessos" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                    <th>Situação</th>
+                                    <th style="text-align:center">Ano</th>
+                                    <th style="text-align:left">Título</th>
+                                    <th style="text-align:left">DOI</th>                      
+                                    <th style="text-align:center"> **</th>                      
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                    <th>Situação</th>
+                                    <th style="text-align:center">Ano</th>
+                                    <th style="text-align:left">Título</th>
+                                    <th style="text-align:left">DOI</th>                                            
+                                    <th style="text-align:center">**</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    {%for referencia in referencias%}
+                                        <tr>
+                                            <td style="text-align:center">{{referencia.situacao}}</td>
+                                            <td style="text-align:center">{{referencia.ano}}</td>
+                                            <td>{{referencia.titulo}}</td>
+                                            <td style="text-align:center">{{referencia.doi}}</td>
+                                            <td style="text-align:center">
+                                                <a id="btn-processo-detail"  type="link" class="btn btn-link"  href="#"> 
+                                                    <i class="far fa-file-alt"></i>
+                                                </a>
+
+                                                <button class="btn-processo-remover btn btn-link" type="link" value=''>
+                                                    <i class="far fa-trash-alt" style="color:red"></i>
+                                                </button>                           
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            
+            </div>
+            {% include 'reuse/footer.html' %}
+        </div>
+    </div>
+</body>
+</html>

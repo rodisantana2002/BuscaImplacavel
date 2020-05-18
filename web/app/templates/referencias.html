@@ -22,43 +22,50 @@
                         </a>
                     </div>
 
-                    <div class="row">
-                        {% for referencia in referencias %}
-                            <!-- Area Card Referencia -->
-                            <div class="col-lg-12 col-lg-12">
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">{{referencia.ano}} [File{{referencia.id}}]</h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="button" href="#">Detalhes</a> 
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Opções Referência:</div>
-                                            <a class="dropdown-item" href="#">Download PDF</a>
-                                            <a class="dropdown-item" href="#">Exportar BibText</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Excluir</a>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <!-- Card Body -->
-                                    <div class="card-body">
-                                        <div class="referencia-area">
-                                            <h4 style="color:black"><b>{{referencia.titulo}}</b></h4>
-                                            <p>Autor(es): {{referencia.autores}}<p/>
-                                            <p>Resumo: <br> {{referencia.resumo}}<p/>
-                                            <p>KeyWords: <br> {{referencia.keywords}}<p/>
-                                            <hr>                                
-                                            <p style="color:orange">Smart-Tags:</p>
-                                        </div>
+                        {% if referencias|length ==0 %}
+                            <hr>                                                             
+                            <h3 style="text-align:center">Nenhuma referência localizada</h3>      
+                        {% else %}     
+                            <div class="row" >                        
+                                {% for referencia in referencias %}
+                                    <!-- Area Card Referencia -->
+                                    <div class="col-lg-12 col-lg-12">
+                                        <div class="card shadow mb-4">
+                                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                                <h6 class="m-0 font-weight-bold text-primary">{{referencia.ano}} [File{{referencia.id}}]</h6>
+                                                <div class="dropdown no-arrow">
+                                                    <a class="button" href="#">Detalhes</a> 
+                                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                                    <div class="dropdown-header">Opções Referência:</div>
+                                                    <a class="dropdown-item" href="#">Download PDF</a>
+                                                    <a class="dropdown-item" href="#">Exportar BibText</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Excluir</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card Body -->
+                                            <div class="card-body">
+                                                <div class="referencia-area">
+                                                    <h4 style="color:black"><b>{{referencia.titulo}}</b></h4>
+                                                    <p>Autor(es): {{referencia.autores}}<p/>
+                                                    <p>Resumo: <br> {{referencia.resumo}}<p/>
+                                                    <p>KeyWords: <br> {{referencia.keywords}}<p/>
+                                                    <hr>                                
+                                                    <p style="color:orange">Smart-Tags:</p>
+                                                </div>
+                                            </div>
+                                        </div>                                                            
                                     </div>
-                                </div>
+                                {% endfor %}                         
                             </div>
-                        {% endfor %}    
-                    </div>
+                        {% endif %}                               
+
                 </div>
 
             </div>

@@ -194,7 +194,9 @@ class Operacoes():
         return self.referencia.query.all()        
 
     def obterReferenciaById(self, id):
-       return self.referencia.query.filter_by(id=id).first()        
+        return self.referencia.query.filter_by(id=id).first()        
 
-    def importarBibText(sefl, strBibText):
-        pass
+    def importarBibText(self, strBibText):
+        referencias = self.processamento.importarReferencia(strBibText)
+        return referencias
+        

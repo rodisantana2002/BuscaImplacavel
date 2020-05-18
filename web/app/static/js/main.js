@@ -1,7 +1,7 @@
 $(document).ready(function () {
    var url_base = "http://localhost:5000/";
-   var url_files_import = "static/files/import/"
-   var url_files_export = "static/files/export/"
+   var url_files_txt = "static/files/txt/"
+   var url_files_bib = "static/files/bib/"
 
     // exibe alerta regsitro
     if ($("#registro-alerta").html() === "") {
@@ -24,6 +24,52 @@ $(document).ready(function () {
     });
 
     // $('#card-estatistica-bibtext').hide();
+
+    // Carregar BibText
+    $('#btn-bibtext-carregar').click(function (){
+                
+        if (validarDadosFileBib()) {
+            var dialog = bootbox.dialog({
+                title: 'Atenção!',
+                message: '<div class="text-center"><i class="fa fa-spin fa-spinner"></i>Aguarde... processando arquivo...</div>',
+                closeButton:true,
+                centerVertical: true
+            });
+
+            dialog.init(function () {
+                setTimeout(function () {
+                    // carrega conteudo do arquivo selecionado
+                    jQuery.get(url_base + url_files_bib + $("#name-file-bibtext").val().split('\\').pop(),
+                        function (data) {
+                            conteudo = data;
+                            $.ajax({
+                                type: "POST",
+                                url: url_base + "referencia/importar/file",
+                                data: {
+                                    bibText: conteudo
+                                },
+                                async: true,
+                                success: function (data) {
+                                    $(location).attr('href', url_base + 'referencia/import/')
+                                }
+                            });
+                        }
+                    );            
+                }, 1);
+            });
+        }    
+        else {
+            bootbox.alert({
+                message: "Selecione um arquivo",
+                size: 'small',
+                centerVertical:true
+            });          
+            $("#name-file-bibtext").focus();
+        }
+    });
+
+
+// ---------------------------------------------------------
 
 
     // registrar processo
@@ -115,7 +161,7 @@ $(document).ready(function () {
             dialog.init(function () {
                 setTimeout(function () {
                     // carrega conteudo do arquivo selecionado
-                    jQuery.get(url_base + url_files_import + $("#name-file").val().split('\\').pop(),
+                    jQuery.get(url_base + url_files_txt + $("#name-file").val().split('\\').pop(),
                         function (data) {
                             conteudo = data;
                             $.ajax({
@@ -325,6 +371,14 @@ $(document).ready(function () {
     // valida dados arquivo upload
     function validarDadosFile() {
         if ($("#name-file").val().trim().length === 0) {
+            return false;
+        }
+        return true;
+    }
+
+    // valida dados arquivo upload - bibText
+    function validarDadosFileBib() {
+        if ($("#name-file-bibtext").val().trim().length === 0) {
             return false;
         }
         return true;

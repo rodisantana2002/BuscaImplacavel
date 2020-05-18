@@ -242,7 +242,6 @@ class Referencia(db.Model):
             'titulo': self.titulo,
             'publisher': self.publisher,
             'doi': self.doi,
-            'pesquisa_id': self.pesquisa_id,
             'situacao': self.situacao,
             'resumo': self.resumo,
             'autores': self.autores,

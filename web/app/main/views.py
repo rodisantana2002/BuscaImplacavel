@@ -39,6 +39,12 @@ def carregarReferencia(id=None):
 def importarBibText():
     return render_template('referenciasImport.html')
 
+@views.route('/referencia/importar/file', methods=['POST'])
+def importarBibTextFile():
+    strBibText = request.values.get('bibText')
+    referencias = oper.importarBibText(strBibText)    
+    return render_template('referenciasImportDetail.html', referencias = referencias)
+
 @views.route('/processo', methods=['GET'])
 @views.route('/processo/<id>', methods=['GET'])
 def carregarProcesso(id=None):
