@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     // Carregar BibText
     $('#btn-bibtext-carregar').click(function (){
-                
+
         if (validarDadosFileBib()) {
             var dialog = bootbox.dialog({
                 title: 'Atenção!',
@@ -40,21 +40,32 @@ $(document).ready(function () {
                 setTimeout(function () {
                     // carrega conteudo do arquivo selecionado
                     jQuery.get(url_base + url_files_bib + $("#name-file-bibtext").val().split('\\').pop(),
-                        function (data) {
-                            conteudo = data;
-                            $.ajax({
-                                type: "POST",
-                                url: url_base + "referencia/importar/file",
-                                data: {
-                                    bibText: conteudo
-                                },
-                                async: true,
-                                success: function (data) {
-                                    $(location).attr('href', url_base + 'referencia/import/')
-                                }
-                            });
-                        }
+                    function (data) {
+                        conteudo = data;
+                        $.ajax({
+                            type: "POST",
+                            url: url_base + "referencia/importar/file",
+                            data: {
+                                bibText: conteudo
+                            },
+                            async: true,
+                            success: function (result) {
+                                dialog.modal('hide');
+
+                                $.ajax({
+                                    type: "POST", 
+                                    url: url_base + "referencia/importar",
+                                    data:{
+                                        referencias : result
+                                    },
+                                    async: true,
+                                    success: function (data){}
+                                });
+                            }
+                        });
+                    }
                     );            
+            
                 }, 1);
             });
         }    

@@ -134,6 +134,5 @@ class Processamento(object):
                     referencia.keywords = ""
 
                 # adiciona na coleção
-                refs.append(referencia)                        
-                referencia.add(referencia)                       
+                refs.append(referencia.__str__())                        
         return refs

@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, Blueprint, render_template, session, request, redirect, url_for, send_from_directory, Response
+from flask import Flask, Blueprint, render_template, session, request, redirect, url_for, send_from_directory, Response, json,jsonify
 from app.controls.operacoes import *
 from app.controls.utils import *
 from app.model.models import *
@@ -24,7 +24,6 @@ def home():
                                          refPendentes=dashboard.get('pendentes'), refProcessadas=dashboard.get('processadas'),
                                          referencias=dashboard.get('referencias'))
 
-
 @views.route('/referencia', methods=['GET'])
 @views.route('/referencia/<id>', methods=['GET'])
 def carregarReferencia(id=None):
@@ -35,15 +34,21 @@ def carregarReferencia(id=None):
         referencia = oper.obterReferenciaById(id)
         return render_template('referenciasDetail.html', referencia = referencia)
 
-@views.route('/referencia/importar', methods=['GET'])
+@views.route('/referencia/importar', methods=['GET', 'POST'])
 def importarBibText():
-    return render_template('referenciasImport.html')
+    if request.method == 'GET':
+        return render_template('referenciasImport.html')
+    else:
+        refer = request.values.get('referencias')
+        var = []
+        print(refer)
+        return render_template('referenciasImportDetail.html', referencias = var)
 
 @views.route('/referencia/importar/file', methods=['POST'])
 def importarBibTextFile():
     strBibText = request.values.get('bibText')
-    referencias = oper.importarBibText(strBibText)    
-    return render_template('referenciasImportDetail.html', referencias = referencias)
+    refer = oper.importarBibText(strBibText)    
+    return jsonify(refer)
 
 @views.route('/processo', methods=['GET'])
 @views.route('/processo/<id>', methods=['GET'])
