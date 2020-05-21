@@ -124,8 +124,8 @@ class Processamento(object):
                         referencia.url = ""
 
                     if 'title' in ref:
-                        referencia.title = ref['title'].replace("{", "").replace("}", "")
-                        referencia.titulo = self._processarTraducao(ref['title'].replace("{", "").replace("}", ""))
+                        referencia.title = re.sub('[^A-Za-z0-9\s]+', '', ref['title'])
+                        referencia.titulo = self._processarTraducao(re.sub('[^A-Za-z0-9\s]+', '', ref['title']))
                     else:
                         referencia.title = ""
                         referencia.titulo = ""
@@ -136,29 +136,29 @@ class Processamento(object):
                         referencia.ano = ""
 
                     if 'publisher' in ref:
-                        referencia.publisher = ref['publisher']
+                        referencia.publisher = re.sub('[^A-Za-z0-9\s]+', '', ref['publisher'])
                     else:
                         referencia.publisher = ""
         
                     if 'booktitle' in ref:
-                        referencia.bookTitulo = ref['booktitle']
+                        referencia.bookTitulo = re.sub('[^A-Za-z0-9\s]+', '', ref['booktitle'])
                     else:
                         referencia.bookTitulo = ""
 
                     if 'author' in ref:
-                        referencia.autores = ref['author'].replace("{", "").replace("}", "")
+                        referencia.autores = re.sub('[^A-Za-z0-9\s]+', '', ref['author'])
                     else:
                         referencia.autores = ""
 
                     if 'abstract' in ref:
-                        referencia.abstract = ref['abstract'].replace("{", "").replace("}", "")
-                        referencia.resumo = self._processarTraducao(ref['abstract'].replace("{", "").replace("}", ""))
+                        referencia.abstract = re.sub('[^A-Za-z0-9\s]+', '', ref['abstract'])
+                        referencia.resumo = self._processarTraducao(re.sub('[^A-Za-z0-9\s]+', '', ref['abstract']))
                     else:
                         referencia.abstract = ""
                         referencia.resumo = ""
 
                     if 'keywords' in ref:
-                        referencia.keywords = ref['keywords']
+                        referencia.keywords = re.sub('[^A-Za-z0-9\s]+', '', ref['keywords'])
                     else:
                         referencia.keywords = ""
 
