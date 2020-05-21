@@ -36,67 +36,68 @@
                             </div>
                         </div>                        
                     </div>
+                    {% if referencias|length >0 %}
+                        <!-- Tabela BibTexts -->
+                        <div class="card shadow mb-4" id ="card-relacao-bibtext">
+                            <div class="card-header ">
+                                <div class="d-sm-flex align-items-center justify-content-between mb-1">
+                                    <h6 class="m-0 font-weight-bold text-primary">Registros Localizados</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">
+                                        <button class="btn btn-link" id="btn-referencia-importar">[importar]</button>
+                                    </h6>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="dataTableProcessos" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                    <th style="text-align:center">Situação</th>
+                                    <th>Ano</th>
+                                    <th style="text-align:center">Titulo</th>
+                                    <th style="text-align:left">Autor(es)</th>                      
+                                    <th style="text-align:center"> **</th>                      
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                    <th style="text-align:center">Situação</th>
+                                    <th>Ano</th>
+                                    <th style="text-align:center">Titulo</th>
+                                    <th style="text-align:left">Autor(es)</th>                                            
+                                    <th style="text-align:center">**</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    {% for referencia in referencias %}
+                                        <tr>
+                                            <td style="text-align:center">{{referencia.situacao}}</td>
+                                            <td>{{referencia.ano}}</td>
+                                            <td style="text-align:left">{{referencia.titulo}}</td>
+                                            <td style="text-align:left">{{referencia.autores}}</td>                                                        
+                                            <td style="text-align:center">
+                                                <button class="btn-referencia-detail btn btn-link" type="link"  value='{"id":"{{referencia.id}}", 
+                                                                                                                        "titulo":"{{referencia.titulo}}", 
+                                                                                                                        "resumo":"{{referencia.resumo}}", 
+                                                                                                                        "autores":"{{referencia.autores}}"}' > 
+                                                    <i class="far fa-file-alt"></i>
+                                                </button>
 
-                    <!-- Tabela BibTexts -->
-                    <div class="card shadow mb-4" id ="card-relacao-bibtext">
-                        <div class="card-header ">
-                            <div class="d-sm-flex align-items-center justify-content-between mb-1">
-                                <h6 class="m-0 font-weight-bold text-primary">Registros Localizados</h6>
-                                <h6 class="m-0 font-weight-bold text-primary">
-                                     <a class="button" href="{{ url_for('views.atualizarSituacaoReferencia', situacao='Ativa')}}">Importar</a> 
-                                </h6>
+                                                <button class="btn-referencia-remover btn btn-link" type="link" value='{"id":"{{referencia.id}}"}'>
+                                                    <i class="far fa-trash-alt" style="color:red"></i>
+                                                </button>                           
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                                </table>
+                            </div>
                             </div>
                         </div>
-                        
-                        <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped" id="dataTableProcessos" width="100%" cellspacing="0">
-                            <thead>
-                                <tr>
-                                <th style="text-align:center">Situação</th>
-                                <th>Ano</th>
-                                <th style="text-align:center">Titulo</th>
-                                <th style="text-align:left">Autor(es)</th>                      
-                                <th style="text-align:center"> **</th>                      
-                                </tr>
-                            </thead>
-                            <tfoot>
-                                <tr>
-                                <th style="text-align:center">Situação</th>
-                                <th>Ano</th>
-                                <th style="text-align:center">Titulo</th>
-                                <th style="text-align:left">Autor(es)</th>                                            
-                                <th style="text-align:center">**</th>
-                                </tr>
-                            </tfoot>
-                            <tbody>
-                                {% for referencia in referencias %}
-                                    <tr>
-                                        <td style="text-align:center">{{referencia.situacao}}</td>
-                                        <td>{{referencia.ano}}</td>
-                                        <td style="text-align:left">{{referencia.titulo}}</td>
-                                        <td style="text-align:left">{{referencia.autores}}</td>                                                        
-                                        <td style="text-align:center">
-                                            <a id="btn-referencia-detail"  type="link" class="btn btn-link"  href="{{ url_for('views.carregarProcesso', id=referencia.id)}}"> 
-                                                <i class="far fa-file-alt"></i>
-                                            </a>
-
-                                            <button class="btn-referencia-remover btn btn-link" type="link" value='{"id":"{{referencia.id}}"}'>
-                                                <i class="far fa-trash-alt" style="color:red"></i>
-                                            </button>                           
-                                        </td>
-                                    </tr>
-                                {% endfor %}
-                            </tbody>
-                            </table>
-                        </div>
-                        </div>
-
-
-
-
-                    </div>
-
+                    {% else %}
+                        <h3 style="text-align:center">Não foram localizadas referências pendentes</h3>      
+                    {% endif %}    
 
                 </div>
             

@@ -213,11 +213,11 @@ class Operacoes():
             
         return self.response
 
-    def atualizarSituacaoReferencia(self, situacao):
+    def atualizarSituacaoReferencia(self, situacaoOld, situacaoNew):
         try:
-            referencias = self.referencia.query.filter_by(situacao=situacao).all()            
+            referencias = self.referencia.query.filter_by(situacao=situacaoOld).all()            
             for referencia in referencias:
-                referencia.situacao = situacao
+                referencia.situacao = situacaoNew
                 referencia.update()
 
                 self.response["code"] = "200"
@@ -228,3 +228,17 @@ class Operacoes():
             self.response["msg"] = "Erro desconhecido"
             
         return self.response            
+
+    def removerReferencia(self, id):
+        try:
+            obj = Referencia()
+            obj = self.referencia.query.filter_by(id=id).first()
+            obj.delete(obj)
+
+            self.response["code"] = "200"
+            self.response["msg"] = "Registro deletado com sucesso!"
+
+        except:
+            self.response["code"] = "500"
+            self.response["msg"] = "Erro desconhecido"
+        return self.response        

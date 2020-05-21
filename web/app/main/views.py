@@ -34,10 +34,22 @@ def carregarReferencia(id=None):
         referencia = oper.obterReferenciaById(id)
         return render_template('referenciasDetail.html', referencia = referencia)
 
-@views.route('/referencia/importar', methods=['GET'])
+@views.route('/referencia/importar', methods=['GET', 'POST'])
 def importarBibText():
-    referencias = oper.obterReferenciasBySituacao("Pendente")
-    return render_template('referenciasImport.html', referencias=referencias)
+    if request.method == 'GET':    
+        referencias = oper.obterReferenciasBySituacao("Pendente")
+        return render_template('referenciasImport.html', referencias=referencias)
+    else:
+        situacaoOld = request.values.get('situacaoOld')    
+        situacaoNew = request.values.get('situacaoNew')    
+        result = oper.atualizarSituacaoReferencia(situacaoOld, situacaoNew)
+
+        return result.get("code")
+
+# @views.route('/referencia/importar', methods=['POST'])
+# def atualizarSituacaoReferencia():
+
+
 
 @views.route('/referencia/importar/file', methods=['POST'])
 def importarBibTextFile():
@@ -45,12 +57,14 @@ def importarBibTextFile():
     result = oper.importarBibText(strBibText)    
     return result.get("code")
 
-@views.route('/referencia/importar/<situacao>', methods=['GET'])
-def atualizarSituacaoReferencia(situacao):
-    result = oper.atualizarSituacaoReferencia(situacao)
 
-    referencias = oper.obterReferenciasBySituacao("Pendente")
-    return render_template('referenciasImport.html', referencias=referencias)
+@views.route('/referencia/remover', methods=['POST'])
+def removerReferencia():
+    referencia_id = request.values.get('id')
+    result = oper.removerReferencia(referencia_id)
+
+    return result.get("code")
+
 
 
 @views.route('/processo', methods=['GET'])
@@ -107,7 +121,7 @@ def removerProcessoArquivo():
 
 
 @views.route('/processo/arquivo/referencia/remover', methods=['POST'])
-def removerReferencia():
+def removerFileReferencia():
     referencia_id = request.values.get('id')
     result = oper.removerFileReferencia(referencia_id)
 

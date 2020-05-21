@@ -29,6 +29,12 @@ from googletrans import Translator
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/20100101 Firefox/27.0'}
 AVAILABLE_SCIHUB_BASE_URL = ['search.crossref.org']
 
+
+# log config
+logging.basicConfig()
+logger = logging.getLogger('Log.')
+logger.setLevel(logging.DEBUG)
+
 class Processamento(object):
 
     def __init__(self):
@@ -37,6 +43,15 @@ class Processamento(object):
         self.available_base_url_list = AVAILABLE_SCIHUB_BASE_URL
         self.base_url = 'https://' + self.available_base_url_list[0] + '/'
         urllib3.disable_warnings()
+
+        # logs
+        self.homeDir = "../web/app/logs"
+        self.logFile = self.homeDir + '/translate_referencia.log'
+        self.logger_handler = logging.FileHandler(self.logFile, mode='w')
+        self.logger_handler.setLevel(logging.DEBUG)
+        # Associe o Handler ao  Logger
+        logger.addHandler(self.logger_handler)
+
 
     @retry(wait_random_min=2000, wait_random_max=10000, stop_max_attempt_number=2)
     def obterReferencia(self, referencia):
@@ -82,66 +97,81 @@ class Processamento(object):
             return 'err'
 
     def importarReferencia(self, strBibText):
-        refs=[]        
+        refs=[]                
         if len(strBibText.strip()) > 0:            
             bib_database = bibtexparser.loads(strBibText)
             
-            for ref in bib_database.entries:
-                # popula valores no objeto
-                referencia = Referencia()
-                referencia.situacao = "Pendente"
+            logger.debug('----------------------------------------------------------------------------------------------')
+            logger.debug('---> Iniciando processo de Tradução das Referências.')            
 
-                if 'doi' in ref:
-                    referencia.doi = ref['doi']
-                else:
-                    referencia.doi = ""
+            data_hora_atuais = datetime.now()
+            data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')            
 
-                if 'url' in ref:
-                    referencia.url = ref['url']
-                else:
-                    referencia.url = ""
+            try:
+                for ref in bib_database.entries:
+                    # popula valores no objeto                    
+                    referencia = Referencia()
+                    referencia.situacao = "Pendente"
+                    
+                    if 'doi' in ref:
+                        referencia.doi = ref['doi']
+                    else:
+                        referencia.doi = ""
 
-                if 'title' in ref:
-                    referencia.title = ref['title'].replace("{", "").replace("}", "")
-                    referencia.titulo = self._processarTraducao(ref['title'].replace("{", "").replace("}", ""))
-                else:
-                    referencia.title = ""
-                    referencia.titulo = ""
+                    if 'url' in ref:
+                        referencia.url = ref['url']
+                    else:
+                        referencia.url = ""
 
-                if 'year' in ref:
-                    referencia.ano = ref['year']
-                else:
-                    referencia.ano = ""
+                    if 'title' in ref:
+                        referencia.title = ref['title'].replace("{", "").replace("}", "")
+                        referencia.titulo = self._processarTraducao(ref['title'].replace("{", "").replace("}", ""))
+                    else:
+                        referencia.title = ""
+                        referencia.titulo = ""
 
-                if 'publisher' in ref:
-                    referencia.publisher = ref['publisher']
-                else:
-                    referencia.publisher = ""
-    
-                if 'booktitle' in ref:
-                    referencia.bookTitulo = ref['booktitle']
-                else:
-                    referencia.bookTitulo = ""
+                    if 'year' in ref:
+                        referencia.ano = ref['year']
+                    else:
+                        referencia.ano = ""
 
-                if 'author' in ref:
-                    referencia.autores = ref['author']
-                else:
-                    referencia.autores = ""
+                    if 'publisher' in ref:
+                        referencia.publisher = ref['publisher']
+                    else:
+                        referencia.publisher = ""
+        
+                    if 'booktitle' in ref:
+                        referencia.bookTitulo = ref['booktitle']
+                    else:
+                        referencia.bookTitulo = ""
 
-                if 'abstract' in ref:
-                    referencia.abstract = ref['abstract']
-                    referencia.resumo = self._processarTraducao(ref['abstract'])
-                else:
-                    referencia.abstract = ""
-                    referencia.resumo = ""
+                    if 'author' in ref:
+                        referencia.autores = ref['author'].replace("{", "").replace("}", "")
+                    else:
+                        referencia.autores = ""
 
-                if 'keywords' in ref:
-                    referencia.keywords = ref['keywords']
-                else:
-                    referencia.keywords = ""
+                    if 'abstract' in ref:
+                        referencia.abstract = ref['abstract'].replace("{", "").replace("}", "")
+                        referencia.resumo = self._processarTraducao(ref['abstract'].replace("{", "").replace("}", ""))
+                    else:
+                        referencia.abstract = ""
+                        referencia.resumo = ""
 
-                # adiciona na coleção
-                refs.append(referencia)                        
+                    if 'keywords' in ref:
+                        referencia.keywords = ref['keywords']
+                    else:
+                        referencia.keywords = ""
+
+                    # adiciona na coleção
+                    refs.append(referencia)                        
+                    logger.debug('---> {} ---[  ok  ] referência traduzida com sucesso! [{}]'.format(data_atual, referencia.doi))
+
+            except:
+                logger.debug('---> {} ---[ erro ] referência não foi traduzida [{}]'.format(data_atual, referencia.doi))
+
+        logger.debug('----------------------------------------------------------------------------------------------')
+        logger.debug('---> Finalizando processo de Tradução das Referências.')            
+
         return refs
 
     def _processarTraducao(self, strOrigem):
