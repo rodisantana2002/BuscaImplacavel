@@ -23,6 +23,8 @@ from bs4 import BeautifulSoup
 from retrying import retry
 from datetime import datetime
 
+from googletrans import Translator
+
 # constants
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/20100101 Firefox/27.0'}
 AVAILABLE_SCIHUB_BASE_URL = ['search.crossref.org']
@@ -87,6 +89,7 @@ class Processamento(object):
             for ref in bib_database.entries:
                 # popula valores no objeto
                 referencia = Referencia()
+                referencia.situacao = "Pendente"
 
                 if 'doi' in ref:
                     referencia.doi = ref['doi']
@@ -99,8 +102,10 @@ class Processamento(object):
                     referencia.url = ""
 
                 if 'title' in ref:
-                    referencia.titulo = ref['title']
+                    referencia.title = ref['title'].replace("{", "").replace("}", "")
+                    referencia.titulo = self._processarTraducao(ref['title'].replace("{", "").replace("}", ""))
                 else:
+                    referencia.title = ""
                     referencia.titulo = ""
 
                 if 'year' in ref:
@@ -124,8 +129,10 @@ class Processamento(object):
                     referencia.autores = ""
 
                 if 'abstract' in ref:
-                    referencia.resumo = ref['abstract']
+                    referencia.abstract = ref['abstract']
+                    referencia.resumo = self._processarTraducao(ref['abstract'])
                 else:
+                    referencia.abstract = ""
                     referencia.resumo = ""
 
                 if 'keywords' in ref:
@@ -134,5 +141,16 @@ class Processamento(object):
                     referencia.keywords = ""
 
                 # adiciona na coleção
-                refs.append(referencia.__str__())                        
+                refs.append(referencia)                        
         return refs
+
+    def _processarTraducao(self, strOrigem):
+        strDestino = ""
+        try:
+            trans = Translator()
+            txtTranslate = trans.translate(strOrigem, dest='pt')
+            strDestino = txtTranslate.text
+        except Exception:
+            strDestino = "Erro na tradução"
+
+        return strDestino

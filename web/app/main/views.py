@@ -28,27 +28,30 @@ def home():
 @views.route('/referencia/<id>', methods=['GET'])
 def carregarReferencia(id=None):
     if id == None:
-        referencias = oper.obterReferencias()
+        referencias = oper.obterReferenciasBySituacao("Ativa")
         return render_template('referencias.html', referencias = referencias)
     else:
         referencia = oper.obterReferenciaById(id)
         return render_template('referenciasDetail.html', referencia = referencia)
 
-@views.route('/referencia/importar', methods=['GET', 'POST'])
+@views.route('/referencia/importar', methods=['GET'])
 def importarBibText():
-    if request.method == 'GET':
-        return render_template('referenciasImport.html')
-    else:
-        refer = request.values.get('referencias')
-        var = []
-        print(refer)
-        return render_template('referenciasImportDetail.html', referencias = var)
+    referencias = oper.obterReferenciasBySituacao("Pendente")
+    return render_template('referenciasImport.html', referencias=referencias)
 
 @views.route('/referencia/importar/file', methods=['POST'])
 def importarBibTextFile():
     strBibText = request.values.get('bibText')
-    refer = oper.importarBibText(strBibText)    
-    return jsonify(refer)
+    result = oper.importarBibText(strBibText)    
+    return result.get("code")
+
+@views.route('/referencia/importar/<situacao>', methods=['GET'])
+def atualizarSituacaoReferencia(situacao):
+    result = oper.atualizarSituacaoReferencia(situacao)
+
+    referencias = oper.obterReferenciasBySituacao("Pendente")
+    return render_template('referenciasImport.html', referencias=referencias)
+
 
 @views.route('/processo', methods=['GET'])
 @views.route('/processo/<id>', methods=['GET'])

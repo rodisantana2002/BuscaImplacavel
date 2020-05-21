@@ -45,18 +45,20 @@ class database(object):
         #                                         processo_file_id INTEGER,
         #                                         criado_em VARCHAR(20));""")                                              
 
-        # tabelas.append("""CREATE TABLE Referencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
-        #                                         situacao VARCHAR(20),
-        #                                         titulo TEXT, 
-        #                                         ano VARCHAR(4), 
-        #                                         autores TEXT, 
-        #                                         resumo TEXT, 
-        #                                         keywords TEXT, 
-        #                                         doi TEXT, 
-        #                                         url TEXT, 
-        #                                         publisher TEXT,
-        #                                         bookTitulo TEXT, 
-        #                                         criado_em VARCHAR(20));""")
+        tabelas.append("""CREATE TABLE Referencia (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+                                                situacao VARCHAR(20),
+                                                title TEXT,
+                                                titulo TEXT, 
+                                                ano VARCHAR(4), 
+                                                autores TEXT, 
+                                                abstract TEXT,
+                                                resumo TEXT, 
+                                                keywords TEXT, 
+                                                doi TEXT, 
+                                                url TEXT, 
+                                                publisher TEXT,
+                                                bookTitulo TEXT, 
+                                                criado_em VARCHAR(20));""")
 
         # tabelas.append("""CREATE TABLE Translate (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
         #                                                situacao VARCHAR(20),
@@ -67,15 +69,15 @@ class database(object):
         #                                                referencia_id VARCHAR(50),
         #                                                criado_em VARCHAR(12));""")
 
-        tabelas.append("""CREATE TABLE ReferenciaTag (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
-                                                      tag TEXT, 
-                                                      referencia_id VARCHAR(50),
-                                                      criado_em VARCHAR(12));""")
+        # tabelas.append("""CREATE TABLE ReferenciaTag (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+        #                                               tag TEXT, 
+        #                                               referencia_id VARCHAR(50),
+        #                                               criado_em VARCHAR(12));""")
 
-        tabelas.append("""CREATE TABLE ReferenciaHistorico (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
-                                                            historico TEXT, 
-                                                            referencia_id VARCHAR(50),
-                                                            criado_em VARCHAR(12));""")
+        # tabelas.append("""CREATE TABLE ReferenciaHistorico (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 
+        #                                                     historico TEXT, 
+        #                                                     referencia_id VARCHAR(50),
+        #                                                     criado_em VARCHAR(12));""")
 
 
 

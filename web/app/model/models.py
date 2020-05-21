@@ -205,8 +205,10 @@ class Referencia(db.Model):
     __tablename__ = 'Referencia'
 
     id = db.Column(db.Integer, primary_key=True)
-    situacao = db.Column(db.String(20), default="Iniciada")
+    situacao = db.Column(db.String(20))
+    title = db.Column(db.String(1000))
     titulo = db.Column(db.String(1000))
+    abstract = db.Column(db.String())
     resumo = db.Column(db.String())
     ano = db.Column(db.String(10))
     autores = db.Column(db.String(1000))
@@ -239,10 +241,12 @@ class Referencia(db.Model):
         return {
             'id': self.id,
             'ano': self.ano,
+            'title': self.title,
             'titulo': self.titulo,
             'publisher': self.publisher,
             'doi': self.doi,
             'situacao': self.situacao,
+            'abstract': self.abstract,
             'resumo': self.resumo,
             'autores': self.autores,
             'keywords': self.keywords,

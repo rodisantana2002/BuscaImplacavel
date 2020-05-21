@@ -19,7 +19,7 @@ operacoes = Blueprint("operacoes", __name__)
 class Operacoes():
 
     def __init__(self):
-        self.authentic = {"code": "", "msg": "", "id": "", "value": "", "superuser": ""}
+        self.response = {"code": "", "msg": "", "id": "", "value": "", "superuser": ""}
         self.dashboard = {"processos": 0, "files": 0, "processadas": 0, "pendentes": 0, "referencias": 0, "traduzidas":0, "pendentes":0, "duplicadas":0}
         self.pesquisa = Pesquisa()
         self.processo = Processo()
@@ -66,20 +66,20 @@ class Operacoes():
             obj = Processo
             obj.add(obj)
 
-            self.authentic["code"] = "200"
-            self.authentic["msg"] = "Registro efetuado com sucesso!"
+            self.response["code"] = "200"
+            self.response["msg"] = "Registro efetuado com sucesso!"
 
         except:
-            self.authentic["code"] = "500"
-            self.authentic["msg"] = "Erro desconhecido"
-        return self.authentic
+            self.response["code"] = "500"
+            self.response["msg"] = "Erro desconhecido"
+        return self.response
 
     def registrarProcessoArquivo(self, ProcessoFile):
         try:
             file = self.processoFile.query.filter_by(name_file=ProcessoFile.name_file, processo_id=ProcessoFile.processo_id).first()
             if file != None:
-                self.authentic["code"] = "500"
-                self.authentic["msg"] = "Arquivo já esta registrado no processo!"
+                self.response["code"] = "500"
+                self.response["msg"] = "Arquivo já esta registrado no processo!"
             else:                        
                 processoFile = ProcessoFile
                 processoFile.add(processoFile)
@@ -96,13 +96,13 @@ class Operacoes():
                         processoFileReferencia.add(processoFileReferencia)
                         linha = linha +1
 
-                self.authentic["code"] = "200"
-                self.authentic["msg"] = "Registro efetuado com sucesso!"
+                self.response["code"] = "200"
+                self.response["msg"] = "Registro efetuado com sucesso!"
 
         except :
-            self.authentic["code"] = "500"
-            self.authentic["msg"] = "Erro desconhecido"
-        return self.authentic
+            self.response["code"] = "500"
+            self.response["msg"] = "Erro desconhecido"
+        return self.response
 
     def obterProcessoArquivoById(self, id):
         return self.processoFile.query.filter_by(id=id).first()
@@ -117,14 +117,14 @@ class Operacoes():
             obj = self.processo.query.filter_by(id=id).first()
             obj.delete(obj)
 
-            self.authentic["code"] = "200"
-            self.authentic["msg"] = "Registro deletado com sucesso!"
+            self.response["code"] = "200"
+            self.response["msg"] = "Registro deletado com sucesso!"
 
         except:
-            self.authentic["code"] = "500"
-            self.authentic["msg"] = "Erro desconhecido"
+            self.response["code"] = "500"
+            self.response["msg"] = "Erro desconhecido"
 
-        return self.authentic
+        return self.response
 
     def removerFile(self, id):
         try:
@@ -132,14 +132,14 @@ class Operacoes():
             obj = self.processoFile.query.filter_by(id=id).first()
             obj.delete(obj)
 
-            self.authentic["code"] = "200"
-            self.authentic["msg"] = "Registro deletado com sucesso!"
+            self.response["code"] = "200"
+            self.response["msg"] = "Registro deletado com sucesso!"
 
         except:
-            self.authentic["code"] = "500"
-            self.authentic["msg"] = "Erro desconhecido"
+            self.response["code"] = "500"
+            self.response["msg"] = "Erro desconhecido"
 
-        return self.authentic
+        return self.response
 
     def removerFileReferencia(self, id):
         try:
@@ -147,13 +147,13 @@ class Operacoes():
             obj = self.processoFileReferencia.query.filter_by(id=id).first()
             obj.delete(obj)
 
-            self.authentic["code"] = "200"
-            self.authentic["msg"] = "Registro deletado com sucesso!"
+            self.response["code"] = "200"
+            self.response["msg"] = "Registro deletado com sucesso!"
 
         except:
-            self.authentic["code"] = "500"
-            self.authentic["msg"] = "Erro desconhecido"
-        return self.authentic
+            self.response["code"] = "500"
+            self.response["msg"] = "Erro desconhecido"
+        return self.response
 
     def buscarFileReferencias(self, id):
         try:
@@ -181,14 +181,14 @@ class Operacoes():
                 else:
                     logger.debug('---> {} ---[ erro ] referência não foi extraída [{}]'.format(data_atual, referencia.txt_referencia))
 
-            self.authentic["code"] = "200"
-            self.authentic["msg"] = "Processamento finalizado com sucesso"
+            self.response["code"] = "200"
+            self.response["msg"] = "Processamento finalizado com sucesso"
 
         except:
-            self.authentic["code"] = "500"
-            self.authentic["msg"] = "Erro desconhecido"
+            self.response["code"] = "500"
+            self.response["msg"] = "Erro desconhecido"
             
-        return self.authentic
+        return self.response
 
     def obterReferencias(self):
         return self.referencia.query.all()        
@@ -196,7 +196,35 @@ class Operacoes():
     def obterReferenciaById(self, id):
         return self.referencia.query.filter_by(id=id).first()        
 
+    def obterReferenciasBySituacao(self, situacao):
+        return self.referencia.query.filter_by(situacao=situacao).all()            
+
     def importarBibText(self, strBibText):
-        referencias = self.processamento.importarReferencia(strBibText)
-        return referencias
-        
+        try:
+            referencias = self.processamento.importarReferencia(strBibText)
+            self.referencia.addAll(referencias)
+
+            self.response["code"] = "200"
+            self.response["msg"] = "Processamento finalizado com sucesso"
+
+        except:
+            self.response["code"] = "500"
+            self.response["msg"] = "Erro desconhecido"
+            
+        return self.response
+
+    def atualizarSituacaoReferencia(self, situacao):
+        try:
+            referencias = self.referencia.query.filter_by(situacao=situacao).all()            
+            for referencia in referencias:
+                referencia.situacao = situacao
+                referencia.update()
+
+                self.response["code"] = "200"
+                self.response["msg"] = "Atualização processada com sucesso"
+
+        except:
+            self.response["code"] = "500"
+            self.response["msg"] = "Erro desconhecido"
+            
+        return self.response            

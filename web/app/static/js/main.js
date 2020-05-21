@@ -24,6 +24,7 @@ $(document).ready(function () {
     });
 
     // $('#card-estatistica-bibtext').hide();
+    // $('#card-relacao-bibtext').hide();
 
     // Carregar BibText
     $('#btn-bibtext-carregar').click(function (){
@@ -50,17 +51,12 @@ $(document).ready(function () {
                             },
                             async: true,
                             success: function (result) {
-                                dialog.modal('hide');
-
-                                $.ajax({
-                                    type: "POST", 
-                                    url: url_base + "referencia/importar",
-                                    data:{
-                                        referencias : result
-                                    },
-                                    async: true,
-                                    success: function (data){}
-                                });
+                                if (result === "200") {
+                                    location.reload();
+                                }
+                                else {
+                                    dialog.find('.bootbox-body').html("Não foi possível processar a importação!");
+                                }
                             }
                         });
                     }
@@ -68,6 +64,7 @@ $(document).ready(function () {
             
                 }, 1);
             });
+
         }    
         else {
             bootbox.alert({
