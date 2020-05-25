@@ -106,7 +106,7 @@ class Processamento(object):
 
             data_hora_atuais = datetime.now()
             data_atual = data_hora_atuais.strftime('%d/%m/%Y %H:%M:%S')            
-
+            i=1
             try:
                 for ref in bib_database.entries:
                     # popula valores no objeto                    
@@ -164,7 +164,9 @@ class Processamento(object):
 
                     # adiciona na coleção
                     refs.append(referencia)                        
-                    logger.debug('---> {} ---[  ok  ] referência traduzida com sucesso! [{}]'.format(data_atual, referencia.doi))
+                    logger.debug('---> {} ---[  ok  ] referência [{}] traduzida com sucesso! [{}]'.format(data_atual, str(i), referencia.doi))
+                    time.sleep(7)
+                    i=i+1
 
             except:
                 logger.debug('---> {} ---[ erro ] referência não foi traduzida [{}]'.format(data_atual, referencia.doi))
@@ -180,7 +182,7 @@ class Processamento(object):
             trans = Translator()
             txtTranslate = trans.translate(strOrigem, dest='pt')
             strDestino = txtTranslate.text
-        except Exception:
-            strDestino = "Erro na tradução"
+        except Exception as exc:
+            strDestino = "Erro na tradução [{}]".format(exc)
 
         return strDestino
