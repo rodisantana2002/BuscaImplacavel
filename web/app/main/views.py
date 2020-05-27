@@ -51,6 +51,13 @@ def atualizarSituacaoReferenciaReprovar():
     result = oper.atualizarSituacaoReferenciaByID(id, 'Reprovada')
     return result.get("code")
 
+
+@views.route('/referencia/aprovar', methods=['POST'])
+def atualizarSituacaoReferenciaAprovar():
+    id = request.values.get('id')
+    result = oper.atualizarSituacaoReferenciaByID(id, 'Aprovada')
+    return result.get("code")
+
 @views.route('/referencia/importar/file', methods=['POST'])
 def importarBibTextFile():
     strBibText = request.values.get('bibText')
