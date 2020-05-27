@@ -126,6 +126,62 @@ $(document).ready(function () {
         });    
     });
 
+    // reprovar referencia
+    $(".btn-referencia-reprovar").click(function () {
+        var referencia = jQuery.parseJSON($(this).val());
+
+        bootbox.confirm({
+            message: "Confirma a reprovação da Referência?",
+            size: "small",
+            centerVertical: true,
+            buttons: {
+                confirm: {
+                    label: 'Sim',
+                    label: '<i class="fa fa-check"></i> Confirm',
+                    className: 'btn-success'
+                },
+                cancel: {
+                    label: 'Não',
+                    label: '<i class="fa fa-times"></i> Cancel',
+                    className: 'btn-danger'
+                }
+            },
+
+            callback: function (result) {
+                if (result) {
+                    var dialog = bootbox.dialog({
+                        message: '<p class="text-center mb-0"><i class="fa fa-spin fa-cog"></i> Aguarde... processando exclusão...</p>',
+                        centerVertical: true,
+                        closeButton: true
+                    });
+
+                    dialog.init(function () {
+                        setTimeout(function () {
+                            //processa a exlusão dos dados do processo
+                            $.ajax({
+                                type: "POST",
+                                data: { id: referencia.id },
+                                url: url_base + "referencia/reprovar",
+                                async: false,
+                                success: function (data) {
+                                    if (data === "200") {
+                                        location.reload();
+                                    }
+                                    else {
+                                        dialog.find('.bootbox-body').html("Não foi possível atualizar a situação da referência!");
+                                    }
+                                }
+                            });
+
+                        }, 1);
+                    });
+
+                }
+            }
+        }); 
+
+    });
+
 
     // exibe popup com detalhes da referencia
     $(".btn-referencia-detail").click(function () {

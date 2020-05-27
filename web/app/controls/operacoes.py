@@ -229,6 +229,21 @@ class Operacoes():
             
         return self.response            
 
+    def atualizarSituacaoReferenciaByID(self, id, situacaoNew):
+        try:
+            referencia = self.referencia.query.filter_by(id=id).first()
+            referencia.situacao = situacaoNew
+            referencia.update()
+
+            self.response["code"] = "200"
+            self.response["msg"] = "Atualização processada com sucesso"
+
+        except:
+            self.response["code"] = "500"
+            self.response["msg"] = "Erro desconhecido"
+            
+        return self.response     
+
     def removerReferencia(self, id):
         try:
             obj = Referencia()

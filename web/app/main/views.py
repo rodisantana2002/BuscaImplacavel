@@ -43,13 +43,13 @@ def importarBibText():
         situacaoOld = request.values.get('situacaoOld')    
         situacaoNew = request.values.get('situacaoNew')    
         result = oper.atualizarSituacaoReferencia(situacaoOld, situacaoNew)
-
         return result.get("code")
 
-# @views.route('/referencia/importar', methods=['POST'])
-# def atualizarSituacaoReferencia():
-
-
+@views.route('/referencia/reprovar', methods=['POST'])
+def atualizarSituacaoReferenciaReprovar():
+    id = request.values.get('id')
+    result = oper.atualizarSituacaoReferenciaByID(id, 'Reprovada')
+    return result.get("code")
 
 @views.route('/referencia/importar/file', methods=['POST'])
 def importarBibTextFile():
