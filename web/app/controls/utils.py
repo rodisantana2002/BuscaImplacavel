@@ -1,5 +1,8 @@
 import os
 import sys
+import csv
+import sqlite3
+
 
 from flask import render_template, current_app, Blueprint
 from threading import Thread
@@ -26,3 +29,32 @@ class Utils():
 
     def _obterArquivos(self, path, tipo):    
         return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith(tipo)])
+
+
+    # Permite a exportação dos dados de quaquer tabela ou consulta do banco de dados
+    def gerarCSV(self, path_db, path_arquivo, name, strSQL):
+        conn = sqlite3.connect(path_db)
+        cursor = conn.cursor()
+        columns=[]
+        rows=[]
+        
+        # popula os names das colunas
+        result = cursor.execute(strSQL)   
+        columns = [i[0] for i in result.description]
+        line = dict.fromkeys(columns)
+
+        with open(path_arquivo+name+'.csv', 'w') as arquivo:
+            writer = csv.DictWriter(arquivo, fieldnames=columns)
+            writer.writeheader()
+
+            # carrega os valores das colunas        
+            for row in result:
+                col = 0
+                # atualiza dicionario e grava como linha no csv
+                for key in line.keys():
+                    line[key]= str(row[col])
+                    col = col+1
+                writer.writerow(line)
+                
+        arquivo.close()    
+        print('Arquivo gerado com sucesso--> '+ name)  

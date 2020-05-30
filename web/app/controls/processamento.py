@@ -9,6 +9,7 @@ import re
 import logging
 import os
 import sys
+import csv
 import requests
 import urllib3
 import time
@@ -28,7 +29,6 @@ from googletrans import Translator
 # constants
 HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:27.0) Gecko/20100101 Firefox/27.0'}
 AVAILABLE_SCIHUB_BASE_URL = ['search.crossref.org']
-
 
 # log config
 logging.basicConfig()
@@ -52,6 +52,7 @@ class Processamento(object):
         # Associe o Handler ao  Logger
         logger.addHandler(self.logger_handler)
 
+        self.arqCSV = '../web/app/static/files/csv/jabref.csv'        
 
     @retry(wait_random_min=2000, wait_random_max=10000, stop_max_attempt_number=2)
     def obterReferencia(self, referencia):
