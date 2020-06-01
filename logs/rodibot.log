@@ -17,21 +17,86 @@
 ----------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------
 ---> Iniciando tentativa [1] de downloads dos arquivos.
----> 01/06/2020 12:22:38 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2009-1.pdf]
----> 01/06/2020 12:22:50 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2008-2.pdf]
----> 01/06/2020 12:23:02 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2009-3.pdf]
----> 01/06/2020 12:23:15 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2010-4.pdf]
----> 01/06/2020 12:23:25 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2009-5.pdf]
----> 01/06/2020 12:23:36 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2009-6.pdf]
----> 01/06/2020 12:23:46 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2010-7.pdf]
----> 01/06/2020 12:23:57 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2010-8.pdf]
----> 01/06/2020 12:24:09 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2009-9.pdf]
----> 01/06/2020 12:24:19 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
----> 01/06/2020 12:24:37 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2010-11.pdf]
----> 01/06/2020 12:24:49 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2009-12.pdf]
----> 01/06/2020 12:25:00 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2017-13.pdf]
----> 01/06/2020 12:25:13 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2009-14.pdf]
----> 01/06/2020 12:25:24 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2012-15.pdf]
----> 01/06/2020 12:25:35 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2014-16.pdf]
----> 01/06/2020 12:25:48 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
----> 01/06/2020 12:26:19 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2015-18.pdf]
+---> 01/06/2020 17:08:54 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2013-121.pdf]
+---> 01/06/2020 17:09:08 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2013-122.pdf]
+---> 01/06/2020 17:09:18 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2008-123.pdf]
+---> 01/06/2020 17:09:30 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2013-124.pdf]
+---> 01/06/2020 17:09:41 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2010-125.pdf]
+---> 01/06/2020 17:09:54 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2012-126.pdf]
+---> 01/06/2020 17:10:04 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2016-127.pdf]
+---> 01/06/2020 17:10:16 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2015-128.pdf]
+---> 01/06/2020 17:10:25 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:10:40 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2013-130.pdf]
+---> 01/06/2020 17:10:51 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2017-131.pdf]
+---> 01/06/2020 17:11:01 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2014-132.pdf]
+---> 01/06/2020 17:11:12 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:11:29 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2011-134.pdf]
+---> 01/06/2020 17:11:41 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2012-135.pdf]
+---> 01/06/2020 17:11:51 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2015-136.pdf]
+---> 01/06/2020 17:12:01 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2010-137.pdf]
+---> 01/06/2020 17:12:12 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2010-138.pdf]
+---> 01/06/2020 17:12:23 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2018-139.pdf]
+---> 01/06/2020 17:12:35 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2016-140.pdf]
+---> 01/06/2020 17:12:47 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2013-141.pdf]
+---> 01/06/2020 17:12:58 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:13:09 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2001-143.pdf]
+---> 01/06/2020 17:13:19 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2011-144.pdf]
+---> 01/06/2020 17:13:30 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2018-145.pdf]
+---> 01/06/2020 17:13:41 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:13:54 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2011-147.pdf]
+---> 01/06/2020 17:14:05 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2016-148.pdf]
+---> 01/06/2020 17:14:17 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2012-149.pdf]
+---> 01/06/2020 17:14:27 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2019-150.pdf]
+---> 01/06/2020 17:14:38 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2017-151.pdf]
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [2] de downloads dos arquivos.
+---> 01/06/2020 17:14:48 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:15:01 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:15:20 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:15:33 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [3] de downloads dos arquivos.
+---> 01/06/2020 17:15:45 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:16:01 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:16:17 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:16:31 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [4] de downloads dos arquivos.
+---> 01/06/2020 17:16:41 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:16:57 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:17:18 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:17:30 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [5] de downloads dos arquivos.
+---> 01/06/2020 17:17:40 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:17:54 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:18:10 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:18:23 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [6] de downloads dos arquivos.
+---> 01/06/2020 17:18:33 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:18:48 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:19:08 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:19:18 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [7] de downloads dos arquivos.
+---> 01/06/2020 17:19:38 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:19:53 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:20:11 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:20:23 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [8] de downloads dos arquivos.
+---> 01/06/2020 17:20:34 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:20:47 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:21:04 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:21:14 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [9] de downloads dos arquivos.
+---> 01/06/2020 17:21:27 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:21:43 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:22:00 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:22:11 ---[ ok ] Arquivo baixado com sucesso com identificador [JABREF-2009-146.pdf]
+----------------------------------------------------------------------------------------------
+---> Iniciando tentativa [10] de downloads dos arquivos.
+---> 01/06/2020 17:22:21 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
+---> 01/06/2020 17:22:35 Invalid URL 'None': No schema supplied. Perhaps you meant http://None?
