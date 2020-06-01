@@ -36,7 +36,6 @@ class Utils():
         conn = sqlite3.connect(path_db)
         cursor = conn.cursor()
         columns=[]
-        rows=[]
         
         # popula os names das colunas
         result = cursor.execute(strSQL)   

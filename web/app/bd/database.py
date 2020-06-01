@@ -14,7 +14,8 @@ logger.setLevel(logging.DEBUG)
 
 class database(object):
     def __init__(self):
-        self.pathOrigem = 'sqlite:///../buscaimplacavel/web/app/bd/bot.db'
+        self.pathOrigem = 'sqlite:///../buscaimplacavel/web/app/bd/bot.db' 
+        self.pathCSV = '../buscaimplacavel/bases/origem/' 
         self.engine = create_engine(self.pathOrigem)        
 
     def gerarTabelas(self):
@@ -102,9 +103,55 @@ class database(object):
     def _obterArquivos(self, path, tipo):
         return ([path+file for p, _, files in os.walk(os.path.abspath(path)) for file in files if file.lower().endswith("." + tipo)])
 
+
+    # Permite a exportação dos dados de quaquer tabela ou consulta do banco de dados
+    def gerarCSV(self, name, strSQL):
+        conn = sqlite3.connect("/home/osboxes/Documentos/projetos/automator/buscaimplacavel/web/app/bd/bot.db")
+        cursor = conn.cursor()
+        columns=[]
+        
+        # popula os names das colunas
+        result = cursor.execute(strSQL)   
+        columns = [i[0] for i in result.description]
+        line = dict.fromkeys(columns)
+
+        with open(self.pathCSV+name+'.csv', 'w') as arquivo:
+            writer = csv.DictWriter(arquivo, fieldnames=columns)
+            writer.writeheader()
+
+            # carrega os valores das colunas        
+            for row in result:
+                col = 0
+                # atualiza dicionario e grava como linha no csv
+                for key in line.keys():
+                    line[key]= str(row[col])
+                    col = col+1
+                writer.writerow(line)
+                
+        arquivo.close()    
+        print('Arquivo gerado com sucesso--> '+ name)  
+
+
 def main():
     db = database()
-    db.gerarTabelas()
+    # gerar Tabelas
+    # db.gerarTabelas()
+
+    # exporta dados específicos direto do BD
+    strSQL = """SELECT  doi as Identifier,
+                        titulo as Title, 
+                        ano as Year, 
+                        autores as Author, 
+                        doi as DOI, 
+                        url as URL, 
+                        keywords as Custom3, 
+                        publisher as Publisher, 
+                        bookTitulo as BibliographyType
+                    FROM Referencia
+                    WHERE situacao = 'Aprovada'
+             """
+
+    db.gerarCSV("JABREF", strSQL)
 
 
 if __name__ == '__main__':

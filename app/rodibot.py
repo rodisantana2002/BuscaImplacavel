@@ -5,6 +5,7 @@ import sys
 import csv
 import os
 import logging
+import time
 
 import scihub as sc
 import pdftotxt as conv
@@ -105,6 +106,8 @@ class base(object):
                                     }
                             writer.writerow(file)
                             logger.debug('---> %s ---[ ok ] Arquivo baixado com sucesso com identificador [%s]', data_atual, row['id'] + ".pdf")
+                        time.sleep(8)    
+
         os.rename(tmp_file, self.fileOUT)
         return status
 
